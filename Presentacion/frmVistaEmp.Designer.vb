@@ -39,7 +39,7 @@ Partial Class frmVistaEmp
         '
         'Panel1
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Location = New System.Drawing.Point(12, 44)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(206, 206)
@@ -47,7 +47,7 @@ Partial Class frmVistaEmp
         '
         'Panel2
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)

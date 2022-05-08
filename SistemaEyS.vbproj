@@ -80,58 +80,58 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddCargo.Designer.vb">
+    <Compile Include="Presentacion\FrmAddCargo.Designer.vb">
       <DependentUpon>FrmAddCargo.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddCargo.vb">
+    <Compile Include="Presentacion\FrmAddCargo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddDepartamento.Designer.vb">
+    <Compile Include="Presentacion\FrmAddDepartamento.Designer.vb">
       <DependentUpon>FrmAddDepartamento.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddDepartamento.vb">
+    <Compile Include="Presentacion\FrmAddDepartamento.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddEmpleado.Designer.vb">
+    <Compile Include="Presentacion\FrmAddEmpleado.Designer.vb">
       <DependentUpon>FrmAddEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddEmpleado.vb">
+    <Compile Include="Presentacion\FrmAddEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddEntidad.Designer.vb">
+    <Compile Include="Presentacion\FrmAddEntidad.Designer.vb">
       <DependentUpon>FrmAddEntidad.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddEntidad.vb">
+    <Compile Include="Presentacion\FrmAddEntidad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListarCargo.Designer.vb">
+    <Compile Include="Presentacion\frmListarCargo.Designer.vb">
       <DependentUpon>frmListarCargo.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmListarCargo.vb">
+    <Compile Include="Presentacion\frmListarCargo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListarDept.Designer.vb">
+    <Compile Include="Presentacion\frmListarDept.Designer.vb">
       <DependentUpon>frmListarDept.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmListarDept.vb">
+    <Compile Include="Presentacion\frmListarDept.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmListarEmp.Designer.vb">
+    <Compile Include="Presentacion\frmListarEmp.Designer.vb">
       <DependentUpon>frmListarEmp.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmListarEmp.vb">
+    <Compile Include="Presentacion\frmListarEmp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVistaAdmin.Designer.vb">
+    <Compile Include="Presentacion\FrmVistaAdmin.Designer.vb">
       <DependentUpon>FrmVistaAdmin.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmVistaAdmin.vb">
+    <Compile Include="Presentacion\FrmVistaAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVistaEmp.Designer.vb">
+    <Compile Include="Presentacion\frmVistaEmp.Designer.vb">
       <DependentUpon>frmVistaEmp.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmVistaEmp.vb">
+    <Compile Include="Presentacion\frmVistaEmp.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -154,31 +154,31 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddCargo.resx">
+    <EmbeddedResource Include="Presentacion\FrmAddCargo.resx">
       <DependentUpon>FrmAddCargo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddDepartamento.resx">
+    <EmbeddedResource Include="Presentacion\FrmAddDepartamento.resx">
       <DependentUpon>FrmAddDepartamento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddEmpleado.resx">
+    <EmbeddedResource Include="Presentacion\FrmAddEmpleado.resx">
       <DependentUpon>FrmAddEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddEntidad.resx">
+    <EmbeddedResource Include="Presentacion\FrmAddEntidad.resx">
       <DependentUpon>FrmAddEntidad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListarCargo.resx">
+    <EmbeddedResource Include="Presentacion\frmListarCargo.resx">
       <DependentUpon>frmListarCargo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListarDept.resx">
+    <EmbeddedResource Include="Presentacion\frmListarDept.resx">
       <DependentUpon>frmListarDept.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmListarEmp.resx">
+    <EmbeddedResource Include="Presentacion\frmListarEmp.resx">
       <DependentUpon>frmListarEmp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVistaAdmin.resx">
+    <EmbeddedResource Include="Presentacion\FrmVistaAdmin.resx">
       <DependentUpon>FrmVistaAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVistaEmp.resx">
+    <EmbeddedResource Include="Presentacion\frmVistaEmp.resx">
       <DependentUpon>frmVistaEmp.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
