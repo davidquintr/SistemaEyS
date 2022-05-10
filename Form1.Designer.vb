@@ -50,7 +50,7 @@ Partial Class Form1
         Me.Button2.Location = New System.Drawing.Point(246, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(110, 47)
-        Me.Button2.TabIndex = 1
+        Me.Button2.TabIndex = 5
         Me.Button2.Text = "Iniciar sesión"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -59,7 +59,7 @@ Partial Class Form1
         Me.Button1.Location = New System.Drawing.Point(362, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(110, 47)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 6
         Me.Button1.Text = "Cerrar"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -82,16 +82,16 @@ Partial Class Form1
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(258, 113)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(208, 27)
-        Me.TextBox2.TabIndex = 30
+        Me.TextBox2.Size = New System.Drawing.Size(208, 25)
+        Me.TextBox2.TabIndex = 4
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(258, 75)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(208, 27)
-        Me.TextBox1.TabIndex = 29
+        Me.TextBox1.Size = New System.Drawing.Size(208, 25)
+        Me.TextBox1.TabIndex = 2
         '
         'Label2
         '
@@ -99,8 +99,8 @@ Partial Class Form1
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(139, 116)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 20)
-        Me.Label2.TabIndex = 28
+        Me.Label2.Size = New System.Drawing.Size(82, 19)
+        Me.Label2.TabIndex = 3
         Me.Label2.Text = "Contraseña:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -110,8 +110,8 @@ Partial Class Form1
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(139, 78)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 20)
-        Me.Label1.TabIndex = 27
+        Me.Label1.Size = New System.Drawing.Size(59, 19)
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "Usuario:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

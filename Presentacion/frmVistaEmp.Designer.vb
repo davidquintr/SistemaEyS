@@ -62,7 +62,7 @@ Partial Class frmVistaEmp
         Me.Button4.Location = New System.Drawing.Point(41, 200)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(310, 43)
-        Me.Button4.TabIndex = 5
+        Me.Button4.TabIndex = 6
         Me.Button4.Text = "Almuerzo"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -71,7 +71,7 @@ Partial Class frmVistaEmp
         Me.Button2.Location = New System.Drawing.Point(41, 151)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(310, 43)
-        Me.Button2.TabIndex = 4
+        Me.Button2.TabIndex = 5
         Me.Button2.Text = "Marcar salida"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -80,7 +80,7 @@ Partial Class frmVistaEmp
         Me.Button1.Location = New System.Drawing.Point(41, 102)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(310, 43)
-        Me.Button1.TabIndex = 3
+        Me.Button1.TabIndex = 4
         Me.Button1.Text = "Marcar entrada"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -90,8 +90,8 @@ Partial Class frmVistaEmp
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(37, 51)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(195, 20)
-        Me.Label3.TabIndex = 2
+        Me.Label3.Size = New System.Drawing.Size(180, 19)
+        Me.Label3.TabIndex = 3
         Me.Label3.Text = "Tiempo trabajando: HH:MM"
         '
         'Label2
@@ -100,8 +100,8 @@ Partial Class frmVistaEmp
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(37, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 20)
-        Me.Label2.TabIndex = 1
+        Me.Label2.Size = New System.Drawing.Size(165, 19)
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Hora de entrada: HH:MM"
         '
         'Label1
@@ -110,8 +110,8 @@ Partial Class frmVistaEmp
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(37, 11)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 20)
-        Me.Label1.TabIndex = 0
+        Me.Label1.Size = New System.Drawing.Size(137, 19)
+        Me.Label1.TabIndex = 1
         Me.Label1.Text = "Buenos días: nombre"
         '
         'FlowLayoutPanel1
@@ -132,7 +132,7 @@ Partial Class frmVistaEmp
         Me.Button3.Location = New System.Drawing.Point(523, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(73, 47)
-        Me.Button3.TabIndex = 0
+        Me.Button3.TabIndex = 8
         Me.Button3.Text = "Finalizar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -142,7 +142,7 @@ Partial Class frmVistaEmp
         Me.Label4.Location = New System.Drawing.Point(12, 256)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(206, 20)
-        Me.Label4.TabIndex = 6
+        Me.Label4.TabIndex = 7
         Me.Label4.Text = "HH:MM:SS"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
