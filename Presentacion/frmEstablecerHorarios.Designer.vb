@@ -23,10 +23,14 @@ Partial Class frmEstablecerHorarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
@@ -42,15 +46,11 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown10 = New System.Windows.Forms.NumericUpDown()
         Me.NumericUpDown11 = New System.Windows.Forms.NumericUpDown()
         Me.NumericUpDown12 = New System.Windows.Forms.NumericUpDown()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -74,31 +74,31 @@ Partial Class frmEstablecerHorarios
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 154)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(445, 53)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
-        'Button1
+        'btnCerrar
         '
-        Me.Button1.Location = New System.Drawing.Point(369, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(73, 47)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Cerrar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCerrar.Location = New System.Drawing.Point(369, 3)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.Text = "Cerrar"
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnGuardar
         '
-        Me.Button2.Location = New System.Drawing.Point(290, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(73, 47)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Guardar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(290, 3)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
+        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -121,7 +121,7 @@ Partial Class frmEstablecerHorarios
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label9, 4, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 4, 0)
@@ -155,12 +155,48 @@ Partial Class frmEstablecerHorarios
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(433, 93)
         Me.TableLayoutPanel1.TabIndex = 0
         '
+        'Label9
+        '
+        Me.Label9.Location = New System.Drawing.Point(258, 62)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(24, 30)
+        Me.Label9.TabIndex = 24
+        Me.Label9.Text = "-"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(258, 31)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(24, 30)
+        Me.Label8.TabIndex = 23
+        Me.Label8.Text = "-"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(258, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(24, 30)
+        Me.Label7.TabIndex = 22
+        Me.Label7.Text = "-"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(178, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(14, 30)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = ":"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(3, 3)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 24)
+        Me.CheckBox1.Size = New System.Drawing.Size(76, 23)
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "Regular"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -170,7 +206,7 @@ Partial Class frmEstablecerHorarios
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(3, 34)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(79, 24)
+        Me.CheckBox2.Size = New System.Drawing.Size(74, 23)
         Me.CheckBox2.TabIndex = 1
         Me.CheckBox2.Text = "Sábado"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -181,7 +217,7 @@ Partial Class frmEstablecerHorarios
         Me.CheckBox3.Location = New System.Drawing.Point(3, 65)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CheckBox3.Size = New System.Drawing.Size(92, 24)
+        Me.CheckBox3.Size = New System.Drawing.Size(86, 23)
         Me.CheckBox3.TabIndex = 2
         Me.CheckBox3.Text = "Domingo"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -191,7 +227,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown1.Location = New System.Drawing.Point(118, 3)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown1.TabIndex = 3
         Me.NumericUpDown1.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -200,7 +236,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown2.Location = New System.Drawing.Point(118, 34)
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown2.TabIndex = 4
         Me.NumericUpDown2.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -209,7 +245,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown3.Location = New System.Drawing.Point(118, 65)
         Me.NumericUpDown3.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown3.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown3.TabIndex = 5
         Me.NumericUpDown3.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -218,7 +254,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown4.Location = New System.Drawing.Point(198, 3)
         Me.NumericUpDown4.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown4.Name = "NumericUpDown4"
-        Me.NumericUpDown4.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown4.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown4.TabIndex = 6
         Me.NumericUpDown4.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -227,7 +263,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown5.Location = New System.Drawing.Point(198, 34)
         Me.NumericUpDown5.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown5.Name = "NumericUpDown5"
-        Me.NumericUpDown5.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown5.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown5.TabIndex = 7
         Me.NumericUpDown5.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -236,7 +272,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown6.Location = New System.Drawing.Point(198, 65)
         Me.NumericUpDown6.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown6.Name = "NumericUpDown6"
-        Me.NumericUpDown6.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown6.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown6.TabIndex = 8
         Me.NumericUpDown6.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -245,7 +281,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown7.Location = New System.Drawing.Point(368, 3)
         Me.NumericUpDown7.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown7.Name = "NumericUpDown7"
-        Me.NumericUpDown7.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown7.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown7.TabIndex = 9
         Me.NumericUpDown7.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -254,7 +290,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown8.Location = New System.Drawing.Point(368, 34)
         Me.NumericUpDown8.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown8.Name = "NumericUpDown8"
-        Me.NumericUpDown8.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown8.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown8.TabIndex = 10
         Me.NumericUpDown8.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -263,7 +299,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown9.Location = New System.Drawing.Point(368, 65)
         Me.NumericUpDown9.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown9.Name = "NumericUpDown9"
-        Me.NumericUpDown9.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown9.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown9.TabIndex = 11
         Me.NumericUpDown9.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -272,7 +308,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown10.Location = New System.Drawing.Point(288, 3)
         Me.NumericUpDown10.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown10.Name = "NumericUpDown10"
-        Me.NumericUpDown10.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown10.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown10.TabIndex = 12
         Me.NumericUpDown10.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -281,7 +317,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown11.Location = New System.Drawing.Point(288, 34)
         Me.NumericUpDown11.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown11.Name = "NumericUpDown11"
-        Me.NumericUpDown11.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown11.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown11.TabIndex = 13
         Me.NumericUpDown11.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -290,18 +326,9 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown12.Location = New System.Drawing.Point(288, 65)
         Me.NumericUpDown12.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown12.Name = "NumericUpDown12"
-        Me.NumericUpDown12.Size = New System.Drawing.Size(53, 27)
+        Me.NumericUpDown12.Size = New System.Drawing.Size(53, 25)
         Me.NumericUpDown12.TabIndex = 14
         Me.NumericUpDown12.Value = New Decimal(New Integer() {23, 0, 0, 0})
-        '
-        'Label1
-        '
-        Me.Label1.Location = New System.Drawing.Point(178, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(14, 30)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = ":"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -348,33 +375,6 @@ Partial Class frmEstablecerHorarios
         Me.Label6.Text = ":"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
-        '
-        Me.Label7.Location = New System.Drawing.Point(258, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(24, 30)
-        Me.Label7.TabIndex = 22
-        Me.Label7.Text = "-"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label8
-        '
-        Me.Label8.Location = New System.Drawing.Point(258, 31)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(24, 30)
-        Me.Label8.TabIndex = 23
-        Me.Label8.Text = "-"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label9
-        '
-        Me.Label9.Location = New System.Drawing.Point(258, 62)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(24, 30)
-        Me.Label9.TabIndex = 24
-        Me.Label9.Text = "-"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'frmEstablecerHorarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -405,8 +405,8 @@ Partial Class frmEstablecerHorarios
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnGuardar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label9 As Label

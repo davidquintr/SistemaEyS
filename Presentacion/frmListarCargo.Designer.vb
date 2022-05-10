@@ -23,10 +23,10 @@ Partial Class frmListarCargo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnHorario = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -50,51 +50,51 @@ Partial Class frmListarCargo
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button3)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button4)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button5)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button6)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnHorario)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 226)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(518, 53)
         Me.FlowLayoutPanel1.TabIndex = 18
         '
-        'Button3
+        'btnCerrar
         '
-        Me.Button3.Location = New System.Drawing.Point(442, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(73, 47)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Cerrar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnCerrar.Location = New System.Drawing.Point(442, 3)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.Text = "Cerrar"
+        Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnGuardar
         '
-        Me.Button4.Location = New System.Drawing.Point(363, 3)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(73, 47)
-        Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Guardar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnGuardar.Location = New System.Drawing.Point(363, 3)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
+        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btnHorario
         '
-        Me.Button5.Location = New System.Drawing.Point(284, 3)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(73, 47)
-        Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Horario"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnHorario.Location = New System.Drawing.Point(284, 3)
+        Me.btnHorario.Name = "btnHorario"
+        Me.btnHorario.Size = New System.Drawing.Size(73, 47)
+        Me.btnHorario.TabIndex = 2
+        Me.btnHorario.Text = "Horario"
+        Me.btnHorario.UseVisualStyleBackColor = True
         '
-        'Button6
+        'btnEliminar
         '
-        Me.Button6.Location = New System.Drawing.Point(205, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(73, 47)
-        Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Eliminar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(205, 3)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(73, 47)
+        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Label29
         '
@@ -132,7 +132,7 @@ Partial Class frmListarCargo
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(12, 189)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(289, 31)
+        Me.ComboBox1.Size = New System.Drawing.Size(289, 28)
         Me.ComboBox1.TabIndex = 14
         '
         'GroupBox1
@@ -170,7 +170,7 @@ Partial Class frmListarCargo
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(30, 120)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(75, 20)
+        Me.Label14.Size = New System.Drawing.Size(68, 19)
         Me.Label14.TabIndex = 26
         Me.Label14.Text = "Dirección:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -181,7 +181,7 @@ Partial Class frmListarCargo
         Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.Location = New System.Drawing.Point(212, 90)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(255, 20)
+        Me.Label24.Size = New System.Drawing.Size(237, 19)
         Me.Label24.TabIndex = 15
         Me.Label24.Text = "Ordinarios / Administrador / Maestro"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -192,7 +192,7 @@ Partial Class frmListarCargo
         Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.Location = New System.Drawing.Point(212, 60)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(125, 20)
+        Me.Label25.Size = New System.Drawing.Size(112, 19)
         Me.Label25.TabIndex = 14
         Me.Label25.Text = "Texto de ejemplo"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -203,7 +203,7 @@ Partial Class frmListarCargo
         Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.Location = New System.Drawing.Point(212, 30)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(81, 20)
+        Me.Label26.Size = New System.Drawing.Size(73, 19)
         Me.Label26.TabIndex = 13
         Me.Label26.Text = "XXXXXXXX"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -214,7 +214,7 @@ Partial Class frmListarCargo
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(30, 90)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 20)
+        Me.Label3.Size = New System.Drawing.Size(73, 19)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Privilegios:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -225,7 +225,7 @@ Partial Class frmListarCargo
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(30, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 20)
+        Me.Label2.Size = New System.Drawing.Size(68, 19)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nombres:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -236,7 +236,7 @@ Partial Class frmListarCargo
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(30, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(27, 20)
+        Me.Label1.Size = New System.Drawing.Size(26, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -262,10 +262,10 @@ Partial Class frmListarCargo
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnHorario As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents Label29 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
