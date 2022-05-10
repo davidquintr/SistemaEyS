@@ -27,6 +27,10 @@ Partial Class FrmAddEmpleado
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnDarDeBaja = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -48,10 +52,6 @@ Partial Class FrmAddEmpleado
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -132,6 +132,45 @@ Partial Class FrmAddEmpleado
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar empleado"
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.Location = New System.Drawing.Point(657, 67)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(100, 25)
+        Me.RadioButton2.TabIndex = 25
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Femenino"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.Location = New System.Drawing.Point(553, 67)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(100, 25)
+        Me.RadioButton1.TabIndex = 24
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Masculino"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(173, 268)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(208, 25)
+        Me.TextBox6.TabIndex = 23
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(30, 270)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(100, 19)
+        Me.Label11.TabIndex = 22
+        Me.Label11.Text = "Email personal:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RichTextBox2
         '
@@ -332,45 +371,6 @@ Partial Class FrmAddEmpleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(173, 268)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox6.TabIndex = 23
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(30, 270)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(100, 19)
-        Me.Label11.TabIndex = 22
-        Me.Label11.Text = "Email personal:"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.Location = New System.Drawing.Point(553, 67)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(100, 25)
-        Me.RadioButton1.TabIndex = 24
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Masculino"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.Location = New System.Drawing.Point(657, 67)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(100, 25)
-        Me.RadioButton2.TabIndex = 25
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Femenino"
-        Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'FrmAddEmpleado
         '
