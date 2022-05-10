@@ -75,7 +75,7 @@ Partial Class FrmVistaAdmin
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Location = New System.Drawing.Point(9, 472)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(206, 112)
+        Me.Panel4.Size = New System.Drawing.Size(248, 112)
         Me.Panel4.TabIndex = 2
         '
         'Panel3
@@ -83,7 +83,7 @@ Partial Class FrmVistaAdmin
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel3.Location = New System.Drawing.Point(9, 225)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(206, 33)
+        Me.Panel3.Size = New System.Drawing.Size(248, 33)
         Me.Panel3.TabIndex = 1
         '
         'MonthCalendar1
@@ -97,7 +97,7 @@ Partial Class FrmVistaAdmin
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Location = New System.Drawing.Point(9, 13)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(206, 206)
+        Me.Panel1.Size = New System.Drawing.Size(248, 206)
         Me.Panel1.TabIndex = 0
         '
         'MenuStrip1
@@ -234,9 +234,9 @@ Partial Class FrmVistaAdmin
         Me.Panel8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel8.Location = New System.Drawing.Point(242, 535)
+        Me.Panel8.Location = New System.Drawing.Point(283, 535)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(688, 100)
+        Me.Panel8.Size = New System.Drawing.Size(647, 100)
         Me.Panel8.TabIndex = 7
         '
         'Panel7
@@ -245,9 +245,9 @@ Partial Class FrmVistaAdmin
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel7.Location = New System.Drawing.Point(242, 92)
+        Me.Panel7.Location = New System.Drawing.Point(283, 92)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(688, 437)
+        Me.Panel7.Size = New System.Drawing.Size(647, 437)
         Me.Panel7.TabIndex = 6
         '
         'Panel6
@@ -255,9 +255,9 @@ Partial Class FrmVistaAdmin
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel6.Location = New System.Drawing.Point(242, 30)
+        Me.Panel6.Location = New System.Drawing.Point(283, 30)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(688, 56)
+        Me.Panel6.Size = New System.Drawing.Size(647, 56)
         Me.Panel6.TabIndex = 6
         '
         'FrmVistaAdmin
