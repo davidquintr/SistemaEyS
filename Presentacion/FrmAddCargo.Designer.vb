@@ -84,7 +84,7 @@ Partial Class FrmAddCargo
         'txbNombre
         '
         Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(140, 66)
+        Me.txbNombre.Location = New System.Drawing.Point(149, 66)
         Me.txbNombre.Name = "txbNombre"
         Me.txbNombre.Size = New System.Drawing.Size(208, 25)
         Me.txbNombre.TabIndex = 26
