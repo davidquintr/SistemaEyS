@@ -14,5 +14,6 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         FrmVistaAdmin.Show()
+        MessageBox.Show("Inicio de sesión autorizado", "Confirmación")
     End Sub
 End Class
