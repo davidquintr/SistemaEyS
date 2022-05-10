@@ -253,6 +253,7 @@ Partial Class frmListarCargo
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmListarCargo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmListarCargo"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

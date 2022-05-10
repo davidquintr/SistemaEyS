@@ -540,6 +540,7 @@ Partial Class frmListarEmp
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmListarEmp"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmListarEmp"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

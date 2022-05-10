@@ -174,6 +174,7 @@ Partial Class frmEstablecerEventos
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Name = "frmEstablecerEventos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmEstablecerEventos"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

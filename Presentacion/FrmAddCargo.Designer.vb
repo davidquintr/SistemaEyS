@@ -221,6 +221,7 @@ Partial Class FrmAddCargo
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmAddCargo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddCargo"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

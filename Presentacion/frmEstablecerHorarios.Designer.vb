@@ -383,6 +383,7 @@ Partial Class frmEstablecerHorarios
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Name = "frmEstablecerHorarios"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmEstablecerHorarios"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

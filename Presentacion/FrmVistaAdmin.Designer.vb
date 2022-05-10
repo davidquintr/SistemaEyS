@@ -272,6 +272,7 @@ Partial Class FrmVistaAdmin
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmVistaAdmin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmVistaAdmin2"
         Me.Panel2.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)

@@ -344,6 +344,7 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmAddEmpleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddEmpleado"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

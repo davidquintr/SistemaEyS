@@ -218,6 +218,7 @@ Partial Class FrmAddDepartamento
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmAddDepartamento"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddDepartamento"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

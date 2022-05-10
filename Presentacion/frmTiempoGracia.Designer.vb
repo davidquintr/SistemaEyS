@@ -105,6 +105,7 @@ Partial Class frmTiempoGracia
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Name = "frmTiempoGracia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmTiempoGracia"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

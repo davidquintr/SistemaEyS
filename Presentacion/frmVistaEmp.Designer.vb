@@ -156,6 +156,7 @@ Partial Class frmVistaEmp
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "frmVistaEmp"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmVistaEmp"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

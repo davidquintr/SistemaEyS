@@ -154,6 +154,7 @@ Partial Class frmParametrosGen
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmParametrosGen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmParametrosGen"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
