@@ -25,4 +25,16 @@
     Private Sub EmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem.Click
         FrmAddEmpleado.Show()
     End Sub
+
+    Private Sub DepartamentoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem1.Click
+        frmListarDept.Show()
+    End Sub
+
+    Private Sub CargoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CargoToolStripMenuItem1.Click
+        frmListarCargo.Show()
+    End Sub
+
+    Private Sub EmpleadoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem1.Click
+        frmListarEmp.Show()
+    End Sub
 End Class
