@@ -52,7 +52,7 @@ Partial Class frmTiempoGracia
         Me.btnCerrar.Location = New System.Drawing.Point(288, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 3
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -61,7 +61,7 @@ Partial Class frmTiempoGracia
         Me.btnGuardar.Location = New System.Drawing.Point(209, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
-        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.TabIndex = 2
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -73,7 +73,7 @@ Partial Class frmTiempoGracia
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(364, 108)
-        Me.GroupBox1.TabIndex = 4
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tiempo de gracia"
         '

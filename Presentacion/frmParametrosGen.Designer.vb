@@ -53,7 +53,7 @@ Partial Class frmParametrosGen
         Me.Button3.Location = New System.Drawing.Point(3, 3)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(552, 51)
-        Me.Button3.TabIndex = 0
+        Me.Button3.TabIndex = 3
         Me.Button3.Text = "Botón de ejemplo"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -71,7 +71,7 @@ Partial Class frmParametrosGen
         Me.Button2.Location = New System.Drawing.Point(3, 86)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(402, 77)
-        Me.Button2.TabIndex = 1
+        Me.Button2.TabIndex = 4
         Me.Button2.Text = "Ajustes extras"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -80,7 +80,7 @@ Partial Class frmParametrosGen
         Me.Button1.Location = New System.Drawing.Point(3, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(402, 77)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Establecer eventos"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -108,7 +108,7 @@ Partial Class frmParametrosGen
         Me.Panel3.Location = New System.Drawing.Point(426, 12)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(555, 43)
-        Me.Panel3.TabIndex = 3
+        Me.Panel3.TabIndex = 1
         '
         'Label2
         '
@@ -138,7 +138,7 @@ Partial Class frmParametrosGen
         Me.btnCerrar.Location = New System.Drawing.Point(479, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 5
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
