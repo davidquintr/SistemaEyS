@@ -25,17 +25,11 @@ Partial Class frmListarEmp
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -48,11 +42,17 @@ Partial Class frmListarEmp
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -128,126 +128,60 @@ Partial Class frmListarEmp
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listar empleado"
         '
-        'Label3
+        'Label28
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(30, 90)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Apellidos:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(212, 330)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(125, 20)
+        Me.Label28.TabIndex = 29
+        Me.Label28.Text = "Texto de ejemplo"
+        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label4
+        'Label27
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(30, 120)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 20)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Sexo:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(30, 330)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(124, 20)
+        Me.Label27.TabIndex = 28
+        Me.Label27.Text = "Fecha de ingreso:"
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label5
+        'RichTextBox2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(30, 150)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 20)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Cédula:"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox2.Enabled = False
+        Me.RichTextBox2.Location = New System.Drawing.Point(216, 467)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
+        Me.RichTextBox2.TabIndex = 27
+        Me.RichTextBox2.Text = ""
         '
-        'Label6
+        'Label14
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(30, 180)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(109, 20)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Departamento:"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(30, 467)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(75, 20)
+        Me.Label14.TabIndex = 26
+        Me.Label14.Text = "Dirección:"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label7
+        'RichTextBox1
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(30, 210)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 20)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Cargo:"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(30, 240)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(130, 20)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Email corporativo:"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(30, 270)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(110, 20)
-        Me.Label9.TabIndex = 8
-        Me.Label9.Text = "Email personal:"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(30, 300)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(149, 20)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Fecha de nacimiento:"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(30, 360)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 20)
-        Me.Label11.TabIndex = 10
-        Me.Label11.Text = "Actividad:"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(30, 390)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(70, 20)
-        Me.Label12.TabIndex = 11
-        Me.Label12.Text = "Teléfono:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(30, 420)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(94, 20)
-        Me.Label13.TabIndex = 12
-        Me.Label13.Text = "Observación:"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Window
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.RichTextBox1.Enabled = False
+        Me.RichTextBox1.Location = New System.Drawing.Point(216, 420)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(269, 38)
+        Me.RichTextBox1.TabIndex = 25
+        Me.RichTextBox1.Text = ""
         '
         'Label15
         '
@@ -381,60 +315,126 @@ Partial Class frmListarEmp
         Me.Label26.Text = "XXXXXXXX"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RichTextBox1
+        'Label13
         '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox1.Enabled = False
-        Me.RichTextBox1.Location = New System.Drawing.Point(216, 420)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox1.TabIndex = 25
-        Me.RichTextBox1.Text = ""
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(30, 420)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(94, 20)
+        Me.Label13.TabIndex = 12
+        Me.Label13.Text = "Observación:"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RichTextBox2
+        'Label12
         '
-        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Enabled = False
-        Me.RichTextBox2.Location = New System.Drawing.Point(216, 467)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox2.TabIndex = 27
-        Me.RichTextBox2.Text = ""
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(30, 390)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(70, 20)
+        Me.Label12.TabIndex = 11
+        Me.Label12.Text = "Teléfono:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label14
+        'Label11
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(30, 467)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(75, 20)
-        Me.Label14.TabIndex = 26
-        Me.Label14.Text = "Dirección:"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(30, 360)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(75, 20)
+        Me.Label11.TabIndex = 10
+        Me.Label11.Text = "Actividad:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label27
+        'Label10
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(30, 330)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(124, 20)
-        Me.Label27.TabIndex = 28
-        Me.Label27.Text = "Fecha de ingreso:"
-        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(30, 300)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(149, 20)
+        Me.Label10.TabIndex = 9
+        Me.Label10.Text = "Fecha de nacimiento:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label28
+        'Label9
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(212, 330)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(125, 20)
-        Me.Label28.TabIndex = 29
-        Me.Label28.Text = "Texto de ejemplo"
-        Me.Label28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(30, 270)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(110, 20)
+        Me.Label9.TabIndex = 8
+        Me.Label9.Text = "Email personal:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(30, 240)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(130, 20)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "Email corporativo:"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(30, 210)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 20)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Cargo:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(30, 180)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(109, 20)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Departamento:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(30, 150)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 20)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Cédula:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(30, 120)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(44, 20)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Sexo:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(30, 90)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Apellidos:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ComboBox1
         '
@@ -493,38 +493,38 @@ Partial Class frmListarEmp
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(442, 3)
+        Me.Button3.Location = New System.Drawing.Point(425, 3)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(73, 47)
+        Me.Button3.Size = New System.Drawing.Size(90, 47)
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Cerrar"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(363, 3)
+        Me.Button4.Location = New System.Drawing.Point(329, 3)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(73, 47)
+        Me.Button4.Size = New System.Drawing.Size(90, 47)
         Me.Button4.TabIndex = 1
-        Me.Button4.Text = "Guardar"
+        Me.Button4.Text = "Generar reporte"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(284, 3)
+        Me.Button5.Location = New System.Drawing.Point(233, 3)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(73, 47)
+        Me.Button5.Size = New System.Drawing.Size(90, 47)
         Me.Button5.TabIndex = 2
-        Me.Button5.Text = "Horario"
+        Me.Button5.Text = "Administrar"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(205, 3)
+        Me.Button6.Location = New System.Drawing.Point(137, 3)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(73, 47)
+        Me.Button6.Size = New System.Drawing.Size(90, 47)
         Me.Button6.TabIndex = 3
-        Me.Button6.Text = "Eliminar"
+        Me.Button6.Text = "Operaciones Extraordinarias"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'frmListarEmp

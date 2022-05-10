@@ -24,14 +24,14 @@ Partial Class frmVistaEmp
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -39,7 +39,6 @@ Partial Class frmVistaEmp
         '
         'Panel1
         '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Location = New System.Drawing.Point(12, 44)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(206, 206)
@@ -47,7 +46,6 @@ Partial Class frmVistaEmp
         '
         'Panel2
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
@@ -59,15 +57,42 @@ Partial Class frmVistaEmp
         Me.Panel2.Size = New System.Drawing.Size(387, 306)
         Me.Panel2.TabIndex = 1
         '
-        'Label1
+        'Button4
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(37, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Buenos días: nombre"
+        Me.Button4.Location = New System.Drawing.Point(41, 200)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(310, 43)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Almuerzo"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(41, 151)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(310, 43)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Marcar salida"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(41, 102)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(310, 43)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Marcar entrada"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(37, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(195, 20)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Tiempo trabajando: HH:MM"
         '
         'Label2
         '
@@ -79,15 +104,15 @@ Partial Class frmVistaEmp
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Hora de entrada: HH:MM"
         '
-        'Label3
+        'Label1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(37, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(195, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Tiempo trabajando: HH:MM"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(37, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(147, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Buenos días: nombre"
         '
         'FlowLayoutPanel1
         '
@@ -110,33 +135,6 @@ Partial Class frmVistaEmp
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Finalizar"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(41, 102)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(310, 43)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Marcar entrada"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(41, 151)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(310, 43)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Marcar salida"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(41, 200)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(310, 43)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Almuerzo"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'Label4
         '

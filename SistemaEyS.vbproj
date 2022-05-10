@@ -98,10 +98,16 @@
     <Compile Include="Presentacion\FrmAddEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\FrmAddEntidad.Designer.vb">
-      <DependentUpon>FrmAddEntidad.vb</DependentUpon>
+    <Compile Include="Presentacion\frmEstablecerEventos.Designer.vb">
+      <DependentUpon>frmEstablecerEventos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmAddEntidad.vb">
+    <Compile Include="Presentacion\frmEstablecerEventos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmEstablecerHorarios.Designer.vb">
+      <DependentUpon>frmEstablecerHorarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmEstablecerHorarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmListarCargo.Designer.vb">
@@ -120,6 +126,18 @@
       <DependentUpon>frmListarEmp.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmListarEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmParametrosGen.Designer.vb">
+      <DependentUpon>frmParametrosGen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmParametrosGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmTiempoGracia.Designer.vb">
+      <DependentUpon>frmTiempoGracia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmTiempoGracia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmVistaAdmin.Designer.vb">
@@ -163,8 +181,11 @@
     <EmbeddedResource Include="Presentacion\FrmAddEmpleado.resx">
       <DependentUpon>FrmAddEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmAddEntidad.resx">
-      <DependentUpon>FrmAddEntidad.vb</DependentUpon>
+    <EmbeddedResource Include="Presentacion\frmEstablecerEventos.resx">
+      <DependentUpon>frmEstablecerEventos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmEstablecerHorarios.resx">
+      <DependentUpon>frmEstablecerHorarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmListarCargo.resx">
       <DependentUpon>frmListarCargo.vb</DependentUpon>
@@ -174,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmListarEmp.resx">
       <DependentUpon>frmListarEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmParametrosGen.resx">
+      <DependentUpon>frmParametrosGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmTiempoGracia.resx">
+      <DependentUpon>frmTiempoGracia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmVistaAdmin.resx">
       <DependentUpon>FrmVistaAdmin.vb</DependentUpon>

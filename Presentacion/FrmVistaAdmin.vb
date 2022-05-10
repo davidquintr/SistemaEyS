@@ -1,6 +1,5 @@
 ﻿Public Class FrmVistaAdmin
     Private Sub AñadirEntidadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirEntidadToolStripMenuItem.Click
-        FrmAddEntidad.Show()
     End Sub
 
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -9,5 +8,21 @@
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
+    End Sub
+
+    Private Sub ParámetrosGeneralesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ParámetrosGeneralesToolStripMenuItem.Click
+        frmParametrosGen.Show()
+    End Sub
+
+    Private Sub DepartamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem.Click
+        FrmAddDepartamento.Show()
+    End Sub
+
+    Private Sub CargoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CargoToolStripMenuItem.Click
+        FrmAddCargo.Show()
+    End Sub
+
+    Private Sub EmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem.Click
+        FrmAddEmpleado.Show()
     End Sub
 End Class
