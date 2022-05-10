@@ -173,6 +173,8 @@ Partial Class frmEstablecerEventos
         Me.ClientSize = New System.Drawing.Size(601, 284)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmEstablecerEventos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmEstablecerEventos"

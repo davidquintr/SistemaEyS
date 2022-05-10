@@ -382,6 +382,8 @@ Partial Class frmEstablecerHorarios
         Me.ClientSize = New System.Drawing.Size(463, 219)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmEstablecerHorarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmEstablecerHorarios"
