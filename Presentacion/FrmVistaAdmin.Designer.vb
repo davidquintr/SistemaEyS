@@ -66,16 +66,16 @@ Partial Class FrmVistaAdmin
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Location = New System.Drawing.Point(12, 30)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(270, 607)
+        Me.Panel2.Size = New System.Drawing.Size(270, 605)
         Me.Panel2.TabIndex = 1
         '
         'Panel4
         '
         Me.Panel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel4.Location = New System.Drawing.Point(9, 472)
+        Me.Panel4.Location = New System.Drawing.Point(9, 444)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(248, 112)
+        Me.Panel4.Size = New System.Drawing.Size(248, 147)
         Me.Panel4.TabIndex = 2
         '
         'Panel3
@@ -152,19 +152,19 @@ Partial Class FrmVistaAdmin
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ParámetrosGeneralesToolStripMenuItem
@@ -271,6 +271,7 @@ Partial Class FrmVistaAdmin
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MinimumSize = New System.Drawing.Size(958, 686)
         Me.Name = "FrmVistaAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmVistaAdmin2"

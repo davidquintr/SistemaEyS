@@ -32,7 +32,6 @@ Partial Class FrmAddEmpleado
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -49,6 +48,10 @@ Partial Class FrmAddEmpleado
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -63,7 +66,7 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 354)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 326)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(787, 53)
         Me.FlowLayoutPanel1.TabIndex = 4
@@ -97,12 +100,15 @@ Partial Class FrmAddEmpleado
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.RadioButton2)
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.RichTextBox2)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
@@ -122,16 +128,16 @@ Partial Class FrmAddEmpleado
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(787, 336)
+        Me.GroupBox1.Size = New System.Drawing.Size(787, 308)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar empleado"
         '
         'RichTextBox2
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(549, 147)
+        Me.RichTextBox2.Location = New System.Drawing.Point(549, 148)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(208, 54)
+        Me.RichTextBox2.Size = New System.Drawing.Size(208, 65)
         Me.RichTextBox2.TabIndex = 15
         Me.RichTextBox2.Text = ""
         '
@@ -159,7 +165,7 @@ Partial Class FrmAddEmpleado
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(549, 107)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(549, 108)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(208, 25)
         Me.DateTimePicker1.TabIndex = 11
@@ -175,18 +181,10 @@ Partial Class FrmAddEmpleado
         Me.Label8.Text = "Sexo:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(549, 67)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(208, 25)
-        Me.ComboBox3.TabIndex = 7
-        '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(549, 27)
+        Me.TextBox5.Location = New System.Drawing.Point(549, 28)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(208, 25)
         Me.TextBox5.TabIndex = 3
@@ -205,7 +203,7 @@ Partial Class FrmAddEmpleado
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(173, 227)
+        Me.TextBox4.Location = New System.Drawing.Point(173, 224)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(208, 25)
         Me.TextBox4.TabIndex = 19
@@ -224,7 +222,7 @@ Partial Class FrmAddEmpleado
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(173, 107)
+        Me.TextBox3.Location = New System.Drawing.Point(173, 108)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(208, 25)
         Me.TextBox3.TabIndex = 9
@@ -254,7 +252,7 @@ Partial Class FrmAddEmpleado
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(173, 187)
+        Me.ComboBox2.Location = New System.Drawing.Point(173, 188)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(208, 25)
         Me.ComboBox2.TabIndex = 17
@@ -273,7 +271,7 @@ Partial Class FrmAddEmpleado
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(173, 147)
+        Me.ComboBox1.Location = New System.Drawing.Point(173, 148)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(208, 25)
         Me.ComboBox1.TabIndex = 13
@@ -281,16 +279,16 @@ Partial Class FrmAddEmpleado
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(173, 67)
+        Me.TextBox2.Location = New System.Drawing.Point(173, 68)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(208, 25)
         Me.TextBox2.TabIndex = 5
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(175, 267)
+        Me.RichTextBox1.Location = New System.Drawing.Point(549, 228)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(208, 54)
+        Me.RichTextBox1.Size = New System.Drawing.Size(208, 65)
         Me.RichTextBox1.TabIndex = 21
         Me.RichTextBox1.Text = ""
         '
@@ -298,7 +296,7 @@ Partial Class FrmAddEmpleado
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(30, 270)
+        Me.Label12.Location = New System.Drawing.Point(406, 226)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(68, 19)
         Me.Label12.TabIndex = 20
@@ -308,7 +306,7 @@ Partial Class FrmAddEmpleado
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(173, 27)
+        Me.TextBox1.Location = New System.Drawing.Point(173, 28)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(208, 25)
         Me.TextBox1.TabIndex = 1
@@ -335,14 +333,54 @@ Partial Class FrmAddEmpleado
         Me.Label1.Text = "ID:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'TextBox6
+        '
+        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(173, 268)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(208, 25)
+        Me.TextBox6.TabIndex = 23
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(30, 270)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(100, 19)
+        Me.Label11.TabIndex = 22
+        Me.Label11.Text = "Email personal:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.Location = New System.Drawing.Point(553, 67)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(100, 25)
+        Me.RadioButton1.TabIndex = 24
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Masculino"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.Location = New System.Drawing.Point(657, 67)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(100, 25)
+        Me.RadioButton2.TabIndex = 25
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Femenino"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
         'FrmAddEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(811, 419)
+        Me.ClientSize = New System.Drawing.Size(811, 391)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "FrmAddEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddEmpleado"
@@ -377,7 +415,10 @@ Partial Class FrmAddEmpleado
     Friend WithEvents Label9 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label11 As Label
 End Class
