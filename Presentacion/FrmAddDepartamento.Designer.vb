@@ -144,7 +144,7 @@ Partial Class FrmAddDepartamento
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(130, 66)
+        Me.TextBox2.Location = New System.Drawing.Point(148, 66)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(208, 25)
         Me.TextBox2.TabIndex = 26
