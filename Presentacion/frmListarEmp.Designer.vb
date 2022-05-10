@@ -135,7 +135,7 @@ Partial Class frmListarEmp
         Me.lblFechaIng.Location = New System.Drawing.Point(212, 330)
         Me.lblFechaIng.Name = "lblFechaIng"
         Me.lblFechaIng.Size = New System.Drawing.Size(112, 19)
-        Me.lblFechaIng.TabIndex = 29
+        Me.lblFechaIng.TabIndex = 21
         Me.lblFechaIng.Text = "Texto de ejemplo"
         Me.lblFechaIng.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -146,7 +146,7 @@ Partial Class frmListarEmp
         Me.Label27.Location = New System.Drawing.Point(30, 330)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(115, 19)
-        Me.Label27.TabIndex = 28
+        Me.Label27.TabIndex = 20
         Me.Label27.Text = "Fecha de ingreso:"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -158,7 +158,7 @@ Partial Class frmListarEmp
         Me.RichTextBox2.Location = New System.Drawing.Point(216, 467)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox2.TabIndex = 27
+        Me.RichTextBox2.TabIndex = 29
         Me.RichTextBox2.Text = ""
         '
         'Label14
@@ -168,7 +168,7 @@ Partial Class frmListarEmp
         Me.Label14.Location = New System.Drawing.Point(30, 467)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(68, 19)
-        Me.Label14.TabIndex = 26
+        Me.Label14.TabIndex = 28
         Me.Label14.Text = "Dirección:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -180,7 +180,7 @@ Partial Class frmListarEmp
         Me.RichTextBox1.Location = New System.Drawing.Point(216, 420)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox1.TabIndex = 25
+        Me.RichTextBox1.TabIndex = 27
         Me.RichTextBox1.Text = ""
         '
         'lblTelefono
@@ -190,7 +190,7 @@ Partial Class frmListarEmp
         Me.lblTelefono.Location = New System.Drawing.Point(212, 390)
         Me.lblTelefono.Name = "lblTelefono"
         Me.lblTelefono.Size = New System.Drawing.Size(112, 19)
-        Me.lblTelefono.TabIndex = 24
+        Me.lblTelefono.TabIndex = 25
         Me.lblTelefono.Text = "Texto de ejemplo"
         Me.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -212,7 +212,7 @@ Partial Class frmListarEmp
         Me.lblFechaNac.Location = New System.Drawing.Point(212, 300)
         Me.lblFechaNac.Name = "lblFechaNac"
         Me.lblFechaNac.Size = New System.Drawing.Size(112, 19)
-        Me.lblFechaNac.TabIndex = 22
+        Me.lblFechaNac.TabIndex = 19
         Me.lblFechaNac.Text = "Texto de ejemplo"
         Me.lblFechaNac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -223,7 +223,7 @@ Partial Class frmListarEmp
         Me.lblEmailPer.Location = New System.Drawing.Point(212, 270)
         Me.lblEmailPer.Name = "lblEmailPer"
         Me.lblEmailPer.Size = New System.Drawing.Size(112, 19)
-        Me.lblEmailPer.TabIndex = 21
+        Me.lblEmailPer.TabIndex = 17
         Me.lblEmailPer.Text = "Texto de ejemplo"
         Me.lblEmailPer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -234,7 +234,7 @@ Partial Class frmListarEmp
         Me.lblEmailCorp.Location = New System.Drawing.Point(212, 240)
         Me.lblEmailCorp.Name = "lblEmailCorp"
         Me.lblEmailCorp.Size = New System.Drawing.Size(112, 19)
-        Me.lblEmailCorp.TabIndex = 20
+        Me.lblEmailCorp.TabIndex = 15
         Me.lblEmailCorp.Text = "Texto de ejemplo"
         Me.lblEmailCorp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -245,7 +245,7 @@ Partial Class frmListarEmp
         Me.lblCargo.Location = New System.Drawing.Point(212, 210)
         Me.lblCargo.Name = "lblCargo"
         Me.lblCargo.Size = New System.Drawing.Size(112, 19)
-        Me.lblCargo.TabIndex = 19
+        Me.lblCargo.TabIndex = 13
         Me.lblCargo.Text = "Texto de ejemplo"
         Me.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -256,7 +256,7 @@ Partial Class frmListarEmp
         Me.lblDepartamento.Location = New System.Drawing.Point(212, 180)
         Me.lblDepartamento.Name = "lblDepartamento"
         Me.lblDepartamento.Size = New System.Drawing.Size(112, 19)
-        Me.lblDepartamento.TabIndex = 18
+        Me.lblDepartamento.TabIndex = 11
         Me.lblDepartamento.Text = "Texto de ejemplo"
         Me.lblDepartamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -267,7 +267,7 @@ Partial Class frmListarEmp
         Me.lblCedula.Location = New System.Drawing.Point(212, 150)
         Me.lblCedula.Name = "lblCedula"
         Me.lblCedula.Size = New System.Drawing.Size(125, 19)
-        Me.lblCedula.TabIndex = 17
+        Me.lblCedula.TabIndex = 9
         Me.lblCedula.Text = "XXX-XXXXXX-XXXX"
         Me.lblCedula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -278,7 +278,7 @@ Partial Class frmListarEmp
         Me.lblSexo.Location = New System.Drawing.Point(212, 120)
         Me.lblSexo.Name = "lblSexo"
         Me.lblSexo.Size = New System.Drawing.Size(34, 19)
-        Me.lblSexo.TabIndex = 16
+        Me.lblSexo.TabIndex = 7
         Me.lblSexo.Text = "M/F"
         Me.lblSexo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -322,7 +322,7 @@ Partial Class frmListarEmp
         Me.Label13.Location = New System.Drawing.Point(30, 420)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(88, 19)
-        Me.Label13.TabIndex = 12
+        Me.Label13.TabIndex = 26
         Me.Label13.Text = "Observación:"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -333,7 +333,7 @@ Partial Class frmListarEmp
         Me.Label12.Location = New System.Drawing.Point(30, 390)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(63, 19)
-        Me.Label12.TabIndex = 11
+        Me.Label12.TabIndex = 24
         Me.Label12.Text = "Teléfono:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -344,7 +344,7 @@ Partial Class frmListarEmp
         Me.Label11.Location = New System.Drawing.Point(30, 360)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(68, 19)
-        Me.Label11.TabIndex = 10
+        Me.Label11.TabIndex = 22
         Me.Label11.Text = "Actividad:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -355,7 +355,7 @@ Partial Class frmListarEmp
         Me.Label10.Location = New System.Drawing.Point(30, 300)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(137, 19)
-        Me.Label10.TabIndex = 9
+        Me.Label10.TabIndex = 18
         Me.Label10.Text = "Fecha de nacimiento:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -366,7 +366,7 @@ Partial Class frmListarEmp
         Me.Label9.Location = New System.Drawing.Point(30, 270)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(100, 19)
-        Me.Label9.TabIndex = 8
+        Me.Label9.TabIndex = 16
         Me.Label9.Text = "Email personal:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -377,7 +377,7 @@ Partial Class frmListarEmp
         Me.Label8.Location = New System.Drawing.Point(30, 240)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(118, 19)
-        Me.Label8.TabIndex = 7
+        Me.Label8.TabIndex = 14
         Me.Label8.Text = "Email corporativo:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -388,7 +388,7 @@ Partial Class frmListarEmp
         Me.Label7.Location = New System.Drawing.Point(30, 210)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 19)
-        Me.Label7.TabIndex = 6
+        Me.Label7.TabIndex = 12
         Me.Label7.Text = "Cargo:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -399,7 +399,7 @@ Partial Class frmListarEmp
         Me.Label6.Location = New System.Drawing.Point(30, 180)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(101, 19)
-        Me.Label6.TabIndex = 5
+        Me.Label6.TabIndex = 10
         Me.Label6.Text = "Departamento:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -410,7 +410,7 @@ Partial Class frmListarEmp
         Me.Label5.Location = New System.Drawing.Point(30, 150)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(54, 19)
-        Me.Label5.TabIndex = 4
+        Me.Label5.TabIndex = 8
         Me.Label5.Text = "Cédula:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -443,7 +443,7 @@ Partial Class frmListarEmp
         Me.ComboBox1.Location = New System.Drawing.Point(12, 538)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(289, 28)
-        Me.ComboBox1.TabIndex = 3
+        Me.ComboBox1.TabIndex = 30
         '
         'Button1
         '
@@ -451,7 +451,7 @@ Partial Class frmListarEmp
         Me.Button1.Name = "Button1"
         Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button1.Size = New System.Drawing.Size(31, 31)
-        Me.Button1.TabIndex = 4
+        Me.Button1.TabIndex = 31
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -461,7 +461,7 @@ Partial Class frmListarEmp
         Me.Button2.Name = "Button2"
         Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button2.Size = New System.Drawing.Size(31, 31)
-        Me.Button2.TabIndex = 5
+        Me.Button2.TabIndex = 33
         Me.Button2.Text = ">"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -471,7 +471,7 @@ Partial Class frmListarEmp
         Me.Label29.Location = New System.Drawing.Point(344, 538)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(146, 32)
-        Me.Label29.TabIndex = 6
+        Me.Label29.TabIndex = 32
         Me.Label29.Text = "999/999"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -496,7 +496,7 @@ Partial Class frmListarEmp
         Me.btnCerrar.Location = New System.Drawing.Point(425, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(90, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 37
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -505,7 +505,7 @@ Partial Class frmListarEmp
         Me.btnReporte.Location = New System.Drawing.Point(329, 3)
         Me.btnReporte.Name = "btnReporte"
         Me.btnReporte.Size = New System.Drawing.Size(90, 47)
-        Me.btnReporte.TabIndex = 1
+        Me.btnReporte.TabIndex = 36
         Me.btnReporte.Text = "Generar reporte"
         Me.btnReporte.UseVisualStyleBackColor = True
         '
@@ -514,7 +514,7 @@ Partial Class frmListarEmp
         Me.btnAdministrar.Location = New System.Drawing.Point(233, 3)
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(90, 47)
-        Me.btnAdministrar.TabIndex = 2
+        Me.btnAdministrar.TabIndex = 35
         Me.btnAdministrar.Text = "Administrar"
         Me.btnAdministrar.UseVisualStyleBackColor = True
         '
@@ -523,7 +523,7 @@ Partial Class frmListarEmp
         Me.btnOpExtra.Location = New System.Drawing.Point(137, 3)
         Me.btnOpExtra.Name = "btnOpExtra"
         Me.btnOpExtra.Size = New System.Drawing.Size(90, 47)
-        Me.btnOpExtra.TabIndex = 3
+        Me.btnOpExtra.TabIndex = 34
         Me.btnOpExtra.Text = "Operaciones Extraordinarias"
         Me.btnOpExtra.UseVisualStyleBackColor = True
         '
