@@ -59,7 +59,7 @@ Partial Class frmEstablecerEventos
         Me.btnCerrar.Location = New System.Drawing.Point(501, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 8
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -68,7 +68,7 @@ Partial Class frmEstablecerEventos
         Me.btnGuardar.Location = New System.Drawing.Point(422, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
-        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.TabIndex = 7
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -80,7 +80,7 @@ Partial Class frmEstablecerEventos
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(577, 204)
-        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Establecer evento con modalidad"
         '
@@ -91,7 +91,7 @@ Partial Class frmEstablecerEventos
         Me.GroupBox2.Location = New System.Drawing.Point(6, 101)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(565, 100)
-        Me.GroupBox2.TabIndex = 1
+        Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Descripción:"
         '
@@ -101,7 +101,7 @@ Partial Class frmEstablecerEventos
         Me.RichTextBox2.Location = New System.Drawing.Point(3, 21)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(559, 76)
-        Me.RichTextBox2.TabIndex = 43
+        Me.RichTextBox2.TabIndex = 6
         Me.RichTextBox2.Text = ""
         '
         'TableLayoutPanel1
@@ -141,7 +141,7 @@ Partial Class frmEstablecerEventos
         Me.Label2.Location = New System.Drawing.Point(3, 32)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 19)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fechas:"
         '
         'ComboBox1
@@ -150,7 +150,7 @@ Partial Class frmEstablecerEventos
         Me.ComboBox1.Location = New System.Drawing.Point(135, 3)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 25)
-        Me.ComboBox1.TabIndex = 2
+        Me.ComboBox1.TabIndex = 1
         '
         'DateTimePicker1
         '

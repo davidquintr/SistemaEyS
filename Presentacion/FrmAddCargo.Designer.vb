@@ -58,7 +58,7 @@ Partial Class FrmAddCargo
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(383, 266)
-        Me.GroupBox1.TabIndex = 1
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar Cargo"
         '
@@ -69,7 +69,7 @@ Partial Class FrmAddCargo
         Me.Label4.Location = New System.Drawing.Point(30, 111)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 19)
-        Me.Label4.TabIndex = 28
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Departamento:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -79,7 +79,7 @@ Partial Class FrmAddCargo
         Me.ComboBox1.Location = New System.Drawing.Point(149, 108)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(208, 25)
-        Me.ComboBox1.TabIndex = 27
+        Me.ComboBox1.TabIndex = 5
         '
         'txbNombre
         '
@@ -87,7 +87,7 @@ Partial Class FrmAddCargo
         Me.txbNombre.Location = New System.Drawing.Point(149, 66)
         Me.txbNombre.Name = "txbNombre"
         Me.txbNombre.Size = New System.Drawing.Size(208, 25)
-        Me.txbNombre.TabIndex = 26
+        Me.txbNombre.TabIndex = 3
         '
         'CheckBox1
         '
@@ -95,7 +95,7 @@ Partial Class FrmAddCargo
         Me.CheckBox1.Location = New System.Drawing.Point(149, 148)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(208, 34)
-        Me.CheckBox1.TabIndex = 25
+        Me.CheckBox1.TabIndex = 7
         Me.CheckBox1.Text = "Administrador"
         Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -105,7 +105,7 @@ Partial Class FrmAddCargo
         Me.RichTextBox1.Location = New System.Drawing.Point(149, 194)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(208, 54)
-        Me.RichTextBox1.TabIndex = 24
+        Me.RichTextBox1.TabIndex = 9
         Me.RichTextBox1.Text = ""
         '
         'Label12
@@ -115,7 +115,7 @@ Partial Class FrmAddCargo
         Me.Label12.Location = New System.Drawing.Point(30, 197)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(82, 19)
-        Me.Label12.TabIndex = 23
+        Me.Label12.TabIndex = 8
         Me.Label12.Text = "Descripción:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -125,7 +125,7 @@ Partial Class FrmAddCargo
         Me.txbID.Location = New System.Drawing.Point(149, 27)
         Me.txbID.Name = "txbID"
         Me.txbID.Size = New System.Drawing.Size(208, 25)
-        Me.txbID.TabIndex = 7
+        Me.txbID.TabIndex = 1
         '
         'Label3
         '
@@ -134,7 +134,7 @@ Partial Class FrmAddCargo
         Me.Label3.Location = New System.Drawing.Point(30, 154)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 19)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 6
         Me.Label3.Text = "Privilegio:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -145,7 +145,7 @@ Partial Class FrmAddCargo
         Me.Label2.Location = New System.Drawing.Point(30, 68)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 19)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -165,7 +165,7 @@ Partial Class FrmAddCargo
         Me.btnCerrar.Location = New System.Drawing.Point(307, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 13
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -190,7 +190,7 @@ Partial Class FrmAddCargo
         Me.btnGuardar.Location = New System.Drawing.Point(228, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
-        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.TabIndex = 12
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -199,7 +199,7 @@ Partial Class FrmAddCargo
         Me.btnHorario.Location = New System.Drawing.Point(149, 3)
         Me.btnHorario.Name = "btnHorario"
         Me.btnHorario.Size = New System.Drawing.Size(73, 47)
-        Me.btnHorario.TabIndex = 2
+        Me.btnHorario.TabIndex = 11
         Me.btnHorario.Text = "Horario"
         Me.btnHorario.UseVisualStyleBackColor = True
         '
@@ -208,7 +208,7 @@ Partial Class FrmAddCargo
         Me.btnEliminar.Location = New System.Drawing.Point(70, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 47)
-        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '

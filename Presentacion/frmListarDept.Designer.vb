@@ -60,7 +60,7 @@ Partial Class frmListarDept
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(518, 202)
-        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listar departamentos"
         '
@@ -71,7 +71,7 @@ Partial Class frmListarDept
         Me.Label4.Location = New System.Drawing.Point(212, 120)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(49, 19)
-        Me.Label4.TabIndex = 29
+        Me.Label4.TabIndex = 7
         Me.Label4.Text = "XXXXX"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -82,7 +82,7 @@ Partial Class frmListarDept
         Me.Label5.Location = New System.Drawing.Point(30, 120)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(30, 19)
-        Me.Label5.TabIndex = 28
+        Me.Label5.TabIndex = 6
         Me.Label5.Text = "Ext:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -94,7 +94,7 @@ Partial Class frmListarDept
         Me.RichTextBox2.Location = New System.Drawing.Point(216, 150)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox2.TabIndex = 27
+        Me.RichTextBox2.TabIndex = 9
         Me.RichTextBox2.Text = ""
         '
         'Label14
@@ -104,7 +104,7 @@ Partial Class frmListarDept
         Me.Label14.Location = New System.Drawing.Point(30, 150)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(82, 19)
-        Me.Label14.TabIndex = 26
+        Me.Label14.TabIndex = 8
         Me.Label14.Text = "Descripción:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -115,7 +115,7 @@ Partial Class frmListarDept
         Me.Label24.Location = New System.Drawing.Point(212, 90)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(144, 19)
-        Me.Label24.TabIndex = 15
+        Me.Label24.TabIndex = 5
         Me.Label24.Text = "texto@ejemplo.com.ni"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -126,7 +126,7 @@ Partial Class frmListarDept
         Me.Label25.Location = New System.Drawing.Point(212, 60)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(112, 19)
-        Me.Label25.TabIndex = 14
+        Me.Label25.TabIndex = 3
         Me.Label25.Text = "Texto de ejemplo"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -137,7 +137,7 @@ Partial Class frmListarDept
         Me.Label26.Location = New System.Drawing.Point(212, 30)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(73, 19)
-        Me.Label26.TabIndex = 13
+        Me.Label26.TabIndex = 1
         Me.Label26.Text = "XXXXXXXX"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -148,7 +148,7 @@ Partial Class frmListarDept
         Me.Label3.Location = New System.Drawing.Point(30, 90)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(44, 19)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 4
         Me.Label3.Text = "Email:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -159,7 +159,7 @@ Partial Class frmListarDept
         Me.Label2.Location = New System.Drawing.Point(30, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 19)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombres:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -186,14 +186,14 @@ Partial Class frmListarDept
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 257)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(518, 53)
-        Me.FlowLayoutPanel1.TabIndex = 12
+        Me.FlowLayoutPanel1.TabIndex = 14
         '
         'btnCerrar
         '
         Me.btnCerrar.Location = New System.Drawing.Point(442, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 16
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -202,7 +202,7 @@ Partial Class frmListarDept
         Me.btnAdministrar.Location = New System.Drawing.Point(363, 3)
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnAdministrar.TabIndex = 3
+        Me.btnAdministrar.TabIndex = 15
         Me.btnAdministrar.Text = "Administrar"
         Me.btnAdministrar.UseVisualStyleBackColor = True
         '
@@ -212,7 +212,7 @@ Partial Class frmListarDept
         Me.Label29.Location = New System.Drawing.Point(344, 220)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(146, 32)
-        Me.Label29.TabIndex = 11
+        Me.Label29.TabIndex = 12
         Me.Label29.Text = "999/999"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -222,7 +222,7 @@ Partial Class frmListarDept
         Me.Button2.Name = "Button2"
         Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button2.Size = New System.Drawing.Size(31, 31)
-        Me.Button2.TabIndex = 10
+        Me.Button2.TabIndex = 13
         Me.Button2.Text = ">"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -232,7 +232,7 @@ Partial Class frmListarDept
         Me.Button1.Name = "Button1"
         Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button1.Size = New System.Drawing.Size(31, 31)
-        Me.Button1.TabIndex = 9
+        Me.Button1.TabIndex = 11
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -243,7 +243,7 @@ Partial Class frmListarDept
         Me.ComboBox1.Location = New System.Drawing.Point(12, 220)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(289, 28)
-        Me.ComboBox1.TabIndex = 8
+        Me.ComboBox1.TabIndex = 10
         '
         'frmListarDept
         '

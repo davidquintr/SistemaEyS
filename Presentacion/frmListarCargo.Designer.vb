@@ -65,7 +65,7 @@ Partial Class frmListarCargo
         Me.btnCerrar.Location = New System.Drawing.Point(442, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabIndex = 15
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class frmListarCargo
         Me.btnGuardar.Location = New System.Drawing.Point(363, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
-        Me.btnGuardar.TabIndex = 1
+        Me.btnGuardar.TabIndex = 14
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -83,7 +83,7 @@ Partial Class frmListarCargo
         Me.btnHorario.Location = New System.Drawing.Point(284, 3)
         Me.btnHorario.Name = "btnHorario"
         Me.btnHorario.Size = New System.Drawing.Size(73, 47)
-        Me.btnHorario.TabIndex = 2
+        Me.btnHorario.TabIndex = 13
         Me.btnHorario.Text = "Horario"
         Me.btnHorario.UseVisualStyleBackColor = True
         '
@@ -92,7 +92,7 @@ Partial Class frmListarCargo
         Me.btnEliminar.Location = New System.Drawing.Point(205, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 47)
-        Me.btnEliminar.TabIndex = 3
+        Me.btnEliminar.TabIndex = 12
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -102,7 +102,7 @@ Partial Class frmListarCargo
         Me.Label29.Location = New System.Drawing.Point(344, 189)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(146, 32)
-        Me.Label29.TabIndex = 17
+        Me.Label29.TabIndex = 10
         Me.Label29.Text = "999/999"
         Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -112,7 +112,7 @@ Partial Class frmListarCargo
         Me.Button2.Name = "Button2"
         Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button2.Size = New System.Drawing.Size(31, 31)
-        Me.Button2.TabIndex = 16
+        Me.Button2.TabIndex = 11
         Me.Button2.Text = ">"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -122,7 +122,7 @@ Partial Class frmListarCargo
         Me.Button1.Name = "Button1"
         Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button1.Size = New System.Drawing.Size(31, 31)
-        Me.Button1.TabIndex = 15
+        Me.Button1.TabIndex = 9
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -133,7 +133,7 @@ Partial Class frmListarCargo
         Me.ComboBox1.Location = New System.Drawing.Point(12, 189)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(289, 28)
-        Me.ComboBox1.TabIndex = 14
+        Me.ComboBox1.TabIndex = 8
         '
         'GroupBox1
         '
@@ -149,7 +149,7 @@ Partial Class frmListarCargo
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(518, 171)
-        Me.GroupBox1.TabIndex = 13
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listar cargos"
         '
@@ -161,7 +161,7 @@ Partial Class frmListarCargo
         Me.RichTextBox2.Location = New System.Drawing.Point(216, 120)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox2.TabIndex = 27
+        Me.RichTextBox2.TabIndex = 7
         Me.RichTextBox2.Text = ""
         '
         'Label14
@@ -171,7 +171,7 @@ Partial Class frmListarCargo
         Me.Label14.Location = New System.Drawing.Point(30, 120)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(68, 19)
-        Me.Label14.TabIndex = 26
+        Me.Label14.TabIndex = 6
         Me.Label14.Text = "Dirección:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -182,7 +182,7 @@ Partial Class frmListarCargo
         Me.Label24.Location = New System.Drawing.Point(212, 90)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(237, 19)
-        Me.Label24.TabIndex = 15
+        Me.Label24.TabIndex = 5
         Me.Label24.Text = "Ordinarios / Administrador / Maestro"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -193,7 +193,7 @@ Partial Class frmListarCargo
         Me.Label25.Location = New System.Drawing.Point(212, 60)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(112, 19)
-        Me.Label25.TabIndex = 14
+        Me.Label25.TabIndex = 3
         Me.Label25.Text = "Texto de ejemplo"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -204,7 +204,7 @@ Partial Class frmListarCargo
         Me.Label26.Location = New System.Drawing.Point(212, 30)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(73, 19)
-        Me.Label26.TabIndex = 13
+        Me.Label26.TabIndex = 1
         Me.Label26.Text = "XXXXXXXX"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -215,7 +215,7 @@ Partial Class frmListarCargo
         Me.Label3.Location = New System.Drawing.Point(30, 90)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 19)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 4
         Me.Label3.Text = "Privilegios:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -226,7 +226,7 @@ Partial Class frmListarCargo
         Me.Label2.Location = New System.Drawing.Point(30, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 19)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombres:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '

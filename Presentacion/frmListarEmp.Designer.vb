@@ -84,7 +84,7 @@ Partial Class frmListarEmp
         Me.Label2.Location = New System.Drawing.Point(30, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(68, 19)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombres:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -124,7 +124,7 @@ Partial Class frmListarEmp
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(518, 520)
-        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listar empleado"
         '
@@ -289,7 +289,7 @@ Partial Class frmListarEmp
         Me.lblApellidos.Location = New System.Drawing.Point(212, 90)
         Me.lblApellidos.Name = "lblApellidos"
         Me.lblApellidos.Size = New System.Drawing.Size(112, 19)
-        Me.lblApellidos.TabIndex = 15
+        Me.lblApellidos.TabIndex = 5
         Me.lblApellidos.Text = "Texto de ejemplo"
         Me.lblApellidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -300,7 +300,7 @@ Partial Class frmListarEmp
         Me.lblNombres.Location = New System.Drawing.Point(212, 60)
         Me.lblNombres.Name = "lblNombres"
         Me.lblNombres.Size = New System.Drawing.Size(112, 19)
-        Me.lblNombres.TabIndex = 14
+        Me.lblNombres.TabIndex = 3
         Me.lblNombres.Text = "Texto de ejemplo"
         Me.lblNombres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -311,7 +311,7 @@ Partial Class frmListarEmp
         Me.lblID.Location = New System.Drawing.Point(212, 30)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(73, 19)
-        Me.lblID.TabIndex = 13
+        Me.lblID.TabIndex = 1
         Me.lblID.Text = "XXXXXXXX"
         Me.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -421,7 +421,7 @@ Partial Class frmListarEmp
         Me.Label4.Location = New System.Drawing.Point(30, 120)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 19)
-        Me.Label4.TabIndex = 3
+        Me.Label4.TabIndex = 6
         Me.Label4.Text = "Sexo:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -432,7 +432,7 @@ Partial Class frmListarEmp
         Me.Label3.Location = New System.Drawing.Point(30, 90)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 19)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 4
         Me.Label3.Text = "Apellidos:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
