@@ -76,7 +76,7 @@ Partial Class FrmAddEmpleado
         Me.btnCerrar.Location = New System.Drawing.Point(711, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 47)
-        Me.btnCerrar.TabIndex = 24
+        Me.btnCerrar.TabIndex = 27
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -85,7 +85,7 @@ Partial Class FrmAddEmpleado
         Me.btnGuardar.Location = New System.Drawing.Point(632, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 47)
-        Me.btnGuardar.TabIndex = 23
+        Me.btnGuardar.TabIndex = 26
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -94,7 +94,7 @@ Partial Class FrmAddEmpleado
         Me.btnDarDeBaja.Location = New System.Drawing.Point(553, 3)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(73, 47)
-        Me.btnDarDeBaja.TabIndex = 22
+        Me.btnDarDeBaja.TabIndex = 25
         Me.btnDarDeBaja.Text = "Dar de baja"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         '
@@ -138,7 +138,7 @@ Partial Class FrmAddEmpleado
         Me.RadioButton2.Location = New System.Drawing.Point(657, 67)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(100, 25)
-        Me.RadioButton2.TabIndex = 25
+        Me.RadioButton2.TabIndex = 8
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Femenino"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -148,7 +148,7 @@ Partial Class FrmAddEmpleado
         Me.RadioButton1.Location = New System.Drawing.Point(553, 67)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(100, 25)
-        Me.RadioButton1.TabIndex = 24
+        Me.RadioButton1.TabIndex = 7
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Masculino"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -159,7 +159,7 @@ Partial Class FrmAddEmpleado
         Me.TextBox6.Location = New System.Drawing.Point(173, 268)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox6.TabIndex = 23
+        Me.TextBox6.TabIndex = 24
         '
         'Label11
         '
@@ -168,7 +168,7 @@ Partial Class FrmAddEmpleado
         Me.Label11.Location = New System.Drawing.Point(30, 270)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(100, 19)
-        Me.Label11.TabIndex = 22
+        Me.Label11.TabIndex = 23
         Me.Label11.Text = "Email personal:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -177,7 +177,7 @@ Partial Class FrmAddEmpleado
         Me.RichTextBox2.Location = New System.Drawing.Point(549, 148)
         Me.RichTextBox2.Name = "RichTextBox2"
         Me.RichTextBox2.Size = New System.Drawing.Size(208, 65)
-        Me.RichTextBox2.TabIndex = 15
+        Me.RichTextBox2.TabIndex = 16
         Me.RichTextBox2.Text = ""
         '
         'Label10
@@ -187,7 +187,7 @@ Partial Class FrmAddEmpleado
         Me.Label10.Location = New System.Drawing.Point(406, 150)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(88, 19)
-        Me.Label10.TabIndex = 14
+        Me.Label10.TabIndex = 15
         Me.Label10.Text = "Observación:"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -198,7 +198,7 @@ Partial Class FrmAddEmpleado
         Me.Label9.Location = New System.Drawing.Point(406, 110)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(115, 19)
-        Me.Label9.TabIndex = 10
+        Me.Label9.TabIndex = 11
         Me.Label9.Text = "Fecha de ingreso:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -207,7 +207,7 @@ Partial Class FrmAddEmpleado
         Me.DateTimePicker1.Location = New System.Drawing.Point(549, 108)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(208, 25)
-        Me.DateTimePicker1.TabIndex = 11
+        Me.DateTimePicker1.TabIndex = 12
         '
         'Label8
         '
@@ -245,7 +245,7 @@ Partial Class FrmAddEmpleado
         Me.TextBox4.Location = New System.Drawing.Point(173, 224)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox4.TabIndex = 19
+        Me.TextBox4.TabIndex = 20
         '
         'Label3
         '
@@ -254,7 +254,7 @@ Partial Class FrmAddEmpleado
         Me.Label3.Location = New System.Drawing.Point(30, 230)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 19)
-        Me.Label3.TabIndex = 18
+        Me.Label3.TabIndex = 19
         Me.Label3.Text = "Email corporativo:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -264,7 +264,7 @@ Partial Class FrmAddEmpleado
         Me.TextBox3.Location = New System.Drawing.Point(173, 108)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox3.TabIndex = 9
+        Me.TextBox3.TabIndex = 10
         '
         'Label6
         '
@@ -273,7 +273,7 @@ Partial Class FrmAddEmpleado
         Me.Label6.Location = New System.Drawing.Point(30, 110)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 19)
-        Me.Label6.TabIndex = 8
+        Me.Label6.TabIndex = 9
         Me.Label6.Text = "Apellidos:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -284,7 +284,7 @@ Partial Class FrmAddEmpleado
         Me.Label5.Location = New System.Drawing.Point(30, 190)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 19)
-        Me.Label5.TabIndex = 16
+        Me.Label5.TabIndex = 17
         Me.Label5.Text = "Cargo:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -294,7 +294,7 @@ Partial Class FrmAddEmpleado
         Me.ComboBox2.Location = New System.Drawing.Point(173, 188)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(208, 25)
-        Me.ComboBox2.TabIndex = 17
+        Me.ComboBox2.TabIndex = 18
         '
         'Label4
         '
@@ -303,13 +303,14 @@ Partial Class FrmAddEmpleado
         Me.Label4.Location = New System.Drawing.Point(30, 150)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 19)
-        Me.Label4.TabIndex = 12
+        Me.Label4.TabIndex = 13
         Me.Label4.Text = "Departamento:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.ItemHeight = 17
         Me.ComboBox1.Location = New System.Drawing.Point(173, 148)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(208, 25)
@@ -328,7 +329,7 @@ Partial Class FrmAddEmpleado
         Me.RichTextBox1.Location = New System.Drawing.Point(549, 228)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(208, 65)
-        Me.RichTextBox1.TabIndex = 21
+        Me.RichTextBox1.TabIndex = 22
         Me.RichTextBox1.Text = ""
         '
         'Label12
@@ -338,7 +339,7 @@ Partial Class FrmAddEmpleado
         Me.Label12.Location = New System.Drawing.Point(406, 226)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(68, 19)
-        Me.Label12.TabIndex = 20
+        Me.Label12.TabIndex = 21
         Me.Label12.Text = "Dirección:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
