@@ -106,7 +106,7 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenúToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(942, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(942, 27)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -114,126 +114,125 @@ Partial Class FrmVistaAdmin
         '
         Me.MenúToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirEntidadToolStripMenuItem, Me.ListarEntidadaToolStripMenuItem, Me.ParámetrosGeneralesToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenúToolStripMenuItem.Name = "MenúToolStripMenuItem"
-        Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(59, 23)
         Me.MenúToolStripMenuItem.Text = "Menú"
         '
         'AñadirEntidadToolStripMenuItem
         '
         Me.AñadirEntidadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem, Me.CargoToolStripMenuItem, Me.EmpleadoToolStripMenuItem})
         Me.AñadirEntidadToolStripMenuItem.Name = "AñadirEntidadToolStripMenuItem"
-        Me.AñadirEntidadToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.AñadirEntidadToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
         Me.AñadirEntidadToolStripMenuItem.Text = "Añadir entidad"
         '
         'DepartamentoToolStripMenuItem
         '
         Me.DepartamentoToolStripMenuItem.Name = "DepartamentoToolStripMenuItem"
-        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
         Me.DepartamentoToolStripMenuItem.Text = "Departamento"
         '
         'CargoToolStripMenuItem
         '
         Me.CargoToolStripMenuItem.Name = "CargoToolStripMenuItem"
-        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
         Me.CargoToolStripMenuItem.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem
         '
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
-        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
         'ListarEntidadaToolStripMenuItem
         '
         Me.ListarEntidadaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem1, Me.CargoToolStripMenuItem1, Me.EmpleadoToolStripMenuItem1})
         Me.ListarEntidadaToolStripMenuItem.Name = "ListarEntidadaToolStripMenuItem"
-        Me.ListarEntidadaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.ListarEntidadaToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
         Me.ListarEntidadaToolStripMenuItem.Text = "Listar entidad"
         '
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(175, 24)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(175, 24)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(175, 24)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ParámetrosGeneralesToolStripMenuItem
         '
         Me.ParámetrosGeneralesToolStripMenuItem.Name = "ParámetrosGeneralesToolStripMenuItem"
-        Me.ParámetrosGeneralesToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.ParámetrosGeneralesToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
         Me.ParámetrosGeneralesToolStripMenuItem.Text = "Parámetros generales"
         '
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VistaPersonalizadaToolStripMenuItem, Me.ReportePersonalizadoToolStripMenuItem, Me.ReporteGeneralToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(77, 23)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'VistaPersonalizadaToolStripMenuItem
         '
         Me.VistaPersonalizadaToolStripMenuItem.Name = "VistaPersonalizadaToolStripMenuItem"
-        Me.VistaPersonalizadaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.VistaPersonalizadaToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
         Me.VistaPersonalizadaToolStripMenuItem.Text = "Vista personalizada"
         '
         'ReportePersonalizadoToolStripMenuItem
         '
         Me.ReportePersonalizadoToolStripMenuItem.Name = "ReportePersonalizadoToolStripMenuItem"
-        Me.ReportePersonalizadoToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReportePersonalizadoToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
         Me.ReportePersonalizadoToolStripMenuItem.Text = "Reporte personalizado"
         '
         'ReporteGeneralToolStripMenuItem
         '
         Me.ReporteGeneralToolStripMenuItem.Name = "ReporteGeneralToolStripMenuItem"
-        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
         Me.ReporteGeneralToolStripMenuItem.Text = "Reporte general"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InstructivoToolStripMenuItem, Me.ReportarUnProblemaToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(62, 23)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'InstructivoToolStripMenuItem
         '
         Me.InstructivoToolStripMenuItem.Name = "InstructivoToolStripMenuItem"
-        Me.InstructivoToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.InstructivoToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
         Me.InstructivoToolStripMenuItem.Text = "Instructivo"
         '
         'ReportarUnProblemaToolStripMenuItem
         '
         Me.ReportarUnProblemaToolStripMenuItem.Name = "ReportarUnProblemaToolStripMenuItem"
-        Me.ReportarUnProblemaToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.ReportarUnProblemaToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
         Me.ReportarUnProblemaToolStripMenuItem.Text = "Reportar un problema"
         '
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
         'Panel8
         '
         Me.Panel8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel8.Location = New System.Drawing.Point(283, 535)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(647, 100)
