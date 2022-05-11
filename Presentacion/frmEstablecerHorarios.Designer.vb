@@ -196,7 +196,7 @@ Partial Class frmEstablecerHorarios
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(3, 3)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(76, 23)
+        Me.CheckBox1.Size = New System.Drawing.Size(81, 24)
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "Regular"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -206,7 +206,7 @@ Partial Class frmEstablecerHorarios
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(3, 34)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(74, 23)
+        Me.CheckBox2.Size = New System.Drawing.Size(79, 24)
         Me.CheckBox2.TabIndex = 8
         Me.CheckBox2.Text = "Sábado"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -217,7 +217,7 @@ Partial Class frmEstablecerHorarios
         Me.CheckBox3.Location = New System.Drawing.Point(3, 65)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CheckBox3.Size = New System.Drawing.Size(86, 23)
+        Me.CheckBox3.Size = New System.Drawing.Size(92, 24)
         Me.CheckBox3.TabIndex = 16
         Me.CheckBox3.Text = "Domingo"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -227,7 +227,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown1.Location = New System.Drawing.Point(118, 3)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown1.TabIndex = 1
         Me.NumericUpDown1.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -236,7 +236,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown2.Location = New System.Drawing.Point(118, 34)
         Me.NumericUpDown2.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown2.TabIndex = 9
         Me.NumericUpDown2.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -245,7 +245,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown3.Location = New System.Drawing.Point(118, 65)
         Me.NumericUpDown3.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown3.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown3.TabIndex = 17
         Me.NumericUpDown3.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -254,7 +254,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown4.Location = New System.Drawing.Point(198, 3)
         Me.NumericUpDown4.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown4.Name = "NumericUpDown4"
-        Me.NumericUpDown4.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown4.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown4.TabIndex = 3
         Me.NumericUpDown4.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -263,7 +263,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown5.Location = New System.Drawing.Point(198, 34)
         Me.NumericUpDown5.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown5.Name = "NumericUpDown5"
-        Me.NumericUpDown5.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown5.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown5.TabIndex = 11
         Me.NumericUpDown5.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -272,7 +272,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown6.Location = New System.Drawing.Point(198, 65)
         Me.NumericUpDown6.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown6.Name = "NumericUpDown6"
-        Me.NumericUpDown6.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown6.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown6.TabIndex = 19
         Me.NumericUpDown6.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -281,7 +281,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown7.Location = New System.Drawing.Point(368, 3)
         Me.NumericUpDown7.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown7.Name = "NumericUpDown7"
-        Me.NumericUpDown7.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown7.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown7.TabIndex = 7
         Me.NumericUpDown7.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -290,7 +290,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown8.Location = New System.Drawing.Point(368, 34)
         Me.NumericUpDown8.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown8.Name = "NumericUpDown8"
-        Me.NumericUpDown8.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown8.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown8.TabIndex = 15
         Me.NumericUpDown8.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -299,7 +299,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown9.Location = New System.Drawing.Point(368, 65)
         Me.NumericUpDown9.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.NumericUpDown9.Name = "NumericUpDown9"
-        Me.NumericUpDown9.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown9.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown9.TabIndex = 23
         Me.NumericUpDown9.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
@@ -308,7 +308,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown10.Location = New System.Drawing.Point(288, 3)
         Me.NumericUpDown10.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown10.Name = "NumericUpDown10"
-        Me.NumericUpDown10.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown10.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown10.TabIndex = 5
         Me.NumericUpDown10.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -317,7 +317,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown11.Location = New System.Drawing.Point(288, 34)
         Me.NumericUpDown11.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown11.Name = "NumericUpDown11"
-        Me.NumericUpDown11.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown11.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown11.TabIndex = 13
         Me.NumericUpDown11.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
@@ -326,7 +326,7 @@ Partial Class frmEstablecerHorarios
         Me.NumericUpDown12.Location = New System.Drawing.Point(288, 65)
         Me.NumericUpDown12.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.NumericUpDown12.Name = "NumericUpDown12"
-        Me.NumericUpDown12.Size = New System.Drawing.Size(53, 25)
+        Me.NumericUpDown12.Size = New System.Drawing.Size(53, 27)
         Me.NumericUpDown12.TabIndex = 21
         Me.NumericUpDown12.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '

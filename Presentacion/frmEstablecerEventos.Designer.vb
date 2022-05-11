@@ -98,9 +98,9 @@ Partial Class frmEstablecerEventos
         'RichTextBox2
         '
         Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox2.Location = New System.Drawing.Point(3, 21)
+        Me.RichTextBox2.Location = New System.Drawing.Point(3, 23)
         Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(559, 76)
+        Me.RichTextBox2.Size = New System.Drawing.Size(559, 74)
         Me.RichTextBox2.TabIndex = 6
         Me.RichTextBox2.Text = ""
         '
@@ -130,7 +130,7 @@ Partial Class frmEstablecerEventos
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 19)
+        Me.Label1.Size = New System.Drawing.Size(112, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tipo de evento:"
         '
@@ -140,7 +140,7 @@ Partial Class frmEstablecerEventos
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 32)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 19)
+        Me.Label2.Size = New System.Drawing.Size(56, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fechas:"
         '
@@ -149,21 +149,21 @@ Partial Class frmEstablecerEventos
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(135, 3)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 28)
         Me.ComboBox1.TabIndex = 1
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(135, 35)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 25)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 27)
         Me.DateTimePicker1.TabIndex = 3
         '
         'DateTimePicker2
         '
         Me.DateTimePicker2.Location = New System.Drawing.Point(351, 35)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 25)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 27)
         Me.DateTimePicker2.TabIndex = 4
         '
         'frmEstablecerEventos

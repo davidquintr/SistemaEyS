@@ -1,22 +1,40 @@
 ﻿Public Class frmParametrosGen
 
-    Dim botonEstablecer As New Button()
-    Dim tiempoGracia As New Button()
-    Dim establecerHorario As New Button()
-
+    Private WithEvents buttonEstablecerEv As New Button
+    Private WithEvents buttonTiempoGracia As New Button
+    Private WithEvents buttonEstablecerHorario As New Button
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
     End Sub
 
     Private Sub frmParametrosGen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        buttonEstablecerEv = colocarBoton("Establecer evento con modalidad")
+        buttonTiempoGracia = colocarBoton("Tiempo de gracia")
+        buttonEstablecerHorario = colocarBoton("Horario de almuerzo")
 
+        AddHandler buttonEstablecerEv.Click, AddressOf ButtonEstablecer_Click
+        AddHandler buttonTiempoGracia.Click, AddressOf ButtonTiempoGracia_Click
+        AddHandler buttonEstablecerHorario.Click, AddressOf buttonEstablecerHor_Click
+
+    End Sub
+
+    Private Sub ButtonEstablecer_Click(sender As Object, e As EventArgs) Handles buttonEstablecerEv.Click
+        frmEstablecerEventos.Show()
+    End Sub
+
+    Private Sub ButtonTiempoGracia_Click(sender As Object, e As EventArgs) Handles buttonTiempoGracia.Click
+        frmTiempoGracia.Show()
+    End Sub
+
+    Private Sub buttonEstablecerHor_Click(sender As Object, e As EventArgs) Handles buttonEstablecerHorario.Click
+        frmEstablecerHorarios.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles buttonEventos.Click
         layoutPanel.Controls.Clear()
-        botonEstablecer = colocarBoton("Establecer evento con modalidad")
-        layoutPanel.Controls.Add(botonEstablecer)
+        layoutPanel.Controls.Add(buttonEstablecerEv)
+
     End Sub
 
     Private Function colocarBoton(texto As String) As Button
@@ -29,9 +47,8 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles buttonAjustes.Click
         layoutPanel.Controls.Clear()
-        tiempoGracia = colocarBoton("Tiempo de gracia")
-        establecerHorario = colocarBoton("Horario de almuerzo")
-        layoutPanel.Controls.Add(tiempoGracia)
-        layoutPanel.Controls.Add(establecerHorario)
+        layoutPanel.Controls.Add(buttonTiempoGracia)
+        layoutPanel.Controls.Add(buttonEstablecerHorario)
     End Sub
+
 End Class
