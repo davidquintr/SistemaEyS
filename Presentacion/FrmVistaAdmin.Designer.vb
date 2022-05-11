@@ -274,7 +274,7 @@ Partial Class FrmVistaAdmin
         Me.MinimumSize = New System.Drawing.Size(958, 686)
         Me.Name = "FrmVistaAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmVistaAdmin2"
+        Me.Text = "Adminstracion"
         Me.Panel2.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

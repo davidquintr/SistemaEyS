@@ -159,7 +159,7 @@ Partial Class frmVistaEmp
         Me.MaximizeBox = False
         Me.Name = "frmVistaEmp"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmVistaEmp"
+        Me.Text = "Entrada y Salida"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)

@@ -223,7 +223,7 @@ Partial Class FrmAddCargo
         Me.MaximizeBox = False
         Me.Name = "FrmAddCargo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmAddCargo"
+        Me.Text = "Agregar departamento"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)

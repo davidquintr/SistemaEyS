@@ -220,7 +220,7 @@ Partial Class FrmAddDepartamento
         Me.MaximizeBox = False
         Me.Name = "FrmAddDepartamento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmAddDepartamento"
+        Me.Text = "Agregar departamento"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

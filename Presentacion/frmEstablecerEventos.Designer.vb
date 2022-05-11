@@ -177,7 +177,7 @@ Partial Class frmEstablecerEventos
         Me.MaximizeBox = False
         Me.Name = "frmEstablecerEventos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmEstablecerEventos"
+        Me.Text = "Establecer eventos"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)

@@ -542,7 +542,7 @@ Partial Class frmListarEmp
         Me.MaximizeBox = False
         Me.Name = "frmListarEmp"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmListarEmp"
+        Me.Text = "Listar empleados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)

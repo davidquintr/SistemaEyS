@@ -256,7 +256,7 @@ Partial Class frmListarCargo
         Me.MaximizeBox = False
         Me.Name = "frmListarCargo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmListarCargo"
+        Me.Text = "Listar cargos"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -156,7 +156,7 @@ Partial Class frmParametrosGen
         Me.MaximizeBox = False
         Me.Name = "frmParametrosGen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmParametrosGen"
+        Me.Text = "Parametros generales"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)

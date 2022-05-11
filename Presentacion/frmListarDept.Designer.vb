@@ -260,7 +260,7 @@ Partial Class frmListarDept
         Me.MaximizeBox = False
         Me.Name = "frmListarDept"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmListarDept"
+        Me.Text = "Listar departamentos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)

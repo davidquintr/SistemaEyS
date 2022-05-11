@@ -384,7 +384,7 @@ Partial Class FrmAddEmpleado
         Me.MaximizeBox = False
         Me.Name = "FrmAddEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmAddEmpleado"
+        Me.Text = "Agregar empleado"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -386,7 +386,7 @@ Partial Class frmEstablecerHorarios
         Me.MaximizeBox = False
         Me.Name = "frmEstablecerHorarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmEstablecerHorarios"
+        Me.Text = "Establecer horarios"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)

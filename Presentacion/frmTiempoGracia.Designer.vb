@@ -108,7 +108,7 @@ Partial Class frmTiempoGracia
         Me.MaximizeBox = False
         Me.Name = "frmTiempoGracia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmTiempoGracia"
+        Me.Text = "Tiempo de gracia"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
