@@ -19,6 +19,7 @@
         Dim Desc As String = rtxtDesc.Text.Trim()
 
 
+
         Dept.RegistroDepAgreg(nombre, ext, email, Desc, 1)
 
 

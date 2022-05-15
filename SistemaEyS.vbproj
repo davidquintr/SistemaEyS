@@ -106,6 +106,12 @@
     <Compile Include="Presentacion\FrmAddEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmAdminCredenciales.Designer.vb">
+      <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAdminCredenciales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmEstablecerEventos.Designer.vb">
       <DependentUpon>frmEstablecerEventos.vb</DependentUpon>
     </Compile>
@@ -140,6 +146,18 @@
       <DependentUpon>frmParametrosGen.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmParametrosGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRestauracionEntidades.Designer.vb">
+      <DependentUpon>frmRestauracionEntidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRestauracionEntidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSeguridadPermisos.Designer.vb">
+      <DependentUpon>frmSeguridadPermisos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSeguridadPermisos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmTiempoGracia.Designer.vb">
@@ -189,6 +207,9 @@
     <EmbeddedResource Include="Presentacion\FrmAddEmpleado.resx">
       <DependentUpon>FrmAddEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmAdminCredenciales.resx">
+      <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmEstablecerEventos.resx">
       <DependentUpon>frmEstablecerEventos.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +227,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmParametrosGen.resx">
       <DependentUpon>frmParametrosGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmRestauracionEntidades.resx">
+      <DependentUpon>frmRestauracionEntidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSeguridadPermisos.resx">
+      <DependentUpon>frmSeguridadPermisos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmTiempoGracia.resx">
       <DependentUpon>frmTiempoGracia.vb</DependentUpon>
