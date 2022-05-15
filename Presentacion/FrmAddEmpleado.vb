@@ -1,4 +1,7 @@
 ﻿Public Class FrmAddEmpleado
+
+    Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
+
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -9,6 +12,23 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+        Dim cedula As String = txtCedula.Text.Trim
+        Dim primerNom As String = txtNombre.Text.Trim
+        Dim segundoNom As String = txtNombre.Text.Trim
+        Dim primerApell As String = txtApellidos.Text.Trim
+        Dim segundoApell As String = txtApellidos.Text.Trim
+        Dim dep As Integer = cbDep.Text.Trim
+        Dim car As Integer = cbCar.Text.Trim
+        Dim emailCorporativo As String = txtEmailC.Text.Trim
+        Dim emailPersonal As String = txtEmailP.Text.Trim
+        Dim Telefono As String = txtTelefono.Text.Trim
+        Dim observacion As String = rtxtObservacion.Text.Trim
+        Dim direccion As String = rtxtDireccion.Text.Trim
+
+
+
+
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 

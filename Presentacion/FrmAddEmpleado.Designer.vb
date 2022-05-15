@@ -27,29 +27,29 @@ Partial Class FrmAddEmpleado
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnDarDeBaja = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.rbFemenino = New System.Windows.Forms.RadioButton()
+        Me.rbMasculino = New System.Windows.Forms.RadioButton()
+        Me.txtEmailP = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.rtxtObservacion = New System.Windows.Forms.RichTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtEmailC = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtApellidos = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbCar = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.cbDep = New System.Windows.Forms.ComboBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.rtxtDireccion = New System.Windows.Forms.RichTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCedula = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -100,29 +100,29 @@ Partial Class FrmAddEmpleado
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.rbFemenino)
+        Me.GroupBox1.Controls.Add(Me.rbMasculino)
+        Me.GroupBox1.Controls.Add(Me.txtEmailP)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox1.Controls.Add(Me.rtxtObservacion)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.txtTelefono)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.txtEmailC)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.txtApellidos)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
+        Me.GroupBox1.Controls.Add(Me.cbCar)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.cbDep)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
+        Me.GroupBox1.Controls.Add(Me.rtxtDireccion)
         Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtCedula)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -133,33 +133,33 @@ Partial Class FrmAddEmpleado
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar empleado"
         '
-        'RadioButton2
+        'rbFemenino
         '
-        Me.RadioButton2.Location = New System.Drawing.Point(657, 67)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(100, 25)
-        Me.RadioButton2.TabIndex = 8
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Femenino"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rbFemenino.Location = New System.Drawing.Point(657, 67)
+        Me.rbFemenino.Name = "rbFemenino"
+        Me.rbFemenino.Size = New System.Drawing.Size(100, 25)
+        Me.rbFemenino.TabIndex = 8
+        Me.rbFemenino.TabStop = True
+        Me.rbFemenino.Text = "Femenino"
+        Me.rbFemenino.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rbMasculino
         '
-        Me.RadioButton1.Location = New System.Drawing.Point(553, 67)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(100, 25)
-        Me.RadioButton1.TabIndex = 7
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Masculino"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rbMasculino.Location = New System.Drawing.Point(553, 67)
+        Me.rbMasculino.Name = "rbMasculino"
+        Me.rbMasculino.Size = New System.Drawing.Size(100, 25)
+        Me.rbMasculino.TabIndex = 7
+        Me.rbMasculino.TabStop = True
+        Me.rbMasculino.Text = "Masculino"
+        Me.rbMasculino.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtEmailP
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(173, 268)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox6.TabIndex = 24
+        Me.txtEmailP.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmailP.Location = New System.Drawing.Point(173, 268)
+        Me.txtEmailP.Name = "txtEmailP"
+        Me.txtEmailP.Size = New System.Drawing.Size(208, 25)
+        Me.txtEmailP.TabIndex = 24
         '
         'Label11
         '
@@ -172,13 +172,13 @@ Partial Class FrmAddEmpleado
         Me.Label11.Text = "Email personal:"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RichTextBox2
+        'rtxtObservacion
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(549, 148)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(208, 65)
-        Me.RichTextBox2.TabIndex = 16
-        Me.RichTextBox2.Text = ""
+        Me.rtxtObservacion.Location = New System.Drawing.Point(549, 148)
+        Me.rtxtObservacion.Name = "rtxtObservacion"
+        Me.rtxtObservacion.Size = New System.Drawing.Size(208, 65)
+        Me.rtxtObservacion.TabIndex = 16
+        Me.rtxtObservacion.Text = ""
         '
         'Label10
         '
@@ -220,13 +220,13 @@ Partial Class FrmAddEmpleado
         Me.Label8.Text = "Sexo:"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox5
+        'txtTelefono
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(549, 28)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox5.TabIndex = 3
+        Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefono.Location = New System.Drawing.Point(549, 28)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(208, 25)
+        Me.txtTelefono.TabIndex = 3
         '
         'Label7
         '
@@ -239,13 +239,13 @@ Partial Class FrmAddEmpleado
         Me.Label7.Text = "Teléfono:"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox4
+        'txtEmailC
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(173, 224)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox4.TabIndex = 20
+        Me.txtEmailC.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmailC.Location = New System.Drawing.Point(173, 224)
+        Me.txtEmailC.Name = "txtEmailC"
+        Me.txtEmailC.Size = New System.Drawing.Size(208, 25)
+        Me.txtEmailC.TabIndex = 20
         '
         'Label3
         '
@@ -258,13 +258,13 @@ Partial Class FrmAddEmpleado
         Me.Label3.Text = "Email corporativo:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox3
+        'txtApellidos
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(173, 108)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox3.TabIndex = 10
+        Me.txtApellidos.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApellidos.Location = New System.Drawing.Point(173, 108)
+        Me.txtApellidos.Name = "txtApellidos"
+        Me.txtApellidos.Size = New System.Drawing.Size(208, 25)
+        Me.txtApellidos.TabIndex = 10
         '
         'Label6
         '
@@ -288,13 +288,13 @@ Partial Class FrmAddEmpleado
         Me.Label5.Text = "Cargo:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox2
+        'cbCar
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(173, 188)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(208, 25)
-        Me.ComboBox2.TabIndex = 18
+        Me.cbCar.FormattingEnabled = True
+        Me.cbCar.Location = New System.Drawing.Point(173, 188)
+        Me.cbCar.Name = "cbCar"
+        Me.cbCar.Size = New System.Drawing.Size(208, 25)
+        Me.cbCar.TabIndex = 18
         '
         'Label4
         '
@@ -307,30 +307,30 @@ Partial Class FrmAddEmpleado
         Me.Label4.Text = "Departamento:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox1
+        'cbDep
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.ItemHeight = 17
-        Me.ComboBox1.Location = New System.Drawing.Point(173, 148)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(208, 25)
-        Me.ComboBox1.TabIndex = 13
+        Me.cbDep.FormattingEnabled = True
+        Me.cbDep.ItemHeight = 17
+        Me.cbDep.Location = New System.Drawing.Point(173, 148)
+        Me.cbDep.Name = "cbDep"
+        Me.cbDep.Size = New System.Drawing.Size(208, 25)
+        Me.cbDep.TabIndex = 13
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(173, 68)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox2.TabIndex = 5
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(173, 68)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(208, 25)
+        Me.txtNombre.TabIndex = 5
         '
-        'RichTextBox1
+        'rtxtDireccion
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(549, 228)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(208, 65)
-        Me.RichTextBox1.TabIndex = 22
-        Me.RichTextBox1.Text = ""
+        Me.rtxtDireccion.Location = New System.Drawing.Point(549, 228)
+        Me.rtxtDireccion.Name = "rtxtDireccion"
+        Me.rtxtDireccion.Size = New System.Drawing.Size(208, 65)
+        Me.rtxtDireccion.TabIndex = 22
+        Me.rtxtDireccion.Text = ""
         '
         'Label12
         '
@@ -343,13 +343,13 @@ Partial Class FrmAddEmpleado
         Me.Label12.Text = "Dirección:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'txtCedula
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(173, 28)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox1.TabIndex = 1
+        Me.txtCedula.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCedula.Location = New System.Drawing.Point(173, 28)
+        Me.txtCedula.Name = "txtCedula"
+        Me.txtCedula.Size = New System.Drawing.Size(208, 25)
+        Me.txtCedula.TabIndex = 1
         '
         'Label2
         '
@@ -368,9 +368,9 @@ Partial Class FrmAddEmpleado
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(30, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(26, 19)
+        Me.Label1.Size = New System.Drawing.Size(54, 19)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID:"
+        Me.Label1.Text = "Cedula:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'FrmAddEmpleado
@@ -397,29 +397,29 @@ Partial Class FrmAddEmpleado
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnDarDeBaja As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtEmailC As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtApellidos As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbCar As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents cbDep As ComboBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents rtxtDireccion As RichTextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents rtxtObservacion As RichTextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents rbFemenino As RadioButton
+    Friend WithEvents rbMasculino As RadioButton
+    Friend WithEvents txtEmailP As TextBox
     Friend WithEvents Label11 As Label
 End Class

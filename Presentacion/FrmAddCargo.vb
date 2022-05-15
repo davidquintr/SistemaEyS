@@ -1,4 +1,6 @@
 ﻿Public Class FrmAddCargo
+
+    Dim carg As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -9,6 +11,13 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+        Dim nombre As String = txbNombre.Text.Trim
+        Dim dep As Integer = cbDep.Text.Trim
+        Dim desc As String = rtxtDesc.Text.Trim
+
+        carg.RegistroCarAgreg(nombre, desc, 1, 2)
+
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
 
     End Sub

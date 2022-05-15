@@ -28,13 +28,13 @@ Partial Class FrmAddDepartamento
         Me.btnHorario = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtExt = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -96,13 +96,13 @@ Partial Class FrmAddDepartamento
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.txtExt)
+        Me.GroupBox1.Controls.Add(Me.txtEmail)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
+        Me.GroupBox1.Controls.Add(Me.rtxtDesc)
         Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtID)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -114,21 +114,21 @@ Partial Class FrmAddDepartamento
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar Departamento"
         '
-        'TextBox4
+        'txtExt
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(149, 151)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox4.TabIndex = 7
+        Me.txtExt.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtExt.Location = New System.Drawing.Point(149, 151)
+        Me.txtExt.Name = "txtExt"
+        Me.txtExt.Size = New System.Drawing.Size(208, 25)
+        Me.txtExt.TabIndex = 7
         '
-        'TextBox3
+        'txtEmail
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(149, 108)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox3.TabIndex = 5
+        Me.txtEmail.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(149, 108)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(208, 25)
+        Me.txtEmail.TabIndex = 5
         '
         'Label4
         '
@@ -141,21 +141,21 @@ Partial Class FrmAddDepartamento
         Me.Label4.Text = "Email:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(148, 66)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox2.TabIndex = 3
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(148, 66)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(208, 25)
+        Me.txtNombre.TabIndex = 3
         '
-        'RichTextBox1
+        'rtxtDesc
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(149, 194)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(208, 54)
-        Me.RichTextBox1.TabIndex = 9
-        Me.RichTextBox1.Text = ""
+        Me.rtxtDesc.Location = New System.Drawing.Point(149, 194)
+        Me.rtxtDesc.Name = "rtxtDesc"
+        Me.rtxtDesc.Size = New System.Drawing.Size(208, 54)
+        Me.rtxtDesc.TabIndex = 9
+        Me.rtxtDesc.Text = ""
         '
         'Label12
         '
@@ -168,13 +168,13 @@ Partial Class FrmAddDepartamento
         Me.Label12.Text = "Descripción:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBox1
+        'txtID
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(149, 27)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(208, 25)
-        Me.TextBox1.TabIndex = 1
+        Me.txtID.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtID.Location = New System.Drawing.Point(149, 27)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(208, 25)
+        Me.txtID.TabIndex = 1
         '
         'Label3
         '
@@ -234,13 +234,13 @@ Partial Class FrmAddDepartamento
     Friend WithEvents btnHorario As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtExt As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents rtxtDesc As RichTextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtID As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label

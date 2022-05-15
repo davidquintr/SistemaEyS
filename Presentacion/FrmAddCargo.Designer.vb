@@ -24,10 +24,10 @@ Partial Class FrmAddCargo
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbDep = New System.Windows.Forms.ComboBox()
         Me.txbNombre = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.cbAdmin = New System.Windows.Forms.CheckBox()
+        Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txbID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -45,10 +45,10 @@ Partial Class FrmAddCargo
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.cbDep)
         Me.GroupBox1.Controls.Add(Me.txbNombre)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.cbAdmin)
+        Me.GroupBox1.Controls.Add(Me.rtxtDesc)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txbID)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -73,13 +73,13 @@ Partial Class FrmAddCargo
         Me.Label4.Text = "Departamento:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox1
+        'cbDep
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(149, 108)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(208, 25)
-        Me.ComboBox1.TabIndex = 5
+        Me.cbDep.FormattingEnabled = True
+        Me.cbDep.Location = New System.Drawing.Point(149, 108)
+        Me.cbDep.Name = "cbDep"
+        Me.cbDep.Size = New System.Drawing.Size(208, 25)
+        Me.cbDep.TabIndex = 5
         '
         'txbNombre
         '
@@ -89,24 +89,24 @@ Partial Class FrmAddCargo
         Me.txbNombre.Size = New System.Drawing.Size(208, 25)
         Me.txbNombre.TabIndex = 3
         '
-        'CheckBox1
+        'cbAdmin
         '
-        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(149, 148)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(208, 34)
-        Me.CheckBox1.TabIndex = 7
-        Me.CheckBox1.Text = "Administrador"
-        Me.CheckBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.cbAdmin.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbAdmin.Location = New System.Drawing.Point(149, 148)
+        Me.cbAdmin.Name = "cbAdmin"
+        Me.cbAdmin.Size = New System.Drawing.Size(208, 34)
+        Me.cbAdmin.TabIndex = 7
+        Me.cbAdmin.Text = "Administrador"
+        Me.cbAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cbAdmin.UseVisualStyleBackColor = True
         '
-        'RichTextBox1
+        'rtxtDesc
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(149, 194)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(208, 54)
-        Me.RichTextBox1.TabIndex = 9
-        Me.RichTextBox1.Text = ""
+        Me.rtxtDesc.Location = New System.Drawing.Point(149, 194)
+        Me.rtxtDesc.Name = "rtxtDesc"
+        Me.rtxtDesc.Size = New System.Drawing.Size(208, 54)
+        Me.rtxtDesc.TabIndex = 9
+        Me.rtxtDesc.Text = ""
         '
         'Label12
         '
@@ -236,14 +236,14 @@ Partial Class FrmAddCargo
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents rtxtDesc As RichTextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents cbAdmin As CheckBox
     Friend WithEvents txbNombre As TextBox
     Friend WithEvents btnCerrar As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbDep As ComboBox
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnHorario As Button
     Friend WithEvents btnEliminar As Button
