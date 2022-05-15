@@ -19,7 +19,7 @@
         Dim Desc As String = rtxtDesc.Text.Trim()
 
 
-        Dept.RegistroDepAgreg(nombre, email, ext, Desc, 1)
+        Dept.RegistroDepAgreg(nombre, ext, email, Desc, 1)
 
 
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
