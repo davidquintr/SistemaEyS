@@ -23,13 +23,13 @@ Partial Class frmListarDept
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbEXT = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.rtxtDescripcion = New System.Windows.Forms.RichTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.lbEmail = New System.Windows.Forms.Label()
+        Me.lbNombre = New System.Windows.Forms.Label()
+        Me.lbID = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -39,20 +39,20 @@ Partial Class frmListarDept
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbDept = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.lbEXT)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox1.Controls.Add(Me.rtxtDescripcion)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.Label24)
-        Me.GroupBox1.Controls.Add(Me.Label25)
-        Me.GroupBox1.Controls.Add(Me.Label26)
+        Me.GroupBox1.Controls.Add(Me.lbEmail)
+        Me.GroupBox1.Controls.Add(Me.lbNombre)
+        Me.GroupBox1.Controls.Add(Me.lbID)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -64,16 +64,16 @@ Partial Class frmListarDept
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listar departamentos"
         '
-        'Label4
+        'lbEXT
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(212, 120)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 19)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "XXXXX"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbEXT.AutoSize = True
+        Me.lbEXT.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEXT.Location = New System.Drawing.Point(212, 120)
+        Me.lbEXT.Name = "lbEXT"
+        Me.lbEXT.Size = New System.Drawing.Size(49, 19)
+        Me.lbEXT.TabIndex = 7
+        Me.lbEXT.Text = "XXXXX"
+        Me.lbEXT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label5
         '
@@ -86,16 +86,16 @@ Partial Class frmListarDept
         Me.Label5.Text = "Ext:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RichTextBox2
+        'rtxtDescripcion
         '
-        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Enabled = False
-        Me.RichTextBox2.Location = New System.Drawing.Point(216, 150)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox2.TabIndex = 9
-        Me.RichTextBox2.Text = ""
+        Me.rtxtDescripcion.BackColor = System.Drawing.SystemColors.Window
+        Me.rtxtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtxtDescripcion.Enabled = False
+        Me.rtxtDescripcion.Location = New System.Drawing.Point(216, 150)
+        Me.rtxtDescripcion.Name = "rtxtDescripcion"
+        Me.rtxtDescripcion.Size = New System.Drawing.Size(269, 38)
+        Me.rtxtDescripcion.TabIndex = 9
+        Me.rtxtDescripcion.Text = ""
         '
         'Label14
         '
@@ -108,38 +108,38 @@ Partial Class frmListarDept
         Me.Label14.Text = "Descripción:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label24
+        'lbEmail
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(212, 90)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(144, 19)
-        Me.Label24.TabIndex = 5
-        Me.Label24.Text = "texto@ejemplo.com.ni"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbEmail.AutoSize = True
+        Me.lbEmail.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEmail.Location = New System.Drawing.Point(212, 90)
+        Me.lbEmail.Name = "lbEmail"
+        Me.lbEmail.Size = New System.Drawing.Size(144, 19)
+        Me.lbEmail.TabIndex = 5
+        Me.lbEmail.Text = "texto@ejemplo.com.ni"
+        Me.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label25
+        'lbNombre
         '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(212, 60)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(112, 19)
-        Me.Label25.TabIndex = 3
-        Me.Label25.Text = "Texto de ejemplo"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbNombre.AutoSize = True
+        Me.lbNombre.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbNombre.Location = New System.Drawing.Point(212, 60)
+        Me.lbNombre.Name = "lbNombre"
+        Me.lbNombre.Size = New System.Drawing.Size(112, 19)
+        Me.lbNombre.TabIndex = 3
+        Me.lbNombre.Text = "Texto de ejemplo"
+        Me.lbNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label26
+        'lbID
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(212, 30)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(73, 19)
-        Me.Label26.TabIndex = 1
-        Me.Label26.Text = "XXXXXXXX"
-        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbID.AutoSize = True
+        Me.lbID.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbID.Location = New System.Drawing.Point(212, 30)
+        Me.lbID.Name = "lbID"
+        Me.lbID.Size = New System.Drawing.Size(73, 19)
+        Me.lbID.TabIndex = 1
+        Me.lbID.Text = "XXXXXXXX"
+        Me.lbID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label3
         '
@@ -236,14 +236,14 @@ Partial Class frmListarDept
         Me.Button1.Text = "<"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'cbDept
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 11.12727!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 220)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(289, 28)
-        Me.ComboBox1.TabIndex = 10
+        Me.cbDept.Font = New System.Drawing.Font("Segoe UI", 11.12727!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbDept.FormattingEnabled = True
+        Me.cbDept.Location = New System.Drawing.Point(12, 220)
+        Me.cbDept.Name = "cbDept"
+        Me.cbDept.Size = New System.Drawing.Size(289, 28)
+        Me.cbDept.TabIndex = 10
         '
         'frmListarDept
         '
@@ -254,7 +254,7 @@ Partial Class frmListarDept
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbDept)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -269,11 +269,11 @@ Partial Class frmListarDept
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents rtxtDescripcion As RichTextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label26 As Label
+    Friend WithEvents lbEmail As Label
+    Friend WithEvents lbNombre As Label
+    Friend WithEvents lbID As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -283,7 +283,7 @@ Partial Class frmListarDept
     Friend WithEvents Label29 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents cbDept As ComboBox
+    Friend WithEvents lbEXT As Label
     Friend WithEvents Label5 As Label
 End Class

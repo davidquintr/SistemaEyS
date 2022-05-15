@@ -7604,15 +7604,14 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[tbl_Empleado] ([cedula], [primerNombre], [segundoNombre], [pri"& _ 
                 "merApellido], [segundoApellido], [direccion], [observacion], [telefono], [emailP"& _ 
-                "ersonal], [emailCorporativo], [sexo], [estadoActividad], [estado], [fechaNac], ["& _ 
-                "fechaIngreso], [fechaAgregado], [idCargo]) VALUES (@cedula, @primerNombre, @segu"& _ 
-                "ndoNombre, @primerApellido, @segundoApellido, @direccion, @observacion, @telefon"& _ 
-                "o, @emailPersonal, @emailCorporativo, @sexo, @estadoActividad, @estado, @fechaNa"& _ 
-                "c, @fechaIngreso, @fechaAgregado, @idCargo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, cedula, primerN"& _ 
-                "ombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, t"& _ 
-                "elefono, emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNa"& _ 
-                "c, fechaIngreso, fechaAgregado, idCargo FROM tbl_Empleado WHERE (idEmpleado = SC"& _ 
-                "OPE_IDENTITY())"
+                "ersonal], [emailCorporativo], [sexo], [estadoActividad], [estado], [fechaIngreso"& _ 
+                "], [idCargo]) VALUES (@cedula, @primerNombre, @segundoNombre, @primerApellido, @"& _ 
+                "segundoApellido, @direccion, @observacion, @telefono, @emailPersonal, @emailCorp"& _ 
+                "orativo, @sexo, @estadoActividad, @estado, @fechaIngreso, @idCargo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idE"& _ 
+                "mpleado, cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, d"& _ 
+                "ireccion, observacion, telefono, emailPersonal, emailCorporativo, sexo, estadoAc"& _ 
+                "tividad, estado, fechaIngreso, idCargo FROM tbl_Empleado WHERE (idEmpleado = SCO"& _ 
+                "PE_IDENTITY())"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cedula", Global.System.Data.SqlDbType.NVarChar, 14, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@primerNombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "primerNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7627,9 +7626,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@sexo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "sexo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estadoActividad", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "estadoActividad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaNac", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaIngreso", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaIngreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaAgregado", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaAgregado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
@@ -8418,24 +8415,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function RegistroEmpAgreg( _
-                    ByVal cedula As String,  _
-                    ByVal primerNombre As String,  _
-                    ByVal segundoNombre As String,  _
-                    ByVal primerApellido As String,  _
-                    ByVal segundoApellido As String,  _
-                    ByVal direccion As String,  _
-                    ByVal observacion As String,  _
-                    ByVal telefono As String,  _
-                    ByVal emailPersonal As String,  _
-                    ByVal emailCorporativo As String,  _
-                    ByVal sexo As Boolean,  _
-                    ByVal estadoActividad As Boolean,  _
-                    ByVal estado As Integer,  _
-                    ByVal fechaNac As Date,  _
-                    ByVal fechaIngreso As Date,  _
-                    ByVal fechaAgregado As Global.System.Nullable(Of Date),  _
-                    ByVal idCargo As Integer) As Integer
+        Public Overloads Overridable Function RegistroEmpAgreg(ByVal cedula As String, ByVal primerNombre As String, ByVal segundoNombre As String, ByVal primerApellido As String, ByVal segundoApellido As String, ByVal direccion As String, ByVal observacion As String, ByVal telefono As String, ByVal emailPersonal As String, ByVal emailCorporativo As String, ByVal sexo As Boolean, ByVal estadoActividad As Boolean, ByVal estado As Integer, ByVal fechaIngreso As Date, ByVal idCargo As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
             If (cedula Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("cedula")
@@ -8490,14 +8470,8 @@ Namespace BDSistemaEySDataSetTableAdapters
             command.Parameters(10).Value = CType(sexo,Boolean)
             command.Parameters(11).Value = CType(estadoActividad,Boolean)
             command.Parameters(12).Value = CType(estado,Integer)
-            command.Parameters(13).Value = CType(fechaNac,Date)
-            command.Parameters(14).Value = CType(fechaIngreso,Date)
-            If (fechaAgregado.HasValue = true) Then
-                command.Parameters(15).Value = CType(fechaAgregado.Value,Date)
-            Else
-                command.Parameters(15).Value = Global.System.DBNull.Value
-            End If
-            command.Parameters(16).Value = CType(idCargo,Integer)
+            command.Parameters(13).Value = CType(fechaIngreso,Date)
+            command.Parameters(14).Value = CType(idCargo,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

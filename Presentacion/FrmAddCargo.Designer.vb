@@ -26,7 +26,7 @@ Partial Class FrmAddCargo
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbDep = New System.Windows.Forms.ComboBox()
         Me.txbNombre = New System.Windows.Forms.TextBox()
-        Me.cbAdmin = New System.Windows.Forms.CheckBox()
+        Me.checkAdmin = New System.Windows.Forms.CheckBox()
         Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txbID = New System.Windows.Forms.TextBox()
@@ -47,7 +47,7 @@ Partial Class FrmAddCargo
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.cbDep)
         Me.GroupBox1.Controls.Add(Me.txbNombre)
-        Me.GroupBox1.Controls.Add(Me.cbAdmin)
+        Me.GroupBox1.Controls.Add(Me.checkAdmin)
         Me.GroupBox1.Controls.Add(Me.rtxtDesc)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txbID)
@@ -89,16 +89,16 @@ Partial Class FrmAddCargo
         Me.txbNombre.Size = New System.Drawing.Size(208, 25)
         Me.txbNombre.TabIndex = 3
         '
-        'cbAdmin
+        'checkAdmin
         '
-        Me.cbAdmin.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbAdmin.Location = New System.Drawing.Point(149, 148)
-        Me.cbAdmin.Name = "cbAdmin"
-        Me.cbAdmin.Size = New System.Drawing.Size(208, 34)
-        Me.cbAdmin.TabIndex = 7
-        Me.cbAdmin.Text = "Administrador"
-        Me.cbAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cbAdmin.UseVisualStyleBackColor = True
+        Me.checkAdmin.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.checkAdmin.Location = New System.Drawing.Point(149, 148)
+        Me.checkAdmin.Name = "checkAdmin"
+        Me.checkAdmin.Size = New System.Drawing.Size(208, 34)
+        Me.checkAdmin.TabIndex = 7
+        Me.checkAdmin.Text = "Administrador"
+        Me.checkAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.checkAdmin.UseVisualStyleBackColor = True
         '
         'rtxtDesc
         '
@@ -223,7 +223,7 @@ Partial Class FrmAddCargo
         Me.MaximizeBox = False
         Me.Name = "FrmAddCargo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Agregar departamento"
+        Me.Text = "Agregar cargo"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
@@ -238,7 +238,7 @@ Partial Class FrmAddCargo
     Friend WithEvents Label1 As Label
     Friend WithEvents rtxtDesc As RichTextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents cbAdmin As CheckBox
+    Friend WithEvents checkAdmin As CheckBox
     Friend WithEvents txbNombre As TextBox
     Friend WithEvents btnCerrar As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel

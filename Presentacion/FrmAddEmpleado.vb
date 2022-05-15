@@ -18,13 +18,16 @@
         Dim segundoNom As String = txtNombre.Text.Trim
         Dim primerApell As String = txtApellidos.Text.Trim
         Dim segundoApell As String = txtApellidos.Text.Trim
-        Dim dep As Integer = cbDep.Text.Trim
-        Dim car As Integer = cbCar.Text.Trim
+        Dim car As Integer = CInt(cbCar.Text.Trim)
         Dim emailCorporativo As String = txtEmailC.Text.Trim
         Dim emailPersonal As String = txtEmailP.Text.Trim
         Dim Telefono As String = txtTelefono.Text.Trim
+        Dim sexoM As Boolean = CBool(rbMasculino.Checked)
+        Dim sexoF As Boolean = CBool(rbFemenino.Checked)
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
+
+
 
 
 
