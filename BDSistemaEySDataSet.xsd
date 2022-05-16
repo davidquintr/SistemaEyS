@@ -70,7 +70,7 @@ SELECT idCargo, nombre, descripcion, estado, idDepartamento FROM tbl_Cargo WHERE
               <Mapping SourceColumn="idDepartamento" DataSetColumn="idDepartamento" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroCarAct" Modifier="Public" Name="RegistroCarAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroCarAct">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroCarAct" Modifier="Public" Name="RegistroCarAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroCarAct">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[tbl_Cargo] SET [nombre] = @nombre, [descripcion] = @descripcion, [estado] = @estado, [idDepartamento] = @idDepartamento WHERE (([idCargo] = @Original_idCargo) AND ([nombre] = @Original_nombre) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ([estado] = @Original_estado) AND ([idDepartamento] = @Original_idDepartamento));
@@ -90,7 +90,7 @@ SELECT idCargo, nombre, descripcion, estado, idDepartamento FROM tbl_Cargo WHERE
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroCarAgreg" Modifier="Public" Name="RegistroCarAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroCarAgreg">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroCarAgreg" Modifier="Public" Name="RegistroCarAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroCarAgreg">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[tbl_Cargo] ([nombre], [descripcion], [estado], [idDepartamento]) VALUES (@nombre, @descripcion, @estado, @idDepartamento);
@@ -104,7 +104,7 @@ SELECT idCargo, nombre, descripcion, estado, idDepartamento FROM tbl_Cargo WHERE
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroCarElim" Modifier="Public" Name="RegistroCarElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroCarElim">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroCarElim" Modifier="Public" Name="RegistroCarElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroCarElim">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[tbl_Cargo] WHERE (([idCargo] = @Original_idCargo) AND ([nombre] = @Original_nombre) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ([estado] = @Original_estado) AND ([idDepartamento] = @Original_idDepartamento))</CommandText>
@@ -257,7 +257,7 @@ SELECT idDepartamento, nombre, ext, email, descripcion, estado FROM tbl_Departam
               <Mapping SourceColumn="estado" DataSetColumn="estado" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroDepAct" Modifier="Public" Name="RegistroDepAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroDepAct">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroDepAct" Modifier="Public" Name="RegistroDepAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroDepAct">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[tbl_Departamento] SET [nombre] = @nombre, [ext] = @ext, [email] = @email, [descripcion] = @descripcion, [estado] = @estado WHERE (([idDepartamento] = @Original_idDepartamento) AND ([nombre] = @Original_nombre) AND ((@IsNull_ext = 1 AND [ext] IS NULL) OR ([ext] = @Original_ext)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ([estado] = @Original_estado));
@@ -280,7 +280,7 @@ SELECT idDepartamento, nombre, ext, email, descripcion, estado FROM tbl_Departam
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroDepAgreg" Modifier="Public" Name="RegistroDepAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroDepAgreg">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroDepAgreg" Modifier="Public" Name="RegistroDepAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroDepAgreg">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[tbl_Departamento] ([nombre], [ext], [email], [descripcion], [estado]) VALUES (@nombre, @ext, @email, @descripcion, @estado);
@@ -295,7 +295,7 @@ SELECT idDepartamento, nombre, ext, email, descripcion, estado FROM tbl_Departam
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroDepElim" Modifier="Public" Name="RegistroDepElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroDepElim">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroDepElim" Modifier="Public" Name="RegistroDepElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroDepElim">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[tbl_Departamento] WHERE (([idDepartamento] = @Original_idDepartamento) AND ([nombre] = @Original_nombre) AND ((@IsNull_ext = 1 AND [ext] IS NULL) OR ([ext] = @Original_ext)) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)) AND ((@IsNull_descripcion = 1 AND [descripcion] IS NULL) OR ([descripcion] = @Original_descripcion)) AND ([estado] = @Original_estado))</CommandText>
@@ -457,7 +457,7 @@ SELECT idEmpleado, cedula, primerNombre, segundoNombre, primerApellido, segundoA
               <Mapping SourceColumn="idCargo" DataSetColumn="idCargo" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroEmpAct" Modifier="Public" Name="RegistroEmpAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroEmpAct">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroEmpAct" Modifier="Public" Name="RegistroEmpAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroEmpAct">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[tbl_Empleado] SET [cedula] = @cedula, [primerNombre] = @primerNombre, [segundoNombre] = @segundoNombre, [primerApellido] = @primerApellido, [segundoApellido] = @segundoApellido, [direccion] = @direccion, [observacion] = @observacion, [telefono] = @telefono, [emailPersonal] = @emailPersonal, [emailCorporativo] = @emailCorporativo, [sexo] = @sexo, [estadoActividad] = @estadoActividad, [estado] = @estado, [fechaNac] = @fechaNac, [fechaIngreso] = @fechaIngreso, [fechaAgregado] = @fechaAgregado, [idCargo] = @idCargo WHERE (([idEmpleado] = @Original_idEmpleado) AND ([cedula] = @Original_cedula) AND ([primerNombre] = @Original_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @Original_primerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellido] = @Original_segundoApellido)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_observacion = 1 AND [observacion] IS NULL) OR ([observacion] = @Original_observacion)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPersonal] = @Original_emailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [emailCorporativo] IS NULL) OR ([emailCorporativo] = @Original_emailCorporativo)) AND ([sexo] = @Original_sexo) AND ([estadoActividad] = @Original_estadoActividad) AND ([estado] = @Original_estado) AND ([fechaNac] = @Original_fechaNac) AND ([fechaIngreso] = @Original_fechaIngreso) AND ((@IsNull_fechaAgregado = 1 AND [fechaAgregado] IS NULL) OR ([fechaAgregado] = @Original_fechaAgregado)) AND ([idCargo] = @Original_idCargo));
@@ -511,7 +511,7 @@ SELECT idEmpleado, cedula, primerNombre, segundoNombre, primerApellido, segundoA
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroEmpAgreg" Modifier="Public" Name="RegistroEmpAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroEmpAgreg">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroEmpAgreg" Modifier="Public" Name="RegistroEmpAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroEmpAgreg">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[tbl_Empleado] ([cedula], [primerNombre], [segundoNombre], [primerApellido], [segundoApellido], [direccion], [observacion], [telefono], [emailPersonal], [emailCorporativo], [sexo], [estadoActividad], [estado], [fechaNac], [fechaIngreso], [fechaAgregado], [idCargo]) VALUES (@cedula, @primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @direccion, @observacion, @telefono, @emailPersonal, @emailCorporativo, @sexo, @estadoActividad, @estado, @fechaNac, @fechaIngreso, @fechaAgregado, @idCargo);
@@ -538,7 +538,7 @@ SELECT idEmpleado, cedula, primerNombre, segundoNombre, primerApellido, segundoA
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroEmpElim" Modifier="Public" Name="RegistroEmpElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroEmpElim">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroEmpElim" Modifier="Public" Name="RegistroEmpElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroEmpElim">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[tbl_Empleado] WHERE (([idEmpleado] = @Original_idEmpleado) AND ([cedula] = @Original_cedula) AND ([primerNombre] = @Original_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @Original_primerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellido] = @Original_segundoApellido)) AND ((@IsNull_direccion = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_observacion = 1 AND [observacion] IS NULL) OR ([observacion] = @Original_observacion)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPersonal] = @Original_emailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [emailCorporativo] IS NULL) OR ([emailCorporativo] = @Original_emailCorporativo)) AND ([sexo] = @Original_sexo) AND ([estadoActividad] = @Original_estadoActividad) AND ([estado] = @Original_estado) AND ([fechaNac] = @Original_fechaNac) AND ([fechaIngreso] = @Original_fechaIngreso) AND ((@IsNull_fechaAgregado = 1 AND [fechaAgregado] IS NULL) OR ([fechaAgregado] = @Original_fechaAgregado)) AND ([idCargo] = @Original_idCargo))</CommandText>
@@ -949,7 +949,7 @@ WHERE        (username = @Param1) AND (password = @Param2)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroUserAct" Modifier="Public" Name="RegistroUserAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroUserAct">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroUserAct" Modifier="Public" Name="RegistroUserAct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroUserAct">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[tbl_Usuario] SET [username] = @username, [password] = @password, [idEmpleado] = @idEmpleado WHERE (([idUsuario] = @Original_idUsuario) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([idEmpleado] = @Original_idEmpleado));
@@ -967,7 +967,7 @@ SELECT idUsuario, username, password, idEmpleado FROM tbl_Usuario WHERE (idUsuar
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroUserAgreg" Modifier="Public" Name="RegistroUserAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="RegistroUserAgreg">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroUserAgreg" Modifier="Public" Name="RegistroUserAgreg" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroUserAgreg">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[tbl_Usuario] ([username], [password], [idEmpleado]) VALUES (@username, @password, @idEmpleado);
@@ -980,7 +980,7 @@ SELECT idUsuario, username, password, idEmpleado FROM tbl_Usuario WHERE (idUsuar
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroUserElim" Modifier="Public" Name="RegistroUserElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="RegistroUserElim">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="RegistroUserElim" Modifier="Public" Name="RegistroUserElim" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="RegistroUserElim">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[tbl_Usuario] WHERE (([idUsuario] = @Original_idUsuario) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([idEmpleado] = @Original_idEmpleado))</CommandText>
@@ -1003,43 +1003,43 @@ SELECT idUsuario, username, password, idEmpleado FROM tbl_Usuario WHERE (idUsuar
   <xs:element name="BDSistemaEySDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BDSistemaEySDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BDSistemaEySDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_Cargo" msprop:Generator_RowClassName="tbl_CargoRow" msprop:Generator_RowEvHandlerName="tbl_CargoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_CargoRowDeleted" msprop:Generator_RowDeletingName="tbl_CargoRowDeleting" msprop:Generator_RowEvArgName="tbl_CargoRowChangeEvent" msprop:Generator_TablePropName="tbl_Cargo" msprop:Generator_RowChangedName="tbl_CargoRowChanged" msprop:Generator_UserTableName="tbl_Cargo" msprop:Generator_RowChangingName="tbl_CargoRowChanging" msprop:Generator_TableClassName="tbl_CargoDataTable" msprop:Generator_TableVarName="tabletbl_Cargo">
+        <xs:element name="tbl_Cargo" msprop:Generator_RowEvHandlerName="tbl_CargoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_CargoRowDeleted" msprop:Generator_RowDeletingName="tbl_CargoRowDeleting" msprop:Generator_RowEvArgName="tbl_CargoRowChangeEvent" msprop:Generator_TablePropName="tbl_Cargo" msprop:Generator_RowChangedName="tbl_CargoRowChanged" msprop:Generator_UserTableName="tbl_Cargo" msprop:Generator_RowChangingName="tbl_CargoRowChanging" msprop:Generator_RowClassName="tbl_CargoRow" msprop:Generator_TableClassName="tbl_CargoDataTable" msprop:Generator_TableVarName="tabletbl_Cargo">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idCargo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
+              <xs:element name="idCargo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
+              <xs:element name="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
-              <xs:element name="idDepartamento" msprop:Generator_UserColumnName="idDepartamento" msprop:Generator_ColumnPropNameInTable="idDepartamentoColumn" msprop:Generator_ColumnPropNameInRow="idDepartamento" msprop:Generator_ColumnVarNameInTable="columnidDepartamento" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="idDepartamento" msprop:Generator_ColumnPropNameInTable="idDepartamentoColumn" msprop:Generator_ColumnPropNameInRow="idDepartamento" msprop:Generator_UserColumnName="idDepartamento" msprop:Generator_ColumnVarNameInTable="columnidDepartamento" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Config" msprop:Generator_RowClassName="tbl_ConfigRow" msprop:Generator_RowEvHandlerName="tbl_ConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ConfigRowDeleted" msprop:Generator_RowDeletingName="tbl_ConfigRowDeleting" msprop:Generator_RowEvArgName="tbl_ConfigRowChangeEvent" msprop:Generator_TablePropName="tbl_Config" msprop:Generator_RowChangedName="tbl_ConfigRowChanged" msprop:Generator_UserTableName="tbl_Config" msprop:Generator_RowChangingName="tbl_ConfigRowChanging" msprop:Generator_TableClassName="tbl_ConfigDataTable" msprop:Generator_TableVarName="tabletbl_Config">
+        <xs:element name="tbl_Config" msprop:Generator_RowEvHandlerName="tbl_ConfigRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_ConfigRowDeleted" msprop:Generator_RowDeletingName="tbl_ConfigRowDeleting" msprop:Generator_RowEvArgName="tbl_ConfigRowChangeEvent" msprop:Generator_TablePropName="tbl_Config" msprop:Generator_RowChangedName="tbl_ConfigRowChanged" msprop:Generator_UserTableName="tbl_Config" msprop:Generator_RowChangingName="tbl_ConfigRowChanging" msprop:Generator_RowClassName="tbl_ConfigRow" msprop:Generator_TableClassName="tbl_ConfigDataTable" msprop:Generator_TableVarName="tabletbl_Config">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idConfig" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idConfig" msprop:Generator_ColumnPropNameInTable="idConfigColumn" msprop:Generator_ColumnPropNameInRow="idConfig" msprop:Generator_ColumnVarNameInTable="columnidConfig" type="xs:int" />
-              <xs:element name="nombreEmpresa" msprop:Generator_UserColumnName="nombreEmpresa" msprop:Generator_ColumnPropNameInTable="nombreEmpresaColumn" msprop:Generator_ColumnPropNameInRow="nombreEmpresa" msprop:Generator_ColumnVarNameInTable="columnnombreEmpresa">
+              <xs:element name="idConfig" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idConfigColumn" msprop:Generator_ColumnPropNameInRow="idConfig" msprop:Generator_UserColumnName="idConfig" msprop:Generator_ColumnVarNameInTable="columnidConfig" type="xs:int" />
+              <xs:element name="nombreEmpresa" msprop:Generator_ColumnPropNameInTable="nombreEmpresaColumn" msprop:Generator_ColumnPropNameInRow="nombreEmpresa" msprop:Generator_UserColumnName="nombreEmpresa" msprop:Generator_ColumnVarNameInTable="columnnombreEmpresa">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="horarioAlmuerzo" msprop:Generator_UserColumnName="horarioAlmuerzo" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzo" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzo" type="xs:dateTime" />
-              <xs:element name="tiempoGracia" msprop:Generator_UserColumnName="tiempoGracia" msprop:Generator_ColumnPropNameInTable="tiempoGraciaColumn" msprop:Generator_ColumnPropNameInRow="tiempoGracia" msprop:Generator_ColumnVarNameInTable="columntiempoGracia" type="xs:int" />
-              <xs:element name="emailDepDef" msprop:Generator_UserColumnName="emailDepDef" msprop:Generator_ColumnPropNameInTable="emailDepDefColumn" msprop:Generator_ColumnPropNameInRow="emailDepDef" msprop:Generator_ColumnVarNameInTable="columnemailDepDef" minOccurs="0">
+              <xs:element name="horarioAlmuerzo" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzo" msprop:Generator_UserColumnName="horarioAlmuerzo" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzo" type="xs:dateTime" />
+              <xs:element name="tiempoGracia" msprop:Generator_ColumnPropNameInTable="tiempoGraciaColumn" msprop:Generator_ColumnPropNameInRow="tiempoGracia" msprop:Generator_UserColumnName="tiempoGracia" msprop:Generator_ColumnVarNameInTable="columntiempoGracia" type="xs:int" />
+              <xs:element name="emailDepDef" msprop:Generator_ColumnPropNameInTable="emailDepDefColumn" msprop:Generator_ColumnPropNameInRow="emailDepDef" msprop:Generator_UserColumnName="emailDepDef" msprop:Generator_ColumnVarNameInTable="columnemailDepDef" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -1049,177 +1049,177 @@ SELECT idUsuario, username, password, idEmpleado FROM tbl_Usuario WHERE (idUsuar
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Departamento" msprop:Generator_RowClassName="tbl_DepartamentoRow" msprop:Generator_RowEvHandlerName="tbl_DepartamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_DepartamentoRowDeleted" msprop:Generator_RowDeletingName="tbl_DepartamentoRowDeleting" msprop:Generator_RowEvArgName="tbl_DepartamentoRowChangeEvent" msprop:Generator_TablePropName="tbl_Departamento" msprop:Generator_RowChangedName="tbl_DepartamentoRowChanged" msprop:Generator_UserTableName="tbl_Departamento" msprop:Generator_RowChangingName="tbl_DepartamentoRowChanging" msprop:Generator_TableClassName="tbl_DepartamentoDataTable" msprop:Generator_TableVarName="tabletbl_Departamento">
+        <xs:element name="tbl_Departamento" msprop:Generator_RowEvHandlerName="tbl_DepartamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_DepartamentoRowDeleted" msprop:Generator_RowDeletingName="tbl_DepartamentoRowDeleting" msprop:Generator_RowEvArgName="tbl_DepartamentoRowChangeEvent" msprop:Generator_TablePropName="tbl_Departamento" msprop:Generator_RowChangedName="tbl_DepartamentoRowChanged" msprop:Generator_UserTableName="tbl_Departamento" msprop:Generator_RowChangingName="tbl_DepartamentoRowChanging" msprop:Generator_RowClassName="tbl_DepartamentoRow" msprop:Generator_TableClassName="tbl_DepartamentoDataTable" msprop:Generator_TableVarName="tabletbl_Departamento">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idDepartamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idDepartamento" msprop:Generator_ColumnPropNameInTable="idDepartamentoColumn" msprop:Generator_ColumnPropNameInRow="idDepartamento" msprop:Generator_ColumnVarNameInTable="columnidDepartamento" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
+              <xs:element name="idDepartamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idDepartamentoColumn" msprop:Generator_ColumnPropNameInRow="idDepartamento" msprop:Generator_UserColumnName="idDepartamento" msprop:Generator_ColumnVarNameInTable="columnidDepartamento" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ext" msprop:Generator_UserColumnName="ext" msprop:Generator_ColumnPropNameInTable="extColumn" msprop:Generator_ColumnPropNameInRow="ext" msprop:Generator_ColumnVarNameInTable="columnext" minOccurs="0">
+              <xs:element name="ext" msprop:Generator_ColumnPropNameInTable="extColumn" msprop:Generator_ColumnPropNameInRow="ext" msprop:Generator_UserColumnName="ext" msprop:Generator_ColumnVarNameInTable="columnext" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="email" msprop:Generator_UserColumnName="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnVarNameInTable="columnemail" minOccurs="0">
+              <xs:element name="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_UserColumnName="email" msprop:Generator_ColumnVarNameInTable="columnemail" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
+              <xs:element name="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Empleado" msprop:Generator_RowClassName="tbl_EmpleadoRow" msprop:Generator_RowEvHandlerName="tbl_EmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_EmpleadoRowDeleted" msprop:Generator_RowDeletingName="tbl_EmpleadoRowDeleting" msprop:Generator_RowEvArgName="tbl_EmpleadoRowChangeEvent" msprop:Generator_TablePropName="tbl_Empleado" msprop:Generator_RowChangedName="tbl_EmpleadoRowChanged" msprop:Generator_UserTableName="tbl_Empleado" msprop:Generator_RowChangingName="tbl_EmpleadoRowChanging" msprop:Generator_TableClassName="tbl_EmpleadoDataTable" msprop:Generator_TableVarName="tabletbl_Empleado">
+        <xs:element name="tbl_Empleado" msprop:Generator_RowEvHandlerName="tbl_EmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_EmpleadoRowDeleted" msprop:Generator_RowDeletingName="tbl_EmpleadoRowDeleting" msprop:Generator_RowEvArgName="tbl_EmpleadoRowChangeEvent" msprop:Generator_TablePropName="tbl_Empleado" msprop:Generator_RowChangedName="tbl_EmpleadoRowChanged" msprop:Generator_UserTableName="tbl_Empleado" msprop:Generator_RowChangingName="tbl_EmpleadoRowChanging" msprop:Generator_RowClassName="tbl_EmpleadoRow" msprop:Generator_TableClassName="tbl_EmpleadoDataTable" msprop:Generator_TableVarName="tabletbl_Empleado">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idEmpleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
-              <xs:element name="cedula" msprop:Generator_UserColumnName="cedula" msprop:Generator_ColumnPropNameInTable="cedulaColumn" msprop:Generator_ColumnPropNameInRow="cedula" msprop:Generator_ColumnVarNameInTable="columncedula">
+              <xs:element name="idEmpleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
+              <xs:element name="cedula" msprop:Generator_ColumnPropNameInTable="cedulaColumn" msprop:Generator_ColumnPropNameInRow="cedula" msprop:Generator_UserColumnName="cedula" msprop:Generator_ColumnVarNameInTable="columncedula">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="14" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="primerNombre" msprop:Generator_UserColumnName="primerNombre" msprop:Generator_ColumnPropNameInTable="primerNombreColumn" msprop:Generator_ColumnPropNameInRow="primerNombre" msprop:Generator_ColumnVarNameInTable="columnprimerNombre">
+              <xs:element name="primerNombre" msprop:Generator_ColumnPropNameInTable="primerNombreColumn" msprop:Generator_ColumnPropNameInRow="primerNombre" msprop:Generator_UserColumnName="primerNombre" msprop:Generator_ColumnVarNameInTable="columnprimerNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="segundoNombre" msprop:Generator_UserColumnName="segundoNombre" msprop:Generator_ColumnPropNameInTable="segundoNombreColumn" msprop:Generator_ColumnPropNameInRow="segundoNombre" msprop:Generator_ColumnVarNameInTable="columnsegundoNombre" minOccurs="0">
+              <xs:element name="segundoNombre" msprop:Generator_ColumnPropNameInTable="segundoNombreColumn" msprop:Generator_ColumnPropNameInRow="segundoNombre" msprop:Generator_UserColumnName="segundoNombre" msprop:Generator_ColumnVarNameInTable="columnsegundoNombre" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="primerApellido" msprop:Generator_UserColumnName="primerApellido" msprop:Generator_ColumnPropNameInTable="primerApellidoColumn" msprop:Generator_ColumnPropNameInRow="primerApellido" msprop:Generator_ColumnVarNameInTable="columnprimerApellido">
+              <xs:element name="primerApellido" msprop:Generator_ColumnPropNameInTable="primerApellidoColumn" msprop:Generator_ColumnPropNameInRow="primerApellido" msprop:Generator_UserColumnName="primerApellido" msprop:Generator_ColumnVarNameInTable="columnprimerApellido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="segundoApellido" msprop:Generator_UserColumnName="segundoApellido" msprop:Generator_ColumnPropNameInTable="segundoApellidoColumn" msprop:Generator_ColumnPropNameInRow="segundoApellido" msprop:Generator_ColumnVarNameInTable="columnsegundoApellido" minOccurs="0">
+              <xs:element name="segundoApellido" msprop:Generator_ColumnPropNameInTable="segundoApellidoColumn" msprop:Generator_ColumnPropNameInRow="segundoApellido" msprop:Generator_UserColumnName="segundoApellido" msprop:Generator_ColumnVarNameInTable="columnsegundoApellido" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="direccion" msprop:Generator_UserColumnName="direccion" msprop:Generator_ColumnPropNameInTable="direccionColumn" msprop:Generator_ColumnPropNameInRow="direccion" msprop:Generator_ColumnVarNameInTable="columndireccion" minOccurs="0">
+              <xs:element name="direccion" msprop:Generator_ColumnPropNameInTable="direccionColumn" msprop:Generator_ColumnPropNameInRow="direccion" msprop:Generator_UserColumnName="direccion" msprop:Generator_ColumnVarNameInTable="columndireccion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="observacion" msprop:Generator_UserColumnName="observacion" msprop:Generator_ColumnPropNameInTable="observacionColumn" msprop:Generator_ColumnPropNameInRow="observacion" msprop:Generator_ColumnVarNameInTable="columnobservacion" minOccurs="0">
+              <xs:element name="observacion" msprop:Generator_ColumnPropNameInTable="observacionColumn" msprop:Generator_ColumnPropNameInRow="observacion" msprop:Generator_UserColumnName="observacion" msprop:Generator_ColumnVarNameInTable="columnobservacion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="telefono" msprop:Generator_UserColumnName="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" minOccurs="0">
+              <xs:element name="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_UserColumnName="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="12" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="emailPersonal" msprop:Generator_UserColumnName="emailPersonal" msprop:Generator_ColumnPropNameInTable="emailPersonalColumn" msprop:Generator_ColumnPropNameInRow="emailPersonal" msprop:Generator_ColumnVarNameInTable="columnemailPersonal" minOccurs="0">
+              <xs:element name="emailPersonal" msprop:Generator_ColumnPropNameInTable="emailPersonalColumn" msprop:Generator_ColumnPropNameInRow="emailPersonal" msprop:Generator_UserColumnName="emailPersonal" msprop:Generator_ColumnVarNameInTable="columnemailPersonal" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="emailCorporativo" msprop:Generator_UserColumnName="emailCorporativo" msprop:Generator_ColumnPropNameInTable="emailCorporativoColumn" msprop:Generator_ColumnPropNameInRow="emailCorporativo" msprop:Generator_ColumnVarNameInTable="columnemailCorporativo" minOccurs="0">
+              <xs:element name="emailCorporativo" msprop:Generator_ColumnPropNameInTable="emailCorporativoColumn" msprop:Generator_ColumnPropNameInRow="emailCorporativo" msprop:Generator_UserColumnName="emailCorporativo" msprop:Generator_ColumnVarNameInTable="columnemailCorporativo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="sexo" msprop:Generator_UserColumnName="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" type="xs:boolean" />
-              <xs:element name="estadoActividad" msprop:Generator_UserColumnName="estadoActividad" msprop:Generator_ColumnPropNameInTable="estadoActividadColumn" msprop:Generator_ColumnPropNameInRow="estadoActividad" msprop:Generator_ColumnVarNameInTable="columnestadoActividad" type="xs:boolean" />
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
-              <xs:element name="fechaNac" msprop:Generator_UserColumnName="fechaNac" msprop:Generator_ColumnPropNameInTable="fechaNacColumn" msprop:Generator_ColumnPropNameInRow="fechaNac" msprop:Generator_ColumnVarNameInTable="columnfechaNac" type="xs:dateTime" />
-              <xs:element name="fechaIngreso" msprop:Generator_UserColumnName="fechaIngreso" msprop:Generator_ColumnPropNameInTable="fechaIngresoColumn" msprop:Generator_ColumnPropNameInRow="fechaIngreso" msprop:Generator_ColumnVarNameInTable="columnfechaIngreso" type="xs:dateTime" />
-              <xs:element name="fechaAgregado" msprop:Generator_UserColumnName="fechaAgregado" msprop:Generator_ColumnPropNameInTable="fechaAgregadoColumn" msprop:Generator_ColumnPropNameInRow="fechaAgregado" msprop:Generator_ColumnVarNameInTable="columnfechaAgregado" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
+              <xs:element name="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_UserColumnName="sexo" msprop:Generator_ColumnVarNameInTable="columnsexo" type="xs:boolean" />
+              <xs:element name="estadoActividad" msprop:Generator_ColumnPropNameInTable="estadoActividadColumn" msprop:Generator_ColumnPropNameInRow="estadoActividad" msprop:Generator_UserColumnName="estadoActividad" msprop:Generator_ColumnVarNameInTable="columnestadoActividad" type="xs:boolean" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="fechaNac" msprop:Generator_ColumnPropNameInTable="fechaNacColumn" msprop:Generator_ColumnPropNameInRow="fechaNac" msprop:Generator_UserColumnName="fechaNac" msprop:Generator_ColumnVarNameInTable="columnfechaNac" type="xs:dateTime" />
+              <xs:element name="fechaIngreso" msprop:Generator_ColumnPropNameInTable="fechaIngresoColumn" msprop:Generator_ColumnPropNameInRow="fechaIngreso" msprop:Generator_UserColumnName="fechaIngreso" msprop:Generator_ColumnVarNameInTable="columnfechaIngreso" type="xs:dateTime" />
+              <xs:element name="fechaAgregado" msprop:Generator_ColumnPropNameInTable="fechaAgregadoColumn" msprop:Generator_ColumnPropNameInRow="fechaAgregado" msprop:Generator_UserColumnName="fechaAgregado" msprop:Generator_ColumnVarNameInTable="columnfechaAgregado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Evento" msprop:Generator_RowClassName="tbl_EventoRow" msprop:Generator_RowEvHandlerName="tbl_EventoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_EventoRowDeleted" msprop:Generator_RowDeletingName="tbl_EventoRowDeleting" msprop:Generator_RowEvArgName="tbl_EventoRowChangeEvent" msprop:Generator_TablePropName="tbl_Evento" msprop:Generator_RowChangedName="tbl_EventoRowChanged" msprop:Generator_UserTableName="tbl_Evento" msprop:Generator_RowChangingName="tbl_EventoRowChanging" msprop:Generator_TableClassName="tbl_EventoDataTable" msprop:Generator_TableVarName="tabletbl_Evento">
+        <xs:element name="tbl_Evento" msprop:Generator_RowEvHandlerName="tbl_EventoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_EventoRowDeleted" msprop:Generator_RowDeletingName="tbl_EventoRowDeleting" msprop:Generator_RowEvArgName="tbl_EventoRowChangeEvent" msprop:Generator_TablePropName="tbl_Evento" msprop:Generator_RowChangedName="tbl_EventoRowChanged" msprop:Generator_UserTableName="tbl_Evento" msprop:Generator_RowChangingName="tbl_EventoRowChanging" msprop:Generator_RowClassName="tbl_EventoRow" msprop:Generator_TableClassName="tbl_EventoDataTable" msprop:Generator_TableVarName="tabletbl_Evento">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idEvento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idEvento" msprop:Generator_ColumnPropNameInTable="idEventoColumn" msprop:Generator_ColumnPropNameInRow="idEvento" msprop:Generator_ColumnVarNameInTable="columnidEvento" type="xs:int" />
-              <xs:element name="fechaInicio" msprop:Generator_UserColumnName="fechaInicio" msprop:Generator_ColumnPropNameInTable="fechaInicioColumn" msprop:Generator_ColumnPropNameInRow="fechaInicio" msprop:Generator_ColumnVarNameInTable="columnfechaInicio" type="xs:dateTime" />
-              <xs:element name="fechaFin" msprop:Generator_UserColumnName="fechaFin" msprop:Generator_ColumnPropNameInTable="fechaFinColumn" msprop:Generator_ColumnPropNameInRow="fechaFin" msprop:Generator_ColumnVarNameInTable="columnfechaFin" type="xs:dateTime" />
-              <xs:element name="razon" msprop:Generator_UserColumnName="razon" msprop:Generator_ColumnPropNameInTable="razonColumn" msprop:Generator_ColumnPropNameInRow="razon" msprop:Generator_ColumnVarNameInTable="columnrazon">
+              <xs:element name="idEvento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idEventoColumn" msprop:Generator_ColumnPropNameInRow="idEvento" msprop:Generator_UserColumnName="idEvento" msprop:Generator_ColumnVarNameInTable="columnidEvento" type="xs:int" />
+              <xs:element name="fechaInicio" msprop:Generator_ColumnPropNameInTable="fechaInicioColumn" msprop:Generator_ColumnPropNameInRow="fechaInicio" msprop:Generator_UserColumnName="fechaInicio" msprop:Generator_ColumnVarNameInTable="columnfechaInicio" type="xs:dateTime" />
+              <xs:element name="fechaFin" msprop:Generator_ColumnPropNameInTable="fechaFinColumn" msprop:Generator_ColumnPropNameInRow="fechaFin" msprop:Generator_UserColumnName="fechaFin" msprop:Generator_ColumnVarNameInTable="columnfechaFin" type="xs:dateTime" />
+              <xs:element name="razon" msprop:Generator_ColumnPropNameInTable="razonColumn" msprop:Generator_ColumnPropNameInRow="razon" msprop:Generator_UserColumnName="razon" msprop:Generator_ColumnVarNameInTable="columnrazon">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion">
+              <xs:element name="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
-              <xs:element name="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Horario" msprop:Generator_RowClassName="tbl_HorarioRow" msprop:Generator_RowEvHandlerName="tbl_HorarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_HorarioRowDeleted" msprop:Generator_RowDeletingName="tbl_HorarioRowDeleting" msprop:Generator_RowEvArgName="tbl_HorarioRowChangeEvent" msprop:Generator_TablePropName="tbl_Horario" msprop:Generator_RowChangedName="tbl_HorarioRowChanged" msprop:Generator_UserTableName="tbl_Horario" msprop:Generator_RowChangingName="tbl_HorarioRowChanging" msprop:Generator_TableClassName="tbl_HorarioDataTable" msprop:Generator_TableVarName="tabletbl_Horario">
+        <xs:element name="tbl_Horario" msprop:Generator_RowEvHandlerName="tbl_HorarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_HorarioRowDeleted" msprop:Generator_RowDeletingName="tbl_HorarioRowDeleting" msprop:Generator_RowEvArgName="tbl_HorarioRowChangeEvent" msprop:Generator_TablePropName="tbl_Horario" msprop:Generator_RowChangedName="tbl_HorarioRowChanged" msprop:Generator_UserTableName="tbl_Horario" msprop:Generator_RowChangingName="tbl_HorarioRowChanging" msprop:Generator_RowClassName="tbl_HorarioRow" msprop:Generator_TableClassName="tbl_HorarioDataTable" msprop:Generator_TableVarName="tabletbl_Horario">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idHorario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idHorario" msprop:Generator_ColumnPropNameInTable="idHorarioColumn" msprop:Generator_ColumnPropNameInRow="idHorario" msprop:Generator_ColumnVarNameInTable="columnidHorario" type="xs:int" />
-              <xs:element name="horarioIn" msprop:Generator_UserColumnName="horarioIn" msprop:Generator_ColumnPropNameInTable="horarioInColumn" msprop:Generator_ColumnPropNameInRow="horarioIn" msprop:Generator_ColumnVarNameInTable="columnhorarioIn" type="xs:dateTime" />
-              <xs:element name="horarioOut" msprop:Generator_UserColumnName="horarioOut" msprop:Generator_ColumnPropNameInTable="horarioOutColumn" msprop:Generator_ColumnPropNameInRow="horarioOut" msprop:Generator_ColumnVarNameInTable="columnhorarioOut" type="xs:dateTime" />
-              <xs:element name="tipoHorario" msprop:Generator_UserColumnName="tipoHorario" msprop:Generator_ColumnPropNameInTable="tipoHorarioColumn" msprop:Generator_ColumnPropNameInRow="tipoHorario" msprop:Generator_ColumnVarNameInTable="columntipoHorario" type="xs:int" />
-              <xs:element name="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
+              <xs:element name="idHorario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idHorarioColumn" msprop:Generator_ColumnPropNameInRow="idHorario" msprop:Generator_UserColumnName="idHorario" msprop:Generator_ColumnVarNameInTable="columnidHorario" type="xs:int" />
+              <xs:element name="horarioIn" msprop:Generator_ColumnPropNameInTable="horarioInColumn" msprop:Generator_ColumnPropNameInRow="horarioIn" msprop:Generator_UserColumnName="horarioIn" msprop:Generator_ColumnVarNameInTable="columnhorarioIn" type="xs:dateTime" />
+              <xs:element name="horarioOut" msprop:Generator_ColumnPropNameInTable="horarioOutColumn" msprop:Generator_ColumnPropNameInRow="horarioOut" msprop:Generator_UserColumnName="horarioOut" msprop:Generator_ColumnVarNameInTable="columnhorarioOut" type="xs:dateTime" />
+              <xs:element name="tipoHorario" msprop:Generator_ColumnPropNameInTable="tipoHorarioColumn" msprop:Generator_ColumnPropNameInRow="tipoHorario" msprop:Generator_UserColumnName="tipoHorario" msprop:Generator_ColumnVarNameInTable="columntipoHorario" type="xs:int" />
+              <xs:element name="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_OpcCar" msprop:Generator_RowClassName="tbl_OpcCarRow" msprop:Generator_RowEvHandlerName="tbl_OpcCarRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_OpcCarRowDeleted" msprop:Generator_RowDeletingName="tbl_OpcCarRowDeleting" msprop:Generator_RowEvArgName="tbl_OpcCarRowChangeEvent" msprop:Generator_TablePropName="tbl_OpcCar" msprop:Generator_RowChangedName="tbl_OpcCarRowChanged" msprop:Generator_UserTableName="tbl_OpcCar" msprop:Generator_RowChangingName="tbl_OpcCarRowChanging" msprop:Generator_TableClassName="tbl_OpcCarDataTable" msprop:Generator_TableVarName="tabletbl_OpcCar">
+        <xs:element name="tbl_OpcCar" msprop:Generator_RowEvHandlerName="tbl_OpcCarRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_OpcCarRowDeleted" msprop:Generator_RowDeletingName="tbl_OpcCarRowDeleting" msprop:Generator_RowEvArgName="tbl_OpcCarRowChangeEvent" msprop:Generator_TablePropName="tbl_OpcCar" msprop:Generator_RowChangedName="tbl_OpcCarRowChanged" msprop:Generator_UserTableName="tbl_OpcCar" msprop:Generator_RowChangingName="tbl_OpcCarRowChanging" msprop:Generator_RowClassName="tbl_OpcCarRow" msprop:Generator_TableClassName="tbl_OpcCarDataTable" msprop:Generator_TableVarName="tabletbl_OpcCar">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idOpcCar" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idOpcCar" msprop:Generator_ColumnPropNameInTable="idOpcCarColumn" msprop:Generator_ColumnPropNameInRow="idOpcCar" msprop:Generator_ColumnVarNameInTable="columnidOpcCar" type="xs:int" />
-              <xs:element name="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" type="xs:boolean" />
-              <xs:element name="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
-              <xs:element name="idOpcion" msprop:Generator_UserColumnName="idOpcion" msprop:Generator_ColumnPropNameInTable="idOpcionColumn" msprop:Generator_ColumnPropNameInRow="idOpcion" msprop:Generator_ColumnVarNameInTable="columnidOpcion" type="xs:int" />
+              <xs:element name="idOpcCar" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idOpcCarColumn" msprop:Generator_ColumnPropNameInRow="idOpcCar" msprop:Generator_UserColumnName="idOpcCar" msprop:Generator_ColumnVarNameInTable="columnidOpcCar" type="xs:int" />
+              <xs:element name="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" type="xs:boolean" />
+              <xs:element name="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
+              <xs:element name="idOpcion" msprop:Generator_ColumnPropNameInTable="idOpcionColumn" msprop:Generator_ColumnPropNameInRow="idOpcion" msprop:Generator_UserColumnName="idOpcion" msprop:Generator_ColumnVarNameInTable="columnidOpcion" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Opcion" msprop:Generator_RowClassName="tbl_OpcionRow" msprop:Generator_RowEvHandlerName="tbl_OpcionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_OpcionRowDeleted" msprop:Generator_RowDeletingName="tbl_OpcionRowDeleting" msprop:Generator_RowEvArgName="tbl_OpcionRowChangeEvent" msprop:Generator_TablePropName="tbl_Opcion" msprop:Generator_RowChangedName="tbl_OpcionRowChanged" msprop:Generator_UserTableName="tbl_Opcion" msprop:Generator_RowChangingName="tbl_OpcionRowChanging" msprop:Generator_TableClassName="tbl_OpcionDataTable" msprop:Generator_TableVarName="tabletbl_Opcion">
+        <xs:element name="tbl_Opcion" msprop:Generator_RowEvHandlerName="tbl_OpcionRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_OpcionRowDeleted" msprop:Generator_RowDeletingName="tbl_OpcionRowDeleting" msprop:Generator_RowEvArgName="tbl_OpcionRowChangeEvent" msprop:Generator_TablePropName="tbl_Opcion" msprop:Generator_RowChangedName="tbl_OpcionRowChanged" msprop:Generator_UserTableName="tbl_Opcion" msprop:Generator_RowChangingName="tbl_OpcionRowChanging" msprop:Generator_RowClassName="tbl_OpcionRow" msprop:Generator_TableClassName="tbl_OpcionDataTable" msprop:Generator_TableVarName="tabletbl_Opcion">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idOpcion" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idOpcion" msprop:Generator_ColumnPropNameInTable="idOpcionColumn" msprop:Generator_ColumnPropNameInRow="idOpcion" msprop:Generator_ColumnVarNameInTable="columnidOpcion" type="xs:int" />
-              <xs:element name="formulario" msprop:Generator_UserColumnName="formulario" msprop:Generator_ColumnPropNameInTable="formularioColumn" msprop:Generator_ColumnPropNameInRow="formulario" msprop:Generator_ColumnVarNameInTable="columnformulario">
+              <xs:element name="idOpcion" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idOpcionColumn" msprop:Generator_ColumnPropNameInRow="idOpcion" msprop:Generator_UserColumnName="idOpcion" msprop:Generator_ColumnVarNameInTable="columnidOpcion" type="xs:int" />
+              <xs:element name="formulario" msprop:Generator_ColumnPropNameInTable="formularioColumn" msprop:Generator_ColumnPropNameInRow="formulario" msprop:Generator_UserColumnName="formulario" msprop:Generator_ColumnVarNameInTable="columnformulario">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="80" />
@@ -1229,37 +1229,37 @@ SELECT idUsuario, username, password, idEmpleado FROM tbl_Usuario WHERE (idUsuar
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Registro" msprop:Generator_RowClassName="tbl_RegistroRow" msprop:Generator_RowEvHandlerName="tbl_RegistroRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RegistroRowDeleted" msprop:Generator_RowDeletingName="tbl_RegistroRowDeleting" msprop:Generator_RowEvArgName="tbl_RegistroRowChangeEvent" msprop:Generator_TablePropName="tbl_Registro" msprop:Generator_RowChangedName="tbl_RegistroRowChanged" msprop:Generator_UserTableName="tbl_Registro" msprop:Generator_RowChangingName="tbl_RegistroRowChanging" msprop:Generator_TableClassName="tbl_RegistroDataTable" msprop:Generator_TableVarName="tabletbl_Registro">
+        <xs:element name="tbl_Registro" msprop:Generator_RowEvHandlerName="tbl_RegistroRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RegistroRowDeleted" msprop:Generator_RowDeletingName="tbl_RegistroRowDeleting" msprop:Generator_RowEvArgName="tbl_RegistroRowChangeEvent" msprop:Generator_TablePropName="tbl_Registro" msprop:Generator_RowChangedName="tbl_RegistroRowChanged" msprop:Generator_UserTableName="tbl_Registro" msprop:Generator_RowChangingName="tbl_RegistroRowChanging" msprop:Generator_RowClassName="tbl_RegistroRow" msprop:Generator_TableClassName="tbl_RegistroDataTable" msprop:Generator_TableVarName="tabletbl_Registro">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idRegstro" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idRegstro" msprop:Generator_ColumnPropNameInTable="idRegstroColumn" msprop:Generator_ColumnPropNameInRow="idRegstro" msprop:Generator_ColumnVarNameInTable="columnidRegstro" type="xs:int" />
-              <xs:element name="horaEntrada" msprop:Generator_UserColumnName="horaEntrada" msprop:Generator_ColumnPropNameInTable="horaEntradaColumn" msprop:Generator_ColumnPropNameInRow="horaEntrada" msprop:Generator_ColumnVarNameInTable="columnhoraEntrada" type="xs:dateTime" />
-              <xs:element name="horaSalida" msprop:Generator_UserColumnName="horaSalida" msprop:Generator_ColumnPropNameInTable="horaSalidaColumn" msprop:Generator_ColumnPropNameInRow="horaSalida" msprop:Generator_ColumnVarNameInTable="columnhoraSalida" type="xs:dateTime" />
-              <xs:element name="horaAlmuerzoIn" msprop:Generator_UserColumnName="horaAlmuerzoIn" msprop:Generator_ColumnPropNameInTable="horaAlmuerzoInColumn" msprop:Generator_ColumnPropNameInRow="horaAlmuerzoIn" msprop:Generator_ColumnVarNameInTable="columnhoraAlmuerzoIn" type="xs:dateTime" />
-              <xs:element name="horaAlmuerzoOut" msprop:Generator_UserColumnName="horaAlmuerzoOut" msprop:Generator_ColumnPropNameInTable="horaAlmuerzoOutColumn" msprop:Generator_ColumnPropNameInRow="horaAlmuerzoOut" msprop:Generator_ColumnVarNameInTable="columnhoraAlmuerzoOut" type="xs:dateTime" />
-              <xs:element name="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
+              <xs:element name="idRegstro" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idRegstroColumn" msprop:Generator_ColumnPropNameInRow="idRegstro" msprop:Generator_UserColumnName="idRegstro" msprop:Generator_ColumnVarNameInTable="columnidRegstro" type="xs:int" />
+              <xs:element name="horaEntrada" msprop:Generator_ColumnPropNameInTable="horaEntradaColumn" msprop:Generator_ColumnPropNameInRow="horaEntrada" msprop:Generator_UserColumnName="horaEntrada" msprop:Generator_ColumnVarNameInTable="columnhoraEntrada" type="xs:dateTime" />
+              <xs:element name="horaSalida" msprop:Generator_ColumnPropNameInTable="horaSalidaColumn" msprop:Generator_ColumnPropNameInRow="horaSalida" msprop:Generator_UserColumnName="horaSalida" msprop:Generator_ColumnVarNameInTable="columnhoraSalida" type="xs:dateTime" />
+              <xs:element name="horaAlmuerzoIn" msprop:Generator_ColumnPropNameInTable="horaAlmuerzoInColumn" msprop:Generator_ColumnPropNameInRow="horaAlmuerzoIn" msprop:Generator_UserColumnName="horaAlmuerzoIn" msprop:Generator_ColumnVarNameInTable="columnhoraAlmuerzoIn" type="xs:dateTime" />
+              <xs:element name="horaAlmuerzoOut" msprop:Generator_ColumnPropNameInTable="horaAlmuerzoOutColumn" msprop:Generator_ColumnPropNameInRow="horaAlmuerzoOut" msprop:Generator_UserColumnName="horaAlmuerzoOut" msprop:Generator_ColumnVarNameInTable="columnhoraAlmuerzoOut" type="xs:dateTime" />
+              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Usuario" msprop:Generator_RowClassName="tbl_UsuarioRow" msprop:Generator_RowEvHandlerName="tbl_UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_UsuarioRowDeleted" msprop:Generator_RowDeletingName="tbl_UsuarioRowDeleting" msprop:Generator_RowEvArgName="tbl_UsuarioRowChangeEvent" msprop:Generator_TablePropName="tbl_Usuario" msprop:Generator_RowChangedName="tbl_UsuarioRowChanged" msprop:Generator_UserTableName="tbl_Usuario" msprop:Generator_RowChangingName="tbl_UsuarioRowChanging" msprop:Generator_TableClassName="tbl_UsuarioDataTable" msprop:Generator_TableVarName="tabletbl_Usuario">
+        <xs:element name="tbl_Usuario" msprop:Generator_RowEvHandlerName="tbl_UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_UsuarioRowDeleted" msprop:Generator_RowDeletingName="tbl_UsuarioRowDeleting" msprop:Generator_RowEvArgName="tbl_UsuarioRowChangeEvent" msprop:Generator_TablePropName="tbl_Usuario" msprop:Generator_RowChangedName="tbl_UsuarioRowChanged" msprop:Generator_UserTableName="tbl_Usuario" msprop:Generator_RowChangingName="tbl_UsuarioRowChanging" msprop:Generator_RowClassName="tbl_UsuarioRow" msprop:Generator_TableClassName="tbl_UsuarioDataTable" msprop:Generator_TableVarName="tabletbl_Usuario">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_ColumnVarNameInTable="columnidUsuario" type="xs:int" />
-              <xs:element name="username" msprop:Generator_UserColumnName="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnVarNameInTable="columnusername">
+              <xs:element name="idUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_UserColumnName="idUsuario" msprop:Generator_ColumnVarNameInTable="columnidUsuario" type="xs:int" />
+              <xs:element name="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_UserColumnName="username" msprop:Generator_ColumnVarNameInTable="columnusername">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="password" msprop:Generator_UserColumnName="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnVarNameInTable="columnpassword">
+              <xs:element name="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_UserColumnName="password" msprop:Generator_ColumnVarNameInTable="columnpassword">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
+              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1308,14 +1308,14 @@ SELECT idUsuario, username, password, idEmpleado FROM tbl_Usuario WHERE (idUsuar
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Reftbl_Departamento16" msdata:parent="tbl_Departamento" msdata:child="tbl_Cargo" msdata:parentkey="idDepartamento" msdata:childkey="idDepartamento" msprop:Generator_UserParentTable="tbl_Departamento" msprop:Generator_UserChildTable="tbl_Cargo" msprop:Generator_RelationVarName="relationReftbl_Departamento16" msprop:Generator_ChildPropName="Gettbl_CargoRows" msprop:Generator_ParentPropName="tbl_DepartamentoRow" msprop:Generator_UserRelationName="Reftbl_Departamento16" />
-      <msdata:Relationship name="Reftbl_Cargo31" msdata:parent="tbl_Cargo" msdata:child="tbl_Empleado" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Cargo31" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_UserRelationName="Reftbl_Cargo31" msprop:Generator_ParentPropName="tbl_CargoRow" />
-      <msdata:Relationship name="Reftbl_Empleado51" msdata:parent="tbl_Empleado" msdata:child="tbl_Evento" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Evento" msprop:Generator_RelationVarName="relationReftbl_Empleado51" msprop:Generator_ChildPropName="Gettbl_EventoRows" msprop:Generator_UserRelationName="Reftbl_Empleado51" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
-      <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_UserRelationName="Reftbl_Cargo40" msprop:Generator_ParentPropName="tbl_CargoRow" />
-      <msdata:Relationship name="Reftbl_Cargo52" msdata:parent="tbl_Cargo" msdata:child="tbl_OpcCar" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_OpcCar" msprop:Generator_RelationVarName="relationReftbl_Cargo52" msprop:Generator_ChildPropName="Gettbl_OpcCarRows" msprop:Generator_UserRelationName="Reftbl_Cargo52" msprop:Generator_ParentPropName="tbl_CargoRow" />
-      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcCar" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcCar" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcCarRows" msprop:Generator_ParentPropName="tbl_OpcionRow" msprop:Generator_UserRelationName="Reftbl_Opcion53" />
-      <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_UserRelationName="Reftbl_Empleado36" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
-      <msdata:Relationship name="Reftbl_Empleado34" msdata:parent="tbl_Empleado" msdata:child="tbl_Usuario" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Empleado34" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_UserRelationName="Reftbl_Empleado34" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
+      <msdata:Relationship name="Reftbl_Departamento16" msdata:parent="tbl_Departamento" msdata:child="tbl_Cargo" msdata:parentkey="idDepartamento" msdata:childkey="idDepartamento" msprop:Generator_UserParentTable="tbl_Departamento" msprop:Generator_UserChildTable="tbl_Cargo" msprop:Generator_RelationVarName="relationReftbl_Departamento16" msprop:Generator_ChildPropName="Gettbl_CargoRows" msprop:Generator_UserRelationName="Reftbl_Departamento16" msprop:Generator_ParentPropName="tbl_DepartamentoRow" />
+      <msdata:Relationship name="Reftbl_Cargo31" msdata:parent="tbl_Cargo" msdata:child="tbl_Empleado" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Cargo31" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo31" />
+      <msdata:Relationship name="Reftbl_Empleado51" msdata:parent="tbl_Empleado" msdata:child="tbl_Evento" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Evento" msprop:Generator_RelationVarName="relationReftbl_Empleado51" msprop:Generator_ChildPropName="Gettbl_EventoRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado51" />
+      <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo40" />
+      <msdata:Relationship name="Reftbl_Cargo52" msdata:parent="tbl_Cargo" msdata:child="tbl_OpcCar" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_OpcCar" msprop:Generator_RelationVarName="relationReftbl_Cargo52" msprop:Generator_ChildPropName="Gettbl_OpcCarRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo52" />
+      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcCar" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcCar" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcCarRows" msprop:Generator_UserRelationName="Reftbl_Opcion53" msprop:Generator_ParentPropName="tbl_OpcionRow" />
+      <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado36" />
+      <msdata:Relationship name="Reftbl_Empleado34" msdata:parent="tbl_Empleado" msdata:child="tbl_Usuario" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Empleado34" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado34" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

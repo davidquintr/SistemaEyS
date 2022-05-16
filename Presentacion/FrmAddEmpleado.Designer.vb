@@ -34,7 +34,7 @@ Partial Class FrmAddEmpleado
         Me.rtxtObservacion = New System.Windows.Forms.RichTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFechaIngreso = New System.Windows.Forms.DateTimePicker()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -107,7 +107,7 @@ Partial Class FrmAddEmpleado
         Me.GroupBox1.Controls.Add(Me.rtxtObservacion)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.dtpFechaIngreso)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.txtTelefono)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -202,12 +202,12 @@ Partial Class FrmAddEmpleado
         Me.Label9.Text = "Fecha de ingreso:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'DateTimePicker1
+        'dtpFechaIngreso
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(549, 108)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(208, 25)
-        Me.DateTimePicker1.TabIndex = 12
+        Me.dtpFechaIngreso.Location = New System.Drawing.Point(549, 108)
+        Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
+        Me.dtpFechaIngreso.Size = New System.Drawing.Size(208, 25)
+        Me.dtpFechaIngreso.TabIndex = 12
         '
         'Label8
         '
@@ -414,7 +414,7 @@ Partial Class FrmAddEmpleado
     Friend WithEvents rtxtObservacion As RichTextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpFechaIngreso As DateTimePicker
     Friend WithEvents Label8 As Label
     Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label7 As Label

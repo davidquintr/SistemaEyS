@@ -27,9 +27,9 @@ Partial Class frmListarEmp
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblFechaIng = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.rtxtDireccion = New System.Windows.Forms.RichTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.rtxtObservacion = New System.Windows.Forms.RichTextBox()
         Me.lblTelefono = New System.Windows.Forms.Label()
         Me.lblActividad = New System.Windows.Forms.Label()
         Me.lblFechaNac = New System.Windows.Forms.Label()
@@ -53,7 +53,7 @@ Partial Class frmListarEmp
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbEmpleado = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -92,9 +92,9 @@ Partial Class frmListarEmp
         '
         Me.GroupBox1.Controls.Add(Me.lblFechaIng)
         Me.GroupBox1.Controls.Add(Me.Label27)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox1.Controls.Add(Me.rtxtDireccion)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox1.Controls.Add(Me.rtxtObservacion)
         Me.GroupBox1.Controls.Add(Me.lblTelefono)
         Me.GroupBox1.Controls.Add(Me.lblActividad)
         Me.GroupBox1.Controls.Add(Me.lblFechaNac)
@@ -150,16 +150,16 @@ Partial Class frmListarEmp
         Me.Label27.Text = "Fecha de ingreso:"
         Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RichTextBox2
+        'rtxtDireccion
         '
-        Me.RichTextBox2.BackColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox2.Enabled = False
-        Me.RichTextBox2.Location = New System.Drawing.Point(216, 467)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox2.TabIndex = 29
-        Me.RichTextBox2.Text = ""
+        Me.rtxtDireccion.BackColor = System.Drawing.SystemColors.Window
+        Me.rtxtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtxtDireccion.Enabled = False
+        Me.rtxtDireccion.Location = New System.Drawing.Point(216, 467)
+        Me.rtxtDireccion.Name = "rtxtDireccion"
+        Me.rtxtDireccion.Size = New System.Drawing.Size(269, 38)
+        Me.rtxtDireccion.TabIndex = 29
+        Me.rtxtDireccion.Text = ""
         '
         'Label14
         '
@@ -172,16 +172,16 @@ Partial Class frmListarEmp
         Me.Label14.Text = "Dirección:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'RichTextBox1
+        'rtxtObservacion
         '
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox1.Enabled = False
-        Me.RichTextBox1.Location = New System.Drawing.Point(216, 420)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(269, 38)
-        Me.RichTextBox1.TabIndex = 27
-        Me.RichTextBox1.Text = ""
+        Me.rtxtObservacion.BackColor = System.Drawing.SystemColors.Window
+        Me.rtxtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtxtObservacion.Enabled = False
+        Me.rtxtObservacion.Location = New System.Drawing.Point(216, 420)
+        Me.rtxtObservacion.Name = "rtxtObservacion"
+        Me.rtxtObservacion.Size = New System.Drawing.Size(269, 38)
+        Me.rtxtObservacion.TabIndex = 27
+        Me.rtxtObservacion.Text = ""
         '
         'lblTelefono
         '
@@ -436,14 +436,14 @@ Partial Class frmListarEmp
         Me.Label3.Text = "Apellidos:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ComboBox1
+        'cbEmpleado
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 11.12727!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(12, 538)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(289, 28)
-        Me.ComboBox1.TabIndex = 30
+        Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 11.12727!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbEmpleado.FormattingEnabled = True
+        Me.cbEmpleado.Location = New System.Drawing.Point(12, 538)
+        Me.cbEmpleado.Name = "cbEmpleado"
+        Me.cbEmpleado.Size = New System.Drawing.Size(289, 28)
+        Me.cbEmpleado.TabIndex = 30
         '
         'Button1
         '
@@ -536,7 +536,7 @@ Partial Class frmListarEmp
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbEmpleado)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -576,12 +576,12 @@ Partial Class frmListarEmp
     Friend WithEvents lblApellidos As Label
     Friend WithEvents lblNombres As Label
     Friend WithEvents lblID As Label
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents rtxtDireccion As RichTextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents rtxtObservacion As RichTextBox
     Friend WithEvents lblFechaIng As Label
     Friend WithEvents Label27 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbEmpleado As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label29 As Label
