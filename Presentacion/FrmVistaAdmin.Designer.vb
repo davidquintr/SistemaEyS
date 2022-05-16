@@ -45,11 +45,15 @@ Partial Class FrmVistaAdmin
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.SeguridadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministraciónDeCredencialesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RestauraciónDeEntidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,10 +61,10 @@ Partial Class FrmVistaAdmin
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(18, 18)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenúToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenúToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.SeguridadToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(940, 27)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1253, 28)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -68,119 +72,119 @@ Partial Class FrmVistaAdmin
         '
         Me.MenúToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirEntidadToolStripMenuItem, Me.ListarEntidadaToolStripMenuItem, Me.ParámetrosGeneralesToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenúToolStripMenuItem.Name = "MenúToolStripMenuItem"
-        Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(59, 23)
+        Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
         Me.MenúToolStripMenuItem.Text = "Menú"
         '
         'AñadirEntidadToolStripMenuItem
         '
         Me.AñadirEntidadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem, Me.CargoToolStripMenuItem, Me.EmpleadoToolStripMenuItem})
         Me.AñadirEntidadToolStripMenuItem.Name = "AñadirEntidadToolStripMenuItem"
-        Me.AñadirEntidadToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
+        Me.AñadirEntidadToolStripMenuItem.Size = New System.Drawing.Size(234, 26)
         Me.AñadirEntidadToolStripMenuItem.Text = "Añadir entidad"
         '
         'DepartamentoToolStripMenuItem
         '
         Me.DepartamentoToolStripMenuItem.Name = "DepartamentoToolStripMenuItem"
-        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
+        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
         Me.DepartamentoToolStripMenuItem.Text = "Departamento"
         '
         'CargoToolStripMenuItem
         '
         Me.CargoToolStripMenuItem.Name = "CargoToolStripMenuItem"
-        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
+        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
         Me.CargoToolStripMenuItem.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem
         '
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
-        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(175, 24)
+        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
         'ListarEntidadaToolStripMenuItem
         '
         Me.ListarEntidadaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem1, Me.CargoToolStripMenuItem1, Me.EmpleadoToolStripMenuItem1})
         Me.ListarEntidadaToolStripMenuItem.Name = "ListarEntidadaToolStripMenuItem"
-        Me.ListarEntidadaToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
+        Me.ListarEntidadaToolStripMenuItem.Size = New System.Drawing.Size(234, 26)
         Me.ListarEntidadaToolStripMenuItem.Text = "Listar entidad"
         '
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(175, 24)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(189, 26)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(175, 24)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(189, 26)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(175, 24)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(189, 26)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ParámetrosGeneralesToolStripMenuItem
         '
         Me.ParámetrosGeneralesToolStripMenuItem.Name = "ParámetrosGeneralesToolStripMenuItem"
-        Me.ParámetrosGeneralesToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
+        Me.ParámetrosGeneralesToolStripMenuItem.Size = New System.Drawing.Size(234, 26)
         Me.ParámetrosGeneralesToolStripMenuItem.Text = "Parámetros generales"
         '
         'CerrarSesiónToolStripMenuItem
         '
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(218, 24)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(234, 26)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VistaPersonalizadaToolStripMenuItem, Me.ReportePersonalizadoToolStripMenuItem, Me.ReporteGeneralToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(77, 23)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'VistaPersonalizadaToolStripMenuItem
         '
         Me.VistaPersonalizadaToolStripMenuItem.Name = "VistaPersonalizadaToolStripMenuItem"
-        Me.VistaPersonalizadaToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
+        Me.VistaPersonalizadaToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.VistaPersonalizadaToolStripMenuItem.Text = "Vista personalizada"
         '
         'ReportePersonalizadoToolStripMenuItem
         '
         Me.ReportePersonalizadoToolStripMenuItem.Name = "ReportePersonalizadoToolStripMenuItem"
-        Me.ReportePersonalizadoToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
+        Me.ReportePersonalizadoToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.ReportePersonalizadoToolStripMenuItem.Text = "Reporte personalizado"
         '
         'ReporteGeneralToolStripMenuItem
         '
         Me.ReporteGeneralToolStripMenuItem.Name = "ReporteGeneralToolStripMenuItem"
-        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(222, 24)
+        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(243, 26)
         Me.ReporteGeneralToolStripMenuItem.Text = "Reporte general"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InstructivoToolStripMenuItem, Me.ReportarUnProblemaToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(62, 23)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'InstructivoToolStripMenuItem
         '
         Me.InstructivoToolStripMenuItem.Name = "InstructivoToolStripMenuItem"
-        Me.InstructivoToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
+        Me.InstructivoToolStripMenuItem.Size = New System.Drawing.Size(239, 26)
         Me.InstructivoToolStripMenuItem.Text = "Instructivo"
         '
         'ReportarUnProblemaToolStripMenuItem
         '
         Me.ReportarUnProblemaToolStripMenuItem.Name = "ReportarUnProblemaToolStripMenuItem"
-        Me.ReportarUnProblemaToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
+        Me.ReportarUnProblemaToolStripMenuItem.Size = New System.Drawing.Size(239, 26)
         Me.ReportarUnProblemaToolStripMenuItem.Text = "Reportar un problema"
         '
         'AcercaDeToolStripMenuItem
         '
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(221, 24)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(239, 26)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
         'Panel7
@@ -189,9 +193,10 @@ Partial Class FrmVistaAdmin
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel7.Location = New System.Drawing.Point(283, 92)
+        Me.Panel7.Location = New System.Drawing.Point(377, 113)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(645, 432)
+        Me.Panel7.Size = New System.Drawing.Size(859, 531)
         Me.Panel7.TabIndex = 6
         '
         'Panel6
@@ -199,9 +204,10 @@ Partial Class FrmVistaAdmin
         Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel6.Location = New System.Drawing.Point(283, 30)
+        Me.Panel6.Location = New System.Drawing.Point(377, 37)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(645, 56)
+        Me.Panel6.Size = New System.Drawing.Size(859, 68)
         Me.Panel6.TabIndex = 6
         '
         'GroupBox1
@@ -212,68 +218,103 @@ Partial Class FrmVistaAdmin
         Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 37)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(265, 600)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(353, 738)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(6, 19)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(253, 253)
-        Me.Panel1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 275)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(253, 23)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "HH:MM:SS"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(6, 307)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 2
         '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 517)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 636)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(253, 77)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(337, 95)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Eventos del mes"
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(8, 378)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(8, 338)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(337, 28)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "HH:MM:SS"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(8, 23)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(337, 311)
+        Me.Panel1.TabIndex = 0
         '
         'GroupBox3
         '
         Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Location = New System.Drawing.Point(283, 530)
+        Me.GroupBox3.Location = New System.Drawing.Point(377, 652)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(645, 100)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Size = New System.Drawing.Size(860, 123)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         '
+        'SeguridadToolStripMenuItem
+        '
+        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdministraciónDeCredencialesToolStripMenuItem, Me.RestauraciónDeEntidadesToolStripMenuItem, Me.PermisosToolStripMenuItem})
+        Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
+        Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(91, 24)
+        Me.SeguridadToolStripMenuItem.Text = "Seguridad"
+        '
+        'AdministraciónDeCredencialesToolStripMenuItem
+        '
+        Me.AdministraciónDeCredencialesToolStripMenuItem.Name = "AdministraciónDeCredencialesToolStripMenuItem"
+        Me.AdministraciónDeCredencialesToolStripMenuItem.Size = New System.Drawing.Size(299, 26)
+        Me.AdministraciónDeCredencialesToolStripMenuItem.Text = "Administración de credenciales"
+        '
+        'RestauraciónDeEntidadesToolStripMenuItem
+        '
+        Me.RestauraciónDeEntidadesToolStripMenuItem.Name = "RestauraciónDeEntidadesToolStripMenuItem"
+        Me.RestauraciónDeEntidadesToolStripMenuItem.Size = New System.Drawing.Size(299, 26)
+        Me.RestauraciónDeEntidadesToolStripMenuItem.Text = "Restauración de entidades"
+        '
+        'PermisosToolStripMenuItem
+        '
+        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(299, 26)
+        Me.PermisosToolStripMenuItem.Text = "Permisos"
+        '
         'FrmVistaAdmin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(940, 642)
+        Me.ClientSize = New System.Drawing.Size(1253, 790)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(958, 686)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MinimumSize = New System.Drawing.Size(1271, 833)
         Me.Name = "FrmVistaAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Adminstracion"
@@ -312,4 +353,8 @@ Partial Class FrmVistaAdmin
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents SeguridadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AdministraciónDeCredencialesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RestauraciónDeEntidadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
 End Class
