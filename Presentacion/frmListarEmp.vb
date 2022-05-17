@@ -21,105 +21,36 @@
         Dim cb = DirectCast(sender, ComboBox)
 
         If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Int32)("idEmpleado")
-            lblID.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("primerNombre")
-            lblNombres.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("segundoNombre")
-            lblNombres.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("primerApellido")
-            lblApellidos.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("segundoApellido")
-            lblApellidos.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Boolean)("sexo")
-            lblSexo.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("cedula")
-            lblCedula.Text = val
-
-        End If
-
-        'If cb.SelectedIndex >= 0 Then
-        'Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("departamento")
-        'lblDepartamento.Text = val
-
-        ' End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Int32)("idCargo")
-            lblCargo.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("emailCorporativo")
-            lblEmailCorp.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("emailPersonal")
-            lblEmailPer.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Date)("fechaNac")
-            lblFechaNac.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Date)("fechaIngreso")
-            lblFechaIng.Text = val
-
-        End If
-
-        'If cb.SelectedIndex >= 0 Then
-        'Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Int32)("estadoActividad")
-        'lblActividad.Text = val
-
-        'End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("telefono")
-            lblTelefono.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("observacion")
-            rtxtObservacion.Text = val
-
-        End If
-
-        If cb.SelectedIndex >= 0 Then
-            Dim val = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("direccion")
-            rtxtDireccion.Text = val
-
+            Dim empleado = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Int32)("idEmpleado")
+            lblID.Text = empleado
+            Dim nombre = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("primerNombre")
+            lblNombres.Text = nombre
+            Dim nombre2 = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("segundoNombre")
+            lblNombres.Text = nombre2
+            Dim apellido = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("primerApellido")
+            lblApellidos.Text = apellido
+            Dim apellido2 = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("segundoApellido")
+            lblApellidos.Text = apellido2
+            Dim sexo = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Boolean)("sexo")
+            lblSexo.Text = sexo
+            Dim cedula = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("cedula")
+            lblCedula.Text = cedula
+            Dim cargo = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Int32)("idCargo")
+            lblCargo.Text = cargo
+            Dim emailCorp = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("emailCorporativo")
+            lblEmailCorp.Text = emailCorp
+            Dim emailPer = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("emailPersonal")
+            lblEmailPer.Text = emailPer
+            Dim fechaNac = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Date)("fechaNac")
+            lblFechaNac.Text = fechaNac
+            Dim fechaIng = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Date)("fechaIngreso")
+            lblFechaIng.Text = fechaIng
+            Dim telefono = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("telefono")
+            lblTelefono.Text = telefono
+            Dim observacion = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("observacion")
+            rtxtObservacion.Text = observacion
+            Dim direccion = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("direccion")
+            rtxtDireccion.Text = direccion
         End If
     End Sub
 End Class

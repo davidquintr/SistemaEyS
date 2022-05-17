@@ -1,8 +1,4 @@
 ﻿Public Class Form1
-    Private Sub btnInicio_Click(sender As Object, e As EventArgs)
-        FrmVistaAdmin.Show()
-        Me.Hide()
-    End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Me.Close()
@@ -18,14 +14,7 @@
     End Sub
 
     Private Sub btnIng_Click(sender As Object, e As EventArgs) Handles btnIng.Click
-        If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) Then
-            Me.Hide()
-            FrmVistaAdmin.Show()
-            MessageBox.Show("Inicio de sesión autorizado", "Confirmación")
-        Else
-            MessageBox.Show("Usuario o contraseña incorrecta", "Advertencia")
-        End If
-
+        ConfirmarCredenciales()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -37,5 +26,22 @@
         Me.Tbl_UsuarioBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BDSistemaEySDataSet)
 
+    End Sub
+
+    Private Sub ConfirmarCredenciales()
+        If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) Then
+            Me.Hide()
+            FrmVistaAdmin.Show()
+            MessageBox.Show("Inicio de sesión autorizado", "Confirmación")
+        Else
+            MessageBox.Show("Usuario o contraseña incorrecta", "Advertencia")
+        End If
+
+    End Sub
+
+    Private Sub PasswordTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles PasswordTextBox.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            ConfirmarCredenciales()
+        End If
     End Sub
 End Class

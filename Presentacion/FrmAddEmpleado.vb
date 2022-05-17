@@ -22,7 +22,6 @@
 
     End Sub
 
-
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarDep()
         llenarCar()
@@ -53,12 +52,6 @@
         Dim idCar As Integer = CInt(cbCar.SelectedValue)
 
         emp.RegistroEmpAgreg(cedula, primerNom, segundoNom, primerApell, segundoApell, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar)
-
-
-
-
-
-
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
