@@ -1,7 +1,8 @@
 ﻿Public Class frmListarEmp
 
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
-
+    Dim cantEmp As Int32
+    Dim id As Int32 = 0
     Sub llenarEmp()
 
         cbEmpleado.DataSource = emp.GetData()
@@ -9,8 +10,11 @@
         cbEmpleado.ValueMember = "idEmpleado"
         cbEmpleado.Refresh()
     End Sub
+
     Private Sub frmListarEmp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarEmp()
+        cantEmp = emp.GetData.Count()
+        lbCantEmp.Text = (1 + id).ToString + " / " + cantEmp.ToString
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
@@ -19,8 +23,9 @@
 
     Private Sub cbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmpleado.SelectedIndexChanged
         Dim cb = DirectCast(sender, ComboBox)
-
         If cb.SelectedIndex >= 0 Then
+            id = cb.SelectedIndex
+            lbCantEmp.Text = (1 + id).ToString + " / " + cantEmp.ToString
             Dim empleado = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of Int32)("idEmpleado")
             lblID.Text = empleado
             Dim nombre = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("primerNombre")
@@ -52,5 +57,9 @@
             Dim direccion = DirectCast(cb.SelectedItem, DataRowView).Row.Field(Of String)("direccion")
             rtxtDireccion.Text = direccion
         End If
+    End Sub
+
+    Private Sub btnSig_Click(sender As Object, e As EventArgs) Handles btnSig.Click
+
     End Sub
 End Class

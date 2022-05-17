@@ -54,9 +54,9 @@ Partial Class frmListarEmp
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cbEmpleado = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label29 = New System.Windows.Forms.Label()
+        Me.btnAnt = New System.Windows.Forms.Button()
+        Me.btnSig = New System.Windows.Forms.Button()
+        Me.lbCantEmp = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnReporte = New System.Windows.Forms.Button()
@@ -445,35 +445,35 @@ Partial Class frmListarEmp
         Me.cbEmpleado.Size = New System.Drawing.Size(289, 28)
         Me.cbEmpleado.TabIndex = 30
         '
-        'Button1
+        'btnAnt
         '
-        Me.Button1.Location = New System.Drawing.Point(307, 538)
-        Me.Button1.Name = "Button1"
-        Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button1.Size = New System.Drawing.Size(31, 31)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "<"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAnt.Location = New System.Drawing.Point(307, 538)
+        Me.btnAnt.Name = "btnAnt"
+        Me.btnAnt.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnAnt.Size = New System.Drawing.Size(31, 31)
+        Me.btnAnt.TabIndex = 31
+        Me.btnAnt.Text = "<"
+        Me.btnAnt.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSig
         '
-        Me.Button2.Location = New System.Drawing.Point(496, 538)
-        Me.Button2.Name = "Button2"
-        Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button2.Size = New System.Drawing.Size(31, 31)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = ">"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSig.Location = New System.Drawing.Point(496, 538)
+        Me.btnSig.Name = "btnSig"
+        Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnSig.Size = New System.Drawing.Size(31, 31)
+        Me.btnSig.TabIndex = 33
+        Me.btnSig.Text = ">"
+        Me.btnSig.UseVisualStyleBackColor = True
         '
-        'Label29
+        'lbCantEmp
         '
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(344, 538)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(146, 32)
-        Me.Label29.TabIndex = 32
-        Me.Label29.Text = "999/999"
-        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbCantEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCantEmp.Location = New System.Drawing.Point(344, 538)
+        Me.lbCantEmp.Name = "lbCantEmp"
+        Me.lbCantEmp.Size = New System.Drawing.Size(146, 32)
+        Me.lbCantEmp.TabIndex = 32
+        Me.lbCantEmp.Text = "999/999"
+        Me.lbCantEmp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FlowLayoutPanel1
         '
@@ -533,9 +533,9 @@ Partial Class frmListarEmp
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(542, 640)
         Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lbCantEmp)
+        Me.Controls.Add(Me.btnSig)
+        Me.Controls.Add(Me.btnAnt)
         Me.Controls.Add(Me.cbEmpleado)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -582,9 +582,9 @@ Partial Class frmListarEmp
     Friend WithEvents lblFechaIng As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents cbEmpleado As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label29 As Label
+    Friend WithEvents btnAnt As Button
+    Friend WithEvents btnSig As Button
+    Friend WithEvents lbCantEmp As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnReporte As Button
