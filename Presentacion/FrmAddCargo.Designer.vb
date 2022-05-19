@@ -36,8 +36,8 @@ Partial Class FrmAddCargo
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnHorario = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnHorario = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -194,15 +194,6 @@ Partial Class FrmAddCargo
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'btnHorario
-        '
-        Me.btnHorario.Location = New System.Drawing.Point(149, 3)
-        Me.btnHorario.Name = "btnHorario"
-        Me.btnHorario.Size = New System.Drawing.Size(73, 47)
-        Me.btnHorario.TabIndex = 11
-        Me.btnHorario.Text = "Horario"
-        Me.btnHorario.UseVisualStyleBackColor = True
-        '
         'btnEliminar
         '
         Me.btnEliminar.Location = New System.Drawing.Point(70, 3)
@@ -211,6 +202,15 @@ Partial Class FrmAddCargo
         Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
+        '
+        'btnHorario
+        '
+        Me.btnHorario.Location = New System.Drawing.Point(149, 3)
+        Me.btnHorario.Name = "btnHorario"
+        Me.btnHorario.Size = New System.Drawing.Size(73, 47)
+        Me.btnHorario.TabIndex = 11
+        Me.btnHorario.Text = "Horario"
+        Me.btnHorario.UseVisualStyleBackColor = True
         '
         'FrmAddCargo
         '
@@ -245,6 +245,6 @@ Partial Class FrmAddCargo
     Friend WithEvents Label4 As Label
     Friend WithEvents cbDep As ComboBox
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents btnHorario As Button
     Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnHorario As Button
 End Class

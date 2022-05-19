@@ -36,9 +36,9 @@ Partial Class frmListarDept
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnAdministrar = New System.Windows.Forms.Button()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblCantDep = New System.Windows.Forms.Label()
+        Me.btnSig = New System.Windows.Forms.Button()
+        Me.btnAnt = New System.Windows.Forms.Button()
         Me.cbDept = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -206,35 +206,35 @@ Partial Class frmListarDept
         Me.btnAdministrar.Text = "Administrar"
         Me.btnAdministrar.UseVisualStyleBackColor = True
         '
-        'Label29
+        'lblCantDep
         '
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(344, 220)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(146, 32)
-        Me.Label29.TabIndex = 12
-        Me.Label29.Text = "999/999"
-        Me.Label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCantDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCantDep.Location = New System.Drawing.Point(344, 220)
+        Me.lblCantDep.Name = "lblCantDep"
+        Me.lblCantDep.Size = New System.Drawing.Size(146, 32)
+        Me.lblCantDep.TabIndex = 12
+        Me.lblCantDep.Text = "999/999"
+        Me.lblCantDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button2
+        'btnSig
         '
-        Me.Button2.Location = New System.Drawing.Point(496, 220)
-        Me.Button2.Name = "Button2"
-        Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button2.Size = New System.Drawing.Size(31, 31)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = ">"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSig.Location = New System.Drawing.Point(496, 220)
+        Me.btnSig.Name = "btnSig"
+        Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnSig.Size = New System.Drawing.Size(31, 31)
+        Me.btnSig.TabIndex = 13
+        Me.btnSig.Text = ">"
+        Me.btnSig.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnAnt
         '
-        Me.Button1.Location = New System.Drawing.Point(307, 220)
-        Me.Button1.Name = "Button1"
-        Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Button1.Size = New System.Drawing.Size(31, 31)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "<"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAnt.Location = New System.Drawing.Point(307, 220)
+        Me.btnAnt.Name = "btnAnt"
+        Me.btnAnt.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnAnt.Size = New System.Drawing.Size(31, 31)
+        Me.btnAnt.TabIndex = 11
+        Me.btnAnt.Text = "<"
+        Me.btnAnt.UseVisualStyleBackColor = True
         '
         'cbDept
         '
@@ -251,9 +251,9 @@ Partial Class frmListarDept
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(542, 322)
         Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.Label29)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lblCantDep)
+        Me.Controls.Add(Me.btnSig)
+        Me.Controls.Add(Me.btnAnt)
         Me.Controls.Add(Me.cbDept)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -280,9 +280,9 @@ Partial Class frmListarDept
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnAdministrar As Button
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents lblCantDep As Label
+    Friend WithEvents btnSig As Button
+    Friend WithEvents btnAnt As Button
     Friend WithEvents cbDept As ComboBox
     Friend WithEvents lbEXT As Label
     Friend WithEvents Label5 As Label

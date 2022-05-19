@@ -25,7 +25,6 @@ Partial Class FrmAddDepartamento
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnHorario = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtExt = New System.Windows.Forms.TextBox()
@@ -50,7 +49,6 @@ Partial Class FrmAddDepartamento
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnHorario)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(13, 275)
@@ -76,18 +74,9 @@ Partial Class FrmAddDepartamento
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'btnHorario
-        '
-        Me.btnHorario.Location = New System.Drawing.Point(148, 3)
-        Me.btnHorario.Name = "btnHorario"
-        Me.btnHorario.Size = New System.Drawing.Size(73, 47)
-        Me.btnHorario.TabIndex = 11
-        Me.btnHorario.Text = "Horario"
-        Me.btnHorario.UseVisualStyleBackColor = True
-        '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(69, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(148, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 47)
         Me.btnEliminar.TabIndex = 10
@@ -231,7 +220,6 @@ Partial Class FrmAddDepartamento
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents btnHorario As Button
     Friend WithEvents btnEliminar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtExt As TextBox
