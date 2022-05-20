@@ -2,9 +2,13 @@
     Private Sub AñadirEntidadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirEntidadToolStripMenuItem.Click
     End Sub
 
+    Dim currentTime As Date = TimeOfDay
+
+
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.tbl_Empleado' Puede moverla o quitarla según sea necesario.
         Me.Tbl_EmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.tbl_Empleado)
+        Me.Label1.Text = currentTime.ToLongTimeString
 
     End Sub
 
@@ -43,5 +47,9 @@
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         MessageBox.Show("Seguro que desea cerrar la sesión?", "Confirmación", MessageBoxButtons.YesNoCancel)
         Me.Close()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class
