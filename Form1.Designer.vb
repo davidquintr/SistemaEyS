@@ -46,7 +46,7 @@ Partial Class Form1
         '
         UsernameLabel.AutoSize = True
         UsernameLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        UsernameLabel.Location = New System.Drawing.Point(163, 80)
+        UsernameLabel.Location = New System.Drawing.Point(97, 80)
         UsernameLabel.Name = "UsernameLabel"
         UsernameLabel.Size = New System.Drawing.Size(73, 17)
         UsernameLabel.TabIndex = 8
@@ -56,7 +56,7 @@ Partial Class Form1
         '
         PasswordLabel.AutoSize = True
         PasswordLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PasswordLabel.Location = New System.Drawing.Point(163, 114)
+        PasswordLabel.Location = New System.Drawing.Point(97, 114)
         PasswordLabel.Name = "PasswordLabel"
         PasswordLabel.Size = New System.Drawing.Size(68, 17)
         PasswordLabel.TabIndex = 9
@@ -138,7 +138,7 @@ Partial Class Form1
         'UsernameTextBox
         '
         Me.UsernameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_UsuarioBindingSource, "username", True))
-        Me.UsernameTextBox.Location = New System.Drawing.Point(238, 77)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(172, 77)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(254, 20)
         Me.UsernameTextBox.TabIndex = 9
@@ -146,7 +146,7 @@ Partial Class Form1
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_UsuarioBindingSource, "password", True))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(237, 114)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(171, 114)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.PasswordTextBox.Size = New System.Drawing.Size(255, 20)

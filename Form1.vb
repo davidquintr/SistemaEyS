@@ -32,7 +32,6 @@
         If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) Then
             Me.Hide()
             FrmVistaAdmin.Show()
-            MessageBox.Show("Inicio de sesión autorizado", "Confirmación")
         Else
             MessageBox.Show("Usuario o contraseña incorrecta", "Advertencia")
         End If
