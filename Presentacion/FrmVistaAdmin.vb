@@ -3,6 +3,8 @@
     End Sub
 
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.tbl_Empleado' Puede moverla o quitarla según sea necesario.
+        Me.Tbl_EmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.tbl_Empleado)
 
     End Sub
 
