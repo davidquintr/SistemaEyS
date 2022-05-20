@@ -48,18 +48,7 @@ Partial Class FrmVistaAdmin
         Me.ReportarUnProblemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
-        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
-        Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -78,12 +67,26 @@ Partial Class FrmVistaAdmin
         Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaAgregadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.lblHora = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
+        Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
+        Me.hora = New System.Windows.Forms.Timer(Me.components)
+        Me.Time = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel7.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -253,74 +256,6 @@ Partial Class FrmVistaAdmin
         Me.Panel7.Size = New System.Drawing.Size(645, 432)
         Me.Panel7.TabIndex = 6
         '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel6.Location = New System.Drawing.Point(283, 30)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(645, 56)
-        Me.Panel6.TabIndex = 6
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(265, 600)
-        Me.GroupBox1.TabIndex = 8
-        Me.GroupBox1.TabStop = False
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 517)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(253, 77)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Eventos del mes"
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(6, 307)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 275)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(253, 23)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "HH:MM:SS"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(6, 19)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(253, 253)
-        Me.Panel1.TabIndex = 0
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Location = New System.Drawing.Point(283, 530)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(645, 100)
-        Me.GroupBox3.TabIndex = 9
-        Me.GroupBox3.TabStop = False
-        '
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
@@ -331,35 +266,6 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(634, 401)
         Me.DataGridView1.TabIndex = 0
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tbl_EmpleadoBindingSource
-        '
-        Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
-        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'Tbl_EmpleadoTableAdapter
-        '
-        Me.Tbl_EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tbl_CargoTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_ConfigTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_DepartamentoTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_EmpleadoTableAdapter = Me.Tbl_EmpleadoTableAdapter
-        Me.TableAdapterManager.tbl_EventoTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_HorarioTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_OpcCarTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_OpcionTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_RegistroTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_UsuarioTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'IdEmpleadoDataGridViewTextBoxColumn
         '
@@ -470,6 +376,115 @@ Partial Class FrmVistaAdmin
         Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "idCargo"
         Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
         '
+        'Tbl_EmpleadoBindingSource
+        '
+        Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
+        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel6.Location = New System.Drawing.Point(283, 30)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(645, 56)
+        Me.Panel6.TabIndex = 6
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
+        Me.GroupBox1.Controls.Add(Me.lblHora)
+        Me.GroupBox1.Controls.Add(Me.Panel1)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(265, 600)
+        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabStop = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 517)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(253, 77)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Eventos del mes"
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(6, 307)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 2
+        '
+        'lblHora
+        '
+        Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHora.Location = New System.Drawing.Point(6, 275)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(253, 23)
+        Me.lblHora.TabIndex = 1
+        Me.lblHora.Text = "HH:MM:SS"
+        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(6, 19)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(253, 253)
+        Me.Panel1.TabIndex = 0
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Location = New System.Drawing.Point(283, 530)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(645, 100)
+        Me.GroupBox3.TabIndex = 9
+        Me.GroupBox3.TabStop = False
+        '
+        'Tbl_EmpleadoTableAdapter
+        '
+        Me.Tbl_EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tbl_CargoTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_ConfigTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_DepartamentoTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_EmpleadoTableAdapter = Me.Tbl_EmpleadoTableAdapter
+        Me.TableAdapterManager.tbl_EventoTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_HorarioTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_OpcCarTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_OpcionTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_RegistroTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_UsuarioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'hora
+        '
+        Me.hora.Enabled = True
+        '
+        'Time
+        '
+        Me.Time.Enabled = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'FrmVistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -488,10 +503,10 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel7.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -521,7 +536,7 @@ Partial Class FrmVistaAdmin
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblHora As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents SeguridadToolStripMenuItem As ToolStripMenuItem
@@ -551,4 +566,7 @@ Partial Class FrmVistaAdmin
     Friend WithEvents FechaIngresoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaAgregadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents hora As Timer
+    Friend WithEvents Time As Timer
+    Friend WithEvents Timer1 As Timer
 End Class
