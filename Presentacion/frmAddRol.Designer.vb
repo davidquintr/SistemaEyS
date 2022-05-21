@@ -27,11 +27,11 @@ Partial Class frmAddRol
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txbNombre = New System.Windows.Forms.TextBox()
-        Me.txbID = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txbNombre = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txbID = New System.Windows.Forms.TextBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -90,22 +90,6 @@ Partial Class frmAddRol
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar/administrar rol"
         '
-        'txbNombre
-        '
-        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(156, 30)
-        Me.txbNombre.Name = "txbNombre"
-        Me.txbNombre.Size = New System.Drawing.Size(208, 23)
-        Me.txbNombre.TabIndex = 3
-        '
-        'txbID
-        '
-        Me.txbID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbID.Location = New System.Drawing.Point(156, 3)
-        Me.txbID.Name = "txbID"
-        Me.txbID.Size = New System.Drawing.Size(208, 23)
-        Me.txbID.TabIndex = 1
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 2
@@ -127,6 +111,25 @@ Partial Class frmAddRol
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 54)
         Me.TableLayoutPanel1.TabIndex = 3
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(21, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ID:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txbNombre
+        '
+        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbNombre.Location = New System.Drawing.Point(156, 30)
+        Me.txbNombre.Name = "txbNombre"
+        Me.txbNombre.Size = New System.Drawing.Size(208, 23)
+        Me.txbNombre.TabIndex = 3
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -138,16 +141,13 @@ Partial Class frmAddRol
         Me.Label2.Text = "Nombre:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label1
+        'txbID
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txbID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbID.Location = New System.Drawing.Point(156, 3)
+        Me.txbID.Name = "txbID"
+        Me.txbID.Size = New System.Drawing.Size(208, 23)
+        Me.txbID.TabIndex = 1
         '
         'frmAddRol
         '
