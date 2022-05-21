@@ -7,9 +7,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDSistemaEySDataSet.tbl_Usuario' table. You can move, or remove it, as needed.
         Me.Tbl_UsuarioTableAdapter.Fill(Me.BDSistemaEySDataSet.tbl_Usuario)
-        UsernameTextBox.Text = ""
         PasswordTextBox.Text = ""
-
 
     End Sub
 
@@ -33,7 +31,7 @@
             Me.Hide()
             FrmVistaAdmin.Show()
         Else
-
+            MessageBox.Show("Revise sus credenciales o consulte con el administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
     End Sub

@@ -8,6 +8,12 @@
 End Class
 
 Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class Vw_VistaAdminTableAdapter
+    End Class
+
+    Partial Public Class tbl_OpcRolTableAdapter
+    End Class
+
     Partial Public Class tbl_UsuarioTableAdapter
     End Class
 

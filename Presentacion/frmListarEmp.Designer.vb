@@ -137,7 +137,7 @@ Partial Class frmListarEmp
         Me.TableLayoutPanel1.Controls.Add(Me.lblID, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 0, 13)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 24)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 15
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308!))
@@ -529,7 +529,7 @@ Partial Class frmListarEmp
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(90, 23)
         Me.btnCerrar.TabIndex = 37
-        Me.btnCerrar.Text = " "
+        Me.btnCerrar.Text = " Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
         'btnReporte

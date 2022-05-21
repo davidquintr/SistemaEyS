@@ -3,8 +3,9 @@
     End Sub
 
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.tbl_Empleado' Puede moverla o quitarla según sea necesario.
-        Me.Tbl_EmpleadoTableAdapter.Fill(Me.BDSistemaEySDataSet.tbl_Empleado)
+        If VwVistaAdminBindingSource IsNot Nothing Then
+            Me.Vw_VistaAdminTableAdapter.Fill(Me.BDSistemaEySDataSet.Vw_VistaAdmin)
+        End If
 
     End Sub
 
@@ -41,8 +42,11 @@
     End Sub
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
-        MessageBox.Show("Seguro que desea cerrar la sesión?", "Confirmación", MessageBoxButtons.YesNoCancel)
-        Me.Close()
+        Dim opcion As DialogResult = MessageBox.Show("Seguro que desea cerrar la sesión?", "Confirmación", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
+        If opcion = DialogResult.Yes Then
+            Me.Close()
+            Form1.Show()
+        End If
     End Sub
 
 
