@@ -117,6 +117,12 @@
     <Compile Include="Presentacion\FrmAddEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmAddRol.Designer.vb">
+      <DependentUpon>frmAddRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAddRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmAdminCredenciales.Designer.vb">
       <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,12 @@
     <Compile Include="Presentacion\frmListarCargo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmListarCredenciales.Designer.vb">
+      <DependentUpon>frmListarCredenciales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmListarCredenciales.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmListarDept.Designer.vb">
       <DependentUpon>frmListarDept.vb</DependentUpon>
     </Compile>
@@ -151,6 +163,12 @@
       <DependentUpon>frmListarEmp.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmListarEmp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmListarRoles.Designer.vb">
+      <DependentUpon>frmListarRoles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmListarRoles.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmParametrosGen.Designer.vb">
@@ -218,6 +236,9 @@
     <EmbeddedResource Include="Presentacion\FrmAddEmpleado.resx">
       <DependentUpon>FrmAddEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmAddRol.resx">
+      <DependentUpon>frmAddRol.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAdminCredenciales.resx">
       <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
     </EmbeddedResource>
@@ -230,11 +251,17 @@
     <EmbeddedResource Include="Presentacion\frmListarCargo.resx">
       <DependentUpon>frmListarCargo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmListarCredenciales.resx">
+      <DependentUpon>frmListarCredenciales.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmListarDept.resx">
       <DependentUpon>frmListarDept.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmListarEmp.resx">
       <DependentUpon>frmListarEmp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmListarRoles.resx">
+      <DependentUpon>frmListarRoles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmParametrosGen.resx">
       <DependentUpon>frmParametrosGen.vb</DependentUpon>

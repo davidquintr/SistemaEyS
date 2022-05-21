@@ -33,7 +33,7 @@
             Me.Hide()
             FrmVistaAdmin.Show()
         Else
-            MessageBox.Show("Usuario o contraseña incorrecta", "Advertencia")
+
         End If
 
     End Sub

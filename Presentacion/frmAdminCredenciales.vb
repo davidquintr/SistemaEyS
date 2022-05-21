@@ -1,17 +1,21 @@
 ﻿Public Class frmAdminCredenciales
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Label29_Click(sender As Object, e As EventArgs) Handles Label29.Click
+    Private Sub Label29_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub cbCargos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbCargos.SelectedIndexChanged
+    Private Sub cbCargos_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub frmAdminCredenciales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

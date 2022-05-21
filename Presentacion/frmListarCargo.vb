@@ -18,7 +18,7 @@
         Me.Close()
     End Sub
 
-    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) 
         MessageBox.Show("Seguro que se desea eliminar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
@@ -82,4 +82,5 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
 End Class
