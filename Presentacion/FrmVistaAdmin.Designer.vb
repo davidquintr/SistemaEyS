@@ -40,12 +40,39 @@ Partial Class FrmVistaAdmin
         Me.ReportePersonalizadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteGeneralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeguridadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AñadirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AdministrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RolToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RestaurarEntidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstructivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportarUnProblemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.lblHora = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
+        Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
+        Me.hora = New System.Windows.Forms.Timer(Me.components)
+        Me.Time = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.BDSistemaEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,38 +91,13 @@ Partial Class FrmVistaAdmin
         Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaAgregadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.lblHora = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
-        Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
-        Me.hora = New System.Windows.Forms.Timer(Me.components)
-        Me.Time = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.RestaurarEntidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AñadirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AdministrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RolToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -105,7 +107,7 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1255, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1255, 30)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -113,7 +115,7 @@ Partial Class FrmVistaAdmin
         '
         Me.MenúToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirEntidadToolStripMenuItem, Me.ListarEntidadaToolStripMenuItem, Me.ParámetrosGeneralesToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenúToolStripMenuItem.Name = "MenúToolStripMenuItem"
-        Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
+        Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(60, 26)
         Me.MenúToolStripMenuItem.Text = "Menú"
         '
         'AñadirEntidadToolStripMenuItem
@@ -182,7 +184,7 @@ Partial Class FrmVistaAdmin
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VistaPersonalizadaToolStripMenuItem, Me.ReportePersonalizadoToolStripMenuItem, Me.ReporteGeneralToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
-        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 26)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
         '
         'VistaPersonalizadaToolStripMenuItem
@@ -207,14 +209,89 @@ Partial Class FrmVistaAdmin
         '
         Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.RestaurarEntidadesToolStripMenuItem, Me.PermisosToolStripMenuItem})
         Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
-        Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(91, 24)
+        Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(91, 26)
         Me.SeguridadToolStripMenuItem.Text = "Seguridad"
+        '
+        'AñadirToolStripMenuItem
+        '
+        Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
+        Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.AñadirToolStripMenuItem.Text = "Añadir"
+        '
+        'RolToolStripMenuItem
+        '
+        Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
+        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(142, 26)
+        Me.RolToolStripMenuItem.Text = "Rol"
+        '
+        'UsuarioToolStripMenuItem1
+        '
+        Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(142, 26)
+        Me.UsuarioToolStripMenuItem1.Text = "Usuario"
+        '
+        'AdministrarToolStripMenuItem
+        '
+        Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
+        Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
+        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.AdministrarToolStripMenuItem.Text = "Administrar"
+        '
+        'RolToolStripMenuItem1
+        '
+        Me.RolToolStripMenuItem1.Name = "RolToolStripMenuItem1"
+        Me.RolToolStripMenuItem1.Size = New System.Drawing.Size(142, 26)
+        Me.RolToolStripMenuItem1.Text = "Rol"
+        '
+        'UsuarioToolStripMenuItem2
+        '
+        Me.UsuarioToolStripMenuItem2.Name = "UsuarioToolStripMenuItem2"
+        Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(142, 26)
+        Me.UsuarioToolStripMenuItem2.Text = "Usuario"
+        '
+        'RestaurarEntidadesToolStripMenuItem
+        '
+        Me.RestaurarEntidadesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem2, Me.CargoToolStripMenuItem2, Me.EmpleadoToolStripMenuItem2, Me.UsuarioToolStripMenuItem})
+        Me.RestaurarEntidadesToolStripMenuItem.Name = "RestaurarEntidadesToolStripMenuItem"
+        Me.RestaurarEntidadesToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.RestaurarEntidadesToolStripMenuItem.Text = "Restaurar entidades"
+        '
+        'DepartamentoToolStripMenuItem2
+        '
+        Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
+        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(189, 26)
+        Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
+        '
+        'CargoToolStripMenuItem2
+        '
+        Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
+        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(189, 26)
+        Me.CargoToolStripMenuItem2.Text = "Cargo"
+        '
+        'EmpleadoToolStripMenuItem2
+        '
+        Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
+        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(189, 26)
+        Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
+        '
+        'UsuarioToolStripMenuItem
+        '
+        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
+        Me.UsuarioToolStripMenuItem.Text = "Usuario"
+        '
+        'PermisosToolStripMenuItem
+        '
+        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(223, 26)
+        Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InstructivoToolStripMenuItem, Me.ReportarUnProblemaToolStripMenuItem, Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(65, 24)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(65, 26)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'InstructivoToolStripMenuItem
@@ -243,7 +320,7 @@ Partial Class FrmVistaAdmin
         Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel7.Controls.Add(Me.DataGridView1)
         Me.Panel7.Location = New System.Drawing.Point(377, 113)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(859, 531)
         Me.Panel7.TabIndex = 6
@@ -255,11 +332,135 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadoDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.PrimerNombreDataGridViewTextBoxColumn, Me.SegundoNombreDataGridViewTextBoxColumn, Me.PrimerApellidoDataGridViewTextBoxColumn, Me.SegundoApellidoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.ObservacionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.EmailPersonalDataGridViewTextBoxColumn, Me.EmailCorporativoDataGridViewTextBoxColumn, Me.SexoDataGridViewCheckBoxColumn, Me.EstadoActividadDataGridViewCheckBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.FechaNacDataGridViewTextBoxColumn, Me.FechaIngresoDataGridViewTextBoxColumn, Me.FechaAgregadoDataGridViewTextBoxColumn, Me.IdCargoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.Tbl_EmpleadoBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(5, 5)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(845, 494)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Tbl_EmpleadoBindingSource
+        '
+        Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
+        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel6.Location = New System.Drawing.Point(377, 37)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(859, 68)
+        Me.Panel6.TabIndex = 6
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
+        Me.GroupBox1.Controls.Add(Me.lblHora)
+        Me.GroupBox1.Controls.Add(Me.Panel1)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 37)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(353, 738)
+        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabStop = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 636)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(337, 95)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Eventos del mes"
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(8, 378)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 2
+        '
+        'lblHora
+        '
+        Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHora.Location = New System.Drawing.Point(8, 338)
+        Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(337, 28)
+        Me.lblHora.TabIndex = 1
+        Me.lblHora.Text = "HH:MM:SS"
+        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(8, 23)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(337, 311)
+        Me.Panel1.TabIndex = 0
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox3.Location = New System.Drawing.Point(377, 652)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Size = New System.Drawing.Size(860, 123)
+        Me.GroupBox3.TabIndex = 9
+        Me.GroupBox3.TabStop = False
+        '
+        'Tbl_EmpleadoTableAdapter
+        '
+        Me.Tbl_EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.tbl_CargoTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_ConfigTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_DepartamentoTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_EmpleadoTableAdapter = Me.Tbl_EmpleadoTableAdapter
+        Me.TableAdapterManager.tbl_EventoTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_HorarioTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_OpcionTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_RegistroTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_RolTableAdapter = Nothing
+        Me.TableAdapterManager.tbl_UsuarioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'hora
+        '
+        Me.hora.Enabled = True
+        '
+        'Time
+        '
+        Me.Time.Enabled = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'BDSistemaEySDataSetBindingSource
+        '
+        Me.BDSistemaEySDataSetBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.BDSistemaEySDataSetBindingSource.Position = 0
         '
         'IdEmpleadoDataGridViewTextBoxColumn
         '
@@ -406,200 +607,6 @@ Partial Class FrmVistaAdmin
         Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
         Me.IdCargoDataGridViewTextBoxColumn.Width = 125
         '
-        'Tbl_EmpleadoBindingSource
-        '
-        Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
-        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel6.Location = New System.Drawing.Point(377, 37)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(859, 68)
-        Me.Panel6.TabIndex = 6
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
-        Me.GroupBox1.Controls.Add(Me.lblHora)
-        Me.GroupBox1.Controls.Add(Me.Panel1)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 37)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(353, 738)
-        Me.GroupBox1.TabIndex = 8
-        Me.GroupBox1.TabStop = False
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Location = New System.Drawing.Point(8, 636)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(337, 95)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Eventos del mes"
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(8, 378)
-        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 2
-        '
-        'lblHora
-        '
-        Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHora.Location = New System.Drawing.Point(8, 338)
-        Me.lblHora.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(337, 28)
-        Me.lblHora.TabIndex = 1
-        Me.lblHora.Text = "HH:MM:SS"
-        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(8, 23)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(337, 311)
-        Me.Panel1.TabIndex = 0
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Location = New System.Drawing.Point(377, 652)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.GroupBox3.Size = New System.Drawing.Size(860, 123)
-        Me.GroupBox3.TabIndex = 9
-        Me.GroupBox3.TabStop = False
-        '
-        'Tbl_EmpleadoTableAdapter
-        '
-        Me.Tbl_EmpleadoTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.tbl_CargoTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_ConfigTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_DepartamentoTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_EmpleadoTableAdapter = Me.Tbl_EmpleadoTableAdapter
-        Me.TableAdapterManager.tbl_EventoTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_HorarioTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_OpcCarTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_OpcionTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_RegistroTableAdapter = Nothing
-        Me.TableAdapterManager.tbl_UsuarioTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'hora
-        '
-        Me.hora.Enabled = True
-        '
-        'Time
-        '
-        Me.Time.Enabled = True
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        '
-        'RestaurarEntidadesToolStripMenuItem
-        '
-        Me.RestaurarEntidadesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem2, Me.CargoToolStripMenuItem2, Me.EmpleadoToolStripMenuItem2, Me.UsuarioToolStripMenuItem})
-        Me.RestaurarEntidadesToolStripMenuItem.Name = "RestaurarEntidadesToolStripMenuItem"
-        Me.RestaurarEntidadesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.RestaurarEntidadesToolStripMenuItem.Text = "Restaurar entidades"
-        '
-        'DepartamentoToolStripMenuItem2
-        '
-        Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
-        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
-        Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
-        '
-        'CargoToolStripMenuItem2
-        '
-        Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
-        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
-        Me.CargoToolStripMenuItem2.Text = "Cargo"
-        '
-        'EmpleadoToolStripMenuItem2
-        '
-        Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
-        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
-        Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.UsuarioToolStripMenuItem.Text = "Usuario"
-        '
-        'AñadirToolStripMenuItem
-        '
-        Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
-        Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AñadirToolStripMenuItem.Text = "Añadir"
-        '
-        'RolToolStripMenuItem
-        '
-        Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
-        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.RolToolStripMenuItem.Text = "Rol"
-        '
-        'UsuarioToolStripMenuItem1
-        '
-        Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
-        Me.UsuarioToolStripMenuItem1.Text = "Usuario"
-        '
-        'AdministrarToolStripMenuItem
-        '
-        Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
-        Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
-        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AdministrarToolStripMenuItem.Text = "Administrar"
-        '
-        'RolToolStripMenuItem1
-        '
-        Me.RolToolStripMenuItem1.Name = "RolToolStripMenuItem1"
-        Me.RolToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
-        Me.RolToolStripMenuItem1.Text = "Rol"
-        '
-        'UsuarioToolStripMenuItem2
-        '
-        Me.UsuarioToolStripMenuItem2.Name = "UsuarioToolStripMenuItem2"
-        Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
-        Me.UsuarioToolStripMenuItem2.Text = "Usuario"
-        '
-        'PermisosToolStripMenuItem
-        '
-        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.PermisosToolStripMenuItem.Text = "Permisos"
-        '
         'FrmVistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -611,7 +618,7 @@ Partial Class FrmVistaAdmin
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimumSize = New System.Drawing.Size(1270, 724)
         Me.Name = "FrmVistaAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -623,6 +630,7 @@ Partial Class FrmVistaAdmin
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -661,6 +669,21 @@ Partial Class FrmVistaAdmin
     Friend WithEvents Tbl_EmpleadoBindingSource As BindingSource
     Friend WithEvents Tbl_EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Friend WithEvents TableAdapterManager As BDSistemaEySDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents hora As Timer
+    Friend WithEvents Time As Timer
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents RestaurarEntidadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AñadirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RolToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AdministrarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RolToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents UsuarioToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents DepartamentoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents CargoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents EmpleadoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PrimerNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -679,19 +702,5 @@ Partial Class FrmVistaAdmin
     Friend WithEvents FechaIngresoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FechaAgregadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents hora As Timer
-    Friend WithEvents Time As Timer
-    Friend WithEvents Timer1 As Timer
-    Friend WithEvents RestaurarEntidadesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AñadirToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RolToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents AdministrarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RolToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents DepartamentoToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents CargoToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents EmpleadoToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BDSistemaEySDataSetBindingSource As BindingSource
 End Class
