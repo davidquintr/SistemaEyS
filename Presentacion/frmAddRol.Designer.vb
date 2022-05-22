@@ -78,6 +78,7 @@ Partial Class frmAddRol
         Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Visible = False
         '
         'GroupBox1
         '

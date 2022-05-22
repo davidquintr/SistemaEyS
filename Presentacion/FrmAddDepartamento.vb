@@ -1,6 +1,7 @@
 ﻿Public Class FrmAddDepartamento
 
     Dim Dept As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
+    Dim mode As Int16 = 0
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         MessageBox.Show("Si se ha introducido algun dato no seran guardados, seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNoCancel)
@@ -26,4 +27,11 @@
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         MessageBox.Show("Seguro que se desea eliminar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
+
+    Public Sub CambiarModo()
+        mode = 1
+        btnEliminar.Visible = True
+        GroupBox1.Text = "Administrar Departamento"
+    End Sub
+
 End Class

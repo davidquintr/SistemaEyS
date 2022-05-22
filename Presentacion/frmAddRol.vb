@@ -1,8 +1,13 @@
 ﻿Public Class frmAddRol
 
     Dim Rol As New BDSistemaEySDataSetTableAdapters.tbl_RolTableAdapter
+    Dim modo As Int16 = 0
 
-
+    Public Sub CambiarModo()
+        modo = 1
+        btnEliminar.Visible = True
+        GroupBox1.Text = "Administrar Rol"
+    End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()

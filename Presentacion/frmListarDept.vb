@@ -90,4 +90,8 @@
         End Try
     End Sub
 
+    Private Sub btnAdministrar_Click(sender As Object, e As EventArgs) Handles btnAdministrar.Click
+        FrmAddDepartamento.Show()
+        FrmAddDepartamento.CambiarModo()
+    End Sub
 End Class

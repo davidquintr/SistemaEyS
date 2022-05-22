@@ -99,4 +99,8 @@
         MostrarDatos()
     End Sub
 
+    Private Sub btnAdministrar_Click(sender As Object, e As EventArgs) Handles btnAdministrar.Click
+        FrmAddDepartamento.Show()
+        FrmAddEmpleado.CambiarModo()
+    End Sub
 End Class

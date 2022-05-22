@@ -105,6 +105,7 @@ Partial Class FrmAddEmpleado
         Me.btnDarDeBaja.TabIndex = 25
         Me.btnDarDeBaja.Text = "Dar de baja"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
+        Me.btnDarDeBaja.Visible = False
         '
         'Label10
         '

@@ -69,7 +69,7 @@ Partial Class frmListarRoles
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(73, 23)
         Me.btnAdministrar.TabIndex = 15
-        Me.btnAdministrar.Text = "Guardar"
+        Me.btnAdministrar.Text = "Administrar"
         Me.btnAdministrar.UseVisualStyleBackColor = True
         '
         'lblCantRol

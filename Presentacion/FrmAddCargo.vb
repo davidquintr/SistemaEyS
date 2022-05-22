@@ -2,7 +2,13 @@
 
     Dim carg As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
     Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
+    Dim modo As Int16 = 0
 
+    Public Sub CambiarModo()
+        modo = 1
+        btnEliminar.Visible = True
+        GroupBox1.Text = "Administrar Cargo"
+    End Sub
 
     Sub llenarDep()
 

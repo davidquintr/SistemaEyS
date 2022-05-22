@@ -3,7 +3,13 @@
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
     Dim car As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
+    Dim modo As Int16 = 0
 
+    Public Sub CambiarModo()
+        modo = 1
+        btnDarDeBaja.Visible = True
+        GroupBox1.Text = "Administrar Empleado"
+    End Sub
     Sub llenarDep()
 
         cbDep.DataSource = dep.GetData()

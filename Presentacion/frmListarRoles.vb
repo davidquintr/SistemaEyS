@@ -87,4 +87,8 @@
         End Try
     End Sub
 
+    Private Sub btnAdministrar_Click(sender As Object, e As EventArgs) Handles btnAdministrar.Click
+        frmAddRol.Show()
+        frmAddRol.CambiarModo()
+    End Sub
 End Class
