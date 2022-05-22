@@ -1,13 +1,7 @@
 ﻿Public Class frmListarEmp
 
-    Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
-    Dim tblEmp As New BDSistemaEySDataSet.tbl_EmpleadoDataTable
-
-    Dim car As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
-    Dim tblCar As New BDSistemaEySDataSet.tbl_CargoDataTable
-
-    Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
-    Dim tblDep As New BDSistemaEySDataSet.tbl_EmpleadoDataTable
+    Dim viewEmp As New BDSistemaEySDataSetTableAdapters.Vw_ListEmpTableAdapter
+    Dim tblViewEmp As New BDSistemaEySDataSet.Vw_ListEmpDataTable
 
     Dim fila As Integer = 0
     Dim cantEmp As Int32
@@ -15,21 +9,27 @@
     Dim tblMostar As New BindingSource
 
     Sub llenarEmp()
-        cbEmpleado.DataSource = emp.GetData()
-        cbEmpleado.DisplayMember = "primerNombre"
-        cbEmpleado.ValueMember = "idEmpleado"
+        cbEmpleado.DataSource = viewEmp.GetData()
+        cbEmpleado.DisplayMember = "Nombres"
+        cbEmpleado.ValueMember = "ID"
         cbEmpleado.Refresh()
     End Sub
 
     Private Sub frmListarEmp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
 
-        llenarEmp()
-        cantEmp = emp.GetData.Count()
-        lbCantEmp.Text = (1 + id).ToString + " / " + cantEmp.ToString
-        emp.Fill(tblEmp)
-        car.Fill(tblCar)
+            llenarEmp()
+            viewEmp.Fill(tblViewEmp)
+            If (tblViewEmp Is Nothing) Then
+                MsgBox("No hay datos")
+                Me.Close()
+            End If
 
-        MostrarDatos()
+            cantEmp = viewEmp.GetData.Count()
+            MostrarDatos()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
@@ -38,7 +38,7 @@
 
     Private Sub btnSig_Click(sender As Object, e As EventArgs) Handles btnSig.Click
 
-        If (tblEmp Is Nothing) Then
+        If (tblViewEmp Is Nothing) Then
             MsgBox("No hay datos")
             Return
         End If
@@ -47,14 +47,13 @@
             Return
         End If
 
-
         fila += 1
         MostrarDatos()
     End Sub
 
     Private Sub btnAnt_Click(sender As Object, e As EventArgs) Handles btnAnt.Click
 
-        If (tblEmp Is Nothing) Then
+        If (tblViewEmp Is Nothing) Then
             MsgBox("No hay datos")
             Return
         End If
@@ -69,38 +68,37 @@
     End Sub
 
     Private Sub MostrarDatos()
-        lbCantEmp.Text = (1 + fila).ToString + " / " + cantEmp.ToString
-        cbEmpleado.SelectedIndex = fila
-        lbCantEmp.Text = (1 + fila).ToString + " / " + cantEmp.ToString
-        lblCargo.Text = tblCar.Rows(tblEmp.Rows(fila).Item(17) - 1).Item(2)
-        cbEmpleado.SelectedIndex = fila
-        lblID.Text = tblEmp.Rows(fila).Item(0).ToString
-        lblNombres.Text = tblEmp.Rows(fila).Item(2).ToString + " " + tblEmp.Rows(fila).Item(3).ToString
-        lblApellidos.Text = tblEmp.Rows(fila).Item(4).ToString + " " + tblEmp.Rows(fila).Item(5).ToString
-        lblSexo.Text = tblEmp.Rows(fila).Item(11).ToString
-        lblCedula.Text = tblEmp.Rows(fila).Item(1).ToString
-        lblEmailCorp.Text = tblEmp.Rows(fila).Item(10).ToString
-        lblEmailPer.Text = tblEmp.Rows(fila).Item(9).ToString
-        lblFechaNac.Text = tblEmp.Rows(fila).Item(14).ToString
-        lblFechaIng.Text = tblEmp.Rows(fila).Item(15).ToString
-        lblTelefono.Text = tblEmp.Rows(fila).Item(8).ToString
-        rtxtObservacion.Text = tblEmp.Rows(fila).Item(7).ToString
-        rtxtDireccion.Text = tblEmp.Rows(fila).Item(6).ToString
+        Try
+            lbCantEmp.Text = (1 + fila).ToString + " / " + cantEmp.ToString
+            cbEmpleado.SelectedIndex = fila
+
+            lblID.Text = tblViewEmp.Rows(fila).Item(0)
+            lblNombres.Text = tblViewEmp.Rows(fila).Item(1)
+            lblApellidos.Text = tblViewEmp.Rows(fila).Item(2)
+            lblSexo.Text = tblViewEmp.Rows(fila).Item(3)
+            lblCedula.Text = tblViewEmp.Rows(fila).Item(4)
+            lblDepartamento.Text = tblViewEmp.Rows(fila).Item(5)
+            lblCargo.Text = tblViewEmp.Rows(fila).Item(6)
+            lblEmailCorp.Text = tblViewEmp.Rows(fila).Item(7)
+            lblEmailPer.Text = tblViewEmp.Rows(fila).Item(8)
+            lblFechaNac.Text = DateTime.Parse(tblViewEmp.Rows(fila).Item(9)).ToString("f")
+            lblFechaIng.Text = DateTime.Parse(tblViewEmp.Rows(fila).Item(10)).ToString("f")
+            lblActividad.Text = tblViewEmp.Rows(fila).Item(11)
+            lblTelefono.Text = tblViewEmp.Rows(fila).Item(12)
+            rtxtObservacion.Text = tblViewEmp.Rows(fila).Item(13).ToString
+            rtxtDireccion.Text = tblViewEmp.Rows(fila).Item(14)
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnOpExtra_Click(sender As Object, e As EventArgs) Handles btnOpExtra.Click
 
     End Sub
 
-    Private Sub cbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmpleado.SelectedIndexChanged
-
-
-    End Sub
-
     Private Sub cbEmpleado_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbEmpleado.SelectionChangeCommitted
-
         fila = cbEmpleado.SelectedIndex
         MostrarDatos()
-
     End Sub
+
 End Class

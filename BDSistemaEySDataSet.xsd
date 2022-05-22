@@ -970,7 +970,7 @@ SELECT idRol, nombre, estado FROM tbl_Rol WHERE (idRol = SCOPE_IDENTITY())</Comm
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT idRol, nombre, estado FROM dbo.tbl_Rol</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -1075,6 +1075,37 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Vw_ListEmpTableAdapter" GeneratorDataComponentClassName="Vw_ListEmpTableAdapter" Name="Vw_ListEmp" UserDataComponentName="Vw_ListEmpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.Vw_ListEmp" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Nombres, Apellidos, Sexo, Cédula, Departamento, Cargo, [Email Corporativo], [Email Personal], [Fecha de Nacimiento], [Fecha de Ingreso], Activo, Teléfono, Observación, Dirección, Estado FROM dbo.Vw_ListEmp where estado &lt;&gt; 3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Nombres" DataSetColumn="Nombres" />
+              <Mapping SourceColumn="Apellidos" DataSetColumn="Apellidos" />
+              <Mapping SourceColumn="Sexo" DataSetColumn="Sexo" />
+              <Mapping SourceColumn="Cédula" DataSetColumn="Cédula" />
+              <Mapping SourceColumn="Departamento" DataSetColumn="Departamento" />
+              <Mapping SourceColumn="Cargo" DataSetColumn="Cargo" />
+              <Mapping SourceColumn="Email Corporativo" DataSetColumn="Email Corporativo" />
+              <Mapping SourceColumn="Email Personal" DataSetColumn="Email Personal" />
+              <Mapping SourceColumn="Fecha de Nacimiento" DataSetColumn="Fecha de Nacimiento" />
+              <Mapping SourceColumn="Fecha de Ingreso" DataSetColumn="Fecha de Ingreso" />
+              <Mapping SourceColumn="Activo" DataSetColumn="Activo" />
+              <Mapping SourceColumn="Teléfono" DataSetColumn="Teléfono" />
+              <Mapping SourceColumn="Observación" DataSetColumn="Observación" />
+              <Mapping SourceColumn="Dirección" DataSetColumn="Dirección" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1119,7 +1150,7 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
               </xs:element>
               <xs:element name="horarioAlmuerzo" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzo" msprop:Generator_UserColumnName="horarioAlmuerzo" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzo" type="xs:dateTime" />
               <xs:element name="tiempoGracia" msprop:Generator_ColumnPropNameInTable="tiempoGraciaColumn" msprop:Generator_ColumnPropNameInRow="tiempoGracia" msprop:Generator_UserColumnName="tiempoGracia" msprop:Generator_ColumnVarNameInTable="columntiempoGracia" type="xs:int" />
-              <xs:element name="emailDep" msprop:Generator_UserColumnName="emailDep" msprop:Generator_ColumnPropNameInTable="emailDepColumn" msprop:Generator_ColumnPropNameInRow="emailDep" msprop:Generator_ColumnVarNameInTable="columnemailDep" minOccurs="0">
+              <xs:element name="emailDep" msprop:Generator_ColumnPropNameInTable="emailDepColumn" msprop:Generator_ColumnPropNameInRow="emailDep" msprop:Generator_UserColumnName="emailDep" msprop:Generator_ColumnVarNameInTable="columnemailDep" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
@@ -1246,7 +1277,7 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
               <xs:element name="fechaIngreso" msprop:Generator_ColumnPropNameInTable="fechaIngresoColumn" msprop:Generator_ColumnPropNameInRow="fechaIngreso" msprop:Generator_UserColumnName="fechaIngreso" msprop:Generator_ColumnVarNameInTable="columnfechaIngreso" type="xs:dateTime" />
               <xs:element name="fechaAgregado" msprop:Generator_ColumnPropNameInTable="fechaAgregadoColumn" msprop:Generator_ColumnPropNameInRow="fechaAgregado" msprop:Generator_UserColumnName="fechaAgregado" msprop:Generator_ColumnVarNameInTable="columnfechaAgregado" type="xs:dateTime" minOccurs="0" />
               <xs:element name="idCargo" msprop:Generator_ColumnPropNameInTable="idCargoColumn" msprop:Generator_ColumnPropNameInRow="idCargo" msprop:Generator_UserColumnName="idCargo" msprop:Generator_ColumnVarNameInTable="columnidCargo" type="xs:int" />
-              <xs:element name="idUsuario" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnidUsuario" msprop:Generator_UserColumnName="idUsuario" type="xs:int" />
+              <xs:element name="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_UserColumnName="idUsuario" msprop:Generator_ColumnVarNameInTable="columnidUsuario" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1330,37 +1361,72 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
-              <xs:element name="idRol" msprop:Generator_UserColumnName="idRol" msprop:Generator_ColumnPropNameInTable="idRolColumn" msprop:Generator_ColumnPropNameInRow="idRol" msprop:Generator_ColumnVarNameInTable="columnidRol" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="idRol" msprop:Generator_ColumnPropNameInTable="idRolColumn" msprop:Generator_ColumnPropNameInRow="idRol" msprop:Generator_UserColumnName="idRol" msprop:Generator_ColumnVarNameInTable="columnidRol" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_Rol" msprop:Generator_RowClassName="tbl_RolRow" msprop:Generator_RowEvHandlerName="tbl_RolRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RolRowDeleted" msprop:Generator_RowDeletingName="tbl_RolRowDeleting" msprop:Generator_RowEvArgName="tbl_RolRowChangeEvent" msprop:Generator_TablePropName="tbl_Rol" msprop:Generator_RowChangedName="tbl_RolRowChanged" msprop:Generator_UserTableName="tbl_Rol" msprop:Generator_RowChangingName="tbl_RolRowChanging" msprop:Generator_TableClassName="tbl_RolDataTable" msprop:Generator_TableVarName="tabletbl_Rol">
+        <xs:element name="tbl_Rol" msprop:Generator_RowEvHandlerName="tbl_RolRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_RolRowDeleted" msprop:Generator_RowDeletingName="tbl_RolRowDeleting" msprop:Generator_RowEvArgName="tbl_RolRowChangeEvent" msprop:Generator_TablePropName="tbl_Rol" msprop:Generator_RowChangedName="tbl_RolRowChanged" msprop:Generator_UserTableName="tbl_Rol" msprop:Generator_RowChangingName="tbl_RolRowChanging" msprop:Generator_RowClassName="tbl_RolRow" msprop:Generator_TableClassName="tbl_RolDataTable" msprop:Generator_TableVarName="tabletbl_Rol">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idRol" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idRol" msprop:Generator_ColumnPropNameInTable="idRolColumn" msprop:Generator_ColumnPropNameInRow="idRol" msprop:Generator_ColumnVarNameInTable="columnidRol" type="xs:int" />
-              <xs:element name="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
+              <xs:element name="idRol" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idRolColumn" msprop:Generator_ColumnPropNameInRow="idRol" msprop:Generator_UserColumnName="idRol" msprop:Generator_ColumnVarNameInTable="columnidRol" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_UserColumnName="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_OpcRol" msprop:Generator_RowEvHandlerName="tbl_OpcRolRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_OpcRolRowDeleted" msprop:Generator_RowDeletingName="tbl_OpcRolRowDeleting" msprop:Generator_RowEvArgName="tbl_OpcRolRowChangeEvent" msprop:Generator_TablePropName="tbl_OpcRol" msprop:Generator_RowChangedName="tbl_OpcRolRowChanged" msprop:Generator_RowChangingName="tbl_OpcRolRowChanging" msprop:Generator_TableClassName="tbl_OpcRolDataTable" msprop:Generator_RowClassName="tbl_OpcRolRow" msprop:Generator_TableVarName="tabletbl_OpcRol" msprop:Generator_UserTableName="tbl_OpcRol">
+        <xs:element name="tbl_OpcRol" msprop:Generator_RowEvHandlerName="tbl_OpcRolRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_OpcRolRowDeleted" msprop:Generator_RowDeletingName="tbl_OpcRolRowDeleting" msprop:Generator_RowEvArgName="tbl_OpcRolRowChangeEvent" msprop:Generator_TablePropName="tbl_OpcRol" msprop:Generator_RowChangedName="tbl_OpcRolRowChanged" msprop:Generator_UserTableName="tbl_OpcRol" msprop:Generator_RowChangingName="tbl_OpcRolRowChanging" msprop:Generator_RowClassName="tbl_OpcRolRow" msprop:Generator_TableClassName="tbl_OpcRolDataTable" msprop:Generator_TableVarName="tabletbl_OpcRol">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idOpcRol" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="idOpcRol" msprop:Generator_ColumnPropNameInTable="idOpcRolColumn" msprop:Generator_ColumnVarNameInTable="columnidOpcRol" msprop:Generator_UserColumnName="idOpcRol" type="xs:int" />
-              <xs:element name="activo" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnVarNameInTable="columnactivo" msprop:Generator_UserColumnName="activo" type="xs:boolean" />
-              <xs:element name="idOpcion" msprop:Generator_ColumnPropNameInRow="idOpcion" msprop:Generator_ColumnPropNameInTable="idOpcionColumn" msprop:Generator_ColumnVarNameInTable="columnidOpcion" msprop:Generator_UserColumnName="idOpcion" type="xs:int" />
-              <xs:element name="idRol" msprop:Generator_ColumnPropNameInRow="idRol" msprop:Generator_ColumnPropNameInTable="idRolColumn" msprop:Generator_ColumnVarNameInTable="columnidRol" msprop:Generator_UserColumnName="idRol" type="xs:int" />
+              <xs:element name="idOpcRol" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="idOpcRolColumn" msprop:Generator_ColumnPropNameInRow="idOpcRol" msprop:Generator_UserColumnName="idOpcRol" msprop:Generator_ColumnVarNameInTable="columnidOpcRol" type="xs:int" />
+              <xs:element name="activo" msprop:Generator_ColumnPropNameInTable="activoColumn" msprop:Generator_ColumnPropNameInRow="activo" msprop:Generator_UserColumnName="activo" msprop:Generator_ColumnVarNameInTable="columnactivo" type="xs:boolean" />
+              <xs:element name="idOpcion" msprop:Generator_ColumnPropNameInTable="idOpcionColumn" msprop:Generator_ColumnPropNameInRow="idOpcion" msprop:Generator_UserColumnName="idOpcion" msprop:Generator_ColumnVarNameInTable="columnidOpcion" type="xs:int" />
+              <xs:element name="idRol" msprop:Generator_ColumnPropNameInTable="idRolColumn" msprop:Generator_ColumnPropNameInRow="idRol" msprop:Generator_UserColumnName="idRol" msprop:Generator_ColumnVarNameInTable="columnidRol" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vw_VistaAdmin" msprop:Generator_RowEvHandlerName="Vw_VistaAdminRowChangeEventHandler" msprop:Generator_RowDeletedName="Vw_VistaAdminRowDeleted" msprop:Generator_RowDeletingName="Vw_VistaAdminRowDeleting" msprop:Generator_RowEvArgName="Vw_VistaAdminRowChangeEvent" msprop:Generator_TablePropName="Vw_VistaAdmin" msprop:Generator_RowChangedName="Vw_VistaAdminRowChanged" msprop:Generator_RowChangingName="Vw_VistaAdminRowChanging" msprop:Generator_TableClassName="Vw_VistaAdminDataTable" msprop:Generator_RowClassName="Vw_VistaAdminRow" msprop:Generator_TableVarName="tableVw_VistaAdmin" msprop:Generator_UserTableName="Vw_VistaAdmin">
+        <xs:element name="Vw_VistaAdmin" msprop:Generator_RowEvHandlerName="Vw_VistaAdminRowChangeEventHandler" msprop:Generator_RowDeletedName="Vw_VistaAdminRowDeleted" msprop:Generator_RowDeletingName="Vw_VistaAdminRowDeleting" msprop:Generator_RowEvArgName="Vw_VistaAdminRowChangeEvent" msprop:Generator_TablePropName="Vw_VistaAdmin" msprop:Generator_RowChangedName="Vw_VistaAdminRowChanged" msprop:Generator_UserTableName="Vw_VistaAdmin" msprop:Generator_RowChangingName="Vw_VistaAdminRowChanging" msprop:Generator_RowClassName="Vw_VistaAdminRow" msprop:Generator_TableClassName="Vw_VistaAdminDataTable" msprop:Generator_TableVarName="tableVw_VistaAdmin">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="Nombres" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_UserColumnName="Nombres" msprop:Generator_ColumnVarNameInTable="columnNombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_UserColumnName="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre_x0020_de_x0020_Usuario" msprop:Generator_ColumnPropNameInTable="Nombre_de_UsuarioColumn" msprop:Generator_ColumnPropNameInRow="Nombre_de_Usuario" msprop:Generator_UserColumnName="Nombre de Usuario" msprop:Generator_ColumnVarNameInTable="columnNombre_de_Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Activo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="ActivoColumn" msprop:Generator_ColumnPropNameInRow="Activo" msprop:Generator_UserColumnName="Activo" msprop:Generator_ColumnVarNameInTable="columnActivo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Vw_ListEmp" msprop:Generator_RowEvHandlerName="Vw_ListEmpRowChangeEventHandler" msprop:Generator_RowDeletedName="Vw_ListEmpRowDeleted" msprop:Generator_RowDeletingName="Vw_ListEmpRowDeleting" msprop:Generator_RowEvArgName="Vw_ListEmpRowChangeEvent" msprop:Generator_TablePropName="Vw_ListEmp" msprop:Generator_RowChangedName="Vw_ListEmpRowChanged" msprop:Generator_RowChangingName="Vw_ListEmpRowChanging" msprop:Generator_TableClassName="Vw_ListEmpDataTable" msprop:Generator_RowClassName="Vw_ListEmpRow" msprop:Generator_TableVarName="tableVw_ListEmp" msprop:Generator_UserTableName="Vw_ListEmp">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -1371,6 +1437,34 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Apellidos" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Apellidos" msprop:Generator_ColumnPropNameInTable="ApellidosColumn" msprop:Generator_ColumnVarNameInTable="columnApellidos" msprop:Generator_UserColumnName="Apellidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sexo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Sexo" msprop:Generator_ColumnPropNameInTable="SexoColumn" msprop:Generator_ColumnVarNameInTable="columnSexo" msprop:Generator_UserColumnName="Sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cédula" msprop:Generator_ColumnPropNameInRow="Cédula" msprop:Generator_ColumnPropNameInTable="CédulaColumn" msprop:Generator_ColumnVarNameInTable="columnCédula" msprop:Generator_UserColumnName="Cédula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Departamento" msprop:Generator_ColumnPropNameInRow="Departamento" msprop:Generator_ColumnPropNameInTable="DepartamentoColumn" msprop:Generator_ColumnVarNameInTable="columnDepartamento" msprop:Generator_UserColumnName="Departamento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Cargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_UserColumnName="Cargo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1378,13 +1472,22 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nombre_x0020_de_x0020_Usuario" msprop:Generator_ColumnPropNameInRow="Nombre_de_Usuario" msprop:Generator_ColumnPropNameInTable="Nombre_de_UsuarioColumn" msprop:Generator_ColumnVarNameInTable="columnNombre_de_Usuario" msprop:Generator_UserColumnName="Nombre de Usuario">
+              <xs:element name="Email_x0020_Corporativo" msprop:Generator_ColumnPropNameInRow="Email_Corporativo" msprop:Generator_ColumnPropNameInTable="Email_CorporativoColumn" msprop:Generator_ColumnVarNameInTable="columnEmail_Corporativo" msprop:Generator_UserColumnName="Email Corporativo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Email_x0020_Personal" msprop:Generator_ColumnPropNameInRow="Email_Personal" msprop:Generator_ColumnPropNameInTable="Email_PersonalColumn" msprop:Generator_ColumnVarNameInTable="columnEmail_Personal" msprop:Generator_UserColumnName="Email Personal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha_x0020_de_x0020_Nacimiento" msprop:Generator_ColumnPropNameInRow="Fecha_de_Nacimiento" msprop:Generator_ColumnPropNameInTable="Fecha_de_NacimientoColumn" msprop:Generator_ColumnVarNameInTable="columnFecha_de_Nacimiento" msprop:Generator_UserColumnName="Fecha de Nacimiento" type="xs:dateTime" />
+              <xs:element name="Fecha_x0020_de_x0020_Ingreso" msprop:Generator_ColumnPropNameInRow="Fecha_de_Ingreso" msprop:Generator_ColumnPropNameInTable="Fecha_de_IngresoColumn" msprop:Generator_ColumnVarNameInTable="columnFecha_de_Ingreso" msprop:Generator_UserColumnName="Fecha de Ingreso" type="xs:dateTime" />
               <xs:element name="Activo" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Activo" msprop:Generator_ColumnPropNameInTable="ActivoColumn" msprop:Generator_ColumnVarNameInTable="columnActivo" msprop:Generator_UserColumnName="Activo" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1392,6 +1495,28 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Teléfono" msprop:Generator_ColumnPropNameInRow="Teléfono" msprop:Generator_ColumnPropNameInTable="TeléfonoColumn" msprop:Generator_ColumnVarNameInTable="columnTeléfono" msprop:Generator_UserColumnName="Teléfono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Observación" msprop:Generator_ColumnPropNameInRow="Observación" msprop:Generator_ColumnPropNameInTable="ObservaciónColumn" msprop:Generator_ColumnVarNameInTable="columnObservación" msprop:Generator_UserColumnName="Observación" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dirección" msprop:Generator_ColumnPropNameInRow="Dirección" msprop:Generator_ColumnPropNameInTable="DirecciónColumn" msprop:Generator_ColumnVarNameInTable="columnDirección" msprop:Generator_UserColumnName="Dirección" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_UserColumnName="Estado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1445,6 +1570,10 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
       <xs:selector xpath=".//mstns:Vw_VistaAdmin" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
+    <xs:unique name="Vw_ListEmp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Vw_ListEmp" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
@@ -1454,9 +1583,9 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
       <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo40" />
       <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado36" />
       <msdata:Relationship name="Reftbl_Rol56" msdata:parent="tbl_Rol" msdata:child="tbl_Usuario" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Rol56" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_ParentPropName="tbl_RolRow" msprop:Generator_UserRelationName="Reftbl_Rol56" />
-      <msdata:Relationship name="Reftbl_Usuario57" msdata:parent="tbl_Usuario" msdata:child="tbl_Empleado" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserParentTable="tbl_Usuario" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Usuario57" msprop:Generator_UserRelationName="Reftbl_Usuario57" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_ParentPropName="tbl_UsuarioRow" />
-      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcRol" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_OpcionRow" msprop:Generator_UserRelationName="Reftbl_Opcion53" />
+      <msdata:Relationship name="Reftbl_Usuario57" msdata:parent="tbl_Usuario" msdata:child="tbl_Empleado" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserParentTable="tbl_Usuario" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Usuario57" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_UserRelationName="Reftbl_Usuario57" msprop:Generator_ParentPropName="tbl_UsuarioRow" />
       <msdata:Relationship name="Reftbl_Rol58" msdata:parent="tbl_Rol" msdata:child="tbl_OpcRol" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Rol58" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_RolRow" msprop:Generator_UserRelationName="Reftbl_Rol58" />
+      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcRol" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_OpcionRow" msprop:Generator_UserRelationName="Reftbl_Opcion53" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
