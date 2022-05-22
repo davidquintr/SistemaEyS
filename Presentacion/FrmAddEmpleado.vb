@@ -44,9 +44,9 @@
         Dim emailPersonal As String = txtEmailP.Text.Trim
         Dim Telefono As String = txtTelefono.Text.Trim
         Dim sexo As Boolean = CBool(rbMasculino.Checked)
-        Dim fechaIngreso As DateTime = DateTime.Now
+        Dim fechaIngreso As DateTime = dtpFechaIngreso.Value.Date.ToString
         Dim fechaAgregado As DateTime = DateTime.Now
-        Dim fechaNac As DateTime = DateTime.Now
+        Dim fechaNac As DateTime = dtpNac.Value.Date.ToString
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
         Dim idCar As Integer = CInt(cbCar.SelectedValue)

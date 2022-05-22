@@ -59,6 +59,8 @@ Partial Class FrmVistaAdmin
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
@@ -80,18 +82,16 @@ Partial Class FrmVistaAdmin
         Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
         Me.BDSistemaEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_VistaAdminTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -210,26 +210,26 @@ Partial Class FrmVistaAdmin
         '
         Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
         Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AñadirToolStripMenuItem.Text = "Añadir"
         '
         'RolToolStripMenuItem
         '
         Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
-        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RolToolStripMenuItem.Text = "Rol"
         '
         'UsuarioToolStripMenuItem1
         '
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem1.Text = "Usuario"
         '
         'AdministrarToolStripMenuItem
         '
         Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
         Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
-        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdministrarToolStripMenuItem.Text = "Administrar"
         '
         'RolToolStripMenuItem1
@@ -241,14 +241,14 @@ Partial Class FrmVistaAdmin
         'UsuarioToolStripMenuItem2
         '
         Me.UsuarioToolStripMenuItem2.Name = "UsuarioToolStripMenuItem2"
-        Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(114, 22)
+        Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem2.Text = "Usuario"
         '
         'RestaurarEntidadesToolStripMenuItem
         '
         Me.RestaurarEntidadesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem2, Me.CargoToolStripMenuItem2, Me.EmpleadoToolStripMenuItem2, Me.UsuarioToolStripMenuItem})
         Me.RestaurarEntidadesToolStripMenuItem.Name = "RestaurarEntidadesToolStripMenuItem"
-        Me.RestaurarEntidadesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.RestaurarEntidadesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RestaurarEntidadesToolStripMenuItem.Text = "Restaurar entidades"
         '
         'DepartamentoToolStripMenuItem2
@@ -278,7 +278,7 @@ Partial Class FrmVistaAdmin
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'AyudaToolStripMenuItem
@@ -340,6 +340,25 @@ Partial Class FrmVistaAdmin
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(645, 35)
         Me.Panel6.TabIndex = 6
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(641, 31)
+        Me.FlowLayoutPanel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(166, 30)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Actividad actual"
         '
         'GroupBox1
         '
@@ -487,25 +506,6 @@ Partial Class FrmVistaAdmin
         '
         Me.Vw_VistaAdminTableAdapter.ClearBeforeFill = True
         '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(641, 31)
-        Me.FlowLayoutPanel1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 30)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Actividad actual"
-        '
         'FrmVistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -526,13 +526,13 @@ Partial Class FrmVistaAdmin
         Me.Panel7.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

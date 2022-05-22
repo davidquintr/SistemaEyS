@@ -7,6 +7,7 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'BDSistemaEySDataSet.tbl_Usuario' table. You can move, or remove it, as needed.
         Me.Tbl_UsuarioTableAdapter.Fill(Me.BDSistemaEySDataSet.tbl_Usuario)
+        UsernameTextBox.Text = ""
         PasswordTextBox.Text = ""
 
     End Sub

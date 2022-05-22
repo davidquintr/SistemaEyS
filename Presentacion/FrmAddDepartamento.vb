@@ -1,9 +1,6 @@
 ﻿Public Class FrmAddDepartamento
 
     Dim Dept As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
-    Private Sub FrmAddDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         MessageBox.Show("Si se ha introducido algun dato no seran guardados, seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNoCancel)

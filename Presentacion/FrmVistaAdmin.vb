@@ -53,4 +53,20 @@
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblHora.Text = DateTime.Now.ToLongTimeString
     End Sub
+
+    Private Sub RolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RolToolStripMenuItem.Click
+        frmAddRol.Show()
+    End Sub
+
+    Private Sub RolToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RolToolStripMenuItem1.Click
+        frmListarRoles.Show()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem1.Click
+        frmAdminCredenciales.Show()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem2.Click
+        frmListarCredenciales.Show()
+    End Sub
 End Class

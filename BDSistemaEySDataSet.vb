@@ -18,3 +18,8 @@ Namespace BDSistemaEySDataSetTableAdapters
     Partial Public Class Vw_ListEmpTableAdapter
     End Class
 End Namespace
+
+Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class tbl_UsuarioTableAdapter
+    End Class
+End Namespace

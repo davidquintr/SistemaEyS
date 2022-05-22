@@ -5,8 +5,6 @@
 
     Dim fila As Integer = 0
     Dim cantEmp As Int32
-    Dim id As Int32 = 0
-    Dim tblMostar As New BindingSource
 
     Sub llenarEmp()
         cbEmpleado.DataSource = viewEmp.GetData()

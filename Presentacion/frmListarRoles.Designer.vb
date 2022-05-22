@@ -25,10 +25,10 @@ Partial Class frmListarRoles
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnAdministrar = New System.Windows.Forms.Button()
-        Me.lblCantDep = New System.Windows.Forms.Label()
+        Me.lblCantRol = New System.Windows.Forms.Label()
         Me.btnSig = New System.Windows.Forms.Button()
         Me.btnAnt = New System.Windows.Forms.Button()
-        Me.cbDept = New System.Windows.Forms.ComboBox()
+        Me.cbRoles = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.lbID = New System.Windows.Forms.Label()
@@ -69,18 +69,18 @@ Partial Class frmListarRoles
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(73, 23)
         Me.btnAdministrar.TabIndex = 15
-        Me.btnAdministrar.Text = "Administrar"
+        Me.btnAdministrar.Text = "Guardar"
         Me.btnAdministrar.UseVisualStyleBackColor = True
         '
-        'lblCantDep
+        'lblCantRol
         '
-        Me.lblCantDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantDep.Location = New System.Drawing.Point(254, 110)
-        Me.lblCantDep.Name = "lblCantDep"
-        Me.lblCantDep.Size = New System.Drawing.Size(111, 25)
-        Me.lblCantDep.TabIndex = 18
-        Me.lblCantDep.Text = "999/999"
-        Me.lblCantDep.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCantRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCantRol.Location = New System.Drawing.Point(254, 110)
+        Me.lblCantRol.Name = "lblCantRol"
+        Me.lblCantRol.Size = New System.Drawing.Size(111, 25)
+        Me.lblCantRol.TabIndex = 18
+        Me.lblCantRol.Text = "999/999"
+        Me.lblCantRol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnSig
         '
@@ -102,14 +102,14 @@ Partial Class frmListarRoles
         Me.btnAnt.Text = "<"
         Me.btnAnt.UseVisualStyleBackColor = True
         '
-        'cbDept
+        'cbRoles
         '
-        Me.cbDept.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbDept.FormattingEnabled = True
-        Me.cbDept.Location = New System.Drawing.Point(12, 110)
-        Me.cbDept.Name = "cbDept"
-        Me.cbDept.Size = New System.Drawing.Size(205, 25)
-        Me.cbDept.TabIndex = 16
+        Me.cbRoles.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbRoles.FormattingEnabled = True
+        Me.cbRoles.Location = New System.Drawing.Point(12, 110)
+        Me.cbRoles.Name = "cbRoles"
+        Me.cbRoles.Size = New System.Drawing.Size(205, 25)
+        Me.cbRoles.TabIndex = 16
         '
         'GroupBox1
         '
@@ -192,10 +192,10 @@ Partial Class frmListarRoles
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(408, 183)
         Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.lblCantDep)
+        Me.Controls.Add(Me.lblCantRol)
         Me.Controls.Add(Me.btnSig)
         Me.Controls.Add(Me.btnAnt)
-        Me.Controls.Add(Me.cbDept)
+        Me.Controls.Add(Me.cbRoles)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmListarRoles"
         Me.Text = "frmListarRoles"
@@ -210,10 +210,10 @@ Partial Class frmListarRoles
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnAdministrar As Button
-    Friend WithEvents lblCantDep As Label
+    Friend WithEvents lblCantRol As Label
     Friend WithEvents btnSig As Button
     Friend WithEvents btnAnt As Button
-    Friend WithEvents cbDept As ComboBox
+    Friend WithEvents cbRoles As ComboBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents lbID As Label
