@@ -49,12 +49,12 @@ Partial Class frmAddRol
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 110)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(381, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(355, 30)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(305, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(279, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 13
@@ -63,7 +63,7 @@ Partial Class frmAddRol
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(226, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(200, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
@@ -72,7 +72,7 @@ Partial Class frmAddRol
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(147, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(121, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 10
@@ -86,7 +86,7 @@ Partial Class frmAddRol
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(383, 92)
+        Me.GroupBox1.Size = New System.Drawing.Size(355, 92)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar/administrar rol"
@@ -109,7 +109,7 @@ Partial Class frmAddRol
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 54)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(343, 54)
         Me.TableLayoutPanel1.TabIndex = 3
         '
         'Label1
@@ -126,9 +126,9 @@ Partial Class frmAddRol
         'txbNombre
         '
         Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(156, 30)
+        Me.txbNombre.Location = New System.Drawing.Point(144, 30)
         Me.txbNombre.Name = "txbNombre"
-        Me.txbNombre.Size = New System.Drawing.Size(208, 23)
+        Me.txbNombre.Size = New System.Drawing.Size(196, 23)
         Me.txbNombre.TabIndex = 3
         '
         'Label2
@@ -145,16 +145,16 @@ Partial Class frmAddRol
         'txbID
         '
         Me.txbID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbID.Location = New System.Drawing.Point(156, 3)
+        Me.txbID.Location = New System.Drawing.Point(144, 3)
         Me.txbID.Name = "txbID"
-        Me.txbID.Size = New System.Drawing.Size(208, 23)
+        Me.txbID.Size = New System.Drawing.Size(196, 23)
         Me.txbID.TabIndex = 1
         '
         'frmAddRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(405, 152)
+        Me.ClientSize = New System.Drawing.Size(379, 152)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmAddRol"

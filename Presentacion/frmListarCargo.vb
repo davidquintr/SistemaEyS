@@ -1,5 +1,7 @@
 ﻿Public Class frmListarCargo
 
+    Dim adminCargo As New FrmAddCargo
+
     Dim viewCar As New BDSistemaEySDataSetTableAdapters.Vw_ListCargoTableAdapter
     Dim tblViewCar As New BDSistemaEySDataSet.Vw_ListCargoDataTable
     Dim fila As Integer = 0
@@ -91,7 +93,8 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        FrmAddCargo.Show()
-        FrmAddCargo.CambiarModo()
+
+        Me.adminCargo.CambiarModo(fila)
+        Me.adminCargo.Show()
     End Sub
 End Class

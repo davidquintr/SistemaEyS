@@ -26,6 +26,7 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -52,7 +53,6 @@ Partial Class frmSeguridadPermisos
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnHorario = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.lblCantCarg = New System.Windows.Forms.Label()
         Me.btnSig = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
@@ -88,7 +88,7 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel1.Controls.Add(Me.RadioButton3)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 21)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(363, 35)
         Me.FlowLayoutPanel1.TabIndex = 2
@@ -97,7 +97,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(2, 2)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(110, 21)
         Me.RadioButton1.TabIndex = 0
@@ -109,13 +109,25 @@ Partial Class frmSeguridadPermisos
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(116, 2)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(103, 21)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Control total"
         Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(223, 2)
+        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(2)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(86, 21)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Empleado"
+        Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -135,7 +147,7 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel2.Controls.Add(Me.CheckBox3)
         Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel2.Location = New System.Drawing.Point(3, 19)
-        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         Me.FlowLayoutPanel2.Size = New System.Drawing.Size(363, 31)
         Me.FlowLayoutPanel2.TabIndex = 2
@@ -144,7 +156,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(2, 2)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(84, 19)
         Me.CheckBox1.TabIndex = 0
@@ -155,7 +167,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(90, 2)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(58, 19)
         Me.CheckBox2.TabIndex = 1
@@ -166,7 +178,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Location = New System.Drawing.Point(152, 2)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(102, 19)
         Me.CheckBox3.TabIndex = 2
@@ -191,7 +203,7 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel3.Controls.Add(Me.CheckBox6)
         Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel3.Location = New System.Drawing.Point(3, 19)
-        Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
         Me.FlowLayoutPanel3.Size = New System.Drawing.Size(363, 31)
         Me.FlowLayoutPanel3.TabIndex = 2
@@ -200,7 +212,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Location = New System.Drawing.Point(2, 2)
-        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(84, 19)
         Me.CheckBox4.TabIndex = 0
@@ -211,7 +223,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.Location = New System.Drawing.Point(90, 2)
-        Me.CheckBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox5.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(58, 19)
         Me.CheckBox5.TabIndex = 1
@@ -222,7 +234,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.Location = New System.Drawing.Point(152, 2)
-        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox6.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(102, 19)
         Me.CheckBox6.TabIndex = 2
@@ -247,7 +259,7 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel4.Controls.Add(Me.CheckBox9)
         Me.FlowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel4.Location = New System.Drawing.Point(3, 19)
-        Me.FlowLayoutPanel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel4.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel4.Name = "FlowLayoutPanel4"
         Me.FlowLayoutPanel4.Size = New System.Drawing.Size(363, 31)
         Me.FlowLayoutPanel4.TabIndex = 2
@@ -256,7 +268,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox7.AutoSize = True
         Me.CheckBox7.Location = New System.Drawing.Point(2, 2)
-        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox7.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(84, 19)
         Me.CheckBox7.TabIndex = 0
@@ -267,7 +279,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox8.AutoSize = True
         Me.CheckBox8.Location = New System.Drawing.Point(90, 2)
-        Me.CheckBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(58, 19)
         Me.CheckBox8.TabIndex = 1
@@ -278,7 +290,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox9.AutoSize = True
         Me.CheckBox9.Location = New System.Drawing.Point(152, 2)
-        Me.CheckBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(102, 19)
         Me.CheckBox9.TabIndex = 2
@@ -305,7 +317,7 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FlowLayoutPanel5.Location = New System.Drawing.Point(3, 19)
-        Me.FlowLayoutPanel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.FlowLayoutPanel5.Margin = New System.Windows.Forms.Padding(2)
         Me.FlowLayoutPanel5.Name = "FlowLayoutPanel5"
         Me.FlowLayoutPanel5.Size = New System.Drawing.Size(363, 58)
         Me.FlowLayoutPanel5.TabIndex = 2
@@ -314,7 +326,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox10.AutoSize = True
         Me.CheckBox10.Location = New System.Drawing.Point(2, 2)
-        Me.CheckBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(191, 19)
         Me.CheckBox10.TabIndex = 0
@@ -325,7 +337,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox11.AutoSize = True
         Me.CheckBox11.Location = New System.Drawing.Point(197, 2)
-        Me.CheckBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(132, 19)
         Me.CheckBox11.TabIndex = 1
@@ -336,7 +348,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox12.AutoSize = True
         Me.CheckBox12.Location = New System.Drawing.Point(2, 25)
-        Me.CheckBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(139, 19)
         Me.CheckBox12.TabIndex = 2
@@ -347,7 +359,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.CheckBox13.AutoSize = True
         Me.CheckBox13.Location = New System.Drawing.Point(145, 25)
-        Me.CheckBox13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBox13.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBox13.Name = "CheckBox13"
         Me.CheckBox13.Size = New System.Drawing.Size(164, 19)
         Me.CheckBox13.TabIndex = 3
@@ -407,18 +419,6 @@ Partial Class frmSeguridadPermisos
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'RadioButton3
-        '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(223, 2)
-        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(2)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(86, 21)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Empleado"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
         'lblCantCarg
         '
         Me.lblCantCarg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -431,7 +431,7 @@ Partial Class frmSeguridadPermisos
         '
         'btnSig
         '
-        Me.btnSig.Location = New System.Drawing.Point(353, 340)
+        Me.btnSig.Location = New System.Drawing.Point(353, 341)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnSig.Size = New System.Drawing.Size(23, 25)
@@ -473,7 +473,7 @@ Partial Class frmSeguridadPermisos
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmSeguridadPermisos"
         Me.Text = "frmSeguridadPermisos"
         Me.GroupBox1.ResumeLayout(False)

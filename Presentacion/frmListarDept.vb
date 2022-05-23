@@ -19,7 +19,6 @@
     Private Sub frmListarDept_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Try
-
             llenarDept()
             Dept.Fill(tblDept)
             If (tblDept Is Nothing) Then

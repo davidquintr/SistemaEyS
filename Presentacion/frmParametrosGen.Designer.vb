@@ -60,7 +60,7 @@ Partial Class frmParametrosGen
         Me.labelParametros.Font = New System.Drawing.Font("Segoe UI Semibold", 11.78182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelParametros.Location = New System.Drawing.Point(3, 9)
         Me.labelParametros.Name = "labelParametros"
-        Me.labelParametros.Size = New System.Drawing.Size(194, 25)
+        Me.labelParametros.Size = New System.Drawing.Size(169, 21)
         Me.labelParametros.TabIndex = 0
         Me.labelParametros.Text = "Parámetros Generales"
         '
@@ -78,7 +78,7 @@ Partial Class frmParametrosGen
         Me.labelTituloSel.Font = New System.Drawing.Font("Segoe UI Semibold", 11.78182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.labelTituloSel.Location = New System.Drawing.Point(3, 9)
         Me.labelTituloSel.Name = "labelTituloSel"
-        Me.labelTituloSel.Size = New System.Drawing.Size(65, 25)
+        Me.labelTituloSel.Size = New System.Drawing.Size(56, 21)
         Me.labelTituloSel.TabIndex = 1
         Me.labelTituloSel.Text = "Título."
         '
@@ -90,14 +90,14 @@ Partial Class frmParametrosGen
         Me.FlowLayoutPanel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel2.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(340, 489)
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(344, 489)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(424, 53)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(420, 53)
         Me.FlowLayoutPanel2.TabIndex = 7
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(341, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(337, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(80, 47)
         Me.btnCerrar.TabIndex = 5

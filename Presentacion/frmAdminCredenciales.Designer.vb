@@ -23,7 +23,7 @@ Partial Class frmAdminCredenciales
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gboxPrincipal = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.txtPassConfirm = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -38,7 +38,11 @@ Partial Class frmAdminCredenciales
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnDarDeBaja = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.cbEmpleado = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.gboxPrincipal.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -54,57 +58,62 @@ Partial Class frmAdminCredenciales
         Me.Label1.Text = "ID:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'GroupBox1
+        'gboxPrincipal
         '
-        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 11)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(369, 180)
-        Me.GroupBox1.TabIndex = 1
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = " Seguridad: Administración/Agregar de credenciales"
+        Me.gboxPrincipal.Controls.Add(Me.TableLayoutPanel1)
+        Me.gboxPrincipal.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.gboxPrincipal.Location = New System.Drawing.Point(10, 11)
+        Me.gboxPrincipal.Name = "gboxPrincipal"
+        Me.gboxPrincipal.Size = New System.Drawing.Size(369, 203)
+        Me.gboxPrincipal.TabIndex = 1
+        Me.gboxPrincipal.TabStop = False
+        Me.gboxPrincipal.Text = " Seguridad: Administración/Agregar de credenciales"
         '
         'TableLayoutPanel1
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.75084!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.24916!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.cbEmpleado, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtPassConfirm, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtPass, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.txtNombre, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtID, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cbRol, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtPass, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.cbRol, 1, 5)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 2, 3)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 29)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 5
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(357, 144)
+        Me.TableLayoutPanel1.RowCount = 6
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(357, 168)
         Me.TableLayoutPanel1.TabIndex = 6
         '
         'txtPassConfirm
         '
         Me.txtPassConfirm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassConfirm.Location = New System.Drawing.Point(152, 87)
+        Me.txtPassConfirm.Location = New System.Drawing.Point(142, 84)
         Me.txtPassConfirm.Name = "txtPassConfirm"
-        Me.txtPassConfirm.Size = New System.Drawing.Size(201, 23)
+        Me.txtPassConfirm.Size = New System.Drawing.Size(188, 23)
         Me.txtPassConfirm.TabIndex = 11
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 112)
+        Me.Label3.Location = New System.Drawing.Point(3, 135)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(27, 15)
         Me.Label3.TabIndex = 9
@@ -114,24 +123,24 @@ Partial Class frmAdminCredenciales
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(152, 59)
+        Me.txtPass.Location = New System.Drawing.Point(142, 57)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(201, 23)
+        Me.txtPass.Size = New System.Drawing.Size(188, 23)
         Me.txtPass.TabIndex = 5
         '
         'txtNombre
         '
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(152, 31)
+        Me.txtNombre.Location = New System.Drawing.Point(142, 30)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(201, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(188, 23)
         Me.txtNombre.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 28)
+        Me.Label2.Location = New System.Drawing.Point(3, 27)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(112, 15)
         Me.Label2.TabIndex = 2
@@ -141,26 +150,27 @@ Partial Class frmAdminCredenciales
         'txtID
         '
         Me.txtID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.Location = New System.Drawing.Point(152, 3)
+        Me.txtID.Location = New System.Drawing.Point(142, 3)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(201, 23)
+        Me.txtID.Size = New System.Drawing.Size(188, 23)
         Me.txtID.TabIndex = 1
         '
         'cbRol
         '
+        Me.cbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRol.FormattingEnabled = True
         Me.cbRol.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbRol.Location = New System.Drawing.Point(151, 114)
+        Me.cbRol.Location = New System.Drawing.Point(141, 137)
         Me.cbRol.Margin = New System.Windows.Forms.Padding(2)
         Me.cbRol.Name = "cbRol"
-        Me.cbRol.Size = New System.Drawing.Size(202, 25)
+        Me.cbRol.Size = New System.Drawing.Size(190, 23)
         Me.cbRol.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 56)
+        Me.Label4.Location = New System.Drawing.Point(3, 54)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 15)
         Me.Label4.TabIndex = 4
@@ -171,7 +181,7 @@ Partial Class frmAdminCredenciales
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 84)
+        Me.Label5.Location = New System.Drawing.Point(3, 81)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 15)
         Me.Label5.TabIndex = 8
@@ -188,9 +198,9 @@ Partial Class frmAdminCredenciales
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 197)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 220)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(369, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(369, 31)
         Me.FlowLayoutPanel1.TabIndex = 5
         '
         'btnCerrar
@@ -220,20 +230,63 @@ Partial Class frmAdminCredenciales
         Me.btnDarDeBaja.Text = "Dar de baja"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         '
+        'cbEmpleado
+        '
+        Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbEmpleado.FormattingEnabled = True
+        Me.cbEmpleado.Items.AddRange(New Object() {"Sin empleado asignado"})
+        Me.cbEmpleado.Location = New System.Drawing.Point(141, 110)
+        Me.cbEmpleado.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbEmpleado.Name = "cbEmpleado"
+        Me.cbEmpleado.Size = New System.Drawing.Size(190, 23)
+        Me.cbEmpleado.TabIndex = 8
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(3, 108)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 15)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Empleado:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(336, 57)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(18, 21)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "*"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(336, 84)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(18, 21)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "*"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'frmAdminCredenciales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 238)
+        Me.ClientSize = New System.Drawing.Size(391, 262)
         Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gboxPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
         Me.Name = "frmAdminCredenciales"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAdminCredenciales"
-        Me.GroupBox1.ResumeLayout(False)
+        Me.gboxPrincipal.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
@@ -242,7 +295,7 @@ Partial Class frmAdminCredenciales
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents gboxPrincipal As GroupBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtNombre As TextBox
@@ -257,4 +310,8 @@ Partial Class frmAdminCredenciales
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPassConfirm As TextBox
     Friend WithEvents btnDarDeBaja As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents cbEmpleado As ComboBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

@@ -137,7 +137,7 @@ Partial Class frmListarEmp
         Me.TableLayoutPanel1.Controls.Add(Me.lblID, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 0, 13)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 24)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 15
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692308!))
@@ -162,11 +162,12 @@ Partial Class frmListarEmp
         '
         Me.rtxtDireccion.BackColor = System.Drawing.SystemColors.Window
         Me.rtxtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtxtDireccion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxtDireccion.Enabled = False
         Me.rtxtDireccion.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
         Me.rtxtDireccion.Location = New System.Drawing.Point(164, 359)
         Me.rtxtDireccion.Name = "rtxtDireccion"
-        Me.rtxtDireccion.Size = New System.Drawing.Size(247, 24)
+        Me.rtxtDireccion.Size = New System.Drawing.Size(247, 29)
         Me.rtxtDireccion.TabIndex = 29
         Me.rtxtDireccion.Text = ""
         '
@@ -185,6 +186,7 @@ Partial Class frmListarEmp
         '
         Me.rtxtObservacion.BackColor = System.Drawing.SystemColors.Window
         Me.rtxtObservacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.rtxtObservacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxtObservacion.Enabled = False
         Me.rtxtObservacion.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
         Me.rtxtObservacion.Location = New System.Drawing.Point(164, 328)

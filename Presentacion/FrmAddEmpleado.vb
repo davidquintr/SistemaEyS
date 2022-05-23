@@ -3,13 +3,53 @@
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
     Dim car As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
-    Dim modo As Int16 = 0
 
-    Public Sub CambiarModo()
+    Dim viewEmp As New BDSistemaEySDataSetTableAdapters.Vw_ListEmpTableAdapter
+    Dim tblViewEmp As New BDSistemaEySDataSet.Vw_ListEmpDataTable
+
+    Dim modo As Integer = 0
+    Dim idEmp As Integer
+
+    Public Sub CambiarModo(idEmp As Integer)
         modo = 1
         btnDarDeBaja.Visible = True
         GroupBox1.Text = "Administrar Empleado"
+        Me.idEmp = idEmp
+        OrdenarDatos()
     End Sub
+
+    Private Sub OrdenarDatos()
+        viewEmp.Fill(tblViewEmp)
+        Try
+            txtCedula.Text = tblViewEmp.Rows(idEmp).Item(4)
+            txtNombre.Text = tblViewEmp.Rows(idEmp).Item(1)
+            txtApellidos.Text = tblViewEmp.Rows(idEmp).Item(2)
+            txtEmailC.Text = tblViewEmp.Rows(idEmp).Item(7)
+            txtEmailP.Text = tblViewEmp.Rows(idEmp).Item(8)
+            txtTelefono.Text = tblViewEmp.Rows(idEmp).Item(12)
+
+            If tblViewEmp.Rows(idEmp).Item(13) Is Nothing Then
+                rtxtObservacion.Text = ""
+            Else
+                rtxtObservacion.Text = tblViewEmp.Rows(idEmp).Item(13)
+            End If
+
+
+
+            rtxtDireccion.Text = tblViewEmp.Rows(idEmp).Item(14)
+
+            If (tblViewEmp.Rows(idEmp).Item(3) = "Masculino") Then
+                rbMasculino.Checked = True
+                rbFemenino.Checked = False
+            Else
+                rbMasculino.Checked = False
+                rbFemenino.Checked = True
+            End If
+        Catch
+        End Try
+
+    End Sub
+
     Sub llenarDep()
 
         cbDep.DataSource = dep.GetData()

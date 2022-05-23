@@ -58,6 +58,13 @@ Partial Class FrmVistaAdmin
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDeUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ActivoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VwVistaAdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -70,26 +77,21 @@ Partial Class FrmVistaAdmin
         Me.hora = New System.Windows.Forms.Timer(Me.components)
         Me.Time = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ActivoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VwVistaAdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
         Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
         Me.BDSistemaEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_VistaAdminTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -107,7 +109,7 @@ Partial Class FrmVistaAdmin
         '
         'MenúToolStripMenuItem
         '
-        Me.MenúToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirEntidadToolStripMenuItem, Me.ListarEntidadaToolStripMenuItem, Me.ParámetrosGeneralesToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
+        Me.MenúToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirEntidadToolStripMenuItem, Me.ListarEntidadaToolStripMenuItem, Me.ToolStripSeparator1, Me.ParámetrosGeneralesToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenúToolStripMenuItem.Name = "MenúToolStripMenuItem"
         Me.MenúToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.MenúToolStripMenuItem.Text = "Menú"
@@ -117,24 +119,24 @@ Partial Class FrmVistaAdmin
         Me.AñadirEntidadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem, Me.CargoToolStripMenuItem, Me.EmpleadoToolStripMenuItem})
         Me.AñadirEntidadToolStripMenuItem.Name = "AñadirEntidadToolStripMenuItem"
         Me.AñadirEntidadToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.AñadirEntidadToolStripMenuItem.Text = "Añadir entidad"
+        Me.AñadirEntidadToolStripMenuItem.Text = "Añadir"
         '
         'DepartamentoToolStripMenuItem
         '
         Me.DepartamentoToolStripMenuItem.Name = "DepartamentoToolStripMenuItem"
-        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentoToolStripMenuItem.Text = "Departamento"
         '
         'CargoToolStripMenuItem
         '
         Me.CargoToolStripMenuItem.Name = "CargoToolStripMenuItem"
-        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CargoToolStripMenuItem.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem
         '
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
-        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
         'ListarEntidadaToolStripMenuItem
@@ -142,24 +144,24 @@ Partial Class FrmVistaAdmin
         Me.ListarEntidadaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem1, Me.CargoToolStripMenuItem1, Me.EmpleadoToolStripMenuItem1})
         Me.ListarEntidadaToolStripMenuItem.Name = "ListarEntidadaToolStripMenuItem"
         Me.ListarEntidadaToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.ListarEntidadaToolStripMenuItem.Text = "Listar entidad"
+        Me.ListarEntidadaToolStripMenuItem.Text = "Listar"
         '
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ParámetrosGeneralesToolStripMenuItem
@@ -201,7 +203,7 @@ Partial Class FrmVistaAdmin
         '
         'SeguridadToolStripMenuItem
         '
-        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.RestaurarEntidadesToolStripMenuItem, Me.PermisosToolStripMenuItem})
+        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.ToolStripSeparator2, Me.RestaurarEntidadesToolStripMenuItem, Me.PermisosToolStripMenuItem})
         Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
         Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.SeguridadToolStripMenuItem.Text = "Seguridad"
@@ -216,13 +218,13 @@ Partial Class FrmVistaAdmin
         'RolToolStripMenuItem
         '
         Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
-        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.RolToolStripMenuItem.Text = "Rol"
         '
         'UsuarioToolStripMenuItem1
         '
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
         Me.UsuarioToolStripMenuItem1.Text = "Usuario"
         '
         'AdministrarToolStripMenuItem
@@ -230,12 +232,12 @@ Partial Class FrmVistaAdmin
         Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
         Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
         Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.AdministrarToolStripMenuItem.Text = "Administrar"
+        Me.AdministrarToolStripMenuItem.Text = "Listar"
         '
         'RolToolStripMenuItem1
         '
         Me.RolToolStripMenuItem1.Name = "RolToolStripMenuItem1"
-        Me.RolToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
+        Me.RolToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.RolToolStripMenuItem1.Text = "Rol"
         '
         'UsuarioToolStripMenuItem2
@@ -254,25 +256,25 @@ Partial Class FrmVistaAdmin
         'DepartamentoToolStripMenuItem2
         '
         Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
-        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
         '
         'CargoToolStripMenuItem2
         '
         Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
-        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.CargoToolStripMenuItem2.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem2
         '
         Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
-        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
         '
         'UsuarioToolStripMenuItem
         '
         Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem.Text = "Usuario"
         '
         'PermisosToolStripMenuItem
@@ -329,6 +331,48 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.Size = New System.Drawing.Size(634, 401)
         Me.DataGridView1.TabIndex = 0
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CargoDataGridViewTextBoxColumn
+        '
+        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo"
+        Me.CargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
+        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
+        '
+        'NombreDeUsuarioDataGridViewTextBoxColumn
+        '
+        Me.NombreDeUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Nombre de Usuario"
+        Me.NombreDeUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario"
+        Me.NombreDeUsuarioDataGridViewTextBoxColumn.Name = "NombreDeUsuarioDataGridViewTextBoxColumn"
+        '
+        'ActivoDataGridViewTextBoxColumn
+        '
+        Me.ActivoDataGridViewTextBoxColumn.DataPropertyName = "Activo"
+        Me.ActivoDataGridViewTextBoxColumn.HeaderText = "Activo"
+        Me.ActivoDataGridViewTextBoxColumn.Name = "ActivoDataGridViewTextBoxColumn"
+        Me.ActivoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'VwVistaAdminBindingSource
+        '
+        Me.VwVistaAdminBindingSource.DataMember = "Vw_VistaAdmin"
+        Me.VwVistaAdminBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panel6
         '
@@ -430,48 +474,6 @@ Partial Class FrmVistaAdmin
         '
         Me.Timer1.Enabled = True
         '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CargoDataGridViewTextBoxColumn
-        '
-        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo"
-        Me.CargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
-        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
-        '
-        'NombreDeUsuarioDataGridViewTextBoxColumn
-        '
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Nombre de Usuario"
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario"
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn.Name = "NombreDeUsuarioDataGridViewTextBoxColumn"
-        '
-        'ActivoDataGridViewTextBoxColumn
-        '
-        Me.ActivoDataGridViewTextBoxColumn.DataPropertyName = "Activo"
-        Me.ActivoDataGridViewTextBoxColumn.HeaderText = "Activo"
-        Me.ActivoDataGridViewTextBoxColumn.Name = "ActivoDataGridViewTextBoxColumn"
-        Me.ActivoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'VwVistaAdminBindingSource
-        '
-        Me.VwVistaAdminBindingSource.DataMember = "Vw_VistaAdmin"
-        Me.VwVistaAdminBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Tbl_EmpleadoBindingSource
         '
         Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
@@ -506,6 +508,16 @@ Partial Class FrmVistaAdmin
         '
         Me.Vw_VistaAdminTableAdapter.ClearBeforeFill = True
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(184, 6)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        '
         'FrmVistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -525,12 +537,12 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.PerformLayout()
         Me.Panel7.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -596,4 +608,6 @@ Partial Class FrmVistaAdmin
     Friend WithEvents ActivoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Label1 As Label
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
 End Class

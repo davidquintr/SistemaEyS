@@ -15,6 +15,9 @@
 End Class
 
 Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class Vw_UsuarioTableAdapter
+    End Class
+
     Partial Public Class Vw_ListEmpTableAdapter
     End Class
 End Namespace

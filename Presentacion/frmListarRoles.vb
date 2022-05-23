@@ -17,9 +17,7 @@
     End Sub
 
     Private Sub frmListarRoles_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Try
-
             llenarRol()
             Rol.Fill(tblRol)
             If (tblRol Is Nothing) Then
@@ -76,7 +74,7 @@
 
     Private Sub MostrarDatos()
         Try
-            lblCantRol.Text = (1 + fila).ToString + " / " + lblCantRol.ToString
+            lblCantRol.Text = (1 + fila).ToString + " / " + cantRol.ToString
             cbRoles.SelectedIndex = fila
 
             lbID.Text = tblRol.Rows(fila).Item(0)
@@ -89,6 +87,6 @@
 
     Private Sub btnAdministrar_Click(sender As Object, e As EventArgs) Handles btnAdministrar.Click
         frmAddRol.Show()
-        frmAddRol.CambiarModo()
+        frmAddRol.CambiarModo(fila)
     End Sub
 End Class
