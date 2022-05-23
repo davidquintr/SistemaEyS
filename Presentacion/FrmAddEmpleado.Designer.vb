@@ -26,6 +26,7 @@ Partial Class FrmAddEmpleado
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnDarDeBaja = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -57,11 +58,13 @@ Partial Class FrmAddEmpleado
         Me.Label13 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -73,15 +76,16 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 247)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 476)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(620, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(613, 33)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(544, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(537, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 27
@@ -90,7 +94,7 @@ Partial Class FrmAddEmpleado
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(465, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(458, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 26
@@ -99,13 +103,23 @@ Partial Class FrmAddEmpleado
         '
         'btnDarDeBaja
         '
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(386, 3)
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(379, 3)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(73, 25)
         Me.btnDarDeBaja.TabIndex = 25
         Me.btnDarDeBaja.Text = "Dar de baja"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         Me.btnDarDeBaja.Visible = False
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(300, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 28
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
         '
         'Label10
         '
@@ -461,11 +475,20 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(277, 191)
         Me.TableLayoutPanel1.TabIndex = 25
         '
+        'DgvEmpleado
+        '
+        Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEmpleado.Location = New System.Drawing.Point(17, 246)
+        Me.DgvEmpleado.Name = "DgvEmpleado"
+        Me.DgvEmpleado.Size = New System.Drawing.Size(610, 224)
+        Me.DgvEmpleado.TabIndex = 5
+        '
         'FrmAddEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(644, 289)
+        Me.ClientSize = New System.Drawing.Size(637, 521)
+        Me.Controls.Add(Me.DgvEmpleado)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -480,6 +503,7 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -519,4 +543,6 @@ Partial Class FrmAddEmpleado
     Friend WithEvents Label13 As Label
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents DgvEmpleado As DataGridView
 End Class

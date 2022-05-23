@@ -8,9 +8,15 @@
     Dim modo As Integer = 0
     Dim idCargo As Integer
 
+    Sub llenarGrid()
+        dgvCargos.DataSource = carg.GetData
+        dgvCargos.Refresh()
+    End Sub
+
     Public Sub CambiarModo(idCargo As Integer)
         modo = 1
         btnEliminar.Visible = True
+        btnEditar.Visible = True
         GroupBox1.Text = "Administrar Cargo"
         Me.idCargo = idCargo
         viewCar.Fill(tblViewCar)
@@ -39,7 +45,7 @@
     End Sub
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarDep()
-
+        llenarGrid()
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
@@ -65,4 +71,31 @@
         MessageBox.Show("Seguro que se desea eliminar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
+    Private Sub dgvCargos_DoubleClick(sender As Object, e As EventArgs) Handles dgvCargos.DoubleClick
+        Try
+
+            Dim fila As Integer = dgvCargos.CurrentRow.Index
+            idCargo = dgvCargos.Item(0, fila).Value
+            txbNombre.Text = dgvCargos.Item(1, fila).Value
+            cbDep.Text = dgvCargos.Item(4, fila).Value
+            rtxtDesc.Text = dgvCargos.Item(2, fila).Value
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
+        Dim id As Integer = CInt(txbID.Text.Trim)
+        Dim nombre As String = txbNombre.Text.Trim
+        Dim departamento As Integer = CInt(cbDep.SelectedValue)
+        Dim desc As String = rtxtDesc.Text.Trim
+        Dim estado As Integer
+
+        carg.RegistroCarAct(nombre, desc, estado, departamento, idCargo, id)
+
+        llenarGrid()
+    End Sub
 End Class

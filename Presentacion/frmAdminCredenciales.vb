@@ -2,9 +2,12 @@
 
     Dim user As New BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter
     Dim Rol As New BDSistemaEySDataSetTableAdapters.tbl_RolTableAdapter
+    Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
 
     Dim vwUsr As New BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter
     Dim tblVwUsr As New BDSistemaEySDataSet.Vw_UsuarioDataTable
+
+    Dim vwEmp As New BDSistemaEySDataSetTableAdapters.Vw_ListEmpTableAdapter
 
     Dim idUser As Integer
 
@@ -18,8 +21,16 @@
         cbRol.Refresh()
 
     End Sub
+
+    Sub llenarEmp()
+        cbEmpleado.DataSource = vwEmp.GetData()
+        cbEmpleado.DisplayMember = "Nombres"
+        cbEmpleado.ValueMember = "ID"
+        cbEmpleado.Refresh()
+    End Sub
     Private Sub frmAdminCredenciales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarRol()
+        llenarEmp()
         btnDarDeBaja.Visible = False
         gboxPrincipal.Text = "Seguridad: Agregar Usuario"
     End Sub
@@ -59,5 +70,9 @@
 
     Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnDarDeBaja.Click
         MessageBox.Show("Se desea dar de baja?", "Confirmación", MessageBoxButtons.YesNoCancel)
+    End Sub
+
+    Private Sub cbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmpleado.SelectedIndexChanged
+
     End Sub
 End Class

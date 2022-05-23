@@ -5,6 +5,11 @@
     Dim mode As Int16 = 0
     Dim idDept As Integer
 
+    Sub llenarGrid()
+        DgvDepartamentos.DataSource = Dept.GetData
+        DgvDepartamentos.Refresh()
+    End Sub
+
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         MessageBox.Show("Si se ha introducido algun dato no seran guardados, seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNoCancel)
         Me.Close()
@@ -29,18 +34,12 @@
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
         Try
-
             Dim resp As VariantType
-            Dim id As Integer
-            Dim nombre As String = txtNombre.Text
-            Dim ext As String = txtExt.Text
-            Dim email As String = txtEmail.Text
-            Dim desc As String = rtxtDesc.Text
-            Dim estado As Integer
 
             resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
             If (resp = vbYesNo) Then
-                Dept.RegistroDepElim(id, nombre, ext, email, desc, estado)
+                Dept.RegistroDepElim(idDept)
+                llenarGrid()
 
             End If
         Catch ex As Exception
@@ -74,37 +73,7 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
-        If (String.IsNullOrEmpty(txtID.Text)) Then
-            MsgBox("Ningun campo puede quedar vacio", MsgBoxStyle.Critical, "Advertencia")
-            txtID.Focus()
-            Exit Sub
-        End If
-
-        If (String.IsNullOrEmpty(txtNombre.Text)) Then
-            MsgBox("Ningun campo puede quedar vacio", MsgBoxStyle.Critical, "Advertencia")
-            txtNombre.Focus()
-            Exit Sub
-        End If
-
-        If (String.IsNullOrEmpty(txtEmail.Text)) Then
-            MsgBox("Ningun campo puede quedar vacio", MsgBoxStyle.Critical, "Advertencia")
-            txtEmail.Focus()
-            Exit Sub
-        End If
-
-        If (String.IsNullOrEmpty(txtExt.Text)) Then
-            MsgBox("Ningun campo puede quedar vacio", MsgBoxStyle.Critical, "Advertencia")
-            txtExt.Focus()
-            Exit Sub
-        End If
-
-        If (String.IsNullOrEmpty(rtxtDesc.Text)) Then
-            MsgBox("Ningun campo puede quedar vacio", MsgBoxStyle.Critical, "Advertencia")
-            rtxtDesc.Focus()
-            Exit Sub
-        End If
-
-        Dim id As Integer = txtID.Text.Trim
+        Dim id As Integer = CInt(txtID.Text.Trim)
         Dim nombre As String = txtNombre.Text.Trim
         Dim email As String = txtEmail.Text.Trim
         Dim ext As String = txtExt.Text.Trim
@@ -113,6 +82,26 @@
 
         Dept.RegistroDepAct(nombre, ext, email, desc, estado, idDept, id)
 
-        OrdenaDatos()
+        llenarGrid()
+    End Sub
+
+    Private Sub FrmAddDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        llenarGrid()
+    End Sub
+
+    Private Sub DgvDepartamentos_DoubleClick(sender As Object, e As EventArgs) Handles DgvDepartamentos.DoubleClick
+        Try
+
+            Dim fila As Integer = DgvDepartamentos.CurrentRow.Index
+            idDept = DgvDepartamentos.Item(0, fila).Value
+            txtNombre.Text = DgvDepartamentos.Item(1, fila).Value
+            txtEmail.Text = DgvDepartamentos.Item(3, fila).Value
+            txtExt.Text = DgvDepartamentos.Item(2, fila).Value
+            rtxtDesc.Text = DgvDepartamentos.Item(4, fila).Value
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 End Class

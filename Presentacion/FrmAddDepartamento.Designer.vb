@@ -39,9 +39,11 @@ Partial Class FrmAddDepartamento
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.DgvDepartamentos = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -57,12 +59,12 @@ Partial Class FrmAddDepartamento
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(13, 204)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(333, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(705, 30)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(257, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(629, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 13
@@ -71,7 +73,7 @@ Partial Class FrmAddDepartamento
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(178, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(550, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
@@ -80,7 +82,7 @@ Partial Class FrmAddDepartamento
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(99, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(471, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 10
@@ -90,7 +92,7 @@ Partial Class FrmAddDepartamento
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(20, 3)
+        Me.btnEditar.Location = New System.Drawing.Point(392, 3)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(73, 25)
         Me.btnEditar.TabIndex = 14
@@ -232,11 +234,20 @@ Partial Class FrmAddDepartamento
         Me.Label3.Text = "Ext:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'DgvDepartamentos
+        '
+        Me.DgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvDepartamentos.Location = New System.Drawing.Point(396, 22)
+        Me.DgvDepartamentos.Name = "DgvDepartamentos"
+        Me.DgvDepartamentos.Size = New System.Drawing.Size(319, 176)
+        Me.DgvDepartamentos.TabIndex = 5
+        '
         'FrmAddDepartamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(358, 245)
+        Me.ClientSize = New System.Drawing.Size(730, 245)
+        Me.Controls.Add(Me.DgvDepartamentos)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -248,6 +259,7 @@ Partial Class FrmAddDepartamento
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.DgvDepartamentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -269,4 +281,5 @@ Partial Class FrmAddDepartamento
     Friend WithEvents Label1 As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnEditar As Button
+    Friend WithEvents DgvDepartamentos As DataGridView
 End Class

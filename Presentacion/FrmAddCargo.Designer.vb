@@ -24,22 +24,25 @@ Partial Class FrmAddCargo
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.cbDep = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txbID = New System.Windows.Forms.TextBox()
         Me.txbNombre = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnHorario = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dgvCargos = New System.Windows.Forms.DataGridView()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
+        CType(Me.dgvCargos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -77,22 +80,24 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 114)
         Me.TableLayoutPanel1.TabIndex = 3
         '
-        'rtxtDesc
-        '
-        Me.rtxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtxtDesc.Location = New System.Drawing.Point(156, 78)
-        Me.rtxtDesc.Name = "rtxtDesc"
-        Me.rtxtDesc.Size = New System.Drawing.Size(212, 33)
-        Me.rtxtDesc.TabIndex = 9
-        Me.rtxtDesc.Text = ""
-        '
         'cbDep
         '
         Me.cbDep.FormattingEnabled = True
-        Me.cbDep.Location = New System.Drawing.Point(156, 53)
+        Me.cbDep.Location = New System.Drawing.Point(156, 51)
         Me.cbDep.Name = "cbDep"
         Me.cbDep.Size = New System.Drawing.Size(208, 23)
         Me.cbDep.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(21, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ID:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txbID
         '
@@ -105,14 +110,56 @@ Partial Class FrmAddCargo
         'txbNombre
         '
         Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(156, 28)
+        Me.txbNombre.Location = New System.Drawing.Point(156, 27)
         Me.txbNombre.Name = "txbNombre"
         Me.txbNombre.Size = New System.Drawing.Size(208, 23)
         Me.txbNombre.TabIndex = 3
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(54, 15)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nombre:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 48)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 15)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Departamento:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(3, 72)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(72, 15)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Descripción:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'rtxtDesc
+        '
+        Me.rtxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtxtDesc.Location = New System.Drawing.Point(156, 75)
+        Me.rtxtDesc.Name = "rtxtDesc"
+        Me.rtxtDesc.Size = New System.Drawing.Size(212, 36)
+        Me.rtxtDesc.TabIndex = 9
+        Me.rtxtDesc.Text = ""
+        '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(301, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(604, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 13
@@ -129,15 +176,16 @@ Partial Class FrmAddCargo
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnHorario)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 162)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(377, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(680, 30)
         Me.FlowLayoutPanel1.TabIndex = 2
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(222, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(525, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
@@ -146,7 +194,7 @@ Partial Class FrmAddCargo
         '
         'btnHorario
         '
-        Me.btnHorario.Location = New System.Drawing.Point(143, 3)
+        Me.btnHorario.Location = New System.Drawing.Point(446, 3)
         Me.btnHorario.Name = "btnHorario"
         Me.btnHorario.Size = New System.Drawing.Size(73, 25)
         Me.btnHorario.TabIndex = 11
@@ -155,7 +203,7 @@ Partial Class FrmAddCargo
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(64, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(367, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 10
@@ -163,55 +211,30 @@ Partial Class FrmAddCargo
         Me.btnEliminar.UseVisualStyleBackColor = True
         Me.btnEliminar.Visible = False
         '
-        'Label12
+        'dgvCargos
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(3, 75)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(72, 15)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Descripción:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.dgvCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCargos.Location = New System.Drawing.Point(414, 6)
+        Me.dgvCargos.Name = "dgvCargos"
+        Me.dgvCargos.Size = New System.Drawing.Size(275, 150)
+        Me.dgvCargos.TabIndex = 3
         '
-        'Label4
+        'btnEditar
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 50)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 15)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Departamento:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 25)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 15)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Nombre:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(288, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 14
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
         '
         'FrmAddCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(401, 204)
+        Me.ClientSize = New System.Drawing.Size(704, 204)
+        Me.Controls.Add(Me.dgvCargos)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -223,6 +246,7 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        CType(Me.dgvCargos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -242,4 +266,6 @@ Partial Class FrmAddCargo
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents dgvCargos As DataGridView
+    Friend WithEvents btnEditar As Button
 End Class
