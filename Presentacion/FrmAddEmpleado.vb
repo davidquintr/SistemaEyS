@@ -131,7 +131,18 @@
     End Sub
 
     Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnDarDeBaja.Click
-        MessageBox.Show("Se desea dar de baja?", "Confirmación", MessageBoxButtons.YesNoCancel)
+        Try
+            Dim resp As VariantType
+
+            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
+            If (resp = vbYes) Then
+                emp.RegistroEmpElim(idEmp)
+                llenarGrid()
+
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
@@ -154,9 +165,10 @@
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
         Dim idCar As Integer = CInt(cbCar.SelectedValue)
+        Dim idUser As Integer
         Dim id As Integer
 
-        emp.RegistroEmpAct(cedula, primerNom, segundoNom, primerApell, segundoApell, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNac, fechaIngreso, fechaAgregado, idCar, idEmp, id)
+        emp.RegistroEmpAct(cedula, primerNom, segundoNom, primerApell, segundoApell, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser, idEmp, id)
 
         llenarGrid()
     End Sub

@@ -10331,17 +10331,18 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "UPDATE [dbo].[tbl_Empleado] SET [cedula] = @cedula, [primerNombre] = @primerNombr"& _ 
-                "e, [segundoNombre] = @segundoNombre, [primerApellido] = @primerApellido, [segund"& _ 
-                "oApellido] = @segundoApellido, [direccion] = @direccion, [observacion] = @observ"& _ 
-                "acion, [telefono] = @telefono, [emailPersonal] = @emailPersonal, [emailCorporati"& _ 
-                "vo] = @emailCorporativo, [sexo] = @sexo, [estadoActividad] = @estadoActividad, ["& _ 
-                "estado] = @estado, [fechaNac] = @fechaNac, [fechaIngreso] = @fechaIngreso, [fech"& _ 
-                "aAgregado] = @fechaAgregado, [idCargo] = @idCargo WHERE (([idEmpleado] = @Origin"& _ 
-                "al_idEmpleado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, cedula, primerNombre, segundoNombre, primer"& _ 
-                "Apellido, segundoApellido, direccion, observacion, telefono, emailPersonal, emai"& _ 
-                "lCorporativo, sexo, estadoActividad, estado, fechaNac, fechaIngreso, fechaAgrega"& _ 
-                "do, idCargo FROM tbl_Empleado WHERE (idEmpleado = @idEmpleado)"
+            Me._commandCollection(1).CommandText = "UPDATE [tbl_Empleado] SET [cedula] = @cedula, [primerNombre] = @primerNombre, [se"& _ 
+                "gundoNombre] = @segundoNombre, [primerApellido] = @primerApellido, [segundoApell"& _ 
+                "ido] = @segundoApellido, [direccion] = @direccion, [observacion] = @observacion,"& _ 
+                " [telefono] = @telefono, [emailPersonal] = @emailPersonal, [emailCorporativo] = "& _ 
+                "@emailCorporativo, [sexo] = @sexo, [estadoActividad] = @estadoActividad, [estado"& _ 
+                "] = @estado, [fechaNac] = @fechaNac, [fechaIngreso] = @fechaIngreso, [fechaAgreg"& _ 
+                "ado] = @fechaAgregado, [idCargo] = @idCargo, [idUsuario] = @idUsuario WHERE (([i"& _ 
+                "dEmpleado] = @Original_idEmpleado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, cedula, primerNombre, s"& _ 
+                "egundoNombre, primerApellido, segundoApellido, direccion, observacion, telefono,"& _ 
+                " emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNac, fecha"& _ 
+                "Ingreso, fechaAgregado, idCargo, idUsuario FROM tbl_Empleado WHERE (idEmpleado ="& _ 
+                " @idEmpleado)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cedula", Global.System.Data.SqlDbType.NVarChar, 14, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@primerNombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "primerNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10360,6 +10361,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaIngreso", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaIngreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaAgregado", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaAgregado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
@@ -10396,50 +10398,9 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "DELETE FROM [dbo].[tbl_Empleado] WHERE (([idEmpleado] = @Original_idEmpleado) AND"& _ 
-                " ([cedula] = @Original_cedula) AND ([primerNombre] = @Original_primerNombre) AND"& _ 
-                " ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = "& _ 
-                "@Original_segundoNombre)) AND ([primerApellido] = @Original_primerApellido) AND "& _ 
-                "((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellid"& _ 
-                "o] = @Original_segundoApellido)) AND ((@IsNull_direccion = 1 AND [direccion] IS "& _ 
-                "NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_observacion = 1 AND "& _ 
-                "[observacion] IS NULL) OR ([observacion] = @Original_observacion)) AND ((@IsNull"& _ 
-                "_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND "& _ 
-                "((@IsNull_emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPersonal] = @"& _ 
-                "Original_emailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [emailCorporativ"& _ 
-                "o] IS NULL) OR ([emailCorporativo] = @Original_emailCorporativo)) AND ([sexo] = "& _ 
-                "@Original_sexo) AND ([estadoActividad] = @Original_estadoActividad) AND ([estado"& _ 
-                "] = @Original_estado) AND ([fechaNac] = @Original_fechaNac) AND ([fechaIngreso] "& _ 
-                "= @Original_fechaIngreso) AND ((@IsNull_fechaAgregado = 1 AND [fechaAgregado] IS"& _ 
-                " NULL) OR ([fechaAgregado] = @Original_fechaAgregado)) AND ([idCargo] = @Origina"& _ 
-                "l_idCargo))"
+            Me._commandCollection(3).CommandText = "DELETE FROM [dbo].[tbl_Empleado] WHERE (([idEmpleado] = @Original_idEmpleado))"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_cedula", Global.System.Data.SqlDbType.NVarChar, 14, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_primerNombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "primerNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_segundoNombre", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "segundoNombre", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_segundoNombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "segundoNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_primerApellido", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "primerApellido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_segundoApellido", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "segundoApellido", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_segundoApellido", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "segundoApellido", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_direccion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_observacion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "observacion", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_observacion", Global.System.Data.SqlDbType.VarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "observacion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_telefono", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telefono", Global.System.Data.SqlDbType.NVarChar, 12, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_emailPersonal", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailPersonal", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_emailPersonal", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "emailPersonal", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_emailCorporativo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailCorporativo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_emailCorporativo", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "emailCorporativo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_sexo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "sexo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estadoActividad", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "estadoActividad", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaNac", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaNac", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaIngreso", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaIngreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_fechaAgregado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaAgregado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaAgregado", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaAgregado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10979,6 +10940,7 @@ Namespace BDSistemaEySDataSetTableAdapters
                     ByVal fechaIngreso As Date,  _
                     ByVal fechaAgregado As Global.System.Nullable(Of Date),  _
                     ByVal idCargo As Integer,  _
+                    ByVal idUsuario As Global.System.Nullable(Of Integer),  _
                     ByVal Original_idEmpleado As Integer,  _
                     ByVal idEmpleado As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
@@ -11043,8 +11005,13 @@ Namespace BDSistemaEySDataSetTableAdapters
                 command.Parameters(15).Value = Global.System.DBNull.Value
             End If
             command.Parameters(16).Value = CType(idCargo,Integer)
-            command.Parameters(17).Value = CType(Original_idEmpleado,Integer)
-            command.Parameters(18).Value = CType(idEmpleado,Integer)
+            If (idUsuario.HasValue = true) Then
+                command.Parameters(17).Value = CType(idUsuario.Value,Integer)
+            Else
+                command.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            command.Parameters(18).Value = CType(Original_idEmpleado,Integer)
+            command.Parameters(19).Value = CType(idEmpleado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11171,136 +11138,9 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
-        Public Overloads Overridable Function RegistroEmpElim( _
-                    ByVal Original_idEmpleado As Integer,  _
-                    ByVal Original_cedula As String,  _
-                    ByVal Original_primerNombre As String,  _
-                    ByVal IsNull_segundoNombre As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_segundoNombre As String,  _
-                    ByVal Original_primerApellido As String,  _
-                    ByVal IsNull_segundoApellido As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_segundoApellido As String,  _
-                    ByVal IsNull_direccion As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_direccion As String,  _
-                    ByVal IsNull_observacion As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_observacion As String,  _
-                    ByVal IsNull_telefono As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_telefono As String,  _
-                    ByVal IsNull_emailPersonal As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_emailPersonal As String,  _
-                    ByVal IsNull_emailCorporativo As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_emailCorporativo As String,  _
-                    ByVal Original_sexo As Boolean,  _
-                    ByVal Original_estadoActividad As Boolean,  _
-                    ByVal Original_estado As Integer,  _
-                    ByVal Original_fechaNac As Date,  _
-                    ByVal Original_fechaIngreso As Date,  _
-                    ByVal IsNull_fechaAgregado As Global.System.Nullable(Of Integer),  _
-                    ByVal Original_fechaAgregado As Global.System.Nullable(Of Date),  _
-                    ByVal Original_idCargo As Integer) As Integer
+        Public Overloads Overridable Function RegistroEmpElim(ByVal Original_idEmpleado As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
             command.Parameters(0).Value = CType(Original_idEmpleado,Integer)
-            If (Original_cedula Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_cedula")
-            Else
-                command.Parameters(1).Value = CType(Original_cedula,String)
-            End If
-            If (Original_primerNombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_primerNombre")
-            Else
-                command.Parameters(2).Value = CType(Original_primerNombre,String)
-            End If
-            If (IsNull_segundoNombre.HasValue = true) Then
-                command.Parameters(3).Value = CType(IsNull_segundoNombre.Value,Integer)
-            Else
-                command.Parameters(3).Value = Global.System.DBNull.Value
-            End If
-            If (Original_segundoNombre Is Nothing) Then
-                command.Parameters(4).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(4).Value = CType(Original_segundoNombre,String)
-            End If
-            If (Original_primerApellido Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_primerApellido")
-            Else
-                command.Parameters(5).Value = CType(Original_primerApellido,String)
-            End If
-            If (IsNull_segundoApellido.HasValue = true) Then
-                command.Parameters(6).Value = CType(IsNull_segundoApellido.Value,Integer)
-            Else
-                command.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Original_segundoApellido Is Nothing) Then
-                command.Parameters(7).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(7).Value = CType(Original_segundoApellido,String)
-            End If
-            If (IsNull_direccion.HasValue = true) Then
-                command.Parameters(8).Value = CType(IsNull_direccion.Value,Integer)
-            Else
-                command.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            If (Original_direccion Is Nothing) Then
-                command.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(9).Value = CType(Original_direccion,String)
-            End If
-            If (IsNull_observacion.HasValue = true) Then
-                command.Parameters(10).Value = CType(IsNull_observacion.Value,Integer)
-            Else
-                command.Parameters(10).Value = Global.System.DBNull.Value
-            End If
-            If (Original_observacion Is Nothing) Then
-                command.Parameters(11).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(11).Value = CType(Original_observacion,String)
-            End If
-            If (IsNull_telefono.HasValue = true) Then
-                command.Parameters(12).Value = CType(IsNull_telefono.Value,Integer)
-            Else
-                command.Parameters(12).Value = Global.System.DBNull.Value
-            End If
-            If (Original_telefono Is Nothing) Then
-                command.Parameters(13).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(13).Value = CType(Original_telefono,String)
-            End If
-            If (IsNull_emailPersonal.HasValue = true) Then
-                command.Parameters(14).Value = CType(IsNull_emailPersonal.Value,Integer)
-            Else
-                command.Parameters(14).Value = Global.System.DBNull.Value
-            End If
-            If (Original_emailPersonal Is Nothing) Then
-                command.Parameters(15).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(15).Value = CType(Original_emailPersonal,String)
-            End If
-            If (IsNull_emailCorporativo.HasValue = true) Then
-                command.Parameters(16).Value = CType(IsNull_emailCorporativo.Value,Integer)
-            Else
-                command.Parameters(16).Value = Global.System.DBNull.Value
-            End If
-            If (Original_emailCorporativo Is Nothing) Then
-                command.Parameters(17).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(17).Value = CType(Original_emailCorporativo,String)
-            End If
-            command.Parameters(18).Value = CType(Original_sexo,Boolean)
-            command.Parameters(19).Value = CType(Original_estadoActividad,Boolean)
-            command.Parameters(20).Value = CType(Original_estado,Integer)
-            command.Parameters(21).Value = CType(Original_fechaNac,Date)
-            command.Parameters(22).Value = CType(Original_fechaIngreso,Date)
-            If (IsNull_fechaAgregado.HasValue = true) Then
-                command.Parameters(23).Value = CType(IsNull_fechaAgregado.Value,Integer)
-            Else
-                command.Parameters(23).Value = Global.System.DBNull.Value
-            End If
-            If (Original_fechaAgregado.HasValue = true) Then
-                command.Parameters(24).Value = CType(Original_fechaAgregado.Value,Date)
-            Else
-                command.Parameters(24).Value = Global.System.DBNull.Value
-            End If
-            command.Parameters(25).Value = CType(Original_idCargo,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
