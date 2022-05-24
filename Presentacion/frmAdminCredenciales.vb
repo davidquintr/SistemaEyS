@@ -24,7 +24,7 @@
 
     Sub llenarEmp()
         cbEmpleado.DataSource = vwEmp.GetData()
-        cbEmpleado.DisplayMember = "Nombres"
+        cbEmpleado.DisplayMember = "Nombre"
         cbEmpleado.ValueMember = "ID"
         cbEmpleado.Refresh()
     End Sub

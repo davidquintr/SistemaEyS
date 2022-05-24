@@ -1,8 +1,5 @@
 ﻿Public Class frmListarCredenciales
 
-    Dim cred As New BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter
-    Dim tblCred As New BDSistemaEySDataSet.tbl_UsuarioDataTable
-
     Dim vwUsr As New BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter
     Dim tblVwUsr As New BDSistemaEySDataSet.Vw_UsuarioDataTable
 
@@ -21,7 +18,7 @@
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-
+        Me.Close()
     End Sub
 
     Private Sub frmListarCredenciales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -29,7 +26,7 @@
         Try
             llenarCred()
             vwUsr.Fill(tblVwUsr)
-            If (vwUsr Is Nothing) Then
+            If (tblVwUsr Is Nothing) Then
                 MsgBox("No hay datos")
                 Me.Close()
             End If

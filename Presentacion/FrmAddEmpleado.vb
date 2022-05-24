@@ -3,6 +3,7 @@
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
     Dim car As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
+    Dim user As New BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter
 
     Dim viewEmp As New BDSistemaEySDataSetTableAdapters.Vw_ListEmpTableAdapter
     Dim tblViewEmp As New BDSistemaEySDataSet.Vw_ListEmpDataTable
@@ -56,6 +57,13 @@
 
     End Sub
 
+    Sub llenarUser()
+        cbUsuario.DataSource = user.GetData()
+        cbUsuario.DisplayMember = "username"
+        cbUsuario.ValueMember = "idUsuario"
+        cbUsuario.Refresh()
+    End Sub
+
     Sub llenarDep()
 
         cbDep.DataSource = dep.GetData()
@@ -77,6 +85,7 @@
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarDep()
         llenarCar()
+        llenarUser()
         llenarGrid()
     End Sub
 
@@ -122,9 +131,9 @@
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
         Dim idCar As Integer = CInt(cbCar.SelectedValue)
-        Dim idUser As Integer = 0
+        Dim idUser As Integer = CInt(cbUsuario.SelectedValue)
 
-        emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, 1)
+        emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser)
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
 
 
@@ -198,4 +207,7 @@
         End Try
     End Sub
 
+    Private Sub cbUsuario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbUsuario.SelectedIndexChanged
+
+    End Sub
 End Class

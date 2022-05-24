@@ -59,6 +59,8 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cbUsuario = New System.Windows.Forms.ComboBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -387,6 +389,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.ColumnCount = 2
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.36842!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.63158!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label14, 0, 6)
         Me.TableLayoutPanel2.Controls.Add(Me.dtpNac, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label13, 0, 2)
@@ -399,6 +402,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.Controls.Add(Me.Label8, 0, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.FlowLayoutPanel2, 1, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.dtpFechaIngreso, 1, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.cbUsuario, 1, 6)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(286, 27)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -483,6 +487,26 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.Size = New System.Drawing.Size(610, 224)
         Me.DgvEmpleado.TabIndex = 5
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(3, 162)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(50, 15)
+        Me.Label14.TabIndex = 28
+        Me.Label14.Text = "Usuario:"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cbUsuario
+        '
+        Me.cbUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbUsuario.FormattingEnabled = True
+        Me.cbUsuario.Location = New System.Drawing.Point(132, 165)
+        Me.cbUsuario.Name = "cbUsuario"
+        Me.cbUsuario.Size = New System.Drawing.Size(194, 23)
+        Me.cbUsuario.TabIndex = 29
+        '
         'FrmAddEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -545,4 +569,6 @@ Partial Class FrmAddEmpleado
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnEditar As Button
     Friend WithEvents DgvEmpleado As DataGridView
+    Friend WithEvents Label14 As Label
+    Friend WithEvents cbUsuario As ComboBox
 End Class
