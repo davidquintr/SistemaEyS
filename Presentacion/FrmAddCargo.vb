@@ -68,6 +68,20 @@
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+
+        Try
+            Dim resp As VariantType
+
+            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
+            If (resp = vbYesNo) Then
+                carg.RegistroCarElim(idCargo)
+                llenarGrid()
+
+            End If
+        Catch ex As Exception
+
+        End Try
+
         MessageBox.Show("Seguro que se desea eliminar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
