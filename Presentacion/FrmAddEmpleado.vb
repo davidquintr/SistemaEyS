@@ -165,20 +165,20 @@
         Try
 
             Dim fila As Integer = DgvEmpleado.CurrentRow.Index
-            txtCedula = DgvEmpleado.Item(0, fila).Value
-            txtNombre.Text = DgvEmpleado.Item(1, fila).Value
+            txtCedula.Text = DgvEmpleado.Item(1, fila).Value
             txtNombre.Text = DgvEmpleado.Item(2, fila).Value
-            txtApellidos.Text = DgvEmpleado.Item(3, fila).Value
+            txtNombre.Text = DgvEmpleado.Item(3, fila).Value
             txtApellidos.Text = DgvEmpleado.Item(4, fila).Value
-            rtxtDireccion.Text = DgvEmpleado.Item(5, fila).Value
-            rtxtObservacion.Text = DgvEmpleado.Item(6, fila).Value
-            txtTelefono.Text = DgvEmpleado.Item(7, fila).Value
-            txtEmailP.Text = DgvEmpleado.Item(8, fila).Value
-            txtEmailC.Text = DgvEmpleado.Item(9, fila).Value
-            rbFemenino.Checked = DgvEmpleado.Item(10, fila).Value
-            rbMasculino.Checked = DgvEmpleado.Item(10, fila).Value
-            dtpNac = DgvEmpleado.Item(13, fila).Value
-            dtpFechaIngreso.Text = DgvEmpleado.Item(14, fila).Value
+            txtApellidos.Text = DgvEmpleado.Item(5, fila).Value
+            rtxtDireccion.Text = DgvEmpleado.Item(6, fila).Value
+            rtxtObservacion.Text = DgvEmpleado.Item(7, fila).Value
+            txtTelefono.Text = DgvEmpleado.Item(8, fila).Value
+            txtEmailP.Text = DgvEmpleado.Item(9, fila).Value
+            txtEmailC.Text = DgvEmpleado.Item(10, fila).Value
+            rbFemenino.Checked = DgvEmpleado.Item(11, fila).Value
+            rbMasculino.Checked = DgvEmpleado.Item(11, fila).Value
+            dtpNac = DgvEmpleado.Item(14, fila).Value
+            dtpFechaIngreso.Text = DgvEmpleado.Item(15, fila).Value
 
 
         Catch ex As Exception
