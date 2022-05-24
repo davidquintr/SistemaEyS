@@ -165,7 +165,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(PasswordLabel, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(UsernameLabel, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.UsernameTextBox, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(116, 40)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(58, 40)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))

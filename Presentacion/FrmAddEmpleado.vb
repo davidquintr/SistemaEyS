@@ -177,8 +177,8 @@
             txtEmailC.Text = DgvEmpleado.Item(10, fila).Value
             rbFemenino.Checked = DgvEmpleado.Item(11, fila).Value
             rbMasculino.Checked = DgvEmpleado.Item(11, fila).Value
-            dtpNac = DgvEmpleado.Item(14, fila).Value
-            dtpFechaIngreso.Text = DgvEmpleado.Item(15, fila).Value
+            dtpNac.Value = DgvEmpleado.Item(14, fila).Value
+            dtpFechaIngreso.Value = DgvEmpleado.Item(15, fila).Value
 
 
         Catch ex As Exception
