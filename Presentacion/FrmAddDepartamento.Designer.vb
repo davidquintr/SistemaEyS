@@ -54,8 +54,8 @@ Partial Class FrmAddDepartamento
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(13, 204)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -77,12 +77,12 @@ Partial Class FrmAddDepartamento
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
-        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(471, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(392, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 10
@@ -92,7 +92,7 @@ Partial Class FrmAddDepartamento
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(392, 3)
+        Me.btnEditar.Location = New System.Drawing.Point(471, 3)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(73, 25)
         Me.btnEditar.TabIndex = 14

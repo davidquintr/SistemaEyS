@@ -37,8 +37,8 @@ Partial Class FrmAddCargo
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnHorario = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.dgvCargos = New System.Windows.Forms.DataGridView()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.dgvCargos = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -174,9 +174,9 @@ Partial Class FrmAddCargo
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnHorario)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnHorario)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 162)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -189,12 +189,12 @@ Partial Class FrmAddCargo
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
-        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnHorario
         '
-        Me.btnHorario.Location = New System.Drawing.Point(446, 3)
+        Me.btnHorario.Location = New System.Drawing.Point(288, 3)
         Me.btnHorario.Name = "btnHorario"
         Me.btnHorario.Size = New System.Drawing.Size(73, 25)
         Me.btnHorario.TabIndex = 11
@@ -211,6 +211,16 @@ Partial Class FrmAddCargo
         Me.btnEliminar.UseVisualStyleBackColor = True
         Me.btnEliminar.Visible = False
         '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(446, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 14
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
+        '
         'dgvCargos
         '
         Me.dgvCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -218,16 +228,6 @@ Partial Class FrmAddCargo
         Me.dgvCargos.Name = "dgvCargos"
         Me.dgvCargos.Size = New System.Drawing.Size(275, 150)
         Me.dgvCargos.TabIndex = 3
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Location = New System.Drawing.Point(288, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEditar.TabIndex = 14
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        Me.btnEditar.Visible = False
         '
         'FrmAddCargo
         '

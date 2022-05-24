@@ -67,7 +67,7 @@ Partial Class frmAddRol
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
-        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnEliminar

@@ -261,7 +261,7 @@ Partial Class frmAdminCredenciales
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
         Me.btnGuardar.TabIndex = 12
-        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnDarDeBaja
@@ -270,7 +270,7 @@ Partial Class frmAdminCredenciales
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(73, 23)
         Me.btnDarDeBaja.TabIndex = 14
-        Me.btnDarDeBaja.Text = "Dar de baja"
+        Me.btnDarDeBaja.Text = "Eliminar"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         '
         'frmAdminCredenciales

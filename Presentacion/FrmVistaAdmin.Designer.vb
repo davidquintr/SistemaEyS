@@ -119,24 +119,24 @@ Partial Class FrmVistaAdmin
         Me.AñadirEntidadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem, Me.CargoToolStripMenuItem, Me.EmpleadoToolStripMenuItem})
         Me.AñadirEntidadToolStripMenuItem.Name = "AñadirEntidadToolStripMenuItem"
         Me.AñadirEntidadToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.AñadirEntidadToolStripMenuItem.Text = "Añadir"
+        Me.AñadirEntidadToolStripMenuItem.Text = "Administrar"
         '
         'DepartamentoToolStripMenuItem
         '
         Me.DepartamentoToolStripMenuItem.Name = "DepartamentoToolStripMenuItem"
-        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentoToolStripMenuItem.Text = "Departamento"
         '
         'CargoToolStripMenuItem
         '
         Me.CargoToolStripMenuItem.Name = "CargoToolStripMenuItem"
-        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.CargoToolStripMenuItem.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem
         '
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
-        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
         'ListarEntidadaToolStripMenuItem
@@ -149,19 +149,19 @@ Partial Class FrmVistaAdmin
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ToolStripSeparator1

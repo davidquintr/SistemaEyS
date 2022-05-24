@@ -174,7 +174,7 @@
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
         Dim idCar As Integer = CInt(cbCar.SelectedValue)
-        Dim idUser As Integer
+        Dim idUser As Integer = CInt(cbUsuario.SelectedValue)
         Dim id As Integer
 
         emp.RegistroEmpAct(cedula, primerNom, segundoNom, primerApell, segundoApell, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser, idEmp, id)
@@ -186,6 +186,7 @@
         Try
 
             Dim fila As Integer = DgvEmpleado.CurrentRow.Index
+            idEmp = DgvEmpleado.Item(0, fila).Value
             txtCedula.Text = DgvEmpleado.Item(1, fila).Value
             txtNombre.Text = DgvEmpleado.Item(2, fila).Value
             txtNombre.Text = DgvEmpleado.Item(3, fila).Value
