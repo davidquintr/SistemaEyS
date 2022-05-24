@@ -10364,17 +10364,17 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[tbl_Empleado] ([cedula], [primerNombre], [segundoNombre], [pri"& _ 
-                "merApellido], [segundoApellido], [direccion], [observacion], [telefono], [emailP"& _ 
-                "ersonal], [emailCorporativo], [sexo], [estadoActividad], [estado], [fechaNac], ["& _ 
-                "fechaIngreso], [fechaAgregado], [idCargo]) VALUES (@cedula, @primerNombre, @segu"& _ 
-                "ndoNombre, @primerApellido, @segundoApellido, @direccion, @observacion, @telefon"& _ 
-                "o, @emailPersonal, @emailCorporativo, @sexo, @estadoActividad, @estado, @fechaNa"& _ 
-                "c, @fechaIngreso, @fechaAgregado, @idCargo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, cedula, primerN"& _ 
-                "ombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, t"& _ 
-                "elefono, emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNa"& _ 
-                "c, fechaIngreso, fechaAgregado, idCargo FROM tbl_Empleado WHERE (idEmpleado = SC"& _ 
-                "OPE_IDENTITY())"
+            Me._commandCollection(2).CommandText = "INSERT INTO [tbl_Empleado] ([cedula], [primerNombre], [segundoNombre], [primerApe"& _ 
+                "llido], [segundoApellido], [direccion], [observacion], [telefono], [emailPersona"& _ 
+                "l], [emailCorporativo], [sexo], [estadoActividad], [estado], [fechaNac], [fechaI"& _ 
+                "ngreso], [fechaAgregado], [idCargo], [idUsuario]) VALUES (@cedula, @primerNombre"& _ 
+                ", @segundoNombre, @primerApellido, @segundoApellido, @direccion, @observacion, @"& _ 
+                "telefono, @emailPersonal, @emailCorporativo, @sexo, @estadoActividad, @estado, @"& _ 
+                "fechaNac, @fechaIngreso, @fechaAgregado, @idCargo, @idUsuario);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmplea"& _ 
+                "do, cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direcc"& _ 
+                "ion, observacion, telefono, emailPersonal, emailCorporativo, sexo, estadoActivid"& _ 
+                "ad, estado, fechaNac, fechaIngreso, fechaAgregado, idCargo, idUsuario FROM tbl_E"& _ 
+                "mpleado WHERE (idEmpleado = SCOPE_IDENTITY())"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@cedula", Global.System.Data.SqlDbType.NVarChar, 14, Global.System.Data.ParameterDirection.Input, 0, 0, "cedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@primerNombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "primerNombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10393,6 +10393,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaIngreso", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaIngreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaAgregado", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaAgregado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "DELETE FROM [dbo].[tbl_Empleado] WHERE (([idEmpleado] = @Original_idEmpleado) AND"& _ 
@@ -11081,7 +11082,8 @@ Namespace BDSistemaEySDataSetTableAdapters
                     ByVal fechaNac As Date,  _
                     ByVal fechaIngreso As Date,  _
                     ByVal fechaAgregado As Global.System.Nullable(Of Date),  _
-                    ByVal idCargo As Integer) As Integer
+                    ByVal idCargo As Integer,  _
+                    ByVal idUsuario As Global.System.Nullable(Of Integer)) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
             If (cedula Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("cedula")
@@ -11144,6 +11146,11 @@ Namespace BDSistemaEySDataSetTableAdapters
                 command.Parameters(15).Value = Global.System.DBNull.Value
             End If
             command.Parameters(16).Value = CType(idCargo,Integer)
+            If (idUsuario.HasValue = true) Then
+                command.Parameters(17).Value = CType(idUsuario.Value,Integer)
+            Else
+                command.Parameters(17).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

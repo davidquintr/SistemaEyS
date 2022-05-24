@@ -122,8 +122,9 @@
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
         Dim idCar As Integer = CInt(cbCar.SelectedValue)
+        Dim idUser As Integer = 0
 
-        emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar)
+        emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, 1)
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
 
 

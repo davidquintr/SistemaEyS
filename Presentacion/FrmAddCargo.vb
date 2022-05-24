@@ -73,7 +73,7 @@
             Dim resp As VariantType
 
             resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
-            If (resp = vbYesNo) Then
+            If (resp = vbYes) Then
                 carg.RegistroCarElim(idCargo)
                 llenarGrid()
 
@@ -82,7 +82,6 @@
 
         End Try
 
-        MessageBox.Show("Seguro que se desea eliminar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
     Private Sub dgvCargos_DoubleClick(sender As Object, e As EventArgs) Handles dgvCargos.DoubleClick

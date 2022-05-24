@@ -37,7 +37,7 @@
             Dim resp As VariantType
 
             resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
-            If (resp = vbYesNo) Then
+            If (resp = vbYes) Then
                 Dept.RegistroDepElim(idDept)
                 llenarGrid()
 
