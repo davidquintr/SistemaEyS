@@ -25,8 +25,8 @@ Partial Class FrmAddDepartamento
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
@@ -80,6 +80,15 @@ Partial Class FrmAddDepartamento
         Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(471, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 14
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
         'btnEliminar
         '
         Me.btnEliminar.Location = New System.Drawing.Point(392, 3)
@@ -89,15 +98,6 @@ Partial Class FrmAddDepartamento
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         Me.btnEliminar.Visible = False
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Location = New System.Drawing.Point(471, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEditar.TabIndex = 14
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '

@@ -26,15 +26,19 @@ Partial Class frmAddRol
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txbNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txbID = New System.Windows.Forms.TextBox()
+        Me.DgvRol = New System.Windows.Forms.DataGridView()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DgvRol, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -46,15 +50,17 @@ Partial Class frmAddRol
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 110)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 227)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(355, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(403, 31)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(279, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(327, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 13
@@ -63,7 +69,7 @@ Partial Class frmAddRol
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(200, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(248, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
@@ -72,7 +78,7 @@ Partial Class frmAddRol
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(121, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(169, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 10
@@ -80,13 +86,22 @@ Partial Class frmAddRol
         Me.btnEliminar.UseVisualStyleBackColor = True
         Me.btnEliminar.Visible = False
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(11, 3)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
+        Me.btnLimpiar.TabIndex = 31
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(355, 92)
+        Me.GroupBox1.Size = New System.Drawing.Size(400, 92)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Agregar/administrar rol"
@@ -150,11 +165,29 @@ Partial Class frmAddRol
         Me.txbID.Size = New System.Drawing.Size(196, 23)
         Me.txbID.TabIndex = 1
         '
+        'DgvRol
+        '
+        Me.DgvRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvRol.Location = New System.Drawing.Point(12, 96)
+        Me.DgvRol.Name = "DgvRol"
+        Me.DgvRol.Size = New System.Drawing.Size(400, 125)
+        Me.DgvRol.TabIndex = 5
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(90, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 32
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
         'frmAddRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(379, 152)
+        Me.ClientSize = New System.Drawing.Size(427, 270)
+        Me.Controls.Add(Me.DgvRol)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmAddRol"
@@ -163,6 +196,7 @@ Partial Class frmAddRol
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.DgvRol, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -177,4 +211,7 @@ Partial Class frmAddRol
     Friend WithEvents txbID As TextBox
     Friend WithEvents txbNombre As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents DgvRol As DataGridView
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents btnEditar As Button
 End Class

@@ -35,9 +35,9 @@ Partial Class FrmAddCargo
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnHorario = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnHorario = New System.Windows.Forms.Button()
         Me.dgvCargos = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -192,14 +192,15 @@ Partial Class FrmAddCargo
         Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'btnHorario
+        'btnEditar
         '
-        Me.btnHorario.Location = New System.Drawing.Point(288, 3)
-        Me.btnHorario.Name = "btnHorario"
-        Me.btnHorario.Size = New System.Drawing.Size(73, 25)
-        Me.btnHorario.TabIndex = 11
-        Me.btnHorario.Text = "Horario"
-        Me.btnHorario.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(446, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 14
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
         '
         'btnEliminar
         '
@@ -211,15 +212,14 @@ Partial Class FrmAddCargo
         Me.btnEliminar.UseVisualStyleBackColor = True
         Me.btnEliminar.Visible = False
         '
-        'btnEditar
+        'btnHorario
         '
-        Me.btnEditar.Location = New System.Drawing.Point(446, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEditar.TabIndex = 14
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        Me.btnEditar.Visible = False
+        Me.btnHorario.Location = New System.Drawing.Point(288, 3)
+        Me.btnHorario.Name = "btnHorario"
+        Me.btnHorario.Size = New System.Drawing.Size(73, 25)
+        Me.btnHorario.TabIndex = 11
+        Me.btnHorario.Text = "Horario"
+        Me.btnHorario.UseVisualStyleBackColor = True
         '
         'dgvCargos
         '

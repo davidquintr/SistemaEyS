@@ -25,8 +25,9 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnDarDeBaja = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnDarDeBaja = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -54,13 +55,13 @@ Partial Class FrmAddEmpleado
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.dtpNac = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.cbUsuario = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.cbUsuario = New System.Windows.Forms.ComboBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -79,6 +80,7 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 476)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -103,6 +105,16 @@ Partial Class FrmAddEmpleado
         Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(379, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 28
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
+        '
         'btnDarDeBaja
         '
         Me.btnDarDeBaja.Location = New System.Drawing.Point(300, 3)
@@ -113,15 +125,14 @@ Partial Class FrmAddEmpleado
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         Me.btnDarDeBaja.Visible = False
         '
-        'btnEditar
+        'btnLimpiar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(379, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEditar.TabIndex = 28
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        Me.btnEditar.Visible = False
+        Me.btnLimpiar.Location = New System.Drawing.Point(221, 3)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
+        Me.btnLimpiar.TabIndex = 29
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -417,6 +428,17 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(329, 191)
         Me.TableLayoutPanel2.TabIndex = 26
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(3, 162)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(50, 15)
+        Me.Label14.TabIndex = 28
+        Me.Label14.Text = "Usuario:"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'dtpNac
         '
         Me.dtpNac.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -445,6 +467,15 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         Me.FlowLayoutPanel2.Size = New System.Drawing.Size(196, 22)
         Me.FlowLayoutPanel2.TabIndex = 13
+        '
+        'cbUsuario
+        '
+        Me.cbUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbUsuario.FormattingEnabled = True
+        Me.cbUsuario.Location = New System.Drawing.Point(132, 165)
+        Me.cbUsuario.Name = "cbUsuario"
+        Me.cbUsuario.Size = New System.Drawing.Size(194, 23)
+        Me.cbUsuario.TabIndex = 29
         '
         'TableLayoutPanel1
         '
@@ -486,26 +517,6 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.Size = New System.Drawing.Size(610, 224)
         Me.DgvEmpleado.TabIndex = 5
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(3, 162)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(50, 15)
-        Me.Label14.TabIndex = 28
-        Me.Label14.Text = "Usuario:"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cbUsuario
-        '
-        Me.cbUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbUsuario.FormattingEnabled = True
-        Me.cbUsuario.Location = New System.Drawing.Point(132, 165)
-        Me.cbUsuario.Name = "cbUsuario"
-        Me.cbUsuario.Size = New System.Drawing.Size(194, 23)
-        Me.cbUsuario.TabIndex = 29
         '
         'FrmAddEmpleado
         '
@@ -571,4 +582,5 @@ Partial Class FrmAddEmpleado
     Friend WithEvents DgvEmpleado As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents cbUsuario As ComboBox
+    Friend WithEvents btnLimpiar As Button
 End Class

@@ -11,8 +11,12 @@
 
     Dim idUser As Integer
 
-    Dim mode As Integer
+    Dim mode As Integer = 0
 
+    Sub llenarGrid()
+        DgvCredenciales.DataSource = user.GetData
+        DgvCredenciales.Refresh()
+    End Sub
     Sub llenarRol()
 
         cbRol.DataSource = Rol.GetData()
@@ -23,22 +27,24 @@
     End Sub
 
     Sub llenarEmp()
-        cbEmpleado.DataSource = vwEmp.GetData()
-        cbEmpleado.DisplayMember = "Nombre"
-        cbEmpleado.ValueMember = "ID"
+        cbEmpleado.DataSource = emp.GetData()
+        cbEmpleado.DisplayMember = "primerNombre"
+        cbEmpleado.ValueMember = "idEmpleado"
         cbEmpleado.Refresh()
     End Sub
+
     Private Sub frmAdminCredenciales_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarRol()
         llenarEmp()
-        btnDarDeBaja.Visible = False
+        llenarGrid()
         gboxPrincipal.Text = "Seguridad: Agregar Usuario"
     End Sub
 
     Public Sub CambiarModo(idUser As Integer)
         gboxPrincipal.Text = "Seguridad: Editar Usuario"
         mode = 1
-        btnDarDeBaja.Visible = True
+        btnEditar.Visible = True
+        btnEliminar.Visible = True
         Me.idUser = idUser
         MostrarDatos()
     End Sub
@@ -68,11 +74,55 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnDarDeBaja.Click
-        MessageBox.Show("Se desea dar de baja?", "Confirmación", MessageBoxButtons.YesNoCancel)
+    Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Try
+            Dim resp As VariantType
+
+            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
+            If (resp = vbYes) Then
+                user.RegistroUserElim(idUser)
+                llenarGrid()
+
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 
-    Private Sub cbEmpleado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEmpleado.SelectedIndexChanged
+    Private Sub DgvCredenciales_DoubleClick(sender As Object, e As EventArgs) Handles DgvCredenciales.DoubleClick
 
+        Try
+
+            Dim fila As Integer = DgvCredenciales.CurrentRow.Index
+            idUser = DgvCredenciales.Item(0, fila).Value
+            txtNombre.Text = DgvCredenciales.Item(1, fila).Value
+            txtPass.Text = DgvCredenciales.Item(2, fila).Value
+            cbEmpleado.Text = DgvCredenciales.Item(3, fila).Value
+            cbRol.Text = DgvCredenciales.Item(4, fila).Value
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
+        Dim id As Integer = CInt(txtID.Text.Trim)
+        Dim usernName As String = txtNombre.Text.Trim
+        Dim pass As String = txtPass.Text.Trim
+        Dim rol As Integer = CInt(cbRol.SelectedValue)
+        Dim estado As Integer
+
+        user.RegistroUserAct(usernName, pass, 1, rol, idUser, id)
+
+        llenarGrid()
+    End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        txtID.Text = ""
+        txtNombre.Text = ""
+        txtPass.Text = ""
+        txtPassConfirm.Text = ""
     End Sub
 End Class

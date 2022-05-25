@@ -24,12 +24,16 @@ Partial Class frmListarCredenciales
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.lbRol = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblEmp = New System.Windows.Forms.Label()
+        Me.lblContraseña = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.lbID = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbRol = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -38,10 +42,6 @@ Partial Class frmListarCredenciales
         Me.btnSig = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.cbCredenciales = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblContraseña = New System.Windows.Forms.Label()
-        Me.lblEmp = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -85,27 +85,27 @@ Partial Class frmListarCredenciales
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 116)
         Me.TableLayoutPanel1.TabIndex = 19
         '
-        'lbRol
+        'lblEmp
         '
-        Me.lbRol.AutoSize = True
-        Me.lbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbRol.Location = New System.Drawing.Point(151, 92)
-        Me.lbRol.Name = "lbRol"
-        Me.lbRol.Size = New System.Drawing.Size(97, 15)
-        Me.lbRol.TabIndex = 9
-        Me.lbRol.Text = "Texto de ejemplo"
-        Me.lbRol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblEmp.AutoSize = True
+        Me.lblEmp.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lblEmp.Location = New System.Drawing.Point(151, 69)
+        Me.lblEmp.Name = "lblEmp"
+        Me.lblEmp.Size = New System.Drawing.Size(97, 15)
+        Me.lblEmp.TabIndex = 24
+        Me.lblEmp.Text = "Texto de ejemplo"
+        Me.lblEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label3
+        'lblContraseña
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(3, 92)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(27, 15)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Rol:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblContraseña.AutoSize = True
+        Me.lblContraseña.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lblContraseña.Location = New System.Drawing.Point(151, 46)
+        Me.lblContraseña.Name = "lblContraseña"
+        Me.lblContraseña.Size = New System.Drawing.Size(97, 15)
+        Me.lblContraseña.TabIndex = 20
+        Me.lblContraseña.Text = "Texto de ejemplo"
+        Me.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label1
         '
@@ -118,6 +118,17 @@ Partial Class frmListarCredenciales
         Me.Label1.Text = "ID:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label5.Location = New System.Drawing.Point(3, 69)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 15)
+        Me.Label5.TabIndex = 21
+        Me.Label5.Text = "Empleado:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'lbID
         '
         Me.lbID.AutoSize = True
@@ -128,6 +139,17 @@ Partial Class frmListarCredenciales
         Me.lbID.TabIndex = 1
         Me.lbID.Text = "XXXXXXXX"
         Me.lbID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(3, 46)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 15)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Contraseña:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbNombre
         '
@@ -150,6 +172,28 @@ Partial Class frmListarCredenciales
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre de usuario:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label3.Location = New System.Drawing.Point(3, 92)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(27, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Rol:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lbRol
+        '
+        Me.lbRol.AutoSize = True
+        Me.lbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.lbRol.Location = New System.Drawing.Point(151, 92)
+        Me.lbRol.Name = "lbRol"
+        Me.lbRol.Size = New System.Drawing.Size(97, 15)
+        Me.lbRol.TabIndex = 9
+        Me.lbRol.Text = "Texto de ejemplo"
+        Me.lbRol.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'FlowLayoutPanel1
         '
@@ -231,50 +275,6 @@ Partial Class frmListarCredenciales
         Me.cbCredenciales.Name = "cbCredenciales"
         Me.cbCredenciales.Size = New System.Drawing.Size(191, 23)
         Me.cbCredenciales.TabIndex = 19
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(3, 46)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 15)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Contraseña:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(3, 69)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 15)
-        Me.Label5.TabIndex = 21
-        Me.Label5.Text = "Empleado:"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblContraseña
-        '
-        Me.lblContraseña.AutoSize = True
-        Me.lblContraseña.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblContraseña.Location = New System.Drawing.Point(151, 46)
-        Me.lblContraseña.Name = "lblContraseña"
-        Me.lblContraseña.Size = New System.Drawing.Size(97, 15)
-        Me.lblContraseña.TabIndex = 20
-        Me.lblContraseña.Text = "Texto de ejemplo"
-        Me.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblEmp
-        '
-        Me.lblEmp.AutoSize = True
-        Me.lblEmp.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lblEmp.Location = New System.Drawing.Point(151, 69)
-        Me.lblEmp.Name = "lblEmp"
-        Me.lblEmp.Size = New System.Drawing.Size(97, 15)
-        Me.lblEmp.TabIndex = 24
-        Me.lblEmp.Text = "Texto de ejemplo"
-        Me.lblEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmListarCredenciales
         '

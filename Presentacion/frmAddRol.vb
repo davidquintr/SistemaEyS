@@ -6,6 +6,11 @@
     Dim idRol As Integer
     Dim modo As Int16 = 0
 
+    Sub llenarGrid()
+        DgvRol.DataSource = Rol.GetData
+        DgvRol.Refresh()
+    End Sub
+
     Public Sub CambiarModo(idRol As Integer)
         modo = 1
         btnEliminar.Visible = True
@@ -31,16 +36,57 @@
 
         Rol.RegistroRolAgreg(Nombre, estado)
 
+        llenarGrid()
+
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
 
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        MessageBox.Show("Seguro que se desea eliminar?", "Confirmación", MessageBoxButtons.YesNoCancel)
+        Try
+            Dim resp As VariantType
+
+            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
+            If (resp = vbYes) Then
+                Rol.RegistroRolElim(idRol)
+                llenarGrid()
+
+            End If
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub frmAddRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        llenarGrid()
         GroupBox1.Text = "Agregar Rol"
-        btnCerrar.Visible = False
+    End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        txbID.Text = ""
+        txbNombre.Text = ""
+    End Sub
+
+    Private Sub DgvRol_DoubleClick(sender As Object, e As EventArgs) Handles DgvRol.DoubleClick
+        Try
+
+            Dim fila As Integer = DgvRol.CurrentRow.Index
+            idRol = DgvRol.Item(0, fila).Value
+            txbNombre.Text = DgvRol.Item(1, fila).Value
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
+        Dim id As Integer = CInt(txbID.Text.Trim)
+        Dim nombre As String = txbNombre.Text.Trim
+
+        Rol.RegistroRolAct(nombre, 1, idRol, id)
+
+        llenarGrid()
     End Sub
 End Class

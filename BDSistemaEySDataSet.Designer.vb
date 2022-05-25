@@ -12741,20 +12741,15 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "UPDATE [tbl_Usuario] SET [username] = @username, [password] = @password, [estado]"& _ 
-                " = @estado, [idRol] = @idRol WHERE (([idUsuario] = @Original_idUsuario) AND ([us"& _ 
-                "ername] = @Original_username) AND ([password] = @Original_password) AND ([estado"& _ 
-                "] = @Original_estado) AND ([idRol] = @Original_idRol));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idUsuario, usern"& _ 
-                "ame, password, estado, idRol FROM tbl_Usuario WHERE (idUsuario = @idUsuario)"
+                " = @estado, [idRol] = @idRol WHERE (([idUsuario] = @Original_idUsuario));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
+                "T idUsuario, username, password, estado, idRol FROM tbl_Usuario WHERE (idUsuario"& _ 
+                " = @idUsuario)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_username", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_password", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
@@ -12768,15 +12763,9 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "DELETE FROM [tbl_Usuario] WHERE (([idUsuario] = @Original_idUsuario) AND ([userna"& _ 
-                "me] = @Original_username) AND ([password] = @Original_password) AND ([estado] = "& _ 
-                "@Original_estado) AND ([idRol] = @Original_idRol))"
+            Me._commandCollection(4).CommandText = "DELETE FROM [tbl_Usuario] WHERE (([idUsuario] = @Original_idUsuario))"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_username", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_password", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12998,7 +12987,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function RegistroUserAct(ByVal username As String, ByVal password As String, ByVal estado As Integer, ByVal idRol As Integer, ByVal Original_idUsuario As Integer, ByVal Original_username As String, ByVal Original_password As String, ByVal Original_estado As Integer, ByVal Original_idRol As Integer, ByVal idUsuario As Integer) As Integer
+        Public Overloads Overridable Function RegistroUserAct(ByVal username As String, ByVal password As String, ByVal estado As Integer, ByVal idRol As Integer, ByVal Original_idUsuario As Integer, ByVal idUsuario As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
             If (username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("username")
@@ -13013,19 +13002,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             command.Parameters(2).Value = CType(estado,Integer)
             command.Parameters(3).Value = CType(idRol,Integer)
             command.Parameters(4).Value = CType(Original_idUsuario,Integer)
-            If (Original_username Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_username")
-            Else
-                command.Parameters(5).Value = CType(Original_username,String)
-            End If
-            If (Original_password Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_password")
-            Else
-                command.Parameters(6).Value = CType(Original_password,String)
-            End If
-            command.Parameters(7).Value = CType(Original_estado,Integer)
-            command.Parameters(8).Value = CType(Original_idRol,Integer)
-            command.Parameters(9).Value = CType(idUsuario,Integer)
+            command.Parameters(5).Value = CType(idUsuario,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13080,21 +13057,9 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
-        Public Overloads Overridable Function RegistroUserElim(ByVal Original_idUsuario As Integer, ByVal Original_username As String, ByVal Original_password As String, ByVal Original_estado As Integer, ByVal Original_idRol As Integer) As Integer
+        Public Overloads Overridable Function RegistroUserElim(ByVal Original_idUsuario As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
             command.Parameters(0).Value = CType(Original_idUsuario,Integer)
-            If (Original_username Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_username")
-            Else
-                command.Parameters(1).Value = CType(Original_username,String)
-            End If
-            If (Original_password Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_password")
-            Else
-                command.Parameters(2).Value = CType(Original_password,String)
-            End If
-            command.Parameters(3).Value = CType(Original_estado,Integer)
-            command.Parameters(4).Value = CType(Original_idRol,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13290,14 +13255,12 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "UPDATE [dbo].[tbl_Rol] SET [nombre] = @nombre, [estado] = @estado WHERE (([idRol]"& _ 
-                " = @Original_idRol) AND ([nombre] = @Original_nombre) AND ([estado] = @Original_"& _ 
-                "estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idRol, nombre, estado FROM tbl_Rol WHERE (idRol = @idRol)"
+                " = @Original_idRol));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idRol, nombre, estado FROM tbl_Rol WHERE (idRol = "& _ 
+                "@idRol)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
@@ -13308,12 +13271,9 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "DELETE FROM [dbo].[tbl_Rol] WHERE (([idRol] = @Original_idRol) AND ([nombre] = @O"& _ 
-                "riginal_nombre) AND ([estado] = @Original_estado))"
+            Me._commandCollection(3).CommandText = "DELETE FROM [dbo].[tbl_Rol] WHERE (([idRol] = @Original_idRol))"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13467,7 +13427,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
-        Public Overloads Overridable Function RegistroRolAct(ByVal nombre As String, ByVal estado As Integer, ByVal Original_idRol As Integer, ByVal Original_nombre As String, ByVal Original_estado As Integer, ByVal idRol As Integer) As Integer
+        Public Overloads Overridable Function RegistroRolAct(ByVal nombre As String, ByVal estado As Integer, ByVal Original_idRol As Integer, ByVal idRol As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
             If (nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombre")
@@ -13476,13 +13436,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             End If
             command.Parameters(1).Value = CType(estado,Integer)
             command.Parameters(2).Value = CType(Original_idRol,Integer)
-            If (Original_nombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_nombre")
-            Else
-                command.Parameters(3).Value = CType(Original_nombre,String)
-            End If
-            command.Parameters(4).Value = CType(Original_estado,Integer)
-            command.Parameters(5).Value = CType(idRol,Integer)
+            command.Parameters(3).Value = CType(idRol,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13531,15 +13485,9 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
-        Public Overloads Overridable Function RegistroRolElim(ByVal Original_idRol As Integer, ByVal Original_nombre As String, ByVal Original_estado As Integer) As Integer
+        Public Overloads Overridable Function RegistroRolElim(ByVal Original_idRol As Integer) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
             command.Parameters(0).Value = CType(Original_idRol,Integer)
-            If (Original_nombre Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_nombre")
-            Else
-                command.Parameters(1).Value = CType(Original_nombre,String)
-            End If
-            command.Parameters(2).Value = CType(Original_estado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

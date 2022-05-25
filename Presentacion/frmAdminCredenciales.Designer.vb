@@ -41,10 +41,14 @@ Partial Class frmAdminCredenciales
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnDarDeBaja = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.DgvCredenciales = New System.Windows.Forms.DataGridView()
         Me.gboxPrincipal.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
+        CType(Me.DgvCredenciales, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -74,7 +78,7 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.75084!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.24916!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.cbEmpleado, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtPassConfirm, 1, 3)
@@ -117,26 +121,26 @@ Partial Class frmAdminCredenciales
         Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEmpleado.FormattingEnabled = True
         Me.cbEmpleado.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbEmpleado.Location = New System.Drawing.Point(140, 110)
+        Me.cbEmpleado.Location = New System.Drawing.Point(139, 110)
         Me.cbEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.cbEmpleado.Name = "cbEmpleado"
-        Me.cbEmpleado.Size = New System.Drawing.Size(189, 23)
+        Me.cbEmpleado.Size = New System.Drawing.Size(187, 23)
         Me.cbEmpleado.TabIndex = 8
         '
         'txtPassConfirm
         '
         Me.txtPassConfirm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassConfirm.Location = New System.Drawing.Point(141, 84)
+        Me.txtPassConfirm.Location = New System.Drawing.Point(140, 84)
         Me.txtPassConfirm.Name = "txtPassConfirm"
-        Me.txtPassConfirm.Size = New System.Drawing.Size(187, 23)
+        Me.txtPassConfirm.Size = New System.Drawing.Size(185, 23)
         Me.txtPassConfirm.TabIndex = 11
         '
         'txtNombre
         '
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(141, 30)
+        Me.txtNombre.Location = New System.Drawing.Point(140, 30)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(187, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(185, 23)
         Me.txtNombre.TabIndex = 3
         '
         'Label2
@@ -153,9 +157,9 @@ Partial Class frmAdminCredenciales
         'txtID
         '
         Me.txtID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.Location = New System.Drawing.Point(141, 3)
+        Me.txtID.Location = New System.Drawing.Point(140, 3)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(187, 23)
+        Me.txtID.Size = New System.Drawing.Size(185, 23)
         Me.txtID.TabIndex = 1
         '
         'Label4
@@ -183,9 +187,9 @@ Partial Class frmAdminCredenciales
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(141, 57)
+        Me.txtPass.Location = New System.Drawing.Point(140, 57)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(187, 23)
+        Me.txtPass.Size = New System.Drawing.Size(185, 23)
         Me.txtPass.TabIndex = 5
         '
         'Label3
@@ -204,16 +208,16 @@ Partial Class frmAdminCredenciales
         Me.cbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRol.FormattingEnabled = True
         Me.cbRol.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbRol.Location = New System.Drawing.Point(140, 137)
+        Me.cbRol.Location = New System.Drawing.Point(139, 137)
         Me.cbRol.Margin = New System.Windows.Forms.Padding(2)
         Me.cbRol.Name = "cbRol"
-        Me.cbRol.Size = New System.Drawing.Size(189, 23)
+        Me.cbRol.Size = New System.Drawing.Size(187, 23)
         Me.cbRol.TabIndex = 7
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(334, 57)
+        Me.Button1.Location = New System.Drawing.Point(331, 57)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(18, 21)
         Me.Button1.TabIndex = 12
@@ -224,7 +228,7 @@ Partial Class frmAdminCredenciales
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(334, 84)
+        Me.Button2.Location = New System.Drawing.Point(331, 84)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(18, 21)
         Me.Button2.TabIndex = 13
@@ -239,16 +243,18 @@ Partial Class frmAdminCredenciales
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 220)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(369, 31)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(707, 31)
         Me.FlowLayoutPanel1.TabIndex = 5
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(293, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(631, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
         Me.btnCerrar.TabIndex = 13
@@ -257,27 +263,56 @@ Partial Class frmAdminCredenciales
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(214, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(552, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
         Me.btnGuardar.TabIndex = 12
         Me.btnGuardar.Text = "Nuevo"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'btnDarDeBaja
+        'btnEditar
         '
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(135, 3)
-        Me.btnDarDeBaja.Name = "btnDarDeBaja"
-        Me.btnDarDeBaja.Size = New System.Drawing.Size(73, 23)
-        Me.btnDarDeBaja.TabIndex = 14
-        Me.btnDarDeBaja.Text = "Eliminar"
-        Me.btnDarDeBaja.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(473, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 29
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(394, 3)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
+        Me.btnEliminar.TabIndex = 14
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.Visible = False
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(315, 3)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
+        Me.btnLimpiar.TabIndex = 30
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
+        'DgvCredenciales
+        '
+        Me.DgvCredenciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCredenciales.Location = New System.Drawing.Point(395, 11)
+        Me.DgvCredenciales.Name = "DgvCredenciales"
+        Me.DgvCredenciales.Size = New System.Drawing.Size(322, 197)
+        Me.DgvCredenciales.TabIndex = 6
         '
         'frmAdminCredenciales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 262)
+        Me.ClientSize = New System.Drawing.Size(729, 262)
+        Me.Controls.Add(Me.DgvCredenciales)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.gboxPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -290,6 +325,7 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        CType(Me.DgvCredenciales, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -309,9 +345,12 @@ Partial Class frmAdminCredenciales
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPassConfirm As TextBox
-    Friend WithEvents btnDarDeBaja As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents cbEmpleado As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents DgvCredenciales As DataGridView
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnLimpiar As Button
 End Class

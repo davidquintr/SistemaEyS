@@ -136,6 +136,7 @@
         emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser)
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
 
+        llenarGrid()
 
     End Sub
 
@@ -208,7 +209,17 @@
         End Try
     End Sub
 
-    Private Sub cbUsuario_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbUsuario.SelectedIndexChanged
-
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        txtCedula.Text = ""
+        txtNombre.Text = ""
+        txtApellidos.Text = ""
+        txtEmailC.Text = ""
+        txtEmailP.Text = ""
+        txtTelefono.Text = ""
+        dtpFechaIngreso.Value = DateTime.Now
+        dtpNac.Value = DateTime.Now
+        rtxtDireccion.Text = ""
+        rtxtObservacion.Text = ""
     End Sub
+
 End Class

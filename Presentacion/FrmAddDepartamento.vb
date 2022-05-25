@@ -23,12 +23,11 @@
         Dim ext As String = txtExt.Text.Trim()
         Dim Desc As String = rtxtDesc.Text.Trim()
 
-
-
         Dept.RegistroDepAgreg(nombre, ext, email, Desc, 1)
 
-
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
+
+        llenarGrid()
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
