@@ -22,29 +22,24 @@ Partial Class frmVistaEmp
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.lblHora = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(206, 212)
-        Me.Panel1.TabIndex = 0
         '
         'Panel2
         '
@@ -57,14 +52,24 @@ Partial Class frmVistaEmp
         Me.Panel2.Size = New System.Drawing.Size(265, 238)
         Me.Panel2.TabIndex = 1
         '
-        'Button4
+        'FlowLayoutPanel2
         '
-        Me.Button4.Location = New System.Drawing.Point(3, 75)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(200, 30)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Almuerzo"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.FlowLayoutPanel2.Controls.Add(Me.Button1)
+        Me.FlowLayoutPanel2.Controls.Add(Me.Button2)
+        Me.FlowLayoutPanel2.Controls.Add(Me.Button4)
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(40, 69)
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(211, 143)
+        Me.FlowLayoutPanel2.TabIndex = 7
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(200, 30)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Marcar entrada"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -75,14 +80,14 @@ Partial Class frmVistaEmp
         Me.Button2.Text = "Marcar salida"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Button4
         '
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(200, 30)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Marcar entrada"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button4.Location = New System.Drawing.Point(3, 75)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(200, 30)
+        Me.Button4.TabIndex = 6
+        Me.Button4.Text = "Almuerzo"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -136,35 +141,33 @@ Partial Class frmVistaEmp
         Me.Button3.Text = "Finalizar"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label4
+        'lblHora
         '
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 230)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(206, 20)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "HH:MM:SS"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblHora.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHora.Location = New System.Drawing.Point(12, 230)
+        Me.lblHora.Name = "lblHora"
+        Me.lblHora.Size = New System.Drawing.Size(206, 20)
+        Me.lblHora.TabIndex = 7
+        Me.lblHora.Text = "HH:MM:SS"
+        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'FlowLayoutPanel2
+        'Timer1
         '
-        Me.FlowLayoutPanel2.Controls.Add(Me.Button1)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Button2)
-        Me.FlowLayoutPanel2.Controls.Add(Me.Button4)
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(40, 69)
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(211, 143)
-        Me.FlowLayoutPanel2.TabIndex = 7
+        Me.Timer1.Enabled = True
+        '
+        'Timer2
+        '
+        Me.Timer2.Enabled = True
+        Me.Timer2.Interval = 1000
         '
         'frmVistaEmp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(501, 298)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblHora)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmVistaEmp"
@@ -172,13 +175,11 @@ Partial Class frmVistaEmp
         Me.Text = "Entrada y Salida"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -188,6 +189,8 @@ Partial Class frmVistaEmp
     Friend WithEvents Button1 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Button3 As Button
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblHora As Label
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Timer2 As Timer
 End Class

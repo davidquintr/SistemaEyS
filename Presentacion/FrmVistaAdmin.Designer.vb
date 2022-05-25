@@ -48,11 +48,6 @@ Partial Class FrmVistaAdmin
         Me.RolToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.RestaurarEntidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstructivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -124,19 +119,19 @@ Partial Class FrmVistaAdmin
         'DepartamentoToolStripMenuItem
         '
         Me.DepartamentoToolStripMenuItem.Name = "DepartamentoToolStripMenuItem"
-        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.DepartamentoToolStripMenuItem.Text = "Departamento"
         '
         'CargoToolStripMenuItem
         '
         Me.CargoToolStripMenuItem.Name = "CargoToolStripMenuItem"
-        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CargoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.CargoToolStripMenuItem.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem
         '
         Me.EmpleadoToolStripMenuItem.Name = "EmpleadoToolStripMenuItem"
-        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadoToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.EmpleadoToolStripMenuItem.Text = "Empleado"
         '
         'ListarEntidadaToolStripMenuItem
@@ -149,19 +144,19 @@ Partial Class FrmVistaAdmin
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ToolStripSeparator1
@@ -208,7 +203,7 @@ Partial Class FrmVistaAdmin
         '
         'SeguridadToolStripMenuItem
         '
-        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.ToolStripSeparator2, Me.RestaurarEntidadesToolStripMenuItem, Me.PermisosToolStripMenuItem})
+        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.ToolStripSeparator2, Me.PermisosToolStripMenuItem})
         Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
         Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.SeguridadToolStripMenuItem.Text = "Seguridad"
@@ -217,7 +212,7 @@ Partial Class FrmVistaAdmin
         '
         Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
         Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AñadirToolStripMenuItem.Text = "Añadir"
         '
         'RolToolStripMenuItem
@@ -236,7 +231,7 @@ Partial Class FrmVistaAdmin
         '
         Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
         Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
-        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdministrarToolStripMenuItem.Text = "Listar"
         '
         'RolToolStripMenuItem1
@@ -254,43 +249,12 @@ Partial Class FrmVistaAdmin
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(174, 6)
-        '
-        'RestaurarEntidadesToolStripMenuItem
-        '
-        Me.RestaurarEntidadesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartamentoToolStripMenuItem2, Me.CargoToolStripMenuItem2, Me.EmpleadoToolStripMenuItem2, Me.UsuarioToolStripMenuItem})
-        Me.RestaurarEntidadesToolStripMenuItem.Name = "RestaurarEntidadesToolStripMenuItem"
-        Me.RestaurarEntidadesToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
-        Me.RestaurarEntidadesToolStripMenuItem.Text = "Restaurar entidades"
-        '
-        'DepartamentoToolStripMenuItem2
-        '
-        Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
-        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
-        Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
-        '
-        'CargoToolStripMenuItem2
-        '
-        Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
-        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
-        Me.CargoToolStripMenuItem2.Text = "Cargo"
-        '
-        'EmpleadoToolStripMenuItem2
-        '
-        Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
-        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
-        Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
-        '
-        'UsuarioToolStripMenuItem
-        '
-        Me.UsuarioToolStripMenuItem.Name = "UsuarioToolStripMenuItem"
-        Me.UsuarioToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.UsuarioToolStripMenuItem.Text = "Usuario"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'AyudaToolStripMenuItem
@@ -582,17 +546,12 @@ Partial Class FrmVistaAdmin
     Friend WithEvents hora As Timer
     Friend WithEvents Time As Timer
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents RestaurarEntidadesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AñadirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RolToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UsuarioToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents AdministrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RolToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents UsuarioToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents DepartamentoToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents CargoToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents EmpleadoToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents UsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BDSistemaEySDataSetBindingSource As BindingSource
     Friend WithEvents VwVistaAdminBindingSource As BindingSource

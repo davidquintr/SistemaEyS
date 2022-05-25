@@ -26,6 +26,7 @@ Partial Class frmAddRol
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -34,7 +35,6 @@ Partial Class frmAddRol
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txbID = New System.Windows.Forms.TextBox()
         Me.DgvRol = New System.Windows.Forms.DataGridView()
-        Me.btnEditar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -85,6 +85,15 @@ Partial Class frmAddRol
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         Me.btnEliminar.Visible = False
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(90, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
+        Me.btnEditar.TabIndex = 32
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'btnLimpiar
         '
@@ -173,15 +182,6 @@ Partial Class frmAddRol
         Me.DgvRol.Size = New System.Drawing.Size(400, 125)
         Me.DgvRol.TabIndex = 5
         '
-        'btnEditar
-        '
-        Me.btnEditar.Location = New System.Drawing.Point(90, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEditar.TabIndex = 32
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        '
         'frmAddRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -190,7 +190,10 @@ Partial Class frmAddRol
         Me.Controls.Add(Me.DgvRol)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmAddRol"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAddRol"
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
