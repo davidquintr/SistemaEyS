@@ -1,4 +1,5 @@
-﻿Public Class FrmAddEmpleado
+﻿
+Public Class FrmAddEmpleado
 
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
@@ -12,18 +13,23 @@
     Dim idEmp As Integer
 
     Public Sub CambiarModo(idEmp As Integer)
-        modo = 1
-        btnDarDeBaja.Visible = True
-        btnEditar.Visible = True
-        GroupBox1.Text = "Administrar Empleado"
+        gbAll.Text = "Editar empleado"
+        btnEditar.Enabled = True
+        btnGuardar.Enabled = False
+        btnDarDeBaja.Enabled = True
         Me.idEmp = idEmp
         OrdenarDatos()
     End Sub
 
     Sub llenarGrid()
-        DgvEmpleado.DataSource = emp.GetData
-        DgvEmpleado.Refresh()
-        DgvEmpleado.Columns(0).Visible = False
+        Try
+            DgvEmpleado.DataSource = emp.GetData
+            DgvEmpleado.Refresh()
+            DgvEmpleado.Columns(0).Visible = False
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
     Private Sub OrdenarDatos()
@@ -41,8 +47,6 @@
             Else
                 rtxtObservacion.Text = tblViewEmp.Rows(idEmp).Item(13)
             End If
-
-
 
             rtxtDireccion.Text = tblViewEmp.Rows(idEmp).Item(14)
 
@@ -84,6 +88,8 @@
     End Sub
 
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        gbAll.Text = "Administrar empleado"
+
         llenarDep()
         llenarCar()
         llenarUser()
@@ -91,109 +97,126 @@
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        MessageBox.Show("Si se ha introducido algun dato no seran guardados, seguro que desea salir?", "Confirmación", MessageBoxButtons.YesNoCancel)
-        Me.Close()
-    End Sub
-
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-
-        Dim cedula As String = txtCedula.Text.Trim
-
-        Dim Separador() As String
-        Separador = txtNombre.Text.Split(" ")
-
-        Dim primerNombre As String = Separador(0)
-        Dim segundoNombre As String
-
-        For i As Integer = 1 To Separador.Length - 1
-            If (i <> Separador.Length - 1) Then
-                segundoNombre += Separador(i) + " "
-            Else
-                segundoNombre += Separador(i)
-            End If
-        Next
-
-        Separador = txtApellidos.Text.Split(" ")
-
-        Dim primerApellido As String = Separador(0)
-        Dim segundoApellido As String
-        If Separador(1) IsNot Nothing Then
-            segundoApellido = Separador(1)
+        If (MessageBox.Show("¿Deseas cerrar? si hay cambios pendientes no se guardarán", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes) Then
+            Me.Close()
         End If
-
-        Dim car As String = cbCar.Text.Trim
-        Dim emailCorporativo As String = txtEmailC.Text.Trim
-        Dim emailPersonal As String = txtEmailP.Text.Trim
-        Dim Telefono As String = txtTelefono.Text.Trim
-        Dim sexo As Boolean = CBool(rbMasculino.Checked)
-        Dim fechaIngreso As DateTime = dtpFechaIngreso.Value.Date.ToString
-        Dim fechaAgregado As DateTime = DateTime.Now
-        Dim fechaNac As DateTime = dtpNac.Value.Date.ToString
-        Dim observacion As String = rtxtObservacion.Text.Trim
-        Dim direccion As String = rtxtDireccion.Text.Trim
-        Dim idCar As Integer = CInt(cbCar.SelectedValue)
-        Dim idUser As Integer = CInt(cbUsuario.SelectedValue)
-
-        emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 1, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser)
-        MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
-
-        llenarGrid()
 
     End Sub
 
     Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnDarDeBaja.Click
         Try
-            Dim resp As VariantType
-
-            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
-            If (resp = vbYes) Then
+            If (MessageBox.Show("¿Deseas eliminar el empleado?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
                 emp.RegistroEmpElim(idEmp)
                 llenarGrid()
-
             End If
+
         Catch ex As Exception
 
         End Try
     End Sub
 
+    Private Sub EnviarDatos(tipo As Integer)
+        If (RealizaComprobaciones() = False) Then
+            Return
+        End If
+
+        Try
+            Dim cedula As String = txtCedula.Text.Trim
+            Dim Separador() As String
+            Separador = txtNombre.Text.Split(" ")
+            Dim primerNombre As String = Separador(0)
+            Dim segundoNombre As String
+
+            For i As Integer = 1 To Separador.Length - 1
+                If (i <> Separador.Length - 1) Then
+                    segundoNombre += Separador(i) + " "
+                Else
+                    segundoNombre += Separador(i)
+                End If
+            Next
+
+            Separador = txtApellidos.Text.Split(" ")
+
+            Dim primerApellido As String = Separador(0)
+            Dim segundoApellido As String
+            If Separador(1) IsNot Nothing Then
+                segundoApellido = Separador(1)
+            End If
+
+            Dim car As String = cbCar.Text.Trim
+            Dim emailCorporativo As String = txtEmailC.Text.Trim
+            Dim emailPersonal As String = txtEmailP.Text.Trim
+            Dim Telefono As String = txtTelefono.Text.Trim
+            Dim sexo As Boolean = CBool(rbMasculino.Checked)
+            Dim fechaIngreso As DateTime = dtpFechaIngreso.Value.Date.ToString
+            Dim fechaAgregado As DateTime = DateTime.Now
+            Dim fechaNac As DateTime = dtpNac.Value.Date.ToString
+            Dim observacion As String = rtxtObservacion.Text.Trim
+            Dim direccion As String = rtxtDireccion.Text.Trim
+            Dim idCar As Integer = CInt(cbCar.SelectedValue)
+            Dim idUser As Integer = CInt(cbUsuario.SelectedValue)
+            Dim id As Integer ' Y esto de donde salió??? XDDD
+
+            If tipo = 0 Then
+                emp.RegistroEmpAct(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 0, 2, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser, idEmp, id)
+            Else
+                emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 0, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Ha ocurrido un error al guardar, intente nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        MessageBox.Show("Se ha guardado exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-
-        Dim cedula As String = txtCedula.Text.Trim
-        Dim primerNom As String = txtNombre.Text.Trim
-        Dim segundoNom As String = txtNombre.Text.Trim
-        Dim primerApell As String = txtApellidos.Text.Trim
-        Dim segundoApell As String = txtApellidos.Text.Trim
-        Dim car As String = cbCar.Text.Trim
-        Dim emailCorporativo As String = txtEmailC.Text.Trim
-        Dim emailPersonal As String = txtEmailP.Text.Trim
-        Dim Telefono As String = txtTelefono.Text.Trim
-        Dim sexo As Boolean = CBool(rbMasculino.Checked)
-        Dim estadoActividad As Boolean
-        Dim estado As Integer
-        Dim fechaIngreso As DateTime = dtpFechaIngreso.Value.Date.ToString
-        Dim fechaAgregado As DateTime = DateTime.Now
-        Dim fechaNac As DateTime = dtpNac.Value.Date.ToString
-        Dim observacion As String = rtxtObservacion.Text.Trim
-        Dim direccion As String = rtxtDireccion.Text.Trim
-        Dim idCar As Integer = CInt(cbCar.SelectedValue)
-        Dim idUser As Integer = CInt(cbUsuario.SelectedValue)
-        Dim id As Integer
-
-        emp.RegistroEmpAct(cedula, primerNom, segundoNom, primerApell, segundoApell, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, estadoActividad, estado, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser, idEmp, id)
-
+        If (MessageBox.Show("¿Deseas guardar los cambios?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
+            EnviarDatos(0)
+        End If
         llenarGrid()
     End Sub
 
+    Private Function RealizaComprobaciones() As Boolean
+        If (txtCedula.Text = String.Empty) Then
+            MessageBox.Show("La cédula no puede quedar vacía", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+
+        If (txtNombre.Text = String.Empty) Then
+            MessageBox.Show("El nombre no puede quedar vacío", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+
+        If (txtApellidos.Text = String.Empty) Then
+            MessageBox.Show("El apellido no puede quedar vacío", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+
+        If (txtEmailP.Text = String.Empty) Then
+            MessageBox.Show("El email personal no puede quedar vacío", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+
+        If (dtpNac.Value.Date.ToString("d") = DateTime.Now.ToString("d")) Then
+            MessageBox.Show("Cambie la fecha de Nacimiento", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return False
+        End If
+        Return True
+    End Function
+
     Private Sub DgvEmpleado_DoubleClick(sender As Object, e As EventArgs) Handles DgvEmpleado.DoubleClick
         Try
+            gbAll.Text = "Editar empleado"
+            btnEditar.Enabled = True
+            btnGuardar.Enabled = False
+            btnDarDeBaja.Enabled = True
 
             Dim fila As Integer = DgvEmpleado.CurrentRow.Index
             idEmp = DgvEmpleado.Item(0, fila).Value
             txtCedula.Text = DgvEmpleado.Item(1, fila).Value
             txtNombre.Text = DgvEmpleado.Item(2, fila).Value
-            txtNombre.Text = DgvEmpleado.Item(3, fila).Value
+            txtNombre.Text += " " + DgvEmpleado.Item(3, fila).Value
             txtApellidos.Text = DgvEmpleado.Item(4, fila).Value
-            txtApellidos.Text = DgvEmpleado.Item(5, fila).Value
+            txtApellidos.Text += " " + DgvEmpleado.Item(5, fila).Value
             rtxtDireccion.Text = DgvEmpleado.Item(6, fila).Value
             rtxtObservacion.Text = DgvEmpleado.Item(7, fila).Value
             txtTelefono.Text = DgvEmpleado.Item(8, fila).Value
@@ -203,14 +226,18 @@
             rbMasculino.Checked = DgvEmpleado.Item(11, fila).Value
             dtpNac.Value = DgvEmpleado.Item(14, fila).Value
             dtpFechaIngreso.Value = DgvEmpleado.Item(15, fila).Value
-
-
+            btnGuardar.Enabled = False
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        gbAll.Text = "Agregar empleado"
+        btnGuardar.Enabled = True
+        btnDarDeBaja.Enabled = False
+        btnEditar.Enabled = False
+
         txtCedula.Text = ""
         txtNombre.Text = ""
         txtApellidos.Text = ""
@@ -221,6 +248,12 @@
         dtpNac.Value = DateTime.Now
         rtxtDireccion.Text = ""
         rtxtObservacion.Text = ""
+    End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If (MessageBox.Show("¿Deseas guardar el nuevo empleado?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
+            EnviarDatos(0)
+        End If
     End Sub
 
 End Class

@@ -65,7 +65,6 @@
             txtEmail.Text = tblDept.Rows(idDept).Item(3)
             txtExt.Text = tblDept.Rows(idDept).Item(2)
             rtxtDesc.Text = tblDept.Rows(idDept).Item(4)
-
         Catch
 
         End Try
@@ -79,7 +78,6 @@
         Dim ext As String = txtExt.Text.Trim
         Dim desc As String = rtxtDesc.Text.Trim
         Dim estado As Integer
-
         Dept.RegistroDepAct(nombre, ext, email, desc, estado, idDept, id)
 
         llenarGrid()

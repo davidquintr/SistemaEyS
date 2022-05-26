@@ -1,7 +1,5 @@
 ﻿Public Class FrmVistaAdmin
 
-
-
     Private GR As Graphics = Me.CreateGraphics
 
     'declaramos la constante de PI
@@ -21,7 +19,6 @@
 
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
         CentroX = 280 / 2
         CentroY = 280 / 2
 
@@ -30,7 +27,6 @@
 
         RefrescarGraficos()
 
-        frmVistaEmp.Show()
         If VwVistaAdminBindingSource IsNot Nothing Then
             Me.Vw_VistaAdminTableAdapter.Fill(Me.BDSistemaEySDataSet.Vw_VistaAdmin)
         End If
