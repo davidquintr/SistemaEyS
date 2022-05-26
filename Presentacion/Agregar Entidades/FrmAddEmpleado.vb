@@ -23,6 +23,7 @@
     Sub llenarGrid()
         DgvEmpleado.DataSource = emp.GetData
         DgvEmpleado.Refresh()
+        DgvEmpleado.Columns(0).Visible = False
     End Sub
 
     Private Sub OrdenarDatos()

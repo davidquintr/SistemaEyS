@@ -16,6 +16,7 @@
     Sub llenarGrid()
         DgvCredenciales.DataSource = user.GetData
         DgvCredenciales.Refresh()
+        DgvCredenciales.Columns(0).Visible = False
     End Sub
     Sub llenarRol()
 
@@ -50,10 +51,16 @@
     End Sub
 
     Private Sub MostrarDatos()
-        vwUsr.Fill(tblVwUsr)
-        txtID.Text = tblVwUsr.Rows(idUser).Item(0)
-        txtNombre.Text = tblVwUsr.Rows(idUser).Item(1)
-        txtPass.Text = tblVwUsr.Rows(idUser).Item(2)
+        Try
+
+            vwUsr.Fill(tblVwUsr)
+            txtID.Text = tblVwUsr.Rows(idUser).Item(0)
+            txtNombre.Text = tblVwUsr.Rows(idUser).Item(1)
+            txtPass.Text = tblVwUsr.Rows(idUser).Item(2)
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -66,6 +73,7 @@
         Dim Rol As Integer = CInt(cbRol.SelectedValue)
 
         user.RegistroUserAgreg(UserName, Pass, 1, Rol)
+        llenarGrid()
 
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub

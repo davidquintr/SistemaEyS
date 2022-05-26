@@ -226,6 +226,7 @@ Partial Class FrmAddCargo
         Me.dgvCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCargos.Location = New System.Drawing.Point(414, 6)
         Me.dgvCargos.Name = "dgvCargos"
+        Me.dgvCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvCargos.Size = New System.Drawing.Size(275, 150)
         Me.dgvCargos.TabIndex = 3
         '

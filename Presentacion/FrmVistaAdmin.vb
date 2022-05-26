@@ -30,7 +30,7 @@
 
         RefrescarGraficos()
 
-
+        frmVistaEmp.Show()
         If VwVistaAdminBindingSource IsNot Nothing Then
             Me.Vw_VistaAdminTableAdapter.Fill(Me.BDSistemaEySDataSet.Vw_VistaAdmin)
         End If

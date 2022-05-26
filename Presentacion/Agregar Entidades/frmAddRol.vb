@@ -9,6 +9,7 @@
     Sub llenarGrid()
         DgvRol.DataSource = Rol.GetData
         DgvRol.Refresh()
+        DgvRol.Columns(0).Visible = False
     End Sub
 
     Public Sub CambiarModo(idRol As Integer)

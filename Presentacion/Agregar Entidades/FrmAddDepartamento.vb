@@ -8,6 +8,7 @@
     Sub llenarGrid()
         DgvDepartamentos.DataSource = Dept.GetData
         DgvDepartamentos.Refresh()
+        DgvDepartamentos.Columns(0).Visible = False
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click

@@ -78,7 +78,7 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.75084!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.24916!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.cbEmpleado, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.txtPassConfirm, 1, 3)
@@ -124,7 +124,7 @@ Partial Class frmAdminCredenciales
         Me.cbEmpleado.Location = New System.Drawing.Point(138, 110)
         Me.cbEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.cbEmpleado.Name = "cbEmpleado"
-        Me.cbEmpleado.Size = New System.Drawing.Size(187, 23)
+        Me.cbEmpleado.Size = New System.Drawing.Size(186, 23)
         Me.cbEmpleado.TabIndex = 8
         '
         'txtPassConfirm
@@ -132,7 +132,7 @@ Partial Class frmAdminCredenciales
         Me.txtPassConfirm.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassConfirm.Location = New System.Drawing.Point(139, 84)
         Me.txtPassConfirm.Name = "txtPassConfirm"
-        Me.txtPassConfirm.Size = New System.Drawing.Size(185, 23)
+        Me.txtPassConfirm.Size = New System.Drawing.Size(184, 23)
         Me.txtPassConfirm.TabIndex = 11
         '
         'txtNombre
@@ -140,7 +140,7 @@ Partial Class frmAdminCredenciales
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(139, 30)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(185, 23)
+        Me.txtNombre.Size = New System.Drawing.Size(184, 23)
         Me.txtNombre.TabIndex = 3
         '
         'Label2
@@ -159,7 +159,7 @@ Partial Class frmAdminCredenciales
         Me.txtID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtID.Location = New System.Drawing.Point(139, 3)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(185, 23)
+        Me.txtID.Size = New System.Drawing.Size(184, 23)
         Me.txtID.TabIndex = 1
         '
         'Label4
@@ -189,7 +189,7 @@ Partial Class frmAdminCredenciales
         Me.txtPass.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.Location = New System.Drawing.Point(139, 57)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(185, 23)
+        Me.txtPass.Size = New System.Drawing.Size(184, 23)
         Me.txtPass.TabIndex = 5
         '
         'Label3
@@ -211,13 +211,13 @@ Partial Class frmAdminCredenciales
         Me.cbRol.Location = New System.Drawing.Point(138, 137)
         Me.cbRol.Margin = New System.Windows.Forms.Padding(2)
         Me.cbRol.Name = "cbRol"
-        Me.cbRol.Size = New System.Drawing.Size(187, 23)
+        Me.cbRol.Size = New System.Drawing.Size(186, 23)
         Me.cbRol.TabIndex = 7
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(330, 57)
+        Me.Button1.Location = New System.Drawing.Point(329, 57)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(18, 21)
         Me.Button1.TabIndex = 12
@@ -228,7 +228,7 @@ Partial Class frmAdminCredenciales
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(330, 84)
+        Me.Button2.Location = New System.Drawing.Point(329, 84)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(18, 21)
         Me.Button2.TabIndex = 13
@@ -304,6 +304,7 @@ Partial Class frmAdminCredenciales
         Me.DgvCredenciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCredenciales.Location = New System.Drawing.Point(395, 11)
         Me.DgvCredenciales.Name = "DgvCredenciales"
+        Me.DgvCredenciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvCredenciales.Size = New System.Drawing.Size(322, 197)
         Me.DgvCredenciales.TabIndex = 6
         '

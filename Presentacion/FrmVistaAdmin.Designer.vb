@@ -212,7 +212,7 @@ Partial Class FrmVistaAdmin
         '
         Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
         Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.AñadirToolStripMenuItem.Text = "Añadir"
         '
         'RolToolStripMenuItem
@@ -231,7 +231,7 @@ Partial Class FrmVistaAdmin
         '
         Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
         Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
-        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.AdministrarToolStripMenuItem.Text = "Listar"
         '
         'RolToolStripMenuItem1
@@ -249,12 +249,12 @@ Partial Class FrmVistaAdmin
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(119, 6)
         '
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'AyudaToolStripMenuItem
@@ -303,6 +303,7 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.Location = New System.Drawing.Point(-2, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(634, 401)
         Me.DataGridView1.TabIndex = 0
         '

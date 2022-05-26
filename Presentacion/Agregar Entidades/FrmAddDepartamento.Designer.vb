@@ -239,6 +239,7 @@ Partial Class FrmAddDepartamento
         Me.DgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDepartamentos.Location = New System.Drawing.Point(396, 22)
         Me.DgvDepartamentos.Name = "DgvDepartamentos"
+        Me.DgvDepartamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvDepartamentos.Size = New System.Drawing.Size(319, 176)
         Me.DgvDepartamentos.TabIndex = 5
         '

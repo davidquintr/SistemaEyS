@@ -179,6 +179,7 @@ Partial Class frmAddRol
         Me.DgvRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRol.Location = New System.Drawing.Point(12, 96)
         Me.DgvRol.Name = "DgvRol"
+        Me.DgvRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvRol.Size = New System.Drawing.Size(400, 125)
         Me.DgvRol.TabIndex = 5
         '

@@ -1,4 +1,8 @@
 ﻿Public Class frmEstablecerHorarios
+
+    Dim Horario As New BDSistemaEySDataSetTableAdapters.tbl_HorarioTableAdapter
+    Dim idHorario As Integer
+
     Private Sub frmEstablecerHorarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

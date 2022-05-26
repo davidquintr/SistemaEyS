@@ -11,6 +11,7 @@
     Sub llenarGrid()
         dgvCargos.DataSource = carg.GetData
         dgvCargos.Refresh()
+        dgvCargos.Columns(0).Visible = False
     End Sub
 
     Public Sub CambiarModo(idCargo As Integer)
@@ -112,5 +113,9 @@
         carg.RegistroCarAct(nombre, desc, estado, departamento, idCargo, id)
 
         llenarGrid()
+    End Sub
+
+    Private Sub btnHorario_Click(sender As Object, e As EventArgs) Handles btnHorario.Click
+        frmEstablecerHorarios.Show()
     End Sub
 End Class

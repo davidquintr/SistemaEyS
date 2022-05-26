@@ -123,10 +123,10 @@
     <Compile Include="Presentacion\Agregar Entidades\frmAddRol.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmAdminCredenciales.Designer.vb">
+    <Compile Include="Presentacion\Agregar Entidades\frmAdminCredenciales.Designer.vb">
       <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmAdminCredenciales.vb">
+    <Compile Include="Presentacion\Agregar Entidades\frmAdminCredenciales.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmEstablecerEventos.Designer.vb">
@@ -234,7 +234,7 @@
     <EmbeddedResource Include="Presentacion\Agregar Entidades\frmAddRol.resx">
       <DependentUpon>frmAddRol.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmAdminCredenciales.resx">
+    <EmbeddedResource Include="Presentacion\Agregar Entidades\frmAdminCredenciales.resx">
       <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmEstablecerEventos.resx">

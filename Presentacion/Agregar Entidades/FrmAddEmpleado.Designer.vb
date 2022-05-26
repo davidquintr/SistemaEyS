@@ -515,6 +515,7 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvEmpleado.Location = New System.Drawing.Point(17, 246)
         Me.DgvEmpleado.Name = "DgvEmpleado"
+        Me.DgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvEmpleado.Size = New System.Drawing.Size(610, 224)
         Me.DgvEmpleado.TabIndex = 5
         '
