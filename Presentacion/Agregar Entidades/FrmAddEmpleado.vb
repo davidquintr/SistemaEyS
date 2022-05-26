@@ -237,7 +237,6 @@ Public Class FrmAddEmpleado
         btnGuardar.Enabled = True
         btnDarDeBaja.Enabled = False
         btnEditar.Enabled = False
-
         txtCedula.Text = ""
         txtNombre.Text = ""
         txtApellidos.Text = ""
@@ -249,11 +248,9 @@ Public Class FrmAddEmpleado
         rtxtDireccion.Text = ""
         rtxtObservacion.Text = ""
     End Sub
-
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If (MessageBox.Show("¿Deseas guardar el nuevo empleado?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
             EnviarDatos(0)
         End If
     End Sub
-
 End Class
