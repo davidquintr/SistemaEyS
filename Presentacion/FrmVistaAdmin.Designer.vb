@@ -79,6 +79,9 @@ Partial Class FrmVistaAdmin
         Me.BDSistemaEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_VistaAdminTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -191,6 +194,7 @@ Partial Class FrmVistaAdmin
         '
         'ReportePersonalizadoToolStripMenuItem
         '
+        Me.ReportePersonalizadoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadoToolStripMenuItem2, Me.CargoToolStripMenuItem2, Me.DepartamentoToolStripMenuItem2})
         Me.ReportePersonalizadoToolStripMenuItem.Name = "ReportePersonalizadoToolStripMenuItem"
         Me.ReportePersonalizadoToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReportePersonalizadoToolStripMenuItem.Text = "Reporte personalizado"
@@ -480,6 +484,24 @@ Partial Class FrmVistaAdmin
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 1000
         '
+        'EmpleadoToolStripMenuItem2
+        '
+        Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
+        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
+        '
+        'CargoToolStripMenuItem2
+        '
+        Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
+        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.CargoToolStripMenuItem2.Text = "Cargo"
+        '
+        'DepartamentoToolStripMenuItem2
+        '
+        Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
+        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
+        '
         'FrmVistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -567,4 +589,7 @@ Partial Class FrmVistaAdmin
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents EmpleadoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents CargoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents DepartamentoToolStripMenuItem2 As ToolStripMenuItem
 End Class

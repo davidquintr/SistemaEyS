@@ -256,4 +256,7 @@
         RefrescarGraficos()
     End Sub
 
+    Private Sub EmpleadoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem2.Click
+        frmViewEmpleado.Show()
+    End Sub
 End Class
