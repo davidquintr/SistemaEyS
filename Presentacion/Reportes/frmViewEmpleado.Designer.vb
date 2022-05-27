@@ -22,30 +22,29 @@ Partial Class frmViewEmpleado
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.rptEmpleado = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.rptEmp = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.SuspendLayout()
         '
-        'rptEmpleado
+        'rptEmp
         '
-        Me.rptEmpleado.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rptEmpleado.LocalReport.ReportEmbeddedResource = "SistemaEyS.rptDepartamento.rdlc"
-        Me.rptEmpleado.Location = New System.Drawing.Point(0, 0)
-        Me.rptEmpleado.Name = "rptEmpleado"
-        Me.rptEmpleado.ServerReport.BearerToken = Nothing
-        Me.rptEmpleado.Size = New System.Drawing.Size(800, 450)
-        Me.rptEmpleado.TabIndex = 0
+        Me.rptEmp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rptEmp.Location = New System.Drawing.Point(0, 0)
+        Me.rptEmp.Name = "rptEmp"
+        Me.rptEmp.ServerReport.BearerToken = Nothing
+        Me.rptEmp.Size = New System.Drawing.Size(800, 450)
+        Me.rptEmp.TabIndex = 0
         '
         'frmViewEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.rptEmpleado)
+        Me.Controls.Add(Me.rptEmp)
         Me.Name = "frmViewEmpleado"
         Me.Text = "frmViewEmpleado"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents rptEmpleado As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents rptEmp As Microsoft.Reporting.WinForms.ReportViewer
 End Class

@@ -235,6 +235,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Presentacion\Modulo\ConfiguracionesRepotes.vb" />
     <Compile Include="Presentacion\Reportes\frmViewEmpleado.Designer.vb">
       <DependentUpon>frmViewEmpleado.vb</DependentUpon>
     </Compile>

@@ -1,5 +1,8 @@
 ﻿Public Class FrmVistaAdmin
 
+    Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
+    Dim tblEmp As New BDSistemaEySDataSet.tbl_EmpleadoDataTable
+
     Private GR As Graphics = Me.CreateGraphics
 
     'declaramos la constante de PI
@@ -257,6 +260,7 @@
     End Sub
 
     Private Sub EmpleadoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem2.Click
-        frmViewEmpleado.Show()
+        emp.Fill(tblEmp)
+        VerReporte(tblEmp, "DsEmp", ".Reportes\rptEmpleado.rdlc")
     End Sub
 End Class
