@@ -2,14 +2,15 @@
 Module ConfiguracionesRepotes
 
 
-    Sub VerReporte(ByVal tbl As DataTable, ByVal nombreDs As String, ByVal nombreRpt As String)
+    Sub VerReporteEmp(ByVal tbl As DataTable, ByVal nombreDs As String, ByVal nombreRpt As String)
+
         Try
             Dim rpt As New ReportDataSource(nombreDs, tbl)
             With frmViewEmpleado
-                .rptEmp.LocalReport.DataSources.Clear()
-                .rptEmp.LocalReport.DataSources.Add(rpt)
-                .rptEmp.LocalReport.ReportPath = nombreRpt
-                .rptEmp.Refresh()
+                .ReportViewer1.LocalReport.DataSources.Clear()
+                .ReportViewer1.LocalReport.DataSources.Add(rpt)
+                .ReportViewer1.LocalReport.ReportPath = nombreRpt
+                .ReportViewer1.Refresh()
                 .Show()
             End With
         Catch ex As Exception
@@ -17,5 +18,6 @@ Module ConfiguracionesRepotes
         End Try
 
     End Sub
+
 
 End Module

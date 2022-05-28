@@ -261,6 +261,6 @@
 
     Private Sub EmpleadoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem2.Click
         emp.Fill(tblEmp)
-        VerReporte(tblEmp, "DsEmp", ".Reportes\rptEmpleado.rdlc")
+        VerReporteEmp(tblEmp, "dtEmpleado", ".\Reportes\rptEmpleado.rdlc")
     End Sub
 End Class
