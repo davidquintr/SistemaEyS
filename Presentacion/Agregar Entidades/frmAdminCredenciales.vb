@@ -47,6 +47,7 @@
         mode = 1
         btnEditar.Visible = True
         btnEliminar.Visible = True
+        btnGuardar.Visible = False
         Me.idUser = idUser
         MostrarDatos()
     End Sub

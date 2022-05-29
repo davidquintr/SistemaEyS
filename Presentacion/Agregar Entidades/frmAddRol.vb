@@ -15,6 +15,7 @@
     Public Sub CambiarModo(idRol As Integer)
         modo = 1
         btnEliminar.Visible = True
+        btnEditar.Visible = True
         GroupBox1.Text = "Administrar Rol"
         Rol.Fill(tblRol)
         Me.idRol = idRol

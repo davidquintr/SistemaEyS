@@ -66,8 +66,8 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.94735!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.30794!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.538087!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.61426!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.06321!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.19878!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.6572!))
         Me.TableLayoutPanel1.Controls.Add(Me.cbEmpleado, 4, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.cbRol, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 3, 0)
@@ -96,10 +96,10 @@ Partial Class frmAdminCredenciales
         Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEmpleado.FormattingEnabled = True
         Me.cbEmpleado.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbEmpleado.Location = New System.Drawing.Point(330, 2)
+        Me.cbEmpleado.Location = New System.Drawing.Point(333, 2)
         Me.cbEmpleado.Margin = New System.Windows.Forms.Padding(2)
         Me.cbEmpleado.Name = "cbEmpleado"
-        Me.cbEmpleado.Size = New System.Drawing.Size(160, 23)
+        Me.cbEmpleado.Size = New System.Drawing.Size(158, 23)
         Me.cbEmpleado.TabIndex = 8
         '
         'cbRol
@@ -107,10 +107,10 @@ Partial Class frmAdminCredenciales
         Me.cbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRol.FormattingEnabled = True
         Me.cbRol.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbRol.Location = New System.Drawing.Point(330, 38)
+        Me.cbRol.Location = New System.Drawing.Point(333, 38)
         Me.cbRol.Margin = New System.Windows.Forms.Padding(2)
         Me.cbRol.Name = "cbRol"
-        Me.cbRol.Size = New System.Drawing.Size(160, 23)
+        Me.cbRol.Size = New System.Drawing.Size(158, 23)
         Me.cbRol.TabIndex = 7
         '
         'Label6
@@ -119,7 +119,7 @@ Partial Class frmAdminCredenciales
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(265, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 30)
+        Me.Label6.Size = New System.Drawing.Size(63, 15)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Empleado:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

@@ -92,6 +92,7 @@ Partial Class frmAddRol
         Me.btnEditar.TabIndex = 32
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.Visible = False
         '
         'btnLimpiar
         '

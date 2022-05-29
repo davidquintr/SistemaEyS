@@ -48,10 +48,9 @@ Partial Class Form1
         '
         UsernameLabel.AutoSize = True
         UsernameLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        UsernameLabel.Location = New System.Drawing.Point(4, 0)
-        UsernameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        UsernameLabel.Location = New System.Drawing.Point(3, 0)
         UsernameLabel.Name = "UsernameLabel"
-        UsernameLabel.Size = New System.Drawing.Size(164, 23)
+        UsernameLabel.Size = New System.Drawing.Size(128, 17)
         UsernameLabel.TabIndex = 8
         UsernameLabel.Text = "Nombre de Usuario:"
         '
@@ -59,10 +58,9 @@ Partial Class Form1
         '
         PasswordLabel.AutoSize = True
         PasswordLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PasswordLabel.Location = New System.Drawing.Point(4, 41)
-        PasswordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        PasswordLabel.Location = New System.Drawing.Point(3, 33)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(101, 23)
+        PasswordLabel.Size = New System.Drawing.Size(77, 17)
         PasswordLabel.TabIndex = 9
         PasswordLabel.Text = "Contraseña:"
         AddHandler PasswordLabel.Click, AddressOf Me.PasswordLabel_Click
@@ -72,30 +70,27 @@ Partial Class Form1
         Me.lbInicioSesion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbInicioSesion.ForeColor = System.Drawing.Color.Black
         Me.lbInicioSesion.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.lbInicioSesion.Location = New System.Drawing.Point(16, 11)
-        Me.lbInicioSesion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbInicioSesion.Location = New System.Drawing.Point(12, 9)
         Me.lbInicioSesion.Name = "lbInicioSesion"
-        Me.lbInicioSesion.Size = New System.Drawing.Size(556, 25)
-        Me.lbInicioSesion.TabIndex = 0
+        Me.lbInicioSesion.Size = New System.Drawing.Size(357, 20)
+        Me.lbInicioSesion.TabIndex = 1
         Me.lbInicioSesion.Text = "Inicio de sesión"
         Me.lbInicioSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnIng
         '
-        Me.btnIng.Location = New System.Drawing.Point(174, 4)
-        Me.btnIng.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnIng.Location = New System.Drawing.Point(131, 3)
         Me.btnIng.Name = "btnIng"
-        Me.btnIng.Size = New System.Drawing.Size(147, 31)
+        Me.btnIng.Size = New System.Drawing.Size(110, 25)
         Me.btnIng.TabIndex = 5
         Me.btnIng.Text = "Iniciar sesión"
         Me.btnIng.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(329, 4)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(247, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 31)
+        Me.Button1.Size = New System.Drawing.Size(110, 25)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Cerrar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -109,10 +104,9 @@ Partial Class Form1
         Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnIng)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(16, 150)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 122)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(480, 40)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(360, 32)
         Me.FlowLayoutPanel1.TabIndex = 7
         '
         'BDSistemaEySDataSet
@@ -148,20 +142,18 @@ Partial Class Form1
         'UsernameTextBox
         '
         Me.UsernameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_UsuarioBindingSource, "username", True))
-        Me.UsernameTextBox.Location = New System.Drawing.Point(184, 4)
-        Me.UsernameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(138, 3)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(203, 22)
-        Me.UsernameTextBox.TabIndex = 9
+        Me.UsernameTextBox.Size = New System.Drawing.Size(153, 20)
+        Me.UsernameTextBox.TabIndex = 0
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Tbl_UsuarioBindingSource, "password", True))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(184, 45)
-        Me.PasswordTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(138, 36)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(203, 22)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(153, 20)
         Me.PasswordTextBox.TabIndex = 10
         '
         'TableLayoutPanel1
@@ -173,26 +165,24 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(PasswordLabel, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(UsernameLabel, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.UsernameTextBox, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(77, 49)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(58, 40)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(417, 82)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(313, 67)
         Me.TableLayoutPanel1.TabIndex = 11
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(512, 203)
+        Me.ClientSize = New System.Drawing.Size(384, 165)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.lbInicioSesion)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
