@@ -6,6 +6,10 @@
     Dim Dept As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
     Dim tblDept As New BDSistemaEySDataSet.tbl_DepartamentoDataTable
 
+    Dim Carg As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
+    Dim tblCarg As New BDSistemaEySDataSet.tbl_CargoDataTable
+
+
     Private GR As Graphics = Me.CreateGraphics
 
     'declaramos la constante de PI
@@ -269,6 +273,11 @@
 
     Private Sub DepartamentoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem2.Click
         Dept.Fill(tblDept)
-        VerReporteDept(tblDept, "dtDepartamento", ".\Reportes\rptDepartamento.rdlc")
+        VerReporteDept(tblDept, "dsDepartamento", ".\Reportes\rptDepartamento.rdlc")
+    End Sub
+
+    Private Sub CargoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles CargoToolStripMenuItem2.Click
+        Carg.Fill(tblCarg)
+        VerReporteCargo(tblCarg, "dsCargo", ".\Reportes\rptCargo.rdlc")
     End Sub
 End Class

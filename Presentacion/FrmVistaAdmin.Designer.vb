@@ -37,7 +37,6 @@ Partial Class FrmVistaAdmin
         Me.ParámetrosGeneralesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VistaPersonalizadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportePersonalizadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
@@ -181,16 +180,10 @@ Partial Class FrmVistaAdmin
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VistaPersonalizadaToolStripMenuItem, Me.ReportePersonalizadoToolStripMenuItem, Me.ReporteGeneralToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePersonalizadoToolStripMenuItem, Me.ReporteGeneralToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
-        '
-        'VistaPersonalizadaToolStripMenuItem
-        '
-        Me.VistaPersonalizadaToolStripMenuItem.Name = "VistaPersonalizadaToolStripMenuItem"
-        Me.VistaPersonalizadaToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.VistaPersonalizadaToolStripMenuItem.Text = "Vista personalizada"
         '
         'ReportePersonalizadoToolStripMenuItem
         '
@@ -543,7 +536,6 @@ Partial Class FrmVistaAdmin
     Friend WithEvents ListarEntidadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ParámetrosGeneralesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VistaPersonalizadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportePersonalizadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteGeneralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InstructivoToolStripMenuItem As ToolStripMenuItem

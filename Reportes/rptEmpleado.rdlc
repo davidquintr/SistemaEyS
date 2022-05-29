@@ -68,9 +68,8 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Left>0.01042in</Left>
         <Height>0.67708in</Height>
-        <Width>8.23525in</Width>
+        <Width>8.36025in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -166,7 +165,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1504,7 +1502,7 @@
         <DataSetName>dtEmpleado</DataSetName>
         <Top>0.81125in</Top>
         <Left>2.00917in</Left>
-        <Height>3.50347in</Height>
+        <Height>3.5035in</Height>
         <Width>3.89583in</Width>
         <ZIndex>2</ZIndex>
         <Style>
@@ -1516,12 +1514,12 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>5.06125in</Height>
+    <Height>5.06126in</Height>
     <Style>
       <BackgroundColor>DimGray</BackgroundColor>
     </Style>
   </Body>
-  <Width>8.24567in</Width>
+  <Width>8.36025in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

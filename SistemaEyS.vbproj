@@ -78,6 +78,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -157,6 +158,12 @@
       <DependentUpon>frmEstablecerHorarios.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmEstablecerHorarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmViewCargo.Designer.vb">
+      <DependentUpon>frmViewCargo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmViewCargo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmViewDepartamento.Designer.vb">
@@ -273,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmEstablecerHorarios.resx">
       <DependentUpon>frmEstablecerHorarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmViewCargo.resx">
+      <DependentUpon>frmViewCargo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmViewDepartamento.resx">
       <DependentUpon>frmViewDepartamento.vb</DependentUpon>
