@@ -102,4 +102,12 @@
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        txtID.Text = ""
+        txtNombre.Text = ""
+        txtEmail.Text = ""
+        txtExt.Text = ""
+        rtxtDesc.Text = ""
+    End Sub
 End Class

@@ -58,14 +58,14 @@ Partial Class FrmAddEmpleado
         Me.Label14 = New System.Windows.Forms.Label()
         Me.dtpNac = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.panelSexo = New System.Windows.Forms.FlowLayoutPanel()
         Me.cbUsuario = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.gbAll.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.FlowLayoutPanel2.SuspendLayout()
+        Me.panelSexo.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -407,7 +407,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.Controls.Add(Me.rtxtObservacion, 1, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.Label10, 0, 4)
         Me.TableLayoutPanel2.Controls.Add(Me.Label8, 0, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.FlowLayoutPanel2, 1, 3)
+        Me.TableLayoutPanel2.Controls.Add(Me.panelSexo, 1, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.dtpFechaIngreso, 1, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.cbUsuario, 1, 6)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(286, 27)
@@ -454,16 +454,16 @@ Partial Class FrmAddEmpleado
         Me.Label13.Text = "Fecha de ingreso:"
         Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'FlowLayoutPanel2
+        'panelSexo
         '
-        Me.FlowLayoutPanel2.Controls.Add(Me.rbFemenino)
-        Me.FlowLayoutPanel2.Controls.Add(Me.rbMasculino)
-        Me.FlowLayoutPanel2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(131, 83)
-        Me.FlowLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(196, 22)
-        Me.FlowLayoutPanel2.TabIndex = 13
+        Me.panelSexo.Controls.Add(Me.rbFemenino)
+        Me.panelSexo.Controls.Add(Me.rbMasculino)
+        Me.panelSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panelSexo.Location = New System.Drawing.Point(131, 83)
+        Me.panelSexo.Margin = New System.Windows.Forms.Padding(2)
+        Me.panelSexo.Name = "panelSexo"
+        Me.panelSexo.Size = New System.Drawing.Size(196, 22)
+        Me.panelSexo.TabIndex = 13
         '
         'cbUsuario
         '
@@ -534,7 +534,7 @@ Partial Class FrmAddEmpleado
         Me.gbAll.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
-        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.panelSexo.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
@@ -574,7 +574,7 @@ Partial Class FrmAddEmpleado
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents dtpNac As DateTimePicker
     Friend WithEvents Label13 As Label
-    Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+    Friend WithEvents panelSexo As FlowLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents btnEditar As Button
     Friend WithEvents DgvEmpleado As DataGridView

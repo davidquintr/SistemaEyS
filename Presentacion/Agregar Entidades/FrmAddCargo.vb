@@ -118,4 +118,10 @@
     Private Sub btnHorario_Click(sender As Object, e As EventArgs) Handles btnHorario.Click
         frmEstablecerHorarios.Show()
     End Sub
+
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        txbID.Text = ""
+        txbNombre.Text = ""
+        rtxtDesc.Text = ""
+    End Sub
 End Class

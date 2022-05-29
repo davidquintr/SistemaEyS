@@ -39,6 +39,9 @@ Partial Class FrmVistaAdmin
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VistaPersonalizadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportePersonalizadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteGeneralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeguridadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AñadirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,9 +82,6 @@ Partial Class FrmVistaAdmin
         Me.BDSistemaEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_VistaAdminTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,6 +198,24 @@ Partial Class FrmVistaAdmin
         Me.ReportePersonalizadoToolStripMenuItem.Name = "ReportePersonalizadoToolStripMenuItem"
         Me.ReportePersonalizadoToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
         Me.ReportePersonalizadoToolStripMenuItem.Text = "Reporte personalizado"
+        '
+        'EmpleadoToolStripMenuItem2
+        '
+        Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
+        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
+        '
+        'CargoToolStripMenuItem2
+        '
+        Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
+        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.CargoToolStripMenuItem2.Text = "Cargo"
+        '
+        'DepartamentoToolStripMenuItem2
+        '
+        Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
+        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
         '
         'ReporteGeneralToolStripMenuItem
         '
@@ -483,24 +501,6 @@ Partial Class FrmVistaAdmin
         '
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 1000
-        '
-        'EmpleadoToolStripMenuItem2
-        '
-        Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
-        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
-        Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
-        '
-        'CargoToolStripMenuItem2
-        '
-        Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
-        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
-        Me.CargoToolStripMenuItem2.Text = "Cargo"
-        '
-        'DepartamentoToolStripMenuItem2
-        '
-        Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
-        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
-        Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
         '
         'FrmVistaAdmin
         '

@@ -3,6 +3,9 @@
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Dim tblEmp As New BDSistemaEySDataSet.tbl_EmpleadoDataTable
 
+    Dim Dept As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
+    Dim tblDept As New BDSistemaEySDataSet.tbl_DepartamentoDataTable
+
     Private GR As Graphics = Me.CreateGraphics
 
     'declaramos la constante de PI
@@ -262,5 +265,10 @@
     Private Sub EmpleadoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EmpleadoToolStripMenuItem2.Click
         emp.Fill(tblEmp)
         VerReporteEmp(tblEmp, "dtEmpleado", ".\Reportes\rptEmpleado.rdlc")
+    End Sub
+
+    Private Sub DepartamentoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DepartamentoToolStripMenuItem2.Click
+        Dept.Fill(tblDept)
+        VerReporteDept(tblDept, "dtDepartamento", ".\Reportes\rptDepartamento.rdlc")
     End Sub
 End Class

@@ -159,6 +159,12 @@
     <Compile Include="Presentacion\frmEstablecerHorarios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmViewDepartamento.Designer.vb">
+      <DependentUpon>frmViewDepartamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmViewDepartamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\Listar Entidades\frmListarCargo.Designer.vb">
       <DependentUpon>frmListarCargo.vb</DependentUpon>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmEstablecerHorarios.resx">
       <DependentUpon>frmEstablecerHorarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmViewDepartamento.resx">
+      <DependentUpon>frmViewDepartamento.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Listar Entidades\frmListarCargo.resx">
       <DependentUpon>frmListarCargo.vb</DependentUpon>

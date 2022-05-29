@@ -3,6 +3,9 @@
     Dim viewEmp As New BDSistemaEySDataSetTableAdapters.Vw_ListEmpTableAdapter
     Dim tblViewEmp As New BDSistemaEySDataSet.Vw_ListEmpDataTable
 
+    Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
+    Dim tblEmp As New BDSistemaEySDataSet.tbl_EmpleadoDataTable
+
     Dim fila As Integer = 0
     Dim cantEmp As Int32
 
@@ -102,5 +105,10 @@
     Private Sub btnAdministrar_Click(sender As Object, e As EventArgs) Handles btnAdministrar.Click
         FrmAddEmpleado.Show()
         FrmAddEmpleado.CambiarModo(fila)
+    End Sub
+
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        emp.Fill(tblEmp)
+        VerReporteEmp(tblEmp, "dtEmpleado", ".\Reportes\rptEmpleado.rdlc")
     End Sub
 End Class
