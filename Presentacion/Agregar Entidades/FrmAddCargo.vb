@@ -26,7 +26,6 @@
 
     Private Sub ColocarDatos()
         Try
-            txbID.Text = tblViewCar.Rows(idCargo).Item(0)
             txbNombre.Text = tblViewCar.Rows(idCargo).Item(1)
             rtxtDesc.Text = tblViewCar.Rows(idCargo).Item(3)
 
@@ -104,7 +103,7 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
-        Dim id As Integer = CInt(txbID.Text.Trim)
+        Dim id As Integer
         Dim nombre As String = txbNombre.Text.Trim
         Dim departamento As Integer = CInt(cbDep.SelectedValue)
         Dim desc As String = rtxtDesc.Text.Trim
@@ -120,8 +119,9 @@
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        txbID.Text = ""
+
         txbNombre.Text = ""
         rtxtDesc.Text = ""
     End Sub
+
 End Class

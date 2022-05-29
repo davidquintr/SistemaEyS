@@ -30,10 +30,8 @@ Partial Class frmAddRol
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txbNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txbID = New System.Windows.Forms.TextBox()
         Me.DgvRol = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -120,37 +118,23 @@ Partial Class frmAddRol
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.24294!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.75706!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.txbNombre, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.txbID, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txbNombre, 1, 0)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(343, 54)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(343, 32)
         Me.TableLayoutPanel1.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txbNombre
         '
         Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(144, 30)
+        Me.txbNombre.Location = New System.Drawing.Point(144, 3)
         Me.txbNombre.Name = "txbNombre"
         Me.txbNombre.Size = New System.Drawing.Size(196, 23)
         Me.txbNombre.TabIndex = 3
@@ -159,29 +143,21 @@ Partial Class frmAddRol
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 27)
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(54, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txbID
-        '
-        Me.txbID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbID.Location = New System.Drawing.Point(144, 3)
-        Me.txbID.Name = "txbID"
-        Me.txbID.Size = New System.Drawing.Size(196, 23)
-        Me.txbID.TabIndex = 1
-        '
         'DgvRol
         '
         Me.DgvRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvRol.Location = New System.Drawing.Point(12, 96)
+        Me.DgvRol.Location = New System.Drawing.Point(12, 74)
         Me.DgvRol.Name = "DgvRol"
         Me.DgvRol.RowHeadersWidth = 51
         Me.DgvRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvRol.Size = New System.Drawing.Size(400, 125)
+        Me.DgvRol.Size = New System.Drawing.Size(400, 147)
         Me.DgvRol.TabIndex = 5
         '
         'frmAddRol
@@ -212,8 +188,6 @@ Partial Class frmAddRol
     Friend WithEvents btnEliminar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txbID As TextBox
     Friend WithEvents txbNombre As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents DgvRol As DataGridView

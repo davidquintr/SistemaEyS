@@ -24,8 +24,6 @@ Partial Class FrmAddCargo
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txbID = New System.Windows.Forms.TextBox()
         Me.txbNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -38,8 +36,8 @@ Partial Class FrmAddCargo
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnHorario = New System.Windows.Forms.Button()
-        Me.dgvCargos = New System.Windows.Forms.DataGridView()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.dgvCargos = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -64,14 +62,12 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.46471!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.96558!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.60413!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.txbID, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.txbNombre, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.rtxtDesc, 3, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.cbDep, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txbNombre, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 2, 1)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(13, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -81,29 +77,10 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(461, 64)
         Me.TableLayoutPanel1.TabIndex = 3
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txbID
-        '
-        Me.txbID.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbID.Location = New System.Drawing.Point(95, 3)
-        Me.txbID.Name = "txbID"
-        Me.txbID.Size = New System.Drawing.Size(127, 23)
-        Me.txbID.TabIndex = 1
-        '
         'txbNombre
         '
         Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(95, 35)
+        Me.txbNombre.Location = New System.Drawing.Point(95, 3)
         Me.txbNombre.Name = "txbNombre"
         Me.txbNombre.Size = New System.Drawing.Size(127, 23)
         Me.txbNombre.TabIndex = 3
@@ -112,7 +89,7 @@ Partial Class FrmAddCargo
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 32)
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(54, 15)
         Me.Label2.TabIndex = 2
@@ -223,6 +200,15 @@ Partial Class FrmAddCargo
         Me.btnHorario.Text = "Horario"
         Me.btnHorario.UseVisualStyleBackColor = True
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(8, 3)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
+        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'dgvCargos
         '
         Me.dgvCargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -232,15 +218,6 @@ Partial Class FrmAddCargo
         Me.dgvCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvCargos.Size = New System.Drawing.Size(479, 150)
         Me.dgvCargos.TabIndex = 3
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Location = New System.Drawing.Point(8, 3)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
-        Me.btnLimpiar.TabIndex = 15
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'FrmAddCargo
         '
@@ -265,7 +242,6 @@ Partial Class FrmAddCargo
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txbID As TextBox
     Friend WithEvents rtxtDesc As RichTextBox
     Friend WithEvents txbNombre As TextBox
     Friend WithEvents btnCerrar As Button
@@ -275,7 +251,6 @@ Partial Class FrmAddCargo
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnHorario As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label12 As Label

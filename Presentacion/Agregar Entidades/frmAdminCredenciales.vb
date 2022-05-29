@@ -18,6 +18,7 @@
         DgvCredenciales.Refresh()
         DgvCredenciales.Columns(0).Visible = False
     End Sub
+
     Sub llenarRol()
 
         cbRol.DataSource = Rol.GetData()
@@ -54,7 +55,6 @@
         Try
 
             vwUsr.Fill(tblVwUsr)
-            txtID.Text = tblVwUsr.Rows(idUser).Item(0)
             txtNombre.Text = tblVwUsr.Rows(idUser).Item(1)
             txtPass.Text = tblVwUsr.Rows(idUser).Item(2)
 
@@ -64,8 +64,6 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-
-
 
         Dim UserName As String = txtNombre.Text.Trim
         Dim Pass As String = txtPass.Text.Trim
@@ -116,7 +114,7 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
-        Dim id As Integer = CInt(txtID.Text.Trim)
+        Dim id As Integer
         Dim usernName As String = txtNombre.Text.Trim
         Dim pass As String = txtPass.Text.Trim
         Dim rol As Integer = CInt(cbRol.SelectedValue)
@@ -128,9 +126,24 @@
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        txtID.Text = ""
+
         txtNombre.Text = ""
         txtPass.Text = ""
         txtPassConfirm.Text = ""
+    End Sub
+    Private Sub btnCon_MouseDown(sender As Object, e As MouseEventArgs) Handles btnCon.MouseDown
+        txtPass.PasswordChar = ""
+    End Sub
+
+    Private Sub btnCon_MouseUp(sender As Object, e As MouseEventArgs) Handles btnCon.MouseUp
+        txtPass.PasswordChar = "*"
+    End Sub
+
+    Private Sub btnConCon_MouseDown(sender As Object, e As MouseEventArgs) Handles btnConCon.MouseDown
+        txtPassConfirm.PasswordChar = ""
+    End Sub
+
+    Private Sub btnConCon_MouseUp(sender As Object, e As MouseEventArgs) Handles btnConCon.MouseUp
+        txtPassConfirm.PasswordChar = "*"
     End Sub
 End Class

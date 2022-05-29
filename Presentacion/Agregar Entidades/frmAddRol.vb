@@ -26,7 +26,6 @@
     End Sub
 
     Private Sub OrdenarDatos()
-        txbID.Text = tblRol.Rows(Me.idRol).Item(0)
         txbNombre.Text = tblRol.Rows(Me.idRol).Item(1)
     End Sub
 
@@ -65,7 +64,6 @@
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        txbID.Text = ""
         txbNombre.Text = ""
     End Sub
 
@@ -83,7 +81,7 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
-        Dim id As Integer = CInt(txbID.Text.Trim)
+        Dim id As Integer
         Dim nombre As String = txbNombre.Text.Trim
 
         Rol.RegistroRolAct(nombre, 1, idRol, id)

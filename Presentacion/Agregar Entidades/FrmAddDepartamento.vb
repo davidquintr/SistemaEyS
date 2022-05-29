@@ -60,7 +60,6 @@
 
     Private Sub OrdenaDatos()
         Try
-            txtID.Text = tblDept.Rows(idDept).Item(0)
             txtNombre.Text = tblDept.Rows(idDept).Item(1)
             txtEmail.Text = tblDept.Rows(idDept).Item(3)
             txtExt.Text = tblDept.Rows(idDept).Item(2)
@@ -72,7 +71,7 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
-        Dim id As Integer = CInt(txtID.Text.Trim)
+        Dim id As Integer
         Dim nombre As String = txtNombre.Text.Trim
         Dim email As String = txtEmail.Text.Trim
         Dim ext As String = txtExt.Text.Trim
@@ -104,10 +103,11 @@
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-        txtID.Text = ""
+
         txtNombre.Text = ""
         txtEmail.Text = ""
         txtExt.Text = ""
         rtxtDesc.Text = ""
     End Sub
+
 End Class

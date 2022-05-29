@@ -250,19 +250,16 @@ Partial Class FrmAddEmpleado
         Me.rbMasculino.Name = "rbMasculino"
         Me.rbMasculino.Size = New System.Drawing.Size(89, 25)
         Me.rbMasculino.TabIndex = 7
-        Me.rbMasculino.TabStop = True
         Me.rbMasculino.Text = "Masculino"
         Me.rbMasculino.UseVisualStyleBackColor = True
         '
         'rbFemenino
         '
-        Me.rbFemenino.Checked = True
         Me.rbFemenino.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbFemenino.Location = New System.Drawing.Point(3, 3)
         Me.rbFemenino.Name = "rbFemenino"
         Me.rbFemenino.Size = New System.Drawing.Size(89, 25)
         Me.rbFemenino.TabIndex = 8
-        Me.rbFemenino.TabStop = True
         Me.rbFemenino.Text = "Femenino"
         Me.rbFemenino.UseVisualStyleBackColor = True
         '
