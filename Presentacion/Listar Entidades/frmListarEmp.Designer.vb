@@ -60,7 +60,6 @@ Partial Class frmListarEmp
         Me.lbCantEmp = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.btnReporte = New System.Windows.Forms.Button()
         Me.btnAdministrar = New System.Windows.Forms.Button()
         Me.btnOpExtra = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
@@ -516,7 +515,6 @@ Partial Class frmListarEmp
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnReporte)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnAdministrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOpExtra)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
@@ -534,18 +532,9 @@ Partial Class frmListarEmp
         Me.btnCerrar.Text = " Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'btnReporte
-        '
-        Me.btnReporte.Location = New System.Drawing.Point(235, 3)
-        Me.btnReporte.Name = "btnReporte"
-        Me.btnReporte.Size = New System.Drawing.Size(90, 23)
-        Me.btnReporte.TabIndex = 36
-        Me.btnReporte.Text = "Generar reporte"
-        Me.btnReporte.UseVisualStyleBackColor = True
-        '
         'btnAdministrar
         '
-        Me.btnAdministrar.Location = New System.Drawing.Point(139, 3)
+        Me.btnAdministrar.Location = New System.Drawing.Point(235, 3)
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(90, 23)
         Me.btnAdministrar.TabIndex = 35
@@ -554,7 +543,7 @@ Partial Class frmListarEmp
         '
         'btnOpExtra
         '
-        Me.btnOpExtra.Location = New System.Drawing.Point(43, 3)
+        Me.btnOpExtra.Location = New System.Drawing.Point(139, 3)
         Me.btnOpExtra.Name = "btnOpExtra"
         Me.btnOpExtra.Size = New System.Drawing.Size(90, 23)
         Me.btnOpExtra.TabIndex = 34
@@ -622,7 +611,6 @@ Partial Class frmListarEmp
     Friend WithEvents lbCantEmp As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnReporte As Button
     Friend WithEvents btnAdministrar As Button
     Friend WithEvents btnOpExtra As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel

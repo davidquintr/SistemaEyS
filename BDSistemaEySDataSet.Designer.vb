@@ -2358,6 +2358,8 @@ Partial Public Class BDSistemaEySDataSet
         
         Private columnidEmpleado As Global.System.Data.DataColumn
         
+        Private columntipoEvento As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -2450,6 +2452,14 @@ Partial Public Class BDSistemaEySDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property tipoEventoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntipoEvento
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2486,9 +2496,9 @@ Partial Public Class BDSistemaEySDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function Addtbl_EventoRow(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal parenttbl_EmpleadoRowByReftbl_Empleado51 As tbl_EmpleadoRow) As tbl_EventoRow
+        Public Overloads Function Addtbl_EventoRow(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal parenttbl_EmpleadoRowByReftbl_Empleado51 As tbl_EmpleadoRow, ByVal tipoEvento As String) As tbl_EventoRow
             Dim rowtbl_EventoRow As tbl_EventoRow = CType(Me.NewRow,tbl_EventoRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, fechaInicio, fechaFin, razon, descripcion, estado, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, fechaInicio, fechaFin, razon, descripcion, estado, Nothing, tipoEvento}
             If (Not (parenttbl_EmpleadoRowByReftbl_Empleado51) Is Nothing) Then
                 columnValuesArray(6) = parenttbl_EmpleadoRowByReftbl_Empleado51(0)
             End If
@@ -2527,6 +2537,7 @@ Partial Public Class BDSistemaEySDataSet
             Me.columndescripcion = MyBase.Columns("descripcion")
             Me.columnestado = MyBase.Columns("estado")
             Me.columnidEmpleado = MyBase.Columns("idEmpleado")
+            Me.columntipoEvento = MyBase.Columns("tipoEvento")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2546,6 +2557,8 @@ Partial Public Class BDSistemaEySDataSet
             MyBase.Columns.Add(Me.columnestado)
             Me.columnidEmpleado = New Global.System.Data.DataColumn("idEmpleado", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidEmpleado)
+            Me.columntipoEvento = New Global.System.Data.DataColumn("tipoEvento", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntipoEvento)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidEvento}, true))
             Me.columnidEvento.AutoIncrement = true
             Me.columnidEvento.AutoIncrementSeed = -1
@@ -2561,6 +2574,8 @@ Partial Public Class BDSistemaEySDataSet
             Me.columndescripcion.MaxLength = 100
             Me.columnestado.AllowDBNull = false
             Me.columnidEmpleado.AllowDBNull = false
+            Me.columntipoEvento.AllowDBNull = false
+            Me.columntipoEvento.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6853,6 +6868,17 @@ Partial Public Class BDSistemaEySDataSet
             End Get
             Set
                 Me(Me.tabletbl_Evento.idEmpleadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property tipoEvento() As String
+            Get
+                Return CType(Me(Me.tabletbl_Evento.tipoEventoColumn),String)
+            End Get
+            Set
+                Me(Me.tabletbl_Evento.tipoEventoColumn) = value
             End Set
         End Property
         
@@ -11292,13 +11318,15 @@ Namespace BDSistemaEySDataSetTableAdapters
             tableMapping.ColumnMappings.Add("descripcion", "descripcion")
             tableMapping.ColumnMappings.Add("estado", "estado")
             tableMapping.ColumnMappings.Add("idEmpleado", "idEmpleado")
+            tableMapping.ColumnMappings.Add("tipoEvento", "tipoEvento")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_Evento] WHERE (([idEvento] = @Original_idEvento) AND ([fec"& _ 
-                "haInicio] = @Original_fechaInicio) AND ([fechaFin] = @Original_fechaFin) AND ([r"& _ 
-                "azon] = @Original_razon) AND ([descripcion] = @Original_descripcion) AND ([estad"& _ 
-                "o] = @Original_estado) AND ([idEmpleado] = @Original_idEmpleado))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [tbl_Evento] WHERE (([idEvento] = @Original_idEvento) AND ([fechaInic"& _ 
+                "io] = @Original_fechaInicio) AND ([fechaFin] = @Original_fechaFin) AND ([razon] "& _ 
+                "= @Original_razon) AND ([descripcion] = @Original_descripcion) AND ([estado] = @"& _ 
+                "Original_estado) AND ([idEmpleado] = @Original_idEmpleado) AND ([tipoEvento] = @"& _ 
+                "Original_tipoEvento))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEvento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaInicio", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -11307,12 +11335,14 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tipoEvento", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_Evento] ([fechaInicio], [fechaFin], [razon], [descripcion]"& _ 
-                ", [estado], [idEmpleado]) VALUES (@fechaInicio, @fechaFin, @razon, @descripcion,"& _ 
-                " @estado, @idEmpleado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEvento, fechaInicio, fechaFin, razon, descripc"& _ 
-                "ion, estado, idEmpleado FROM tbl_Evento WHERE (idEvento = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Evento] ([fechaInicio], [fechaFin], [razon], [descripcion], [est"& _ 
+                "ado], [idEmpleado], [tipoEvento]) VALUES (@fechaInicio, @fechaFin, @razon, @desc"& _ 
+                "ripcion, @estado, @idEmpleado, @tipoEvento);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEvento, fechaInicio, fech"& _ 
+                "aFin, razon, descripcion, estado, idEmpleado, tipoEvento FROM tbl_Evento WHERE ("& _ 
+                "idEvento = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaInicio", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaFin", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaFin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11320,16 +11350,18 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoEvento", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoEvento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_Evento] SET [fechaInicio] = @fechaInicio, [fechaFin] = @fechaFi"& _ 
-                "n, [razon] = @razon, [descripcion] = @descripcion, [estado] = @estado, [idEmplea"& _ 
-                "do] = @idEmpleado WHERE (([idEvento] = @Original_idEvento) AND ([fechaInicio] = "& _ 
-                "@Original_fechaInicio) AND ([fechaFin] = @Original_fechaFin) AND ([razon] = @Ori"& _ 
-                "ginal_razon) AND ([descripcion] = @Original_descripcion) AND ([estado] = @Origin"& _ 
-                "al_estado) AND ([idEmpleado] = @Original_idEmpleado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEvento, fechaIn"& _ 
-                "icio, fechaFin, razon, descripcion, estado, idEmpleado FROM tbl_Evento WHERE (id"& _ 
-                "Evento = @idEvento)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Evento] SET [fechaInicio] = @fechaInicio, [fechaFin] = @fechaFin, [ra"& _ 
+                "zon] = @razon, [descripcion] = @descripcion, [estado] = @estado, [idEmpleado] = "& _ 
+                "@idEmpleado, [tipoEvento] = @tipoEvento WHERE (([idEvento] = @Original_idEvento)"& _ 
+                " AND ([fechaInicio] = @Original_fechaInicio) AND ([fechaFin] = @Original_fechaFi"& _ 
+                "n) AND ([razon] = @Original_razon) AND ([descripcion] = @Original_descripcion) A"& _ 
+                "ND ([estado] = @Original_estado) AND ([idEmpleado] = @Original_idEmpleado) AND ("& _ 
+                "[tipoEvento] = @Original_tipoEvento));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEvento, fechaInicio, fechaFin, "& _ 
+                "razon, descripcion, estado, idEmpleado, tipoEvento FROM tbl_Evento WHERE (idEven"& _ 
+                "to = @idEvento)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaInicio", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaFin", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaFin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11337,6 +11369,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoEvento", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoEvento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEvento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaInicio", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_fechaFin", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaFin", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -11344,6 +11377,7 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tipoEvento", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEvento", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEvento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -11357,12 +11391,49 @@ Namespace BDSistemaEySDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT idEvento, fechaInicio, fechaFin, razon, descripcion, estado, idEmpleado FR"& _ 
-                "OM dbo.tbl_Evento"
+            Me._commandCollection(0).CommandText = "SELECT idEvento, fechaInicio, fechaFin, razon, descripcion, estado, idEmpleado, t"& _ 
+                "ipoEvento FROM tbl_Evento"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "UPDATE [tbl_Evento] SET [tipoEvento] = @tipoEvento, [fechaInicio] = @fechaInicio,"& _ 
+                " [fechaFin] = @fechaFin, [razon] = @razon, [descripcion] = @descripcion, [estado"& _ 
+                "] = @estado, [idEmpleado] = @idEmpleado WHERE (([idEvento] = @Original_idEvento)"& _ 
+                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEvento, tipoEvento, fechaInicio, fechaFin, razon, descripcion, esta"& _ 
+                "do, idEmpleado FROM tbl_Evento WHERE (idEvento = @idEvento)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoEvento", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoEvento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaInicio", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaFin", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaFin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@razon", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "razon", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEvento", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEvento", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[tbl_Evento] ([tipoEvento], [fechaInicio], [fechaFin], [razon],"& _ 
+                " [descripcion], [estado], [idEmpleado]) VALUES (@tipoEvento, @fechaInicio, @fech"& _ 
+                "aFin, @razon, @descripcion, @estado, @idEmpleado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEvento, fechaInicio"& _ 
+                ", fechaFin, razon, descripcion, estado, idEmpleado FROM tbl_Evento WHERE (idEven"& _ 
+                "to = SCOPE_IDENTITY())"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoEvento", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoEvento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaInicio", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaInicio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fechaFin", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "fechaFin", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@razon", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "razon", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "DELETE FROM [dbo].[tbl_Evento] WHERE (([idEvento] = @Original_idEvento))"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEvento", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEvento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11421,7 +11492,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_idEvento As Integer, ByVal Original_fechaInicio As Date, ByVal Original_fechaFin As Date, ByVal Original_razon As String, ByVal Original_descripcion As String, ByVal Original_estado As Integer, ByVal Original_idEmpleado As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_idEvento As Integer, ByVal Original_fechaInicio As Date, ByVal Original_fechaFin As Date, ByVal Original_razon As String, ByVal Original_descripcion As String, ByVal Original_estado As Integer, ByVal Original_idEmpleado As Integer, ByVal Original_tipoEvento As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_idEvento,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_fechaInicio,Date)
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_fechaFin,Date)
@@ -11437,6 +11508,11 @@ Namespace BDSistemaEySDataSetTableAdapters
             End If
             Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_estado,Integer)
             Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_idEmpleado,Integer)
+            If (Original_tipoEvento Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_tipoEvento")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_tipoEvento,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11456,7 +11532,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer, ByVal tipoEvento As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(fechaInicio,Date)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(fechaFin,Date)
             If (razon Is Nothing) Then
@@ -11471,6 +11547,11 @@ Namespace BDSistemaEySDataSetTableAdapters
             End If
             Me.Adapter.InsertCommand.Parameters(4).Value = CType(estado,Integer)
             Me.Adapter.InsertCommand.Parameters(5).Value = CType(idEmpleado,Integer)
+            If (tipoEvento Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tipoEvento")
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(tipoEvento,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11490,7 +11571,23 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer, ByVal Original_idEvento As Integer, ByVal Original_fechaInicio As Date, ByVal Original_fechaFin As Date, ByVal Original_razon As String, ByVal Original_descripcion As String, ByVal Original_estado As Integer, ByVal Original_idEmpleado As Integer, ByVal idEvento As Integer) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal fechaInicio As Date,  _
+                    ByVal fechaFin As Date,  _
+                    ByVal razon As String,  _
+                    ByVal descripcion As String,  _
+                    ByVal estado As Integer,  _
+                    ByVal idEmpleado As Integer,  _
+                    ByVal tipoEvento As String,  _
+                    ByVal Original_idEvento As Integer,  _
+                    ByVal Original_fechaInicio As Date,  _
+                    ByVal Original_fechaFin As Date,  _
+                    ByVal Original_razon As String,  _
+                    ByVal Original_descripcion As String,  _
+                    ByVal Original_estado As Integer,  _
+                    ByVal Original_idEmpleado As Integer,  _
+                    ByVal Original_tipoEvento As String,  _
+                    ByVal idEvento As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(fechaInicio,Date)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(fechaFin,Date)
             If (razon Is Nothing) Then
@@ -11505,22 +11602,32 @@ Namespace BDSistemaEySDataSetTableAdapters
             End If
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(estado,Integer)
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(idEmpleado,Integer)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_idEvento,Integer)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_fechaInicio,Date)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_fechaFin,Date)
+            If (tipoEvento Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tipoEvento")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(tipoEvento,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_idEvento,Integer)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_fechaInicio,Date)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_fechaFin,Date)
             If (Original_razon Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_razon")
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_razon,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_razon,String)
             End If
             If (Original_descripcion Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_descripcion")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_descripcion,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_descripcion,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_estado,Integer)
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_idEmpleado,Integer)
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(idEvento,Integer)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_estado,Integer)
+            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_idEmpleado,Integer)
+            If (Original_tipoEvento Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_tipoEvento")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_tipoEvento,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(idEvento,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -11540,8 +11647,115 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer, ByVal Original_idEvento As Integer, ByVal Original_fechaInicio As Date, ByVal Original_fechaFin As Date, ByVal Original_razon As String, ByVal Original_descripcion As String, ByVal Original_estado As Integer, ByVal Original_idEmpleado As Integer) As Integer
-            Return Me.Update(fechaInicio, fechaFin, razon, descripcion, estado, idEmpleado, Original_idEvento, Original_fechaInicio, Original_fechaFin, Original_razon, Original_descripcion, Original_estado, Original_idEmpleado, Original_idEvento)
+        Public Overloads Overridable Function Update(ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer, ByVal tipoEvento As String, ByVal Original_idEvento As Integer, ByVal Original_fechaInicio As Date, ByVal Original_fechaFin As Date, ByVal Original_razon As String, ByVal Original_descripcion As String, ByVal Original_estado As Integer, ByVal Original_idEmpleado As Integer, ByVal Original_tipoEvento As String) As Integer
+            Return Me.Update(fechaInicio, fechaFin, razon, descripcion, estado, idEmpleado, tipoEvento, Original_idEvento, Original_fechaInicio, Original_fechaFin, Original_razon, Original_descripcion, Original_estado, Original_idEmpleado, Original_tipoEvento, Original_idEvento)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function RegistroEventoAct(ByVal tipoEvento As String, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer, ByVal Original_idEvento As Integer, ByVal idEvento As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            If (tipoEvento Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tipoEvento")
+            Else
+                command.Parameters(0).Value = CType(tipoEvento,String)
+            End If
+            command.Parameters(1).Value = CType(fechaInicio,Date)
+            command.Parameters(2).Value = CType(fechaFin,Date)
+            If (razon Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("razon")
+            Else
+                command.Parameters(3).Value = CType(razon,String)
+            End If
+            If (descripcion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("descripcion")
+            Else
+                command.Parameters(4).Value = CType(descripcion,String)
+            End If
+            command.Parameters(5).Value = CType(estado,Integer)
+            command.Parameters(6).Value = CType(idEmpleado,Integer)
+            command.Parameters(7).Value = CType(Original_idEvento,Integer)
+            command.Parameters(8).Value = CType(idEvento,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function RegistroEventoAgreg(ByVal tipoEvento As String, ByVal fechaInicio As Date, ByVal fechaFin As Date, ByVal razon As String, ByVal descripcion As String, ByVal estado As Integer, ByVal idEmpleado As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            If (tipoEvento Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("tipoEvento")
+            Else
+                command.Parameters(0).Value = CType(tipoEvento,String)
+            End If
+            command.Parameters(1).Value = CType(fechaInicio,Date)
+            command.Parameters(2).Value = CType(fechaFin,Date)
+            If (razon Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("razon")
+            Else
+                command.Parameters(3).Value = CType(razon,String)
+            End If
+            If (descripcion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("descripcion")
+            Else
+                command.Parameters(4).Value = CType(descripcion,String)
+            End If
+            command.Parameters(5).Value = CType(estado,Integer)
+            command.Parameters(6).Value = CType(idEmpleado,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function RegistroEventoElim(ByVal Original_idEvento As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            command.Parameters(0).Value = CType(Original_idEvento,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

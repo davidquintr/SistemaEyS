@@ -94,7 +94,7 @@
     End Sub
 
     Private Sub btnOpExtra_Click(sender As Object, e As EventArgs) Handles btnOpExtra.Click
-
+        frmEstablecerEventos.Show()
     End Sub
 
     Private Sub cbEmpleado_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbEmpleado.SelectionChangeCommitted
@@ -107,8 +107,4 @@
         FrmAddEmpleado.CambiarModo(fila)
     End Sub
 
-    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
-        emp.Fill(tblEmp)
-        VerReporteEmp(tblEmp, "dtEmpleado", ".\Reportes\rptEmpleado.rdlc")
-    End Sub
 End Class

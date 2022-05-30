@@ -72,9 +72,11 @@
         Dim Rol As Integer = CInt(cbRol.SelectedValue)
 
         user.RegistroUserAgreg(UserName, Pass, 1, Rol)
-        llenarGrid()
+
 
         MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
+
+        llenarGrid()
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click

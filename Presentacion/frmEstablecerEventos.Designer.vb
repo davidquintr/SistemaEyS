@@ -25,19 +25,26 @@ Partial Class frmEstablecerEventos
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.rtbDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
+        Me.cbEmpleado = New System.Windows.Forms.ComboBox()
+        Me.txtEvento = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtRazon = New System.Windows.Forms.TextBox()
+        Me.dgvEventos = New System.Windows.Forms.DataGridView()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -48,10 +55,12 @@ Partial Class frmEstablecerEventos
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 222)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 480)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(561, 31)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(561, 30)
         Me.FlowLayoutPanel1.TabIndex = 5
         '
         'btnCerrar
@@ -72,6 +81,15 @@ Partial Class frmEstablecerEventos
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(327, 3)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
+        Me.btnEliminar.TabIndex = 9
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
@@ -79,30 +97,30 @@ Partial Class frmEstablecerEventos
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(561, 204)
+        Me.GroupBox1.Size = New System.Drawing.Size(561, 280)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Establecer evento con modalidad"
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.RichTextBox2)
+        Me.GroupBox2.Controls.Add(Me.rtbDescripcion)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 101)
+        Me.GroupBox2.Location = New System.Drawing.Point(7, 155)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(548, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(548, 125)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Descripción:"
         '
-        'RichTextBox2
+        'rtbDescripcion
         '
-        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox2.Location = New System.Drawing.Point(3, 21)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(542, 76)
-        Me.RichTextBox2.TabIndex = 6
-        Me.RichTextBox2.Text = ""
+        Me.rtbDescripcion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtbDescripcion.Location = New System.Drawing.Point(3, 21)
+        Me.rtbDescripcion.Name = "rtbDescripcion"
+        Me.rtbDescripcion.Size = New System.Drawing.Size(542, 101)
+        Me.rtbDescripcion.TabIndex = 6
+        Me.rtbDescripcion.Text = ""
         '
         'TableLayoutPanel1
         '
@@ -113,15 +131,20 @@ Partial Class frmEstablecerEventos
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.7321!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.ComboBox1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 2, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 26)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpFechaInicio, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.dtpFechaFinal, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.cbEmpleado, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtEvento, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtRazon, 1, 2)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(10, 47)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(548, 65)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(548, 123)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Label1
@@ -138,41 +161,83 @@ Partial Class frmEstablecerEventos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 32)
+        Me.Label2.Location = New System.Drawing.Point(3, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 19)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Fechas:"
         '
-        'ComboBox1
+        'dtpFechaInicio
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(135, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(194, 25)
-        Me.ComboBox1.TabIndex = 1
+        Me.dtpFechaInicio.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(135, 43)
+        Me.dtpFechaInicio.Name = "dtpFechaInicio"
+        Me.dtpFechaInicio.Size = New System.Drawing.Size(194, 23)
+        Me.dtpFechaInicio.TabIndex = 3
         '
-        'DateTimePicker1
+        'dtpFechaFinal
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(135, 35)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(194, 23)
-        Me.DateTimePicker1.TabIndex = 3
+        Me.dtpFechaFinal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(335, 43)
+        Me.dtpFechaFinal.Name = "dtpFechaFinal"
+        Me.dtpFechaFinal.Size = New System.Drawing.Size(200, 23)
+        Me.dtpFechaFinal.TabIndex = 4
         '
-        'DateTimePicker2
+        'cbEmpleado
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(335, 35)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 23)
-        Me.DateTimePicker2.TabIndex = 4
+        Me.cbEmpleado.FormattingEnabled = True
+        Me.cbEmpleado.Location = New System.Drawing.Point(335, 3)
+        Me.cbEmpleado.Name = "cbEmpleado"
+        Me.cbEmpleado.Size = New System.Drawing.Size(210, 25)
+        Me.cbEmpleado.TabIndex = 5
+        '
+        'txtEvento
+        '
+        Me.txtEvento.Location = New System.Drawing.Point(135, 3)
+        Me.txtEvento.Name = "txtEvento"
+        Me.txtEvento.Size = New System.Drawing.Size(194, 25)
+        Me.txtEvento.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 80)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 19)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Razon:"
+        '
+        'txtRazon
+        '
+        Me.txtRazon.Location = New System.Drawing.Point(135, 83)
+        Me.txtRazon.Name = "txtRazon"
+        Me.txtRazon.Size = New System.Drawing.Size(194, 25)
+        Me.txtRazon.TabIndex = 8
+        '
+        'dgvEventos
+        '
+        Me.dgvEventos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEventos.Location = New System.Drawing.Point(18, 298)
+        Me.dgvEventos.Name = "dgvEventos"
+        Me.dgvEventos.Size = New System.Drawing.Size(545, 179)
+        Me.dgvEventos.TabIndex = 6
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(248, 3)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(73, 23)
+        Me.btnEditar.TabIndex = 10
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'frmEstablecerEventos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(582, 262)
+        Me.ClientSize = New System.Drawing.Size(582, 519)
+        Me.Controls.Add(Me.dgvEventos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -185,6 +250,7 @@ Partial Class frmEstablecerEventos
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.dgvEventos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -197,8 +263,14 @@ Partial Class frmEstablecerEventos
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents dtpFechaInicio As DateTimePicker
+    Friend WithEvents dtpFechaFinal As DateTimePicker
+    Friend WithEvents rtbDescripcion As RichTextBox
+    Friend WithEvents cbEmpleado As ComboBox
+    Friend WithEvents dgvEventos As DataGridView
+    Friend WithEvents txtEvento As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtRazon As TextBox
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnEditar As Button
 End Class
