@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ICONapp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Desktop\ICONapp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconApp222" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Desktop\iconApp222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconPad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Desktop\Texturas\iconPad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="securityIconlowlow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Desktop\Texturas\securityIconlowlow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clockMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\Desktop\clockMain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

@@ -27,7 +27,6 @@ Partial Class Form1
         Dim PasswordLabel As System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
@@ -43,7 +42,6 @@ Partial Class Form1
         UsernameLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.Tbl_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,22 +86,12 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Gainsboro
-        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(228, 305)
         Me.Panel2.TabIndex = 9
-        '
-        'Label1
-        '
-        Me.Label1.Image = Global.SistemaEyS.My.Resources.Resources.clockMain
-        Me.Label1.Location = New System.Drawing.Point(-8, 7)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 290)
-        Me.Label1.TabIndex = 0
         '
         'FlowLayoutPanel1
         '
@@ -240,7 +228,6 @@ Partial Class Form1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio de sesion"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
@@ -260,7 +247,6 @@ Partial Class Form1
     Friend WithEvents btnIng As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Tbl_EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Friend WithEvents Tbl_EmpleadoBindingSource As BindingSource
