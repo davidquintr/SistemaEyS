@@ -195,19 +195,19 @@ Partial Class FrmVistaAdmin
         'EmpleadoToolStripMenuItem2
         '
         Me.EmpleadoToolStripMenuItem2.Name = "EmpleadoToolStripMenuItem2"
-        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.EmpleadoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
         Me.EmpleadoToolStripMenuItem2.Text = "Empleado"
         '
         'CargoToolStripMenuItem2
         '
         Me.CargoToolStripMenuItem2.Name = "CargoToolStripMenuItem2"
-        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.CargoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
         Me.CargoToolStripMenuItem2.Text = "Cargo"
         '
         'DepartamentoToolStripMenuItem2
         '
         Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
-        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
         Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
         '
         'ReporteGeneralToolStripMenuItem
@@ -315,11 +315,12 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.CargoDataGridViewTextBoxColumn, Me.NombreDeUsuarioDataGridViewTextBoxColumn, Me.ActivoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.VwVistaAdminBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(-2, 4)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(634, 401)
+        Me.DataGridView1.Size = New System.Drawing.Size(641, 445)
         Me.DataGridView1.TabIndex = 0
         '
         'IDDataGridViewTextBoxColumn

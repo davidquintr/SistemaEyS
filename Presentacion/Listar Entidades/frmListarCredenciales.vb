@@ -9,7 +9,6 @@
     Dim cantUser As Int32
 
     Sub llenarCred()
-
         cbCredenciales.DataSource = vwUsr.GetData()
         cbCredenciales.DisplayMember = "Username"
         cbCredenciales.ValueMember = "ID"

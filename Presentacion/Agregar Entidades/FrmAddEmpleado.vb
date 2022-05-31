@@ -253,4 +253,8 @@ Public Class FrmAddEmpleado
             EnviarDatos(0)
         End If
     End Sub
+
+    Private Sub gbAll_Enter(sender As Object, e As EventArgs) Handles gbAll.Enter
+
+    End Sub
 End Class

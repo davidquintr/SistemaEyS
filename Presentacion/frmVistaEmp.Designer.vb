@@ -57,9 +57,9 @@ Partial Class frmVistaEmp
         Me.FlowLayoutPanel2.Controls.Add(Me.Button1)
         Me.FlowLayoutPanel2.Controls.Add(Me.Button2)
         Me.FlowLayoutPanel2.Controls.Add(Me.Button4)
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(40, 69)
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(29, 86)
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(211, 143)
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(211, 120)
         Me.FlowLayoutPanel2.TabIndex = 7
         '
         'Button1

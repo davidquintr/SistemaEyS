@@ -1,5 +1,4 @@
 ﻿Public Class Form1
-
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
@@ -9,7 +8,7 @@
         Me.Tbl_UsuarioTableAdapter.Fill(Me.BDSistemaEySDataSet.tbl_Usuario)
         UsernameTextBox.Text = ""
         PasswordTextBox.Text = ""
-
+        BDSistemaEySDataSet.EnforceConstraints = False
     End Sub
 
     Private Sub btnIng_Click(sender As Object, e As EventArgs) Handles btnIng.Click
@@ -29,10 +28,10 @@
 
     Private Sub ConfirmarCredenciales()
         If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) Then
+            MessageBox.Show("Revise sus credenciales o consulte con el administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
             Me.Hide()
             FrmVistaAdmin.Show()
-        Else
-            MessageBox.Show("Revise sus credenciales o consulte con el administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
     End Sub
@@ -43,7 +42,4 @@
         End If
     End Sub
 
-    Private Sub PasswordLabel_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

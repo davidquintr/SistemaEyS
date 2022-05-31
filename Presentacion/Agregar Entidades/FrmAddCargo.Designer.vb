@@ -24,12 +24,12 @@ Partial Class FrmAddCargo
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.txbNombre = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbDep = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txbNombre = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -62,12 +62,12 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.46471!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.96558!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.60413!))
-        Me.TableLayoutPanel1.Controls.Add(Me.rtxtDesc, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cbDep, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txbNombre, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.cbDep, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.rtxtDesc, 3, 0)
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(13, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -77,13 +77,33 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(461, 64)
         Me.TableLayoutPanel1.TabIndex = 3
         '
-        'txbNombre
+        'rtxtDesc
         '
-        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(95, 3)
-        Me.txbNombre.Name = "txbNombre"
-        Me.txbNombre.Size = New System.Drawing.Size(127, 23)
-        Me.txbNombre.TabIndex = 3
+        Me.rtxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtxtDesc.Location = New System.Drawing.Point(327, 3)
+        Me.rtxtDesc.Name = "rtxtDesc"
+        Me.rtxtDesc.Size = New System.Drawing.Size(131, 26)
+        Me.rtxtDesc.TabIndex = 9
+        Me.rtxtDesc.Text = ""
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 32)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(86, 15)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Departamento:"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cbDep
+        '
+        Me.cbDep.FormattingEnabled = True
+        Me.cbDep.Location = New System.Drawing.Point(95, 35)
+        Me.cbDep.Name = "cbDep"
+        Me.cbDep.Size = New System.Drawing.Size(126, 23)
+        Me.cbDep.TabIndex = 5
         '
         'Label2
         '
@@ -96,44 +116,24 @@ Partial Class FrmAddCargo
         Me.Label2.Text = "Nombre:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'txbNombre
+        '
+        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbNombre.Location = New System.Drawing.Point(95, 3)
+        Me.txbNombre.Name = "txbNombre"
+        Me.txbNombre.Size = New System.Drawing.Size(127, 23)
+        Me.txbNombre.TabIndex = 3
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(235, 32)
+        Me.Label12.Location = New System.Drawing.Point(235, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(72, 15)
         Me.Label12.TabIndex = 8
         Me.Label12.Text = "Descripción:"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'rtxtDesc
-        '
-        Me.rtxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtxtDesc.Location = New System.Drawing.Point(327, 35)
-        Me.rtxtDesc.Name = "rtxtDesc"
-        Me.rtxtDesc.Size = New System.Drawing.Size(131, 26)
-        Me.rtxtDesc.TabIndex = 9
-        Me.rtxtDesc.Text = ""
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(235, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 15)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Departamento:"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cbDep
-        '
-        Me.cbDep.FormattingEnabled = True
-        Me.cbDep.Location = New System.Drawing.Point(327, 3)
-        Me.cbDep.Name = "cbDep"
-        Me.cbDep.Size = New System.Drawing.Size(126, 23)
-        Me.cbDep.TabIndex = 5
         '
         'btnCerrar
         '
