@@ -27,12 +27,41 @@
     End Sub
 
     Private Sub ConfirmarCredenciales()
-        If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) Then
-            MessageBox.Show("Revise sus credenciales o consulte con el administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Else
-            Me.Hide()
-            FrmVistaAdmin.Show()
-        End If
+        Dim idUsuario As Integer
+        Dim idEmpleado As Integer
+        Dim hasEmp As Boolean = False
+        Try
+            If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) = 0 Then
+                MessageBox.Show("Credenciales incorrectas, verifique sus datos o consulte a un administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+            idUsuario = BDSistemaEySDataSet.tbl_Usuario.First.idUsuario
+
+            If Me.Tbl_EmpleadoTableAdapter.GetEmpleado(Me.BDSistemaEySDataSet.tbl_Empleado, idUsuario) <> 0 Then
+                hasEmp = True
+            End If
+
+            If hasEmp = True Then
+                idEmpleado = BDSistemaEySDataSet.tbl_Empleado.First.idEmpleado
+            End If
+
+            Dim result As DialogResult = MessageBox.Show("¿Desea iniciar como administrador?", "Inicio de sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                FrmVistaAdmin.Show()
+                Me.Hide()
+                Return
+            ElseIf result = DialogResult.No And hasEmp = False Then
+                MessageBox.Show("No existe un empleado asignado a este usuario, consulte a un administrador", "Vista de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            Else
+                frmVistaEmp.Show()
+                Me.Hide()
+                Return
+            End If
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 

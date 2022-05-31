@@ -85,7 +85,7 @@
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblHora.Text = DateTime.Now.ToLongTimeString
+        labelHora.Text = DateTime.Now.ToLongTimeString
     End Sub
 
     Private Sub RolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RolToolStripMenuItem.Click
@@ -279,5 +279,9 @@
     Private Sub CargoToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles CargoToolStripMenuItem2.Click
         Carg.Fill(tblCarg)
         VerReporteCargo(tblCarg, "dsCargo", ".\Reportes\rptCargo.rdlc")
+    End Sub
+
+    Private Sub labelHora_Click(sender As Object, e As EventArgs) Handles labelHora.Click
+
     End Sub
 End Class

@@ -80,7 +80,7 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(16, 586)
-        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(839, 41)
         Me.FlowLayoutPanel1.TabIndex = 4
@@ -88,7 +88,7 @@ Partial Class FrmAddEmpleado
         'btnCerrar
         '
         Me.btnCerrar.Location = New System.Drawing.Point(738, 4)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(97, 31)
         Me.btnCerrar.TabIndex = 27
@@ -98,7 +98,7 @@ Partial Class FrmAddEmpleado
         'btnGuardar
         '
         Me.btnGuardar.Location = New System.Drawing.Point(598, 4)
-        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(132, 31)
         Me.btnGuardar.TabIndex = 26
@@ -108,7 +108,7 @@ Partial Class FrmAddEmpleado
         'btnLimpiar
         '
         Me.btnLimpiar.Location = New System.Drawing.Point(458, 4)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(132, 31)
         Me.btnLimpiar.TabIndex = 29
@@ -118,7 +118,7 @@ Partial Class FrmAddEmpleado
         'btnEditar
         '
         Me.btnEditar.Location = New System.Drawing.Point(318, 4)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(132, 31)
         Me.btnEditar.TabIndex = 28
@@ -128,7 +128,7 @@ Partial Class FrmAddEmpleado
         'btnDarDeBaja
         '
         Me.btnDarDeBaja.Location = New System.Drawing.Point(178, 4)
-        Me.btnDarDeBaja.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnDarDeBaja.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(132, 31)
         Me.btnDarDeBaja.TabIndex = 25
@@ -176,7 +176,7 @@ Partial Class FrmAddEmpleado
         Me.cbCar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbCar.FormattingEnabled = True
         Me.cbCar.Location = New System.Drawing.Point(177, 136)
-        Me.cbCar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbCar.Margin = New System.Windows.Forms.Padding(4)
         Me.cbCar.Name = "cbCar"
         Me.cbCar.Size = New System.Drawing.Size(199, 28)
         Me.cbCar.TabIndex = 18
@@ -185,7 +185,7 @@ Partial Class FrmAddEmpleado
         '
         Me.txtEmailC.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmailC.Location = New System.Drawing.Point(177, 169)
-        Me.txtEmailC.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmailC.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmailC.Name = "txtEmailC"
         Me.txtEmailC.Size = New System.Drawing.Size(199, 27)
         Me.txtEmailC.TabIndex = 20
@@ -196,7 +196,7 @@ Partial Class FrmAddEmpleado
         Me.cbDep.FormattingEnabled = True
         Me.cbDep.ItemHeight = 20
         Me.cbDep.Location = New System.Drawing.Point(177, 103)
-        Me.cbDep.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbDep.Margin = New System.Windows.Forms.Padding(4)
         Me.cbDep.Name = "cbDep"
         Me.cbDep.Size = New System.Drawing.Size(199, 28)
         Me.cbDep.TabIndex = 13
@@ -217,7 +217,7 @@ Partial Class FrmAddEmpleado
         '
         Me.txtApellidos.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApellidos.Location = New System.Drawing.Point(177, 70)
-        Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(199, 27)
         Me.txtApellidos.TabIndex = 10
@@ -226,7 +226,7 @@ Partial Class FrmAddEmpleado
         '
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTelefono.Location = New System.Drawing.Point(170, 4)
-        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(248, 27)
         Me.txtTelefono.TabIndex = 3
@@ -235,7 +235,7 @@ Partial Class FrmAddEmpleado
         '
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(177, 37)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(199, 27)
         Me.txtNombre.TabIndex = 5
@@ -256,7 +256,7 @@ Partial Class FrmAddEmpleado
         '
         Me.txtCedula.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCedula.Location = New System.Drawing.Point(177, 4)
-        Me.txtCedula.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtCedula.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.Size = New System.Drawing.Size(199, 27)
         Me.txtCedula.TabIndex = 1
@@ -265,7 +265,7 @@ Partial Class FrmAddEmpleado
         '
         Me.rbMasculino.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbMasculino.Location = New System.Drawing.Point(4, 43)
-        Me.rbMasculino.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbMasculino.Margin = New System.Windows.Forms.Padding(4)
         Me.rbMasculino.Name = "rbMasculino"
         Me.rbMasculino.Size = New System.Drawing.Size(119, 31)
         Me.rbMasculino.TabIndex = 7
@@ -276,7 +276,7 @@ Partial Class FrmAddEmpleado
         '
         Me.rbFemenino.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbFemenino.Location = New System.Drawing.Point(4, 4)
-        Me.rbFemenino.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rbFemenino.Margin = New System.Windows.Forms.Padding(4)
         Me.rbFemenino.Name = "rbFemenino"
         Me.rbFemenino.Size = New System.Drawing.Size(119, 31)
         Me.rbFemenino.TabIndex = 8
@@ -287,7 +287,7 @@ Partial Class FrmAddEmpleado
         '
         Me.dtpFechaIngreso.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaIngreso.Location = New System.Drawing.Point(170, 70)
-        Me.dtpFechaIngreso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpFechaIngreso.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
         Me.dtpFechaIngreso.Size = New System.Drawing.Size(248, 27)
         Me.dtpFechaIngreso.TabIndex = 12
@@ -297,7 +297,7 @@ Partial Class FrmAddEmpleado
         Me.rtxtObservacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxtObservacion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtxtObservacion.Location = New System.Drawing.Point(170, 136)
-        Me.rtxtObservacion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rtxtObservacion.Margin = New System.Windows.Forms.Padding(4)
         Me.rtxtObservacion.Name = "rtxtObservacion"
         Me.rtxtObservacion.Size = New System.Drawing.Size(249, 25)
         Me.rtxtObservacion.TabIndex = 16
@@ -307,7 +307,7 @@ Partial Class FrmAddEmpleado
         '
         Me.txtEmailP.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmailP.Location = New System.Drawing.Point(177, 202)
-        Me.txtEmailP.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtEmailP.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmailP.Name = "txtEmailP"
         Me.txtEmailP.Size = New System.Drawing.Size(199, 27)
         Me.txtEmailP.TabIndex = 24
@@ -317,7 +317,7 @@ Partial Class FrmAddEmpleado
         Me.rtxtDireccion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxtDireccion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rtxtDireccion.Location = New System.Drawing.Point(170, 169)
-        Me.rtxtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.rtxtDireccion.Margin = New System.Windows.Forms.Padding(4)
         Me.rtxtDireccion.Name = "rtxtDireccion"
         Me.rtxtDireccion.Size = New System.Drawing.Size(249, 25)
         Me.rtxtDireccion.TabIndex = 22
@@ -413,9 +413,9 @@ Partial Class FrmAddEmpleado
         Me.gbAll.Controls.Add(Me.TableLayoutPanel1)
         Me.gbAll.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gbAll.Location = New System.Drawing.Point(16, 15)
-        Me.gbAll.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbAll.Margin = New System.Windows.Forms.Padding(4)
         Me.gbAll.Name = "gbAll"
-        Me.gbAll.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gbAll.Padding = New System.Windows.Forms.Padding(4)
         Me.gbAll.Size = New System.Drawing.Size(839, 281)
         Me.gbAll.TabIndex = 0
         Me.gbAll.TabStop = False
@@ -470,7 +470,7 @@ Partial Class FrmAddEmpleado
         '
         Me.dtpNac.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpNac.Location = New System.Drawing.Point(170, 37)
-        Me.dtpNac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpNac.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpNac.Name = "dtpNac"
         Me.dtpNac.Size = New System.Drawing.Size(248, 27)
         Me.dtpNac.TabIndex = 23
@@ -503,7 +503,7 @@ Partial Class FrmAddEmpleado
         Me.cbUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbUsuario.FormattingEnabled = True
         Me.cbUsuario.Location = New System.Drawing.Point(170, 202)
-        Me.cbUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.cbUsuario.Name = "cbUsuario"
         Me.cbUsuario.Size = New System.Drawing.Size(248, 28)
         Me.cbUsuario.TabIndex = 29
@@ -545,7 +545,7 @@ Partial Class FrmAddEmpleado
         '
         Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvEmpleado.Location = New System.Drawing.Point(23, 303)
-        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DgvEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.RowHeadersWidth = 51
         Me.DgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -561,7 +561,7 @@ Partial Class FrmAddEmpleado
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.gbAll)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "FrmAddEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -23,6 +23,7 @@ Partial Class FrmVistaAdmin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim UsernameLabel As System.Windows.Forms.Label
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenúToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AñadirEntidadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,7 +42,6 @@ Partial Class FrmVistaAdmin
         Me.EmpleadoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CargoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartamentoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReporteGeneralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SeguridadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AñadirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,23 +55,8 @@ Partial Class FrmVistaAdmin
         Me.InstructivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportarUnProblemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ActivoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VwVistaAdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.lblHora = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.hora = New System.Windows.Forms.Timer(Me.components)
         Me.Time = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -81,16 +66,48 @@ Partial Class FrmVistaAdmin
         Me.BDSistemaEySDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_VistaAdminTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.labelHora = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SegundoNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrimerApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SegundoApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ObservacionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailPersonalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailCorporativoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SexoDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.EstadoActividadDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaNacDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaIngresoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaAgregadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        UsernameLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel6.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -100,7 +117,7 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(941, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1039, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -146,19 +163,19 @@ Partial Class FrmVistaAdmin
         'DepartamentoToolStripMenuItem1
         '
         Me.DepartamentoToolStripMenuItem1.Name = "DepartamentoToolStripMenuItem1"
-        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.DepartamentoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.DepartamentoToolStripMenuItem1.Text = "Departamento"
         '
         'CargoToolStripMenuItem1
         '
         Me.CargoToolStripMenuItem1.Name = "CargoToolStripMenuItem1"
-        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.CargoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.CargoToolStripMenuItem1.Text = "Cargo"
         '
         'EmpleadoToolStripMenuItem1
         '
         Me.EmpleadoToolStripMenuItem1.Name = "EmpleadoToolStripMenuItem1"
-        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(150, 22)
+        Me.EmpleadoToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.EmpleadoToolStripMenuItem1.Text = "Empleado"
         '
         'ToolStripSeparator1
@@ -180,7 +197,7 @@ Partial Class FrmVistaAdmin
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePersonalizadoToolStripMenuItem, Me.ReporteGeneralToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportePersonalizadoToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -209,12 +226,6 @@ Partial Class FrmVistaAdmin
         Me.DepartamentoToolStripMenuItem2.Name = "DepartamentoToolStripMenuItem2"
         Me.DepartamentoToolStripMenuItem2.Size = New System.Drawing.Size(150, 22)
         Me.DepartamentoToolStripMenuItem2.Text = "Departamento"
-        '
-        'ReporteGeneralToolStripMenuItem
-        '
-        Me.ReporteGeneralToolStripMenuItem.Name = "ReporteGeneralToolStripMenuItem"
-        Me.ReporteGeneralToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
-        Me.ReporteGeneralToolStripMenuItem.Text = "Reporte general"
         '
         'SeguridadToolStripMenuItem
         '
@@ -297,64 +308,6 @@ Partial Class FrmVistaAdmin
         Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
-        'Panel7
-        '
-        Me.Panel7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel7.Controls.Add(Me.DataGridView1)
-        Me.Panel7.Location = New System.Drawing.Point(283, 71)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(645, 449)
-        Me.Panel7.TabIndex = 6
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.CargoDataGridViewTextBoxColumn, Me.NombreDeUsuarioDataGridViewTextBoxColumn, Me.ActivoDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.VwVistaAdminBindingSource
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(641, 445)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CargoDataGridViewTextBoxColumn
-        '
-        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo"
-        Me.CargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
-        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
-        '
-        'NombreDeUsuarioDataGridViewTextBoxColumn
-        '
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn.DataPropertyName = "Nombre de Usuario"
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn.HeaderText = "Nombre de Usuario"
-        Me.NombreDeUsuarioDataGridViewTextBoxColumn.Name = "NombreDeUsuarioDataGridViewTextBoxColumn"
-        '
-        'ActivoDataGridViewTextBoxColumn
-        '
-        Me.ActivoDataGridViewTextBoxColumn.DataPropertyName = "Activo"
-        Me.ActivoDataGridViewTextBoxColumn.HeaderText = "Activo"
-        Me.ActivoDataGridViewTextBoxColumn.Name = "ActivoDataGridViewTextBoxColumn"
-        Me.ActivoDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'VwVistaAdminBindingSource
         '
         Me.VwVistaAdminBindingSource.DataMember = "Vw_VistaAdmin"
@@ -364,86 +317,6 @@ Partial Class FrmVistaAdmin
         '
         Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
         Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel6.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Panel6.Location = New System.Drawing.Point(283, 30)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(645, 35)
-        Me.Panel6.TabIndex = 6
-        '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(641, 31)
-        Me.FlowLayoutPanel1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 30)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Actividad actual"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
-        Me.GroupBox1.Controls.Add(Me.lblHora)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 253)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(265, 362)
-        Me.GroupBox1.TabIndex = 8
-        Me.GroupBox1.TabStop = False
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 222)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(253, 123)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Eventos del mes"
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 48)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 2
-        '
-        'lblHora
-        '
-        Me.lblHora.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHora.Location = New System.Drawing.Point(6, 16)
-        Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(253, 23)
-        Me.lblHora.TabIndex = 1
-        Me.lblHora.Text = "HH:MM:SS"
-        Me.lblHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox3.Location = New System.Drawing.Point(283, 526)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(645, 89)
-        Me.GroupBox3.TabIndex = 9
-        Me.GroupBox3.TabStop = False
         '
         'hora
         '
@@ -496,33 +369,289 @@ Partial Class FrmVistaAdmin
         Me.Timer2.Enabled = True
         Me.Timer2.Interval = 1000
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 24)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1039, 588)
+        Me.Panel1.TabIndex = 4
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel4.Controls.Add(Me.labelHora)
+        Me.Panel4.Controls.Add(Me.RichTextBox1)
+        Me.Panel4.Controls.Add(Me.MonthCalendar1)
+        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(298, 588)
+        Me.Panel4.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(0, 53)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(641, 47)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Empleado / Usuario"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label2
+        '
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(0, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(641, 38)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Cargo / Rol"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(298, 488)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(741, 100)
+        Me.Panel2.TabIndex = 10
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label1.Image = Global.SistemaEyS.My.Resources.Resources.userIcon
+        Me.Label1.Location = New System.Drawing.Point(641, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(100, 100)
+        Me.Label1.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel3.Controls.Add(UsernameLabel)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(298, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(741, 50)
+        Me.Panel3.TabIndex = 11
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Location = New System.Drawing.Point(9, 9)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(1)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(283, 252)
+        Me.Panel5.TabIndex = 0
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 314)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 1
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Location = New System.Drawing.Point(9, 488)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(283, 90)
+        Me.RichTextBox1.TabIndex = 2
+        Me.RichTextBox1.Text = ""
+        '
+        'labelHora
+        '
+        Me.labelHora.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelHora.ForeColor = System.Drawing.Color.Transparent
+        Me.labelHora.Location = New System.Drawing.Point(9, 271)
+        Me.labelHora.Name = "labelHora"
+        Me.labelHora.Size = New System.Drawing.Size(283, 34)
+        Me.labelHora.TabIndex = 3
+        Me.labelHora.Text = "HH:MM:SS"
+        Me.labelHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdEmpleadoDataGridViewTextBoxColumn, Me.CedulaDataGridViewTextBoxColumn, Me.PrimerNombreDataGridViewTextBoxColumn, Me.SegundoNombreDataGridViewTextBoxColumn, Me.PrimerApellidoDataGridViewTextBoxColumn, Me.SegundoApellidoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.ObservacionDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.EmailPersonalDataGridViewTextBoxColumn, Me.EmailCorporativoDataGridViewTextBoxColumn, Me.SexoDataGridViewCheckBoxColumn, Me.EstadoActividadDataGridViewCheckBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.FechaNacDataGridViewTextBoxColumn, Me.FechaIngresoDataGridViewTextBoxColumn, Me.FechaAgregadoDataGridViewTextBoxColumn, Me.IdCargoDataGridViewTextBoxColumn, Me.IdUsuarioDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.Tbl_EmpleadoBindingSource
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2
+        Me.DataGridView1.Enabled = False
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView1.Location = New System.Drawing.Point(298, 50)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(741, 438)
+        Me.DataGridView1.TabIndex = 12
+        '
+        'IdEmpleadoDataGridViewTextBoxColumn
+        '
+        Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.HeaderText = "idEmpleado"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.Name = "IdEmpleadoDataGridViewTextBoxColumn"
+        Me.IdEmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CedulaDataGridViewTextBoxColumn
+        '
+        Me.CedulaDataGridViewTextBoxColumn.DataPropertyName = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.HeaderText = "cedula"
+        Me.CedulaDataGridViewTextBoxColumn.Name = "CedulaDataGridViewTextBoxColumn"
+        '
+        'PrimerNombreDataGridViewTextBoxColumn
+        '
+        Me.PrimerNombreDataGridViewTextBoxColumn.DataPropertyName = "primerNombre"
+        Me.PrimerNombreDataGridViewTextBoxColumn.HeaderText = "primerNombre"
+        Me.PrimerNombreDataGridViewTextBoxColumn.Name = "PrimerNombreDataGridViewTextBoxColumn"
+        '
+        'SegundoNombreDataGridViewTextBoxColumn
+        '
+        Me.SegundoNombreDataGridViewTextBoxColumn.DataPropertyName = "segundoNombre"
+        Me.SegundoNombreDataGridViewTextBoxColumn.HeaderText = "segundoNombre"
+        Me.SegundoNombreDataGridViewTextBoxColumn.Name = "SegundoNombreDataGridViewTextBoxColumn"
+        '
+        'PrimerApellidoDataGridViewTextBoxColumn
+        '
+        Me.PrimerApellidoDataGridViewTextBoxColumn.DataPropertyName = "primerApellido"
+        Me.PrimerApellidoDataGridViewTextBoxColumn.HeaderText = "primerApellido"
+        Me.PrimerApellidoDataGridViewTextBoxColumn.Name = "PrimerApellidoDataGridViewTextBoxColumn"
+        '
+        'SegundoApellidoDataGridViewTextBoxColumn
+        '
+        Me.SegundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "segundoApellido"
+        Me.SegundoApellidoDataGridViewTextBoxColumn.HeaderText = "segundoApellido"
+        Me.SegundoApellidoDataGridViewTextBoxColumn.Name = "SegundoApellidoDataGridViewTextBoxColumn"
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        '
+        'ObservacionDataGridViewTextBoxColumn
+        '
+        Me.ObservacionDataGridViewTextBoxColumn.DataPropertyName = "observacion"
+        Me.ObservacionDataGridViewTextBoxColumn.HeaderText = "observacion"
+        Me.ObservacionDataGridViewTextBoxColumn.Name = "ObservacionDataGridViewTextBoxColumn"
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        '
+        'EmailPersonalDataGridViewTextBoxColumn
+        '
+        Me.EmailPersonalDataGridViewTextBoxColumn.DataPropertyName = "emailPersonal"
+        Me.EmailPersonalDataGridViewTextBoxColumn.HeaderText = "emailPersonal"
+        Me.EmailPersonalDataGridViewTextBoxColumn.Name = "EmailPersonalDataGridViewTextBoxColumn"
+        '
+        'EmailCorporativoDataGridViewTextBoxColumn
+        '
+        Me.EmailCorporativoDataGridViewTextBoxColumn.DataPropertyName = "emailCorporativo"
+        Me.EmailCorporativoDataGridViewTextBoxColumn.HeaderText = "emailCorporativo"
+        Me.EmailCorporativoDataGridViewTextBoxColumn.Name = "EmailCorporativoDataGridViewTextBoxColumn"
+        '
+        'SexoDataGridViewCheckBoxColumn
+        '
+        Me.SexoDataGridViewCheckBoxColumn.DataPropertyName = "sexo"
+        Me.SexoDataGridViewCheckBoxColumn.HeaderText = "sexo"
+        Me.SexoDataGridViewCheckBoxColumn.Name = "SexoDataGridViewCheckBoxColumn"
+        '
+        'EstadoActividadDataGridViewCheckBoxColumn
+        '
+        Me.EstadoActividadDataGridViewCheckBoxColumn.DataPropertyName = "estadoActividad"
+        Me.EstadoActividadDataGridViewCheckBoxColumn.HeaderText = "estadoActividad"
+        Me.EstadoActividadDataGridViewCheckBoxColumn.Name = "EstadoActividadDataGridViewCheckBoxColumn"
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "estado"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
+        '
+        'FechaNacDataGridViewTextBoxColumn
+        '
+        Me.FechaNacDataGridViewTextBoxColumn.DataPropertyName = "fechaNac"
+        Me.FechaNacDataGridViewTextBoxColumn.HeaderText = "fechaNac"
+        Me.FechaNacDataGridViewTextBoxColumn.Name = "FechaNacDataGridViewTextBoxColumn"
+        '
+        'FechaIngresoDataGridViewTextBoxColumn
+        '
+        Me.FechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "fechaIngreso"
+        Me.FechaIngresoDataGridViewTextBoxColumn.HeaderText = "fechaIngreso"
+        Me.FechaIngresoDataGridViewTextBoxColumn.Name = "FechaIngresoDataGridViewTextBoxColumn"
+        '
+        'FechaAgregadoDataGridViewTextBoxColumn
+        '
+        Me.FechaAgregadoDataGridViewTextBoxColumn.DataPropertyName = "fechaAgregado"
+        Me.FechaAgregadoDataGridViewTextBoxColumn.HeaderText = "fechaAgregado"
+        Me.FechaAgregadoDataGridViewTextBoxColumn.Name = "FechaAgregadoDataGridViewTextBoxColumn"
+        '
+        'IdCargoDataGridViewTextBoxColumn
+        '
+        Me.IdCargoDataGridViewTextBoxColumn.DataPropertyName = "idCargo"
+        Me.IdCargoDataGridViewTextBoxColumn.HeaderText = "idCargo"
+        Me.IdCargoDataGridViewTextBoxColumn.Name = "IdCargoDataGridViewTextBoxColumn"
+        '
+        'IdUsuarioDataGridViewTextBoxColumn
+        '
+        Me.IdUsuarioDataGridViewTextBoxColumn.DataPropertyName = "idUsuario"
+        Me.IdUsuarioDataGridViewTextBoxColumn.HeaderText = "idUsuario"
+        Me.IdUsuarioDataGridViewTextBoxColumn.Name = "IdUsuarioDataGridViewTextBoxColumn"
+        '
+        'UsernameLabel
+        '
+        UsernameLabel.BackColor = System.Drawing.Color.Transparent
+        UsernameLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        UsernameLabel.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        UsernameLabel.ForeColor = System.Drawing.Color.White
+        UsernameLabel.Location = New System.Drawing.Point(0, 0)
+        UsernameLabel.Name = "UsernameLabel"
+        UsernameLabel.Size = New System.Drawing.Size(741, 50)
+        UsernameLabel.TabIndex = 10
+        UsernameLabel.Text = "Entradas del día"
+        UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FrmVistaAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(941, 627)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.Panel6)
+        Me.ClientSize = New System.Drawing.Size(1039, 612)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MinimumSize = New System.Drawing.Size(956, 596)
+        Me.MinimumSize = New System.Drawing.Size(956, 595)
         Me.Name = "FrmVistaAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Adminstracion"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel6.ResumeLayout(False)
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -532,13 +661,10 @@ Partial Class FrmVistaAdmin
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AñadirEntidadToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel6 As Panel
     Friend WithEvents ListarEntidadaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ParámetrosGeneralesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CerrarSesiónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportePersonalizadoToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ReporteGeneralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InstructivoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportarUnProblemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
@@ -548,13 +674,7 @@ Partial Class FrmVistaAdmin
     Friend WithEvents DepartamentoToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents CargoToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EmpleadoToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents lblHora As Label
-    Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents SeguridadToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents Tbl_EmpleadoBindingSource As BindingSource
     Friend WithEvents Tbl_EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
@@ -572,17 +692,41 @@ Partial Class FrmVistaAdmin
     Friend WithEvents BDSistemaEySDataSetBindingSource As BindingSource
     Friend WithEvents VwVistaAdminBindingSource As BindingSource
     Friend WithEvents Vw_VistaAdminTableAdapter As BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter
-    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDeUsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ActivoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Label1 As Label
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents Timer2 As Timer
     Friend WithEvents EmpleadoToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents CargoToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents DepartamentoToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents labelHora As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents IdEmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CedulaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrimerNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SegundoNombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PrimerApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SegundoApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ObservacionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TelefonoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailPersonalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailCorporativoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SexoDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents EstadoActividadDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaNacDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaIngresoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FechaAgregadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdUsuarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
