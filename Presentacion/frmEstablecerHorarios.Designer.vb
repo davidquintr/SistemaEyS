@@ -230,6 +230,7 @@ Partial Class frmEstablecerHorarios
         '
         'npH1R
         '
+        Me.npH1R.Enabled = False
         Me.npH1R.Location = New System.Drawing.Point(118, 3)
         Me.npH1R.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH1R.Name = "npH1R"
@@ -239,6 +240,7 @@ Partial Class frmEstablecerHorarios
         '
         'npH1S
         '
+        Me.npH1S.Enabled = False
         Me.npH1S.Location = New System.Drawing.Point(118, 34)
         Me.npH1S.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH1S.Name = "npH1S"
@@ -248,6 +250,7 @@ Partial Class frmEstablecerHorarios
         '
         'npH1D
         '
+        Me.npH1D.Enabled = False
         Me.npH1D.Location = New System.Drawing.Point(118, 65)
         Me.npH1D.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH1D.Name = "npH1D"
@@ -257,6 +260,7 @@ Partial Class frmEstablecerHorarios
         '
         'npM1R
         '
+        Me.npM1R.Enabled = False
         Me.npM1R.Location = New System.Drawing.Point(198, 3)
         Me.npM1R.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM1R.Name = "npM1R"
@@ -266,6 +270,7 @@ Partial Class frmEstablecerHorarios
         '
         'npM1S
         '
+        Me.npM1S.Enabled = False
         Me.npM1S.Location = New System.Drawing.Point(198, 34)
         Me.npM1S.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM1S.Name = "npM1S"
@@ -275,6 +280,7 @@ Partial Class frmEstablecerHorarios
         '
         'npM1D
         '
+        Me.npM1D.Enabled = False
         Me.npM1D.Location = New System.Drawing.Point(198, 65)
         Me.npM1D.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM1D.Name = "npM1D"
@@ -284,6 +290,7 @@ Partial Class frmEstablecerHorarios
         '
         'npM2R
         '
+        Me.npM2R.Enabled = False
         Me.npM2R.Location = New System.Drawing.Point(368, 3)
         Me.npM2R.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM2R.Name = "npM2R"
@@ -293,6 +300,7 @@ Partial Class frmEstablecerHorarios
         '
         'npM2S
         '
+        Me.npM2S.Enabled = False
         Me.npM2S.Location = New System.Drawing.Point(368, 34)
         Me.npM2S.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM2S.Name = "npM2S"
@@ -302,6 +310,7 @@ Partial Class frmEstablecerHorarios
         '
         'npM2D
         '
+        Me.npM2D.Enabled = False
         Me.npM2D.Location = New System.Drawing.Point(368, 65)
         Me.npM2D.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM2D.Name = "npM2D"
@@ -311,6 +320,7 @@ Partial Class frmEstablecerHorarios
         '
         'npH2R
         '
+        Me.npH2R.Enabled = False
         Me.npH2R.Location = New System.Drawing.Point(288, 3)
         Me.npH2R.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH2R.Name = "npH2R"
@@ -320,6 +330,7 @@ Partial Class frmEstablecerHorarios
         '
         'npH2S
         '
+        Me.npH2S.Enabled = False
         Me.npH2S.Location = New System.Drawing.Point(288, 34)
         Me.npH2S.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH2S.Name = "npH2S"
@@ -329,6 +340,7 @@ Partial Class frmEstablecerHorarios
         '
         'npH2D
         '
+        Me.npH2D.Enabled = False
         Me.npH2D.Location = New System.Drawing.Point(288, 65)
         Me.npH2D.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH2D.Name = "npH2D"

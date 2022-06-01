@@ -52,11 +52,35 @@
     End Sub
 
     Private Sub checkSab_CheckedChanged(sender As Object, e As EventArgs) Handles checkSab.CheckedChanged
+        If Not checkSab.Checked Then
+            npH1S.Enabled = False
+            npM1S.Enabled = False
 
+            npH2S.Enabled = False
+            npM2S.Enabled = False
+        Else
+            npH1S.Enabled = True
+            npM1S.Enabled = True
+
+            npH2S.Enabled = True
+            npM2S.Enabled = True
+        End If
     End Sub
 
     Private Sub checkDom_CheckedChanged(sender As Object, e As EventArgs) Handles checkDom.CheckedChanged
+        If Not checkSab.Checked Then
+            npH1D.Enabled = False
+            npM1D.Enabled = False
 
+            npH2D.Enabled = False
+            npM2D.Enabled = False
+        Else
+            npH1D.Enabled = True
+            npM1D.Enabled = True
+
+            npH2D.Enabled = True
+            npM2D.Enabled = True
+        End If
     End Sub
 
 End Class
