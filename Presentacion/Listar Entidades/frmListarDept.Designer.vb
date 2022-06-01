@@ -41,6 +41,7 @@ Partial Class frmListarDept
         Me.btnSig = New System.Windows.Forms.Button()
         Me.btnAnt = New System.Windows.Forms.Button()
         Me.cbDept = New System.Windows.Forms.ComboBox()
+        Me.labelTitulo = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -48,14 +49,14 @@ Partial Class frmListarDept
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 45)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(384, 171)
+        Me.GroupBox1.Size = New System.Drawing.Size(406, 165)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Listar departamentos"
         '
         'TableLayoutPanel1
         '
@@ -72,7 +73,7 @@ Partial Class frmListarDept
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 24)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 5
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
@@ -80,14 +81,14 @@ Partial Class frmListarDept
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(368, 136)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(381, 131)
         Me.TableLayoutPanel1.TabIndex = 15
         '
         'lbID
         '
         Me.lbID.AutoSize = True
         Me.lbID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbID.Location = New System.Drawing.Point(150, 0)
+        Me.lbID.Location = New System.Drawing.Point(155, 0)
         Me.lbID.Name = "lbID"
         Me.lbID.Size = New System.Drawing.Size(63, 15)
         Me.lbID.TabIndex = 1
@@ -98,7 +99,7 @@ Partial Class frmListarDept
         '
         Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbNombre.Location = New System.Drawing.Point(150, 27)
+        Me.lbNombre.Location = New System.Drawing.Point(155, 26)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(97, 15)
         Me.lbNombre.TabIndex = 3
@@ -109,7 +110,7 @@ Partial Class frmListarDept
         '
         Me.lbEmail.AutoSize = True
         Me.lbEmail.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbEmail.Location = New System.Drawing.Point(150, 54)
+        Me.lbEmail.Location = New System.Drawing.Point(155, 52)
         Me.lbEmail.Name = "lbEmail"
         Me.lbEmail.Size = New System.Drawing.Size(128, 15)
         Me.lbEmail.TabIndex = 5
@@ -120,7 +121,7 @@ Partial Class frmListarDept
         '
         Me.lbEXT.AutoSize = True
         Me.lbEXT.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbEXT.Location = New System.Drawing.Point(150, 81)
+        Me.lbEXT.Location = New System.Drawing.Point(155, 78)
         Me.lbEXT.Name = "lbEXT"
         Me.lbEXT.Size = New System.Drawing.Size(42, 15)
         Me.lbEXT.TabIndex = 7
@@ -132,9 +133,9 @@ Partial Class frmListarDept
         Me.rtxtDescripcion.BackColor = System.Drawing.SystemColors.Window
         Me.rtxtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.rtxtDescripcion.Enabled = False
-        Me.rtxtDescripcion.Location = New System.Drawing.Point(150, 111)
+        Me.rtxtDescripcion.Location = New System.Drawing.Point(155, 107)
         Me.rtxtDescripcion.Name = "rtxtDescripcion"
-        Me.rtxtDescripcion.Size = New System.Drawing.Size(215, 22)
+        Me.rtxtDescripcion.Size = New System.Drawing.Size(215, 21)
         Me.rtxtDescripcion.TabIndex = 9
         Me.rtxtDescripcion.Text = ""
         '
@@ -142,7 +143,7 @@ Partial Class frmListarDept
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(3, 81)
+        Me.Label5.Location = New System.Drawing.Point(3, 78)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(26, 15)
         Me.Label5.TabIndex = 6
@@ -153,7 +154,7 @@ Partial Class frmListarDept
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(3, 108)
+        Me.Label14.Location = New System.Drawing.Point(3, 104)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(72, 15)
         Me.Label14.TabIndex = 8
@@ -164,7 +165,7 @@ Partial Class frmListarDept
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(3, 27)
+        Me.Label2.Location = New System.Drawing.Point(3, 26)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 15)
         Me.Label2.TabIndex = 2
@@ -175,7 +176,7 @@ Partial Class frmListarDept
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(3, 54)
+        Me.Label3.Location = New System.Drawing.Point(3, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(39, 15)
         Me.Label3.TabIndex = 4
@@ -195,21 +196,19 @@ Partial Class frmListarDept
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnAdministrar)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(14, 223)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 249)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(382, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(406, 30)
         Me.FlowLayoutPanel1.TabIndex = 14
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(306, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(330, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
         Me.btnCerrar.TabIndex = 16
@@ -218,7 +217,7 @@ Partial Class frmListarDept
         '
         'btnAdministrar
         '
-        Me.btnAdministrar.Location = New System.Drawing.Point(227, 3)
+        Me.btnAdministrar.Location = New System.Drawing.Point(251, 3)
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(73, 23)
         Me.btnAdministrar.TabIndex = 15
@@ -228,7 +227,7 @@ Partial Class frmListarDept
         'lblCantDep
         '
         Me.lblCantDep.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantDep.Location = New System.Drawing.Point(254, 192)
+        Me.lblCantDep.Location = New System.Drawing.Point(251, 216)
         Me.lblCantDep.Name = "lblCantDep"
         Me.lblCantDep.Size = New System.Drawing.Size(111, 25)
         Me.lblCantDep.TabIndex = 12
@@ -237,7 +236,7 @@ Partial Class frmListarDept
         '
         'btnSig
         '
-        Me.btnSig.Location = New System.Drawing.Point(371, 192)
+        Me.btnSig.Location = New System.Drawing.Point(368, 216)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnSig.Size = New System.Drawing.Size(25, 25)
@@ -247,7 +246,7 @@ Partial Class frmListarDept
         '
         'btnAnt
         '
-        Me.btnAnt.Location = New System.Drawing.Point(223, 192)
+        Me.btnAnt.Location = New System.Drawing.Point(220, 216)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnAnt.Size = New System.Drawing.Size(25, 25)
@@ -259,16 +258,30 @@ Partial Class frmListarDept
         '
         Me.cbDept.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbDept.FormattingEnabled = True
-        Me.cbDept.Location = New System.Drawing.Point(12, 192)
+        Me.cbDept.Location = New System.Drawing.Point(9, 216)
         Me.cbDept.Name = "cbDept"
         Me.cbDept.Size = New System.Drawing.Size(205, 25)
         Me.cbDept.TabIndex = 10
+        '
+        'labelTitulo
+        '
+        Me.labelTitulo.BackColor = System.Drawing.Color.SteelBlue
+        Me.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.labelTitulo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelTitulo.ForeColor = System.Drawing.Color.White
+        Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.labelTitulo.Name = "labelTitulo"
+        Me.labelTitulo.Size = New System.Drawing.Size(406, 43)
+        Me.labelTitulo.TabIndex = 25
+        Me.labelTitulo.Text = "Listar Departamento"
+        Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmListarDept
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(406, 265)
+        Me.ClientSize = New System.Drawing.Size(406, 279)
+        Me.Controls.Add(Me.labelTitulo)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.lblCantDep)
         Me.Controls.Add(Me.btnSig)
@@ -307,4 +320,5 @@ Partial Class frmListarDept
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents labelTitulo As Label
 End Class

@@ -12,19 +12,24 @@
         btnTGracia.Visible = True
         btnDominio.Visible = True
         btnExtras.Visible = False
-        buttonAjustes.Visible = False
+        buttonAjustes.Visible = True
 
-    End Sub
-
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
-        Me.Close()
     End Sub
 
     Private Sub btnExtras_Click(sender As Object, e As EventArgs) Handles btnExtras.Click
         CambiarModo(0)
     End Sub
 
-    Private Sub btnHorarioAlmuerzo_Click(sender As Object, e As EventArgs) Handles btnHorarioAlmuerzo.Click
+    Private Sub btnHorarioAlmuerzo_Click(sender As Object, e As EventArgs)
         frmEstablcerAlmuerzo.Show()
     End Sub
+
+    Private Sub layoutPanel_Paint(sender As Object, e As PaintEventArgs) Handles layoutPanel.Paint
+
+    End Sub
+
+    Private Sub btnIng_Click(sender As Object, e As EventArgs) Handles btnIng.Click
+        Me.Close()
+    End Sub
+
 End Class

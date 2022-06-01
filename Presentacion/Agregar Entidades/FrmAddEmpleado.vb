@@ -19,7 +19,7 @@ Public Class FrmAddEmpleado
 
 
     Public Sub CambiarModo(idEmp As Integer)
-        gbAll.Text = "Editar empleado"
+        labelTitulo.Text = "Editar empleado"
 
         If cbUsuario.Items.Count < 1 Then
             cbUsuario.Enabled = False
@@ -243,7 +243,7 @@ Public Class FrmAddEmpleado
                 cbUsuario.Enabled = False
             End If
 
-            gbAll.Text = "Editar empleado"
+            labelTitulo.Text = "Editar empleado"
             btnGuardarCamb.Enabled = True
             btnGuardar.Enabled = False
             btnDarDeBaja.Enabled = True
@@ -286,7 +286,7 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub Limpiar()
-        gbAll.Text = "Agregar empleado"
+        labelTitulo.Text = "Agregar empleado"
         btnGuardar.Enabled = True
         btnDarDeBaja.Enabled = False
         btnGuardarCamb.Enabled = False
@@ -300,5 +300,9 @@ Public Class FrmAddEmpleado
         dtpNac.Value = DateTime.Now
         rtxtDireccion.Text = ""
         rtxtObservacion.Text = ""
+    End Sub
+
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+
     End Sub
 End Class

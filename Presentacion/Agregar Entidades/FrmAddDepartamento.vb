@@ -136,12 +136,12 @@
     Private Sub AlternarBotones(modo As Integer)
 
         If modo = 0 Then
-            GroupBox1.Text = "Administrar Departamento"
+            labelTitulo.Text = "Administrar Departamento"
             btnGuardar.Enabled = False
             btnEditar.Enabled = True
             btnEliminar.Enabled = True
         Else
-            GroupBox1.Text = "Agregar Departamento"
+            labelTitulo.Text = "Agregar Departamento"
             btnGuardar.Enabled = True
             btnEditar.Enabled = False
             btnEliminar.Enabled = False

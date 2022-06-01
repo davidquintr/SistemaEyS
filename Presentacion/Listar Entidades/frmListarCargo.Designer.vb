@@ -40,6 +40,7 @@ Partial Class frmListarCargo
         Me.lbID = New System.Windows.Forms.Label()
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.labelTitulo = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -47,22 +48,20 @@ Partial Class frmListarCargo
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 192)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 228)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(380, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(401, 30)
         Me.FlowLayoutPanel1.TabIndex = 18
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(304, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(325, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
         Me.btnCerrar.TabIndex = 15
@@ -71,7 +70,7 @@ Partial Class frmListarCargo
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(225, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(246, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
         Me.btnGuardar.TabIndex = 14
@@ -80,7 +79,7 @@ Partial Class frmListarCargo
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(146, 3)
+        Me.Button1.Location = New System.Drawing.Point(167, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(73, 23)
         Me.Button1.TabIndex = 16
@@ -90,16 +89,16 @@ Partial Class frmListarCargo
         'lblCantCarg
         '
         Me.lblCantCarg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantCarg.Location = New System.Drawing.Point(238, 159)
+        Me.lblCantCarg.Location = New System.Drawing.Point(236, 193)
         Me.lblCantCarg.Name = "lblCantCarg"
-        Me.lblCantCarg.Size = New System.Drawing.Size(117, 24)
+        Me.lblCantCarg.Size = New System.Drawing.Size(127, 24)
         Me.lblCantCarg.TabIndex = 10
         Me.lblCantCarg.Text = "999/999"
         Me.lblCantCarg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnSig
         '
-        Me.btnSig.Location = New System.Drawing.Point(369, 159)
+        Me.btnSig.Location = New System.Drawing.Point(362, 192)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnSig.Size = New System.Drawing.Size(23, 25)
@@ -109,7 +108,7 @@ Partial Class frmListarCargo
         '
         'btnAnterior
         '
-        Me.btnAnterior.Location = New System.Drawing.Point(209, 159)
+        Me.btnAnterior.Location = New System.Drawing.Point(207, 193)
         Me.btnAnterior.Name = "btnAnterior"
         Me.btnAnterior.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnAnterior.Size = New System.Drawing.Size(23, 25)
@@ -121,21 +120,21 @@ Partial Class frmListarCargo
         '
         Me.cbCargos.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbCargos.FormattingEnabled = True
-        Me.cbCargos.Location = New System.Drawing.Point(17, 159)
+        Me.cbCargos.Location = New System.Drawing.Point(14, 191)
         Me.cbCargos.Name = "cbCargos"
         Me.cbCargos.Size = New System.Drawing.Size(187, 27)
         Me.cbCargos.TabIndex = 8
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 46)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(380, 141)
+        Me.GroupBox1.Size = New System.Drawing.Size(390, 141)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Listar cargos"
         '
         'TableLayoutPanel1
         '
@@ -150,22 +149,22 @@ Partial Class frmListarCargo
         Me.TableLayoutPanel1.Controls.Add(Me.lbID, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.lbNombre, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 24)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 23)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 4
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.61538!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.05128!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(369, 108)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 113)
         Me.TableLayoutPanel1.TabIndex = 19
         '
         'lbDept
         '
         Me.lbDept.AutoSize = True
         Me.lbDept.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbDept.Location = New System.Drawing.Point(150, 48)
+        Me.lbDept.Location = New System.Drawing.Point(151, 52)
         Me.lbDept.Name = "lbDept"
         Me.lbDept.Size = New System.Drawing.Size(97, 15)
         Me.lbDept.TabIndex = 9
@@ -176,7 +175,7 @@ Partial Class frmListarCargo
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(3, 48)
+        Me.Label3.Location = New System.Drawing.Point(3, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 15)
         Me.Label3.TabIndex = 8
@@ -189,9 +188,9 @@ Partial Class frmListarCargo
         Me.rtxtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.rtxtDescripcion.Enabled = False
         Me.rtxtDescripcion.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!)
-        Me.rtxtDescripcion.Location = New System.Drawing.Point(150, 75)
+        Me.rtxtDescripcion.Location = New System.Drawing.Point(151, 80)
         Me.rtxtDescripcion.Name = "rtxtDescripcion"
-        Me.rtxtDescripcion.Size = New System.Drawing.Size(216, 30)
+        Me.rtxtDescripcion.Size = New System.Drawing.Size(216, 29)
         Me.rtxtDescripcion.TabIndex = 7
         Me.rtxtDescripcion.Text = ""
         '
@@ -210,7 +209,7 @@ Partial Class frmListarCargo
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(3, 72)
+        Me.Label14.Location = New System.Drawing.Point(3, 77)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(72, 15)
         Me.Label14.TabIndex = 6
@@ -221,7 +220,7 @@ Partial Class frmListarCargo
         '
         Me.lbID.AutoSize = True
         Me.lbID.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbID.Location = New System.Drawing.Point(150, 0)
+        Me.lbID.Location = New System.Drawing.Point(151, 0)
         Me.lbID.Name = "lbID"
         Me.lbID.Size = New System.Drawing.Size(63, 15)
         Me.lbID.TabIndex = 1
@@ -232,7 +231,7 @@ Partial Class frmListarCargo
         '
         Me.lbNombre.AutoSize = True
         Me.lbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.lbNombre.Location = New System.Drawing.Point(150, 24)
+        Me.lbNombre.Location = New System.Drawing.Point(151, 25)
         Me.lbNombre.Name = "lbNombre"
         Me.lbNombre.Size = New System.Drawing.Size(97, 15)
         Me.lbNombre.TabIndex = 3
@@ -243,18 +242,32 @@ Partial Class frmListarCargo
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(3, 24)
+        Me.Label2.Location = New System.Drawing.Point(3, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombres:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'labelTitulo
+        '
+        Me.labelTitulo.BackColor = System.Drawing.Color.SteelBlue
+        Me.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.labelTitulo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelTitulo.ForeColor = System.Drawing.Color.White
+        Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.labelTitulo.Name = "labelTitulo"
+        Me.labelTitulo.Size = New System.Drawing.Size(401, 43)
+        Me.labelTitulo.TabIndex = 21
+        Me.labelTitulo.Text = "Listar Cargo"
+        Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmListarCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(401, 234)
+        Me.ClientSize = New System.Drawing.Size(401, 258)
+        Me.Controls.Add(Me.labelTitulo)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.lblCantCarg)
         Me.Controls.Add(Me.btnSig)
@@ -292,4 +305,5 @@ Partial Class frmListarCargo
     Friend WithEvents lbDept As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents labelTitulo As Label
 End Class

@@ -68,6 +68,7 @@ Partial Class FrmAddEmpleado
         Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
         Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.labelTitulo = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.gbAll.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -81,21 +82,22 @@ Partial Class FrmAddEmpleado
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardarCamb)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 476)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 510)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(629, 33)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(651, 33)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(553, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(575, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 27
@@ -104,7 +106,7 @@ Partial Class FrmAddEmpleado
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(448, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(470, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(99, 25)
         Me.btnGuardar.TabIndex = 26
@@ -113,7 +115,7 @@ Partial Class FrmAddEmpleado
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(343, 3)
+        Me.btnLimpiar.Location = New System.Drawing.Point(365, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(99, 25)
         Me.btnLimpiar.TabIndex = 29
@@ -123,7 +125,7 @@ Partial Class FrmAddEmpleado
         'btnGuardarCamb
         '
         Me.btnGuardarCamb.AccessibleName = "btnGuardarCamb"
-        Me.btnGuardarCamb.Location = New System.Drawing.Point(238, 3)
+        Me.btnGuardarCamb.Location = New System.Drawing.Point(260, 3)
         Me.btnGuardarCamb.Name = "btnGuardarCamb"
         Me.btnGuardarCamb.Size = New System.Drawing.Size(99, 25)
         Me.btnGuardarCamb.TabIndex = 28
@@ -132,7 +134,7 @@ Partial Class FrmAddEmpleado
         '
         'btnDarDeBaja
         '
-        Me.btnDarDeBaja.Location = New System.Drawing.Point(133, 3)
+        Me.btnDarDeBaja.Location = New System.Drawing.Point(155, 3)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(99, 25)
         Me.btnDarDeBaja.TabIndex = 25
@@ -205,7 +207,7 @@ Partial Class FrmAddEmpleado
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(3, 27)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(72, 27)
+        Me.Label9.Size = New System.Drawing.Size(122, 15)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Fecha de Nacimiento:"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -221,7 +223,7 @@ Partial Class FrmAddEmpleado
         'txtTelefono
         '
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefono.Location = New System.Drawing.Point(127, 3)
+        Me.txtTelefono.Location = New System.Drawing.Point(132, 3)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(187, 23)
         Me.txtTelefono.TabIndex = 3
@@ -278,7 +280,7 @@ Partial Class FrmAddEmpleado
         'dtpFechaIngreso
         '
         Me.dtpFechaIngreso.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpFechaIngreso.Location = New System.Drawing.Point(127, 57)
+        Me.dtpFechaIngreso.Location = New System.Drawing.Point(132, 57)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
         Me.dtpFechaIngreso.Size = New System.Drawing.Size(187, 23)
         Me.dtpFechaIngreso.TabIndex = 12
@@ -287,9 +289,9 @@ Partial Class FrmAddEmpleado
         '
         Me.rtxtObservacion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxtObservacion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxtObservacion.Location = New System.Drawing.Point(127, 111)
+        Me.rtxtObservacion.Location = New System.Drawing.Point(132, 111)
         Me.rtxtObservacion.Name = "rtxtObservacion"
-        Me.rtxtObservacion.Size = New System.Drawing.Size(187, 21)
+        Me.rtxtObservacion.Size = New System.Drawing.Size(193, 21)
         Me.rtxtObservacion.TabIndex = 16
         Me.rtxtObservacion.Text = ""
         '
@@ -305,9 +307,9 @@ Partial Class FrmAddEmpleado
         '
         Me.rtxtDireccion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.rtxtDireccion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rtxtDireccion.Location = New System.Drawing.Point(127, 138)
+        Me.rtxtDireccion.Location = New System.Drawing.Point(132, 138)
         Me.rtxtDireccion.Name = "rtxtDireccion"
-        Me.rtxtDireccion.Size = New System.Drawing.Size(187, 21)
+        Me.rtxtDireccion.Size = New System.Drawing.Size(193, 21)
         Me.rtxtDireccion.TabIndex = 22
         Me.rtxtDireccion.Text = ""
         '
@@ -393,12 +395,11 @@ Partial Class FrmAddEmpleado
         Me.gbAll.Controls.Add(Me.TableLayoutPanel2)
         Me.gbAll.Controls.Add(Me.TableLayoutPanel1)
         Me.gbAll.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbAll.Location = New System.Drawing.Point(12, 12)
+        Me.gbAll.Location = New System.Drawing.Point(0, 46)
         Me.gbAll.Name = "gbAll"
-        Me.gbAll.Size = New System.Drawing.Size(629, 228)
+        Me.gbAll.Size = New System.Drawing.Size(651, 234)
         Me.gbAll.TabIndex = 0
         Me.gbAll.TabStop = False
-        Me.gbAll.Text = "ACCION - Empleado"
         '
         'TableLayoutPanel2
         '
@@ -419,7 +420,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.Controls.Add(Me.panelSexo, 1, 3)
         Me.TableLayoutPanel2.Controls.Add(Me.dtpFechaIngreso, 1, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.cbUsuario, 1, 6)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(307, 27)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(312, 23)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 7
@@ -430,7 +431,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(317, 191)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(328, 191)
         Me.TableLayoutPanel2.TabIndex = 26
         '
         'Label14
@@ -447,7 +448,7 @@ Partial Class FrmAddEmpleado
         'dtpNac
         '
         Me.dtpNac.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpNac.Location = New System.Drawing.Point(127, 30)
+        Me.dtpNac.Location = New System.Drawing.Point(132, 30)
         Me.dtpNac.Name = "dtpNac"
         Me.dtpNac.Size = New System.Drawing.Size(187, 23)
         Me.dtpNac.TabIndex = 23
@@ -469,17 +470,17 @@ Partial Class FrmAddEmpleado
         Me.panelSexo.Controls.Add(Me.rbMasculino)
         Me.panelSexo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panelSexo.Location = New System.Drawing.Point(126, 83)
+        Me.panelSexo.Location = New System.Drawing.Point(131, 83)
         Me.panelSexo.Margin = New System.Windows.Forms.Padding(2)
         Me.panelSexo.Name = "panelSexo"
-        Me.panelSexo.Size = New System.Drawing.Size(189, 23)
+        Me.panelSexo.Size = New System.Drawing.Size(195, 23)
         Me.panelSexo.TabIndex = 13
         '
         'cbUsuario
         '
         Me.cbUsuario.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbUsuario.FormattingEnabled = True
-        Me.cbUsuario.Location = New System.Drawing.Point(127, 165)
+        Me.cbUsuario.Location = New System.Drawing.Point(132, 165)
         Me.cbUsuario.Name = "cbUsuario"
         Me.cbUsuario.Size = New System.Drawing.Size(187, 23)
         Me.cbUsuario.TabIndex = 29
@@ -503,7 +504,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel1.Controls.Add(Me.txtEmailC, 1, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.cbDep, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.cbCar, 1, 4)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 27)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(11, 23)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 7
@@ -519,12 +520,14 @@ Partial Class FrmAddEmpleado
         '
         'DgvEmpleado
         '
+        Me.DgvEmpleado.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEmpleado.Location = New System.Drawing.Point(17, 246)
+        Me.DgvEmpleado.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.DgvEmpleado.Location = New System.Drawing.Point(0, 286)
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.RowHeadersWidth = 51
         Me.DgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvEmpleado.Size = New System.Drawing.Size(624, 224)
+        Me.DgvEmpleado.Size = New System.Drawing.Size(651, 224)
         Me.DgvEmpleado.TabIndex = 5
         '
         'Tbl_UsuarioTableAdapter
@@ -550,11 +553,25 @@ Partial Class FrmAddEmpleado
         Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
         Me.Tbl_EmpleadoBindingSource.Position = 0
         '
+        'labelTitulo
+        '
+        Me.labelTitulo.BackColor = System.Drawing.Color.SteelBlue
+        Me.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.labelTitulo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelTitulo.ForeColor = System.Drawing.Color.White
+        Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.labelTitulo.Name = "labelTitulo"
+        Me.labelTitulo.Size = New System.Drawing.Size(651, 43)
+        Me.labelTitulo.TabIndex = 6
+        Me.labelTitulo.Text = "Titulo"
+        Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FrmAddEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(651, 521)
+        Me.ClientSize = New System.Drawing.Size(651, 543)
+        Me.Controls.Add(Me.labelTitulo)
         Me.Controls.Add(Me.DgvEmpleado)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.gbAll)
@@ -624,4 +641,5 @@ Partial Class FrmAddEmpleado
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents Tbl_EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Friend WithEvents Tbl_EmpleadoBindingSource As BindingSource
+    Friend WithEvents labelTitulo As Label
 End Class

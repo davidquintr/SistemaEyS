@@ -369,23 +369,21 @@ Partial Class frmSeguridadPermisos
         '
         'FlowLayoutPanel6
         '
-        Me.FlowLayoutPanel6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel6.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel6.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel6.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel6.Controls.Add(Me.btnHorario)
         Me.FlowLayoutPanel6.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel6.Location = New System.Drawing.Point(10, 371)
+        Me.FlowLayoutPanel6.Location = New System.Drawing.Point(0, 372)
         Me.FlowLayoutPanel6.Name = "FlowLayoutPanel6"
-        Me.FlowLayoutPanel6.Size = New System.Drawing.Size(374, 30)
+        Me.FlowLayoutPanel6.Size = New System.Drawing.Size(390, 30)
         Me.FlowLayoutPanel6.TabIndex = 7
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(298, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(314, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
         Me.btnCerrar.TabIndex = 13
@@ -394,7 +392,7 @@ Partial Class frmSeguridadPermisos
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(219, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(235, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
         Me.btnGuardar.TabIndex = 12
@@ -403,7 +401,7 @@ Partial Class frmSeguridadPermisos
         '
         'btnHorario
         '
-        Me.btnHorario.Location = New System.Drawing.Point(140, 3)
+        Me.btnHorario.Location = New System.Drawing.Point(156, 3)
         Me.btnHorario.Name = "btnHorario"
         Me.btnHorario.Size = New System.Drawing.Size(73, 23)
         Me.btnHorario.TabIndex = 11
@@ -412,7 +410,7 @@ Partial Class frmSeguridadPermisos
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(61, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(77, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
         Me.btnEliminar.TabIndex = 10
@@ -462,7 +460,7 @@ Partial Class frmSeguridadPermisos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(390, 411)
+        Me.ClientSize = New System.Drawing.Size(390, 402)
         Me.Controls.Add(Me.lblCantCarg)
         Me.Controls.Add(Me.btnSig)
         Me.Controls.Add(Me.btnAnterior)

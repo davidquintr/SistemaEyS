@@ -172,12 +172,12 @@
     Private Sub AlternarButton(mode As Integer)
 
         If mode = 0 Then
-            gboxPrincipal.Text = "Seguridad: Agregar Usuario"
+            labelTitulo.Text = "Seguridad: Agregar Usuario"
             btnAgregar.Enabled = True
             btnGuardar.Enabled = False
             btnEliminar.Enabled = False
         Else
-            gboxPrincipal.Text = "Seguridad: Administrar Usuario"
+            labelTitulo.Text = "Seguridad: Administrar Usuario"
             btnAgregar.Enabled = False
             btnGuardar.Enabled = True
             btnEliminar.Enabled = True

@@ -27,7 +27,6 @@
         Try
             txbNombre.Text = tblViewCar.Rows(idCargo).Item(1)
             rtxtDesc.Text = tblViewCar.Rows(idCargo).Item(3)
-
         Catch
 
         End Try
@@ -141,18 +140,26 @@
     Private Sub AlternarBotones(mode As Integer)
 
         If mode = 0 Then
-            GroupBox1.Text = "Agregar Cargo"
+            labelTitulo.Text = "Agregar Cargo"
             btnAgregar.Enabled = True
             btnGuardar.Enabled = False
             btnEliminar.Enabled = False
             btnHorario.Enabled = False
         Else
-            GroupBox1.Text = "Administrar Cargo"
+            labelTitulo.Text = "Administrar Cargo"
             btnAgregar.Enabled = False
             btnGuardar.Enabled = True
             btnEliminar.Enabled = True
             btnHorario.Enabled = True
         End If
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles labelTitulo.Click
 
     End Sub
 End Class

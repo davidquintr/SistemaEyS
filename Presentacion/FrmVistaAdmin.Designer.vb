@@ -61,7 +61,13 @@ Partial Class FrmVistaAdmin
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraDeEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraDeSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VwRegistrosDiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lbEmp = New System.Windows.Forms.Label()
@@ -73,6 +79,7 @@ Partial Class FrmVistaAdmin
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VwVistaAdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
         Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
@@ -82,28 +89,21 @@ Partial Class FrmVistaAdmin
         Me.Vw_EmpDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter()
         Me.Vw_UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VwRegistrosDiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_RegistrosDiaTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_RegistrosDiaTableAdapter()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DepartamentoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraDeEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraDeSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         UsernameLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VwRegistrosDiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vw_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.VwRegistrosDiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameLabel
@@ -364,10 +364,46 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.Size = New System.Drawing.Size(741, 438)
         Me.DataGridView1.TabIndex = 12
         '
-        'Tbl_EmpleadoBindingSource
+        'NombreDataGridViewTextBoxColumn
         '
-        Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
-        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'ApellidoDataGridViewTextBoxColumn
+        '
+        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "Apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
+        '
+        'DepartamentoDataGridViewTextBoxColumn
+        '
+        Me.DepartamentoDataGridViewTextBoxColumn.DataPropertyName = "Departamento"
+        Me.DepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento"
+        Me.DepartamentoDataGridViewTextBoxColumn.Name = "DepartamentoDataGridViewTextBoxColumn"
+        '
+        'CargoDataGridViewTextBoxColumn
+        '
+        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo"
+        Me.CargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
+        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
+        '
+        'HoraDeEntradaDataGridViewTextBoxColumn
+        '
+        Me.HoraDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "Hora de Entrada"
+        Me.HoraDeEntradaDataGridViewTextBoxColumn.HeaderText = "Hora de Entrada"
+        Me.HoraDeEntradaDataGridViewTextBoxColumn.Name = "HoraDeEntradaDataGridViewTextBoxColumn"
+        '
+        'HoraDeSalidaDataGridViewTextBoxColumn
+        '
+        Me.HoraDeSalidaDataGridViewTextBoxColumn.DataPropertyName = "Hora de Salida"
+        Me.HoraDeSalidaDataGridViewTextBoxColumn.HeaderText = "Hora de Salida"
+        Me.HoraDeSalidaDataGridViewTextBoxColumn.Name = "HoraDeSalidaDataGridViewTextBoxColumn"
+        '
+        'VwRegistrosDiaBindingSource
+        '
+        Me.VwRegistrosDiaBindingSource.DataMember = "Vw_RegistrosDia"
+        Me.VwRegistrosDiaBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
         'BDSistemaEySDataSet
         '
@@ -478,6 +514,11 @@ Partial Class FrmVistaAdmin
         Me.Panel5.Size = New System.Drawing.Size(283, 252)
         Me.Panel5.TabIndex = 0
         '
+        'Tbl_EmpleadoBindingSource
+        '
+        Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
+        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
         'VwVistaAdminBindingSource
         '
         Me.VwVistaAdminBindingSource.DataMember = "Vw_VistaAdmin"
@@ -530,50 +571,9 @@ Partial Class FrmVistaAdmin
         Me.Vw_UsuarioBindingSource.DataSource = Me.BDSistemaEySDataSet
         Me.Vw_UsuarioBindingSource.Position = 0
         '
-        'VwRegistrosDiaBindingSource
-        '
-        Me.VwRegistrosDiaBindingSource.DataMember = "Vw_RegistrosDia"
-        Me.VwRegistrosDiaBindingSource.DataSource = Me.BDSistemaEySDataSet
-        '
         'Vw_RegistrosDiaTableAdapter
         '
         Me.Vw_RegistrosDiaTableAdapter.ClearBeforeFill = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'ApellidoDataGridViewTextBoxColumn
-        '
-        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "Apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
-        '
-        'DepartamentoDataGridViewTextBoxColumn
-        '
-        Me.DepartamentoDataGridViewTextBoxColumn.DataPropertyName = "Departamento"
-        Me.DepartamentoDataGridViewTextBoxColumn.HeaderText = "Departamento"
-        Me.DepartamentoDataGridViewTextBoxColumn.Name = "DepartamentoDataGridViewTextBoxColumn"
-        '
-        'CargoDataGridViewTextBoxColumn
-        '
-        Me.CargoDataGridViewTextBoxColumn.DataPropertyName = "Cargo"
-        Me.CargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
-        Me.CargoDataGridViewTextBoxColumn.Name = "CargoDataGridViewTextBoxColumn"
-        '
-        'HoraDeEntradaDataGridViewTextBoxColumn
-        '
-        Me.HoraDeEntradaDataGridViewTextBoxColumn.DataPropertyName = "Hora de Entrada"
-        Me.HoraDeEntradaDataGridViewTextBoxColumn.HeaderText = "Hora de Entrada"
-        Me.HoraDeEntradaDataGridViewTextBoxColumn.Name = "HoraDeEntradaDataGridViewTextBoxColumn"
-        '
-        'HoraDeSalidaDataGridViewTextBoxColumn
-        '
-        Me.HoraDeSalidaDataGridViewTextBoxColumn.DataPropertyName = "Hora de Salida"
-        Me.HoraDeSalidaDataGridViewTextBoxColumn.HeaderText = "Hora de Salida"
-        Me.HoraDeSalidaDataGridViewTextBoxColumn.Name = "HoraDeSalidaDataGridViewTextBoxColumn"
         '
         'FrmVistaAdmin
         '
@@ -592,16 +592,16 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VwRegistrosDiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
+        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vw_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.VwRegistrosDiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

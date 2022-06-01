@@ -16,7 +16,7 @@
         modo = 1
         btnEliminar.Visible = True
         btnEditar.Visible = True
-        GroupBox1.Text = "Administrar Rol"
+        labelTitulo.Text = "Administrar Rol"
         Rol.Fill(tblRol)
         Me.idRol = idRol
         OrdenarDatos()
@@ -107,13 +107,13 @@
     Private Sub AlternarBotones(modo As Integer)
 
         If modo = 0 Then
-            GroupBox1.Text = "Administrar Rol"
+            labelTitulo.Text = "Administrar Rol"
 
             btnGuardar.Enabled = False
             btnEliminar.Enabled = True
             btnEditar.Enabled = True
         Else
-            GroupBox1.Text = "Agregar Rol"
+            labelTitulo.Text = "Agregar Rol"
             btnGuardar.Enabled = True
             btnEliminar.Enabled = False
             btnEditar.Enabled = False

@@ -76,21 +76,19 @@ Partial Class frmEstablecerHorarios
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 154)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 129)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(445, 31)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(463, 31)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(369, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(387, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
         Me.btnCerrar.TabIndex = 25
@@ -99,7 +97,7 @@ Partial Class frmEstablecerHorarios
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(290, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(308, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
         Me.btnGuardar.TabIndex = 24
@@ -109,10 +107,12 @@ Partial Class frmEstablecerHorarios
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 17)
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(445, 131)
+        Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.GroupBox1.Size = New System.Drawing.Size(463, 129)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Establecer horarios: Cargo"
@@ -152,13 +152,13 @@ Partial Class frmEstablecerHorarios
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 6, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 6, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 6, 2)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 26)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(433, 93)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(439, 93)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'Label9
@@ -403,7 +403,7 @@ Partial Class frmEstablecerHorarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(463, 197)
+        Me.ClientSize = New System.Drawing.Size(463, 160)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

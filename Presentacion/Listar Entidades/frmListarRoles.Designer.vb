@@ -35,6 +35,7 @@ Partial Class frmListarRoles
         Me.lbNombre = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.labelTitulo = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -42,21 +43,19 @@ Partial Class frmListarRoles
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnAdministrar)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(14, 141)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 181)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(382, 30)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(408, 30)
         Me.FlowLayoutPanel1.TabIndex = 20
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(306, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(332, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
         Me.btnCerrar.TabIndex = 16
@@ -65,7 +64,7 @@ Partial Class frmListarRoles
         '
         'btnAdministrar
         '
-        Me.btnAdministrar.Location = New System.Drawing.Point(227, 3)
+        Me.btnAdministrar.Location = New System.Drawing.Point(253, 3)
         Me.btnAdministrar.Name = "btnAdministrar"
         Me.btnAdministrar.Size = New System.Drawing.Size(73, 23)
         Me.btnAdministrar.TabIndex = 15
@@ -75,7 +74,7 @@ Partial Class frmListarRoles
         'lblCantRol
         '
         Me.lblCantRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.818182!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantRol.Location = New System.Drawing.Point(254, 110)
+        Me.lblCantRol.Location = New System.Drawing.Point(243, 144)
         Me.lblCantRol.Name = "lblCantRol"
         Me.lblCantRol.Size = New System.Drawing.Size(111, 25)
         Me.lblCantRol.TabIndex = 18
@@ -84,7 +83,7 @@ Partial Class frmListarRoles
         '
         'btnSig
         '
-        Me.btnSig.Location = New System.Drawing.Point(371, 110)
+        Me.btnSig.Location = New System.Drawing.Point(360, 144)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnSig.Size = New System.Drawing.Size(25, 25)
@@ -94,7 +93,7 @@ Partial Class frmListarRoles
         '
         'btnAnt
         '
-        Me.btnAnt.Location = New System.Drawing.Point(223, 110)
+        Me.btnAnt.Location = New System.Drawing.Point(212, 144)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnAnt.Size = New System.Drawing.Size(25, 25)
@@ -106,21 +105,21 @@ Partial Class frmListarRoles
         '
         Me.cbRoles.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbRoles.FormattingEnabled = True
-        Me.cbRoles.Location = New System.Drawing.Point(12, 110)
+        Me.cbRoles.Location = New System.Drawing.Point(17, 144)
         Me.cbRoles.Name = "cbRoles"
-        Me.cbRoles.Size = New System.Drawing.Size(205, 25)
+        Me.cbRoles.Size = New System.Drawing.Size(189, 25)
         Me.cbRoles.TabIndex = 16
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(5, 46)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(384, 92)
+        Me.GroupBox1.Size = New System.Drawing.Size(400, 92)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Listar roles"
         '
         'TableLayoutPanel1
         '
@@ -131,7 +130,7 @@ Partial Class frmListarRoles
         Me.TableLayoutPanel1.Controls.Add(Me.lbNombre, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 24)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 21)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -186,11 +185,25 @@ Partial Class frmListarRoles
         Me.Label1.Text = "ID:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'labelTitulo
+        '
+        Me.labelTitulo.BackColor = System.Drawing.Color.SteelBlue
+        Me.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.labelTitulo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelTitulo.ForeColor = System.Drawing.Color.White
+        Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.labelTitulo.Name = "labelTitulo"
+        Me.labelTitulo.Size = New System.Drawing.Size(408, 43)
+        Me.labelTitulo.TabIndex = 35
+        Me.labelTitulo.Text = "Listar Roles"
+        Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmListarRoles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(408, 183)
+        Me.ClientSize = New System.Drawing.Size(408, 211)
+        Me.Controls.Add(Me.labelTitulo)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.lblCantRol)
         Me.Controls.Add(Me.btnSig)
@@ -223,4 +236,5 @@ Partial Class frmListarRoles
     Friend WithEvents lbNombre As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents labelTitulo As Label
 End Class
