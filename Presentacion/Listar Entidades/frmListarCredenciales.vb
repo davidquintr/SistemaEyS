@@ -96,4 +96,5 @@
         editUser.CambiarModo(fila)
         editUser.Show()
     End Sub
+
 End Class

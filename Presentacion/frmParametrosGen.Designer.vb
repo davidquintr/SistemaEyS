@@ -23,7 +23,11 @@ Partial Class frmParametrosGen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.layoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnExtras = New System.Windows.Forms.Button()
+        Me.btnNombreEmpresa = New System.Windows.Forms.Button()
+        Me.btnHorarioAlmuerzo = New System.Windows.Forms.Button()
+        Me.btnTGracia = New System.Windows.Forms.Button()
+        Me.btnDominio = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.labelParametros = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -32,6 +36,7 @@ Partial Class frmParametrosGen
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
         Me.buttonAjustes = New System.Windows.Forms.Button()
+        Me.btnEmpresa = New System.Windows.Forms.Button()
         Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -41,21 +46,65 @@ Partial Class frmParametrosGen
         '
         'layoutPanel
         '
-        Me.layoutPanel.Controls.Add(Me.Button1)
+        Me.layoutPanel.Controls.Add(Me.btnExtras)
+        Me.layoutPanel.Controls.Add(Me.btnNombreEmpresa)
+        Me.layoutPanel.Controls.Add(Me.btnHorarioAlmuerzo)
+        Me.layoutPanel.Controls.Add(Me.btnTGracia)
+        Me.layoutPanel.Controls.Add(Me.btnDominio)
         Me.layoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.layoutPanel.Location = New System.Drawing.Point(344, 64)
         Me.layoutPanel.Name = "layoutPanel"
         Me.layoutPanel.Size = New System.Drawing.Size(420, 419)
         Me.layoutPanel.TabIndex = 0
         '
-        'Button1
+        'btnExtras
         '
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(413, 46)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Ajustes extras"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnExtras.Location = New System.Drawing.Point(3, 3)
+        Me.btnExtras.Name = "btnExtras"
+        Me.btnExtras.Size = New System.Drawing.Size(413, 46)
+        Me.btnExtras.TabIndex = 2
+        Me.btnExtras.Text = "Ajustes extras"
+        Me.btnExtras.UseVisualStyleBackColor = True
+        '
+        'btnNombreEmpresa
+        '
+        Me.btnNombreEmpresa.Location = New System.Drawing.Point(3, 55)
+        Me.btnNombreEmpresa.Name = "btnNombreEmpresa"
+        Me.btnNombreEmpresa.Size = New System.Drawing.Size(413, 46)
+        Me.btnNombreEmpresa.TabIndex = 3
+        Me.btnNombreEmpresa.Text = "Nombre de la Empresa"
+        Me.btnNombreEmpresa.UseVisualStyleBackColor = True
+        Me.btnNombreEmpresa.Visible = False
+        '
+        'btnHorarioAlmuerzo
+        '
+        Me.btnHorarioAlmuerzo.Location = New System.Drawing.Point(3, 107)
+        Me.btnHorarioAlmuerzo.Name = "btnHorarioAlmuerzo"
+        Me.btnHorarioAlmuerzo.Size = New System.Drawing.Size(413, 46)
+        Me.btnHorarioAlmuerzo.TabIndex = 4
+        Me.btnHorarioAlmuerzo.Text = "Horario de almuerzo"
+        Me.btnHorarioAlmuerzo.UseVisualStyleBackColor = True
+        Me.btnHorarioAlmuerzo.Visible = False
+        '
+        'btnTGracia
+        '
+        Me.btnTGracia.Location = New System.Drawing.Point(3, 159)
+        Me.btnTGracia.Name = "btnTGracia"
+        Me.btnTGracia.Size = New System.Drawing.Size(413, 46)
+        Me.btnTGracia.TabIndex = 5
+        Me.btnTGracia.Text = "Tiempo de gracia"
+        Me.btnTGracia.UseVisualStyleBackColor = True
+        Me.btnTGracia.Visible = False
+        '
+        'btnDominio
+        '
+        Me.btnDominio.Location = New System.Drawing.Point(3, 211)
+        Me.btnDominio.Name = "btnDominio"
+        Me.btnDominio.Size = New System.Drawing.Size(413, 46)
+        Me.btnDominio.TabIndex = 6
+        Me.btnDominio.Text = "Dominio de la empresa(@)"
+        Me.btnDominio.UseVisualStyleBackColor = True
+        Me.btnDominio.Visible = False
         '
         'Panel2
         '
@@ -118,6 +167,7 @@ Partial Class frmParametrosGen
         'FlowLayoutPanel3
         '
         Me.FlowLayoutPanel3.Controls.Add(Me.buttonAjustes)
+        Me.FlowLayoutPanel3.Controls.Add(Me.btnEmpresa)
         Me.FlowLayoutPanel3.Location = New System.Drawing.Point(12, 61)
         Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
         Me.FlowLayoutPanel3.Size = New System.Drawing.Size(322, 481)
@@ -131,6 +181,16 @@ Partial Class frmParametrosGen
         Me.buttonAjustes.TabIndex = 1
         Me.buttonAjustes.Text = "Ajustes extras"
         Me.buttonAjustes.UseVisualStyleBackColor = True
+        '
+        'btnEmpresa
+        '
+        Me.btnEmpresa.Location = New System.Drawing.Point(3, 55)
+        Me.btnEmpresa.Name = "btnEmpresa"
+        Me.btnEmpresa.Size = New System.Drawing.Size(319, 46)
+        Me.btnEmpresa.TabIndex = 2
+        Me.btnEmpresa.Text = "Empresa"
+        Me.btnEmpresa.UseVisualStyleBackColor = True
+        Me.btnEmpresa.Visible = False
         '
         'frmParametrosGen
         '
@@ -167,5 +227,10 @@ Partial Class frmParametrosGen
     Friend WithEvents btnCerrar As Button
     Friend WithEvents FlowLayoutPanel3 As FlowLayoutPanel
     Friend WithEvents buttonAjustes As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnExtras As Button
+    Friend WithEvents btnNombreEmpresa As Button
+    Friend WithEvents btnHorarioAlmuerzo As Button
+    Friend WithEvents btnTGracia As Button
+    Friend WithEvents btnDominio As Button
+    Friend WithEvents btnEmpresa As Button
 End Class

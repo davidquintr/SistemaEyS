@@ -175,7 +175,7 @@ Public Class FrmAddEmpleado
         Dim observacion As String = rtxtObservacion.Text.Trim
         Dim direccion As String = rtxtDireccion.Text.Trim
         Dim idCar As Integer = cbCar.SelectedIndex + 1
-        Dim id As Integer ' Y esto de donde salió??? XDDD
+        Dim id As Integer
 
         Dim result As DialogResult = DialogResult.No
 

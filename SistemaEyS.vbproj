@@ -148,6 +148,12 @@
     <Compile Include="Presentacion\Agregar Entidades\frmAdminCredenciales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmEstablcerAlmuerzo.Designer.vb">
+      <DependentUpon>frmEstablcerAlmuerzo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmEstablcerAlmuerzo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmEstablecerEventos.Designer.vb">
       <DependentUpon>frmEstablecerEventos.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Agregar Entidades\frmAdminCredenciales.resx">
       <DependentUpon>frmAdminCredenciales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmEstablcerAlmuerzo.resx">
+      <DependentUpon>frmEstablcerAlmuerzo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmEstablecerEventos.resx">
       <DependentUpon>frmEstablecerEventos.vb</DependentUpon>

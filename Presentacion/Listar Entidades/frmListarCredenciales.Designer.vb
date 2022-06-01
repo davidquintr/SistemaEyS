@@ -36,7 +36,6 @@ Partial Class frmListarCredenciales
         Me.lbRol = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblCantUser = New System.Windows.Forms.Label()
         Me.btnSig = New System.Windows.Forms.Button()
@@ -202,7 +201,6 @@ Partial Class frmListarCredenciales
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(15, 197)
@@ -219,18 +217,9 @@ Partial Class frmListarCredenciales
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.Location = New System.Drawing.Point(220, 3)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
-        Me.btnGuardar.TabIndex = 14
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(141, 3)
+        Me.Button1.Location = New System.Drawing.Point(220, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(73, 23)
         Me.Button1.TabIndex = 16
@@ -311,7 +300,6 @@ Partial Class frmListarCredenciales
     Friend WithEvents lbNombre As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnGuardar As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents lblCantUser As Label
     Friend WithEvents btnSig As Button

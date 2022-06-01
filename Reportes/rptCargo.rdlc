@@ -658,7 +658,7 @@
         <KeepTogether>true</KeepTogether>
         <Top>7.06259cm</Top>
         <Height>1.81208cm</Height>
-        <Width>16.51cm</Width>
+        <Width>18.62667cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -717,10 +717,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>0.92287cm</Top>
-            <Left>13.33183cm</Left>
-            <Height>0.6cm</Height>
-            <Width>2.88713cm</Width>
+            <Top>0.8435cm</Top>
+            <Left>14.97224cm</Left>
+            <Height>0.99688cm</Height>
+            <Width>3.65442cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -735,7 +735,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>1.84037cm</Height>
-        <Width>16.51cm</Width>
+        <Width>18.62667cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -750,7 +750,7 @@
       <BackgroundColor>DimGray</BackgroundColor>
     </Style>
   </Body>
-  <Width>6.5in</Width>
+  <Width>7.33333in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

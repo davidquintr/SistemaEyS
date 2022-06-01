@@ -4,9 +4,10 @@
     Dim Evento As New BDSistemaEySDataSetTableAdapters.tbl_EventoTableAdapter
 
     Dim idEvento As Integer
+    Dim idEmpleado As Integer
 
     Sub llenarGrid()
-        dgvEventos.DataSource = evento.GetData
+        dgvEventos.DataSource = Evento.GetData
         dgvEventos.Refresh()
         dgvEventos.Columns(0).Visible = False
     End Sub
@@ -25,6 +26,7 @@
         rtbDescripcion.Text = ""
         dtpFechaInicio.Value = DateTime.Now
         dtpFechaFinal.Value = DateTime.Now
+
     End Sub
 
 
@@ -53,6 +55,7 @@
     Private Sub frmEstablecerEventos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarEmp()
         llenarGrid()
+
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
@@ -76,17 +79,18 @@
 
             Dim fila As Integer = dgvEventos.CurrentRow.Index
             idEvento = dgvEventos.Item(0, fila).Value
-            txtEvento.Text = dgvEventos.Item(7, fila).Value
-            dtpFechaInicio.Value = dgvEventos.Item(1, fila).Value
-            dtpFechaFinal.Value = dgvEventos.Item(2, fila).Value
-            txtRazon.Text = dgvEventos.Item(3, fila).Value
-            cbEmpleado.Text = dgvEventos.Item(6, fila).Value
-            rtbDescripcion.Text = dgvEventos.Item(4, fila).Value
+            txtEvento.Text = dgvEventos.Item(1, fila).Value
+            dtpFechaInicio.Value = dgvEventos.Item(2, fila).Value
+            dtpFechaFinal.Value = dgvEventos.Item(3, fila).Value
+            txtRazon.Text = dgvEventos.Item(4, fila).Value
+            cbEmpleado.SelectedValue = dgvEventos.Item(7, fila).Value
+            rtbDescripcion.Text = dgvEventos.Item(5, fila).Value
 
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
@@ -103,4 +107,5 @@
 
         llenarGrid()
     End Sub
+
 End Class
