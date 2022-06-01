@@ -1,4 +1,11 @@
 ﻿Partial Class BDSistemaEySDataSet
+    Partial Public Class tbl_UsuarioDataTable
+        Private Sub tbl_UsuarioDataTable_tbl_UsuarioRowChanging(sender As Object, e As tbl_UsuarioRowChangeEvent) Handles Me.tbl_UsuarioRowChanging
+
+        End Sub
+
+    End Class
+
     Partial Public Class tbl_EventoDataTable
         Private Sub tbl_EventoDataTable_ColumnChanging(sender As Object, e As DataColumnChangeEventArgs) Handles Me.ColumnChanging
             If (e.Column.ColumnName = Me.tipoEventoColumn.ColumnName) Then

@@ -16,8 +16,7 @@
     Private CentroX As Single
     Private CentroY As Single
 
-
-
+    Dim idEmp As Integer
 
     Private Sub frmVistaEmp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -31,20 +30,28 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub CargarDatos(idEmp As Integer)
+        Me.idEmp = idEmp
+
+        Me.Vw_EmpDataTableAdapter.ObtenerEmp(Me.BDSistemaEySDataSet.Vw_EmpData, idEmp)
+        lbBienvenida.Text = "Bienvenido, " + BDSistemaEySDataSet.Vw_EmpData.First.Nombre.ToString() + " " + BDSistemaEySDataSet.Vw_EmpData.First.Apellido.ToString()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Desea marcar su entrada?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Desea marcar su salida?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Desea iniciar el almuerzo?", "Confirmación", MessageBoxButtons.YesNoCancel)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblHora.Text = DateTime.Now.ToLongTimeString
+        labelHora.Text = DateTime.Now.ToLongTimeString
     End Sub
 
 
@@ -206,6 +213,19 @@
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
         RefrescarGraficos()
+    End Sub
+
+    Private Sub lblHora_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnIng_Click(sender As Object, e As EventArgs) Handles btnIng.Click
+        Form1.Show()
+        Me.Close()
     End Sub
 
 End Class

@@ -24,11 +24,16 @@
     Private CentroX As Single
     Private CentroY As Single
 
+    Private idEmp As Integer
+    Private idUsuario As Integer
+
     Private Sub AñadirEntidadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AñadirEntidadToolStripMenuItem.Click
     End Sub
 
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.tbl_Usuario' Puede moverla o quitarla según sea necesario.
+        'Me.Tbl_UsuarioTableAdapter1.Fill(Me.BDSistemaEySDataSet.tbl_Usuario)
+        BDSistemaEySDataSet.EnforceConstraints = False
         CentroX = 280 / 2
         CentroY = 280 / 2
 
@@ -39,6 +44,24 @@
 
         If VwVistaAdminBindingSource IsNot Nothing Then
             Me.Vw_VistaAdminTableAdapter.Fill(Me.BDSistemaEySDataSet.Vw_VistaAdmin)
+        End If
+
+    End Sub
+
+    Public Sub AsignarUsuario(idEmp As Integer, idUsuario As Integer)
+        Me.idEmp = idEmp
+        Me.idUsuario = idUsuario
+        Dim atito As String
+
+        Me.Vw_UsuarioTableAdapter.EncontrarUser(Me.BDSistemaEySDataSet.Vw_Usuario, idUsuario)
+
+        lbCargo.Text = BDSistemaEySDataSet.Vw_Usuario.First.Rol.ToString()
+        lbEmp.Text = BDSistemaEySDataSet.Vw_Usuario.First.Username.ToString()
+
+        If idEmp <> 0 Then
+            Me.Vw_EmpDataTableAdapter.ObtenerEmp(Me.BDSistemaEySDataSet.Vw_EmpData, idEmp)
+            lbEmp.Text += " / " + BDSistemaEySDataSet.Vw_EmpData.First.Nombre.ToString() + " " + BDSistemaEySDataSet.Vw_EmpData.First.Apellido.ToString()
+            lbCargo.Text += " / " + BDSistemaEySDataSet.Vw_EmpData.First.Cargo.ToString()
         End If
 
     End Sub
@@ -282,6 +305,10 @@
     End Sub
 
     Private Sub labelHora_Click(sender As Object, e As EventArgs) Handles labelHora.Click
+
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
 
     End Sub
 End Class

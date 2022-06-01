@@ -48,6 +48,7 @@
             Dim result As DialogResult = MessageBox.Show("¿Desea iniciar como administrador?", "Inicio de sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
                 FrmVistaAdmin.Show()
+                FrmVistaAdmin.AsignarUsuario(idEmpleado, idUsuario)
                 Me.Hide()
                 Return
             ElseIf result = DialogResult.No And hasEmp = False Then
@@ -55,12 +56,13 @@
                 Return
             Else
                 frmVistaEmp.Show()
+                frmVistaEmp.CargarDatos(idEmpleado)
                 Me.Hide()
                 Return
             End If
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message, "Vista de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
