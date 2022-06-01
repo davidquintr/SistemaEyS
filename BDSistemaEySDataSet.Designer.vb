@@ -1217,11 +1217,13 @@ Partial Public Class BDSistemaEySDataSet
         
         Private columnnombreEmpresa As Global.System.Data.DataColumn
         
-        Private columnhorarioAlmuerzo As Global.System.Data.DataColumn
-        
         Private columntiempoGracia As Global.System.Data.DataColumn
         
         Private columnemailDep As Global.System.Data.DataColumn
+        
+        Private columnhorarioAlmuerzoIn As Global.System.Data.DataColumn
+        
+        Private columnhorarioAlmuerzoOut As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -1276,14 +1278,6 @@ Partial Public Class BDSistemaEySDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property horarioAlmuerzoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnhorarioAlmuerzo
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property tiempoGraciaColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columntiempoGracia
@@ -1295,6 +1289,22 @@ Partial Public Class BDSistemaEySDataSet
         Public ReadOnly Property emailDepColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnemailDep
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property horarioAlmuerzoInColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhorarioAlmuerzoIn
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property horarioAlmuerzoOutColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhorarioAlmuerzoOut
             End Get
         End Property
         
@@ -1335,9 +1345,9 @@ Partial Public Class BDSistemaEySDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function Addtbl_ConfigRow(ByVal nombreEmpresa As String, ByVal horarioAlmuerzo As Date, ByVal tiempoGracia As Integer, ByVal emailDep As String) As tbl_ConfigRow
+        Public Overloads Function Addtbl_ConfigRow(ByVal nombreEmpresa As String, ByVal tiempoGracia As Integer, ByVal emailDep As String, ByVal horarioAlmuerzoIn As Date, ByVal horarioAlmuerzoOut As Date) As tbl_ConfigRow
             Dim rowtbl_ConfigRow As tbl_ConfigRow = CType(Me.NewRow,tbl_ConfigRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nombreEmpresa, horarioAlmuerzo, tiempoGracia, emailDep}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nombreEmpresa, tiempoGracia, emailDep, horarioAlmuerzoIn, horarioAlmuerzoOut}
             rowtbl_ConfigRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtbl_ConfigRow)
             Return rowtbl_ConfigRow
@@ -1368,9 +1378,10 @@ Partial Public Class BDSistemaEySDataSet
         Friend Sub InitVars()
             Me.columnidConfig = MyBase.Columns("idConfig")
             Me.columnnombreEmpresa = MyBase.Columns("nombreEmpresa")
-            Me.columnhorarioAlmuerzo = MyBase.Columns("horarioAlmuerzo")
             Me.columntiempoGracia = MyBase.Columns("tiempoGracia")
             Me.columnemailDep = MyBase.Columns("emailDep")
+            Me.columnhorarioAlmuerzoIn = MyBase.Columns("horarioAlmuerzoIn")
+            Me.columnhorarioAlmuerzoOut = MyBase.Columns("horarioAlmuerzoOut")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1380,12 +1391,14 @@ Partial Public Class BDSistemaEySDataSet
             MyBase.Columns.Add(Me.columnidConfig)
             Me.columnnombreEmpresa = New Global.System.Data.DataColumn("nombreEmpresa", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnombreEmpresa)
-            Me.columnhorarioAlmuerzo = New Global.System.Data.DataColumn("horarioAlmuerzo", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnhorarioAlmuerzo)
             Me.columntiempoGracia = New Global.System.Data.DataColumn("tiempoGracia", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntiempoGracia)
             Me.columnemailDep = New Global.System.Data.DataColumn("emailDep", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemailDep)
+            Me.columnhorarioAlmuerzoIn = New Global.System.Data.DataColumn("horarioAlmuerzoIn", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhorarioAlmuerzoIn)
+            Me.columnhorarioAlmuerzoOut = New Global.System.Data.DataColumn("horarioAlmuerzoOut", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhorarioAlmuerzoOut)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidConfig}, true))
             Me.columnidConfig.AutoIncrement = true
             Me.columnidConfig.AutoIncrementSeed = -1
@@ -1395,9 +1408,10 @@ Partial Public Class BDSistemaEySDataSet
             Me.columnidConfig.Unique = true
             Me.columnnombreEmpresa.AllowDBNull = false
             Me.columnnombreEmpresa.MaxLength = 100
-            Me.columnhorarioAlmuerzo.AllowDBNull = false
             Me.columntiempoGracia.AllowDBNull = false
             Me.columnemailDep.MaxLength = 100
+            Me.columnhorarioAlmuerzoIn.AllowDBNull = false
+            Me.columnhorarioAlmuerzoOut.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6916,17 +6930,6 @@ Partial Public Class BDSistemaEySDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property horarioAlmuerzo() As Date
-            Get
-                Return CType(Me(Me.tabletbl_Config.horarioAlmuerzoColumn),Date)
-            End Get
-            Set
-                Me(Me.tabletbl_Config.horarioAlmuerzoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property tiempoGracia() As Integer
             Get
                 Return CType(Me(Me.tabletbl_Config.tiempoGraciaColumn),Integer)
@@ -6948,6 +6951,28 @@ Partial Public Class BDSistemaEySDataSet
             End Get
             Set
                 Me(Me.tabletbl_Config.emailDepColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property horarioAlmuerzoIn() As Date
+            Get
+                Return CType(Me(Me.tabletbl_Config.horarioAlmuerzoInColumn),Date)
+            End Get
+            Set
+                Me(Me.tabletbl_Config.horarioAlmuerzoInColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property horarioAlmuerzoOut() As Date
+            Get
+                Return CType(Me(Me.tabletbl_Config.horarioAlmuerzoOutColumn),Date)
+            End Get
+            Set
+                Me(Me.tabletbl_Config.horarioAlmuerzoOutColumn) = value
             End Set
         End Property
         
@@ -10251,54 +10276,63 @@ Namespace BDSistemaEySDataSetTableAdapters
             tableMapping.DataSetTable = "tbl_Config"
             tableMapping.ColumnMappings.Add("idConfig", "idConfig")
             tableMapping.ColumnMappings.Add("nombreEmpresa", "nombreEmpresa")
-            tableMapping.ColumnMappings.Add("horarioAlmuerzo", "horarioAlmuerzo")
             tableMapping.ColumnMappings.Add("tiempoGracia", "tiempoGracia")
             tableMapping.ColumnMappings.Add("emailDep", "emailDep")
+            tableMapping.ColumnMappings.Add("horarioAlmuerzoIn", "horarioAlmuerzoIn")
+            tableMapping.ColumnMappings.Add("horarioAlmuerzoOut", "horarioAlmuerzoOut")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [tbl_Config] WHERE (([idConfig] = @Original_idConfig) AND ([nombreEmp"& _ 
-                "resa] = @Original_nombreEmpresa) AND ([horarioAlmuerzo] = @Original_horarioAlmue"& _ 
-                "rzo) AND ([tiempoGracia] = @Original_tiempoGracia) AND ((@IsNull_emailDep = 1 AN"& _ 
-                "D [emailDep] IS NULL) OR ([emailDep] = @Original_emailDep)))"
+                "resa] = @Original_nombreEmpresa) AND ([tiempoGracia] = @Original_tiempoGracia) A"& _ 
+                "ND ((@IsNull_emailDep = 1 AND [emailDep] IS NULL) OR ([emailDep] = @Original_ema"& _ 
+                "ilDep)) AND ([horarioAlmuerzoIn] = @Original_horarioAlmuerzoIn) AND ([horarioAlm"& _ 
+                "uerzoOut] = @Original_horarioAlmuerzoOut))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idConfig", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idConfig", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombreEmpresa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreEmpresa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioAlmuerzo", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tiempoGracia", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tiempoGracia", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_emailDep", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailDep", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_emailDep", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailDep", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioAlmuerzoIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioAlmuerzoOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Config] ([nombreEmpresa], [horarioAlmuerzo], [tiempoGracia], [em"& _ 
-                "ailDep]) VALUES (@nombreEmpresa, @horarioAlmuerzo, @tiempoGracia, @emailDep);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
-                "ELECT idConfig, nombreEmpresa, horarioAlmuerzo, tiempoGracia, emailDep FROM tbl_"& _ 
-                "Config WHERE (idConfig = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Config] ([nombreEmpresa], [tiempoGracia], [emailDep], [horarioAl"& _ 
+                "muerzoIn], [horarioAlmuerzoOut]) VALUES (@nombreEmpresa, @tiempoGracia, @emailDe"& _ 
+                "p, @horarioAlmuerzoIn, @horarioAlmuerzoOut);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idConfig, nombreEmpresa, ti"& _ 
+                "empoGracia, emailDep, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tbl_Config WHER"& _ 
+                "E (idConfig = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreEmpresa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreEmpresa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzo", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tiempoGracia", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tiempoGracia", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@emailDep", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailDep", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Config] SET [nombreEmpresa] = @nombreEmpresa, [horarioAlmuerzo] = @ho"& _ 
-                "rarioAlmuerzo, [tiempoGracia] = @tiempoGracia, [emailDep] = @emailDep WHERE (([i"& _ 
-                "dConfig] = @Original_idConfig) AND ([nombreEmpresa] = @Original_nombreEmpresa) A"& _ 
-                "ND ([horarioAlmuerzo] = @Original_horarioAlmuerzo) AND ([tiempoGracia] = @Origin"& _ 
-                "al_tiempoGracia) AND ((@IsNull_emailDep = 1 AND [emailDep] IS NULL) OR ([emailDe"& _ 
-                "p] = @Original_emailDep)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idConfig, nombreEmpresa, horarioAlmuerzo, ti"& _ 
-                "empoGracia, emailDep FROM tbl_Config WHERE (idConfig = @idConfig)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Config] SET [nombreEmpresa] = @nombreEmpresa, [tiempoGracia] = @tiemp"& _ 
+                "oGracia, [emailDep] = @emailDep, [horarioAlmuerzoIn] = @horarioAlmuerzoIn, [hora"& _ 
+                "rioAlmuerzoOut] = @horarioAlmuerzoOut WHERE (([idConfig] = @Original_idConfig) A"& _ 
+                "ND ([nombreEmpresa] = @Original_nombreEmpresa) AND ([tiempoGracia] = @Original_t"& _ 
+                "iempoGracia) AND ((@IsNull_emailDep = 1 AND [emailDep] IS NULL) OR ([emailDep] ="& _ 
+                " @Original_emailDep)) AND ([horarioAlmuerzoIn] = @Original_horarioAlmuerzoIn) AN"& _ 
+                "D ([horarioAlmuerzoOut] = @Original_horarioAlmuerzoOut));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idConfig, nomb"& _ 
+                "reEmpresa, tiempoGracia, emailDep, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tb"& _ 
+                "l_Config WHERE (idConfig = @idConfig)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreEmpresa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreEmpresa", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzo", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tiempoGracia", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tiempoGracia", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@emailDep", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailDep", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idConfig", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idConfig", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombreEmpresa", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreEmpresa", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioAlmuerzo", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tiempoGracia", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tiempoGracia", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_emailDep", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailDep", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_emailDep", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailDep", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioAlmuerzoIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioAlmuerzoOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idConfig", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idConfig", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -10312,12 +10346,45 @@ Namespace BDSistemaEySDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(4) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT idConfig, nombreEmpresa, horarioAlmuerzo, tiempoGracia, emailDep FROM tbl_"& _ 
-                "Config"
+            Me._commandCollection(0).CommandText = "SELECT idConfig, nombreEmpresa, tiempoGracia, emailDep, horarioAlmuerzoIn, horari"& _ 
+                "oAlmuerzoOut FROM tbl_Config"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "UPDATE [tbl_Config] SET [horarioAlmuerzoIn] = @horarioAlmuerzoIn, [horarioAlmuerz"& _ 
+                "oOut] = @horarioAlmuerzoOut WHERE (([idConfig] = @Original_idConfig));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT i"& _ 
+                "dConfig, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tbl_Config WHERE (idConfig ="& _ 
+                " @idConfig)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoIn", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoOut", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idConfig", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idConfig", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idConfig", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idConfig", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tb"& _ 
+                "l_Config"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idConfig = @Param1)"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idConfig", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "INSERT INTO [tbl_Config] ([horarioAlmuerzoIn], [horarioAlmuerzoOut]) VALUES (@hor"& _ 
+                "arioAlmuerzoIn, @horarioAlmuerzoOut);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idConfig, horarioAlmuerzoIn, horar"& _ 
+                "ioAlmuerzoOut FROM tbl_Config WHERE (idConfig = SCOPE_IDENTITY())"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoIn", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioAlmuerzoOut", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tb"& _ 
+                "l_Config"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (horarioAlmuerzoIn = @Param1) AND (horarioAlmuerzoOut = @"& _ 
+                "Param2)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioAlmuerzoOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10339,6 +10406,60 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As BDSistemaEySDataSet.tbl_ConfigDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As BDSistemaEySDataSet.tbl_ConfigDataTable = New BDSistemaEySDataSet.tbl_ConfigDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function ExisteAlmuerzo(ByVal dataTable As BDSistemaEySDataSet.tbl_ConfigDataTable, ByVal Param1 As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy3(ByVal Param1 As Integer) As BDSistemaEySDataSet.tbl_ConfigDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            Dim dataTable As BDSistemaEySDataSet.tbl_ConfigDataTable = New BDSistemaEySDataSet.tbl_ConfigDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function ObtenerAlmuerzo(ByVal dataTable As BDSistemaEySDataSet.tbl_ConfigDataTable, ByVal Param1 As Date, ByVal Param2 As Date) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,Date)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy2(ByVal Param1 As Date, ByVal Param2 As Date) As BDSistemaEySDataSet.tbl_ConfigDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Date)
+            Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param2,Date)
             Dim dataTable As BDSistemaEySDataSet.tbl_ConfigDataTable = New BDSistemaEySDataSet.tbl_ConfigDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -10376,22 +10497,23 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_idConfig As Integer, ByVal Original_nombreEmpresa As String, ByVal Original_horarioAlmuerzo As Date, ByVal Original_tiempoGracia As Integer, ByVal Original_emailDep As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_idConfig As Integer, ByVal Original_nombreEmpresa As String, ByVal Original_tiempoGracia As Integer, ByVal Original_emailDep As String, ByVal Original_horarioAlmuerzoIn As Date, ByVal Original_horarioAlmuerzoOut As Date) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_idConfig,Integer)
             If (Original_nombreEmpresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_nombreEmpresa")
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_nombreEmpresa,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_horarioAlmuerzo,Date)
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_tiempoGracia,Integer)
+            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_tiempoGracia,Integer)
             If (Original_emailDep Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_emailDep,String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_emailDep,String)
             End If
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_horarioAlmuerzoIn,Date)
+            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_horarioAlmuerzoOut,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10411,19 +10533,20 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal nombreEmpresa As String, ByVal horarioAlmuerzo As Date, ByVal tiempoGracia As Integer, ByVal emailDep As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal nombreEmpresa As String, ByVal tiempoGracia As Integer, ByVal emailDep As String, ByVal horarioAlmuerzoIn As Date, ByVal horarioAlmuerzoOut As Date) As Integer
             If (nombreEmpresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombreEmpresa")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(nombreEmpresa,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(horarioAlmuerzo,Date)
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(tiempoGracia,Integer)
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(tiempoGracia,Integer)
             If (emailDep Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(emailDep,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(emailDep,String)
             End If
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(horarioAlmuerzoIn,Date)
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(horarioAlmuerzoOut,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10443,26 +10566,26 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal nombreEmpresa As String, ByVal horarioAlmuerzo As Date, ByVal tiempoGracia As Integer, ByVal emailDep As String, ByVal Original_idConfig As Integer, ByVal Original_nombreEmpresa As String, ByVal Original_horarioAlmuerzo As Date, ByVal Original_tiempoGracia As Integer, ByVal Original_emailDep As String, ByVal idConfig As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal nombreEmpresa As String, ByVal tiempoGracia As Integer, ByVal emailDep As String, ByVal horarioAlmuerzoIn As Date, ByVal horarioAlmuerzoOut As Date, ByVal Original_idConfig As Integer, ByVal Original_nombreEmpresa As String, ByVal Original_tiempoGracia As Integer, ByVal Original_emailDep As String, ByVal Original_horarioAlmuerzoIn As Date, ByVal Original_horarioAlmuerzoOut As Date, ByVal idConfig As Integer) As Integer
             If (nombreEmpresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombreEmpresa")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(nombreEmpresa,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(horarioAlmuerzo,Date)
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(tiempoGracia,Integer)
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(tiempoGracia,Integer)
             If (emailDep Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(emailDep,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(emailDep,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_idConfig,Integer)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(horarioAlmuerzoIn,Date)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(horarioAlmuerzoOut,Date)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_idConfig,Integer)
             If (Original_nombreEmpresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_nombreEmpresa")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_nombreEmpresa,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_nombreEmpresa,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_horarioAlmuerzo,Date)
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_tiempoGracia,Integer)
             If (Original_emailDep Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
@@ -10471,7 +10594,9 @@ Namespace BDSistemaEySDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_emailDep,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(idConfig,Integer)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_horarioAlmuerzoIn,Date)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_horarioAlmuerzoOut,Date)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(idConfig,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -10491,8 +10616,58 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal nombreEmpresa As String, ByVal horarioAlmuerzo As Date, ByVal tiempoGracia As Integer, ByVal emailDep As String, ByVal Original_idConfig As Integer, ByVal Original_nombreEmpresa As String, ByVal Original_horarioAlmuerzo As Date, ByVal Original_tiempoGracia As Integer, ByVal Original_emailDep As String) As Integer
-            Return Me.Update(nombreEmpresa, horarioAlmuerzo, tiempoGracia, emailDep, Original_idConfig, Original_nombreEmpresa, Original_horarioAlmuerzo, Original_tiempoGracia, Original_emailDep, Original_idConfig)
+        Public Overloads Overridable Function Update(ByVal nombreEmpresa As String, ByVal tiempoGracia As Integer, ByVal emailDep As String, ByVal horarioAlmuerzoIn As Date, ByVal horarioAlmuerzoOut As Date, ByVal Original_idConfig As Integer, ByVal Original_nombreEmpresa As String, ByVal Original_tiempoGracia As Integer, ByVal Original_emailDep As String, ByVal Original_horarioAlmuerzoIn As Date, ByVal Original_horarioAlmuerzoOut As Date) As Integer
+            Return Me.Update(nombreEmpresa, tiempoGracia, emailDep, horarioAlmuerzoIn, horarioAlmuerzoOut, Original_idConfig, Original_nombreEmpresa, Original_tiempoGracia, Original_emailDep, Original_horarioAlmuerzoIn, Original_horarioAlmuerzoOut, Original_idConfig)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function ActualizarAlmuerzo(ByVal horarioAlmuerzoIn As Date, ByVal horarioAlmuerzoOut As Date, ByVal Original_idConfig As Integer, ByVal idConfig As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(horarioAlmuerzoIn,Date)
+            command.Parameters(1).Value = CType(horarioAlmuerzoOut,Date)
+            command.Parameters(2).Value = CType(Original_idConfig,Integer)
+            command.Parameters(3).Value = CType(idConfig,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertarAlmuerzo(ByVal horarioAlmuerzoIn As Date, ByVal horarioAlmuerzoOut As Date) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            command.Parameters(0).Value = CType(horarioAlmuerzoIn,Date)
+            command.Parameters(1).Value = CType(horarioAlmuerzoOut,Date)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

@@ -1,34 +1,31 @@
 ﻿Public Class frmEstablcerAlmuerzo
 
+    Dim config As New BDSistemaEySDataSetTableAdapters.tbl_ConfigTableAdapter
+
     Dim flagHor As Boolean = False
-    Dim idHorario(3) As Integer
+    Dim idConfig As Integer
 
     Private Sub frmEstablcerAlmuerzo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        If (Me.Tbl_ConfigTableAdapter1.ExisteAlmuerzo(BDSistemaEySDataSet.tbl_Config, idConfig) > 0) Then
+            flagHor = True
+        Else
+            flagHor = False
+        End If
+
+        MessageBox.Show(flagHor.ToString, "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
+
+
+        If flagHor = False Then
+            ConvertirHorarios() 'Esto para crear los datos
+            flagHor = True
+        Else
+            ColocarHorario()
+        End If
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         Me.Close()
-    End Sub
-
-    Private Sub RecargarNumeric()
-
-        If Not checkReg.Checked Then
-            npH1R.Enabled = False
-            npM1R.Enabled = False
-
-            npH2R.Enabled = False
-            npM2R.Enabled = False
-        Else
-            npH1R.Enabled = True
-            npM1R.Enabled = True
-
-            npH2R.Enabled = True
-            npM2R.Enabled = True
-        End If
-
-        'MessageBox.Show(checkReg.Checked.ToString, "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
-
     End Sub
 
     Private Sub ConvertirHorarios()
@@ -43,11 +40,25 @@
         horarioBuilder = "11-09-2001 " + npH2R.Value.ToString + ":" + npM2R.Value.ToString + ":00"
         horaSalidaR = DateTime.Parse(horarioBuilder)
 
+        If flagHor = False Then
+
+            Tbl_ConfigTableAdapter1.InsertarAlmuerzo(horaEntradaR, horaSalidaR)
+        Else
+            Tbl_ConfigTableAdapter1.ActualizarAlmuerzo(horaEntradaR, horaSalidaR, idConfig, idConfig)
+        End If
+
     End Sub
 
     Private Sub ColocarHorario()
-        Dim horaEntradaR, horaEntradaS, horaEntradaD As DateTime
-        Dim horaSalidaR, horaSalidaS, horaSalidaD As DateTime
+
+        Dim horaEntradaR As DateTime
+        Dim horaSalidaR As DateTime
+
+        Me.Tbl_ConfigTableAdapter1.ObtenerAlmuerzo(BDSistemaEySDataSet.tbl_Config, horaEntradaR, horaSalidaR)
+        Me.idConfig = BDSistemaEySDataSet.tbl_Config.First.idConfig
+
+        horaEntradaR = BDSistemaEySDataSet.tbl_Config.First.horarioAlmuerzoIn
+        horaSalidaR = BDSistemaEySDataSet.tbl_Horario.First.horarioOut
 
 
         npH1R.Value = horaEntradaR.Hour
@@ -58,15 +69,7 @@
 
     End Sub
 
-    Private Sub checkReg_CheckedChanged(sender As Object, e As EventArgs) Handles checkReg.CheckedChanged
-        RecargarNumeric()
-    End Sub
-
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If checkReg.Checked = False Then
-            MessageBox.Show("Tiene que haber al menos un horario", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
-            Return
-        End If
 
         If (MessageBox.Show("¿Deseas cambiar el horario?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.No) Then
             Return

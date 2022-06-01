@@ -22,6 +22,7 @@ Partial Class frmEstablcerAlmuerzo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -29,12 +30,14 @@ Partial Class frmEstablcerAlmuerzo
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.checkReg = New System.Windows.Forms.CheckBox()
         Me.npH1R = New System.Windows.Forms.NumericUpDown()
         Me.npM1R = New System.Windows.Forms.NumericUpDown()
         Me.npM2R = New System.Windows.Forms.NumericUpDown()
         Me.npH2R = New System.Windows.Forms.NumericUpDown()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_ConfigTableAdapter1 = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_ConfigTableAdapter()
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -42,6 +45,8 @@ Partial Class frmEstablcerAlmuerzo
         CType(Me.npM1R, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.npM2R, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.npH2R, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -99,13 +104,12 @@ Partial Class frmEstablcerAlmuerzo
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 4, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.checkReg, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.npH1R, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.npM1R, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.npM2R, 7, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.npH2R, 5, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 6, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM1R, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH1R, 1, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 38)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -130,18 +134,6 @@ Partial Class frmEstablcerAlmuerzo
         Me.Label1.TabIndex = 2
         Me.Label1.Text = ":"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'checkReg
-        '
-        Me.checkReg.AutoSize = True
-        Me.checkReg.Checked = True
-        Me.checkReg.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.checkReg.Location = New System.Drawing.Point(3, 3)
-        Me.checkReg.Name = "checkReg"
-        Me.checkReg.Size = New System.Drawing.Size(76, 23)
-        Me.checkReg.TabIndex = 0
-        Me.checkReg.Text = "Regular"
-        Me.checkReg.UseVisualStyleBackColor = True
         '
         'npH1R
         '
@@ -186,6 +178,20 @@ Partial Class frmEstablcerAlmuerzo
         Me.Label4.Text = ":"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'BindingSource1
+        '
+        Me.BindingSource1.DataSource = Me.BDSistemaEySDataSet
+        Me.BindingSource1.Position = 0
+        '
+        'Tbl_ConfigTableAdapter1
+        '
+        Me.Tbl_ConfigTableAdapter1.ClearBeforeFill = True
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'frmEstablcerAlmuerzo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -198,11 +204,12 @@ Partial Class frmEstablcerAlmuerzo
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
         CType(Me.npH1R, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.npM1R, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.npM2R, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.npH2R, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -214,10 +221,12 @@ Partial Class frmEstablcerAlmuerzo
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents checkReg As CheckBox
     Friend WithEvents npH1R As NumericUpDown
     Friend WithEvents npM1R As NumericUpDown
     Friend WithEvents npM2R As NumericUpDown
     Friend WithEvents npH2R As NumericUpDown
     Friend WithEvents Label4 As Label
+    Friend WithEvents Tbl_ConfigTableAdapter1 As BDSistemaEySDataSetTableAdapters.tbl_ConfigTableAdapter
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
 End Class
