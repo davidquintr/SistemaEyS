@@ -61,16 +61,6 @@ Partial Class FrmVistaAdmin
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lbEmp = New System.Windows.Forms.Label()
-        Me.lbCargo = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.labelHora = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IdEmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CedulaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrimerNombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -92,6 +82,16 @@ Partial Class FrmVistaAdmin
         Me.IdUsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lbEmp = New System.Windows.Forms.Label()
+        Me.lbCargo = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.labelHora = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.VwVistaAdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
         Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
@@ -105,11 +105,11 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -374,110 +374,6 @@ Partial Class FrmVistaAdmin
         Me.DataGridView1.Size = New System.Drawing.Size(741, 438)
         Me.DataGridView1.TabIndex = 12
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel2.Controls.Add(Me.lbEmp)
-        Me.Panel2.Controls.Add(Me.lbCargo)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(298, 488)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(741, 100)
-        Me.Panel2.TabIndex = 10
-        '
-        'lbEmp
-        '
-        Me.lbEmp.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.lbEmp.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbEmp.Location = New System.Drawing.Point(0, 53)
-        Me.lbEmp.Name = "lbEmp"
-        Me.lbEmp.Size = New System.Drawing.Size(641, 47)
-        Me.lbEmp.TabIndex = 2
-        Me.lbEmp.Text = "Empleado / Usuario"
-        Me.lbEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'lbCargo
-        '
-        Me.lbCargo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.lbCargo.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbCargo.Location = New System.Drawing.Point(0, 0)
-        Me.lbCargo.Name = "lbCargo"
-        Me.lbCargo.Size = New System.Drawing.Size(641, 38)
-        Me.lbCargo.TabIndex = 1
-        Me.lbCargo.Text = "Cargo / Rol"
-        Me.lbCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label1
-        '
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label1.Image = Global.SistemaEyS.My.Resources.Resources.userIcon
-        Me.Label1.Location = New System.Drawing.Point(641, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 100)
-        Me.Label1.TabIndex = 0
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel3.Controls.Add(UsernameLabel)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(298, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(741, 50)
-        Me.Panel3.TabIndex = 11
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel4.Controls.Add(Me.labelHora)
-        Me.Panel4.Controls.Add(Me.RichTextBox1)
-        Me.Panel4.Controls.Add(Me.MonthCalendar1)
-        Me.Panel4.Controls.Add(Me.Panel5)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(298, 588)
-        Me.Panel4.TabIndex = 3
-        '
-        'labelHora
-        '
-        Me.labelHora.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelHora.ForeColor = System.Drawing.Color.Transparent
-        Me.labelHora.Location = New System.Drawing.Point(9, 271)
-        Me.labelHora.Name = "labelHora"
-        Me.labelHora.Size = New System.Drawing.Size(283, 34)
-        Me.labelHora.TabIndex = 3
-        Me.labelHora.Text = "HH:MM:SS"
-        Me.labelHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(9, 488)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(283, 90)
-        Me.RichTextBox1.TabIndex = 2
-        Me.RichTextBox1.Text = "Eventos:"
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 314)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 1
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Location = New System.Drawing.Point(9, 9)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(1)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(283, 252)
-        Me.Panel5.TabIndex = 0
-        '
         'IdEmpleadoDataGridViewTextBoxColumn
         '
         Me.IdEmpleadoDataGridViewTextBoxColumn.DataPropertyName = "idEmpleado"
@@ -603,6 +499,110 @@ Partial Class FrmVistaAdmin
         Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
         Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel2.Controls.Add(Me.lbEmp)
+        Me.Panel2.Controls.Add(Me.lbCargo)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(298, 488)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(741, 100)
+        Me.Panel2.TabIndex = 10
+        '
+        'lbEmp
+        '
+        Me.lbEmp.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.lbEmp.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbEmp.Location = New System.Drawing.Point(0, 44)
+        Me.lbEmp.Name = "lbEmp"
+        Me.lbEmp.Size = New System.Drawing.Size(641, 56)
+        Me.lbEmp.TabIndex = 2
+        Me.lbEmp.Text = "Empleado / Usuario"
+        Me.lbEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lbCargo
+        '
+        Me.lbCargo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lbCargo.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbCargo.Location = New System.Drawing.Point(0, 0)
+        Me.lbCargo.Name = "lbCargo"
+        Me.lbCargo.Size = New System.Drawing.Size(641, 44)
+        Me.lbCargo.TabIndex = 1
+        Me.lbCargo.Text = "Cargo / Rol"
+        Me.lbCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label1.Image = Global.SistemaEyS.My.Resources.Resources.userIcon
+        Me.Label1.Location = New System.Drawing.Point(641, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(100, 100)
+        Me.Label1.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel3.Controls.Add(UsernameLabel)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(298, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(741, 50)
+        Me.Panel3.TabIndex = 11
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel4.Controls.Add(Me.labelHora)
+        Me.Panel4.Controls.Add(Me.RichTextBox1)
+        Me.Panel4.Controls.Add(Me.MonthCalendar1)
+        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(298, 588)
+        Me.Panel4.TabIndex = 3
+        '
+        'labelHora
+        '
+        Me.labelHora.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelHora.ForeColor = System.Drawing.Color.Transparent
+        Me.labelHora.Location = New System.Drawing.Point(9, 271)
+        Me.labelHora.Name = "labelHora"
+        Me.labelHora.Size = New System.Drawing.Size(283, 34)
+        Me.labelHora.TabIndex = 3
+        Me.labelHora.Text = "HH:MM:SS"
+        Me.labelHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(9, 488)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(283, 90)
+        Me.RichTextBox1.TabIndex = 2
+        Me.RichTextBox1.Text = "Eventos:"
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(9, 314)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 1
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Location = New System.Drawing.Point(9, 9)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(1)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(283, 252)
+        Me.Panel5.TabIndex = 0
+        '
         'VwVistaAdminBindingSource
         '
         Me.VwVistaAdminBindingSource.DataMember = "Vw_VistaAdmin"
@@ -672,11 +672,11 @@ Partial Class FrmVistaAdmin
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
-        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwVistaAdminBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -1,20 +1,31 @@
 ﻿
 Public Class FrmAddEmpleado
-
     Dim emp As New BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
     Dim dep As New BDSistemaEySDataSetTableAdapters.tbl_DepartamentoTableAdapter
     Dim car As New BDSistemaEySDataSetTableAdapters.tbl_CargoTableAdapter
+
     Dim user As New BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter
 
     Dim viewEmp As New BDSistemaEySDataSetTableAdapters.Vw_ListEmpTableAdapter
     Dim tblViewEmp As New BDSistemaEySDataSet.Vw_ListEmpDataTable
 
+    Dim viewUser As New BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter
+    Dim tblViewUser As New BDSistemaEySDataSet.Vw_UsuarioDataTable
+
     Dim modo As Integer = 0
     Dim idEmp As Integer
 
+    Dim fila As Integer
+
+
     Public Sub CambiarModo(idEmp As Integer)
         gbAll.Text = "Editar empleado"
-        btnEditar.Enabled = True
+
+        If cbUsuario.Items.Count < 1 Then
+            cbUsuario.Enabled = False
+        End If
+
+        btnGuardarCamb.Enabled = True
         btnGuardar.Enabled = False
         btnDarDeBaja.Enabled = True
         Me.idEmp = idEmp
@@ -63,9 +74,9 @@ Public Class FrmAddEmpleado
     End Sub
 
     Sub llenarUser()
-        cbUsuario.DataSource = user.GetData()
-        cbUsuario.DisplayMember = "username"
-        cbUsuario.ValueMember = "idUsuario"
+        cbUsuario.DataSource = viewUser.GetUsuariosDisp()
+        cbUsuario.DisplayMember = "Username"
+        cbUsuario.ValueMember = "ID"
         cbUsuario.Refresh()
     End Sub
 
@@ -88,8 +99,8 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub FrmAddEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        gbAll.Text = "Administrar empleado"
-
+        Limpiar()
+        viewUser.Fill(tblViewUser)
         llenarDep()
         llenarCar()
         llenarUser()
@@ -116,59 +127,80 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Sub EnviarDatos(tipo As Integer)
+        Dim idUser As Integer
+
         If (RealizaComprobaciones() = False) Then
             Return
         End If
 
+        Tbl_UsuarioTableAdapter.GetUsuarioID(BDSistemaEySDataSet.tbl_Usuario, cbUsuario.Text)
+
         Try
-            Dim cedula As String = txtCedula.Text.Trim
-            Dim Separador() As String
-            Separador = txtNombre.Text.Split(" ")
-            Dim primerNombre As String = Separador(0)
-            Dim segundoNombre As String
+            idUser = BDSistemaEySDataSet.tbl_Usuario.First.idUsuario
+        Catch ex As Exception
+            idUser = 5
+        End Try
 
-            For i As Integer = 1 To Separador.Length - 1
-                If (i <> Separador.Length - 1) Then
-                    segundoNombre += Separador(i) + " "
-                Else
-                    segundoNombre += Separador(i)
-                End If
-            Next
+        Dim cedula As String = txtCedula.Text.Trim
+        Dim Separador() As String
+        Separador = txtNombre.Text.Split(" ")
+        Dim primerNombre As String = Separador(0)
+        Dim segundoNombre As String
 
-            Separador = txtApellidos.Text.Split(" ")
-
-            Dim primerApellido As String = Separador(0)
-            Dim segundoApellido As String
-            If Separador(1) IsNot Nothing Then
-                segundoApellido = Separador(1)
+        For i As Integer = 1 To Separador.Length - 1
+            If (i <> Separador.Length - 1) Then
+                segundoNombre += Separador(i) + " "
+            Else
+                segundoNombre += Separador(i)
             End If
+        Next
 
-            Dim car As String = cbCar.Text.Trim
-            Dim emailCorporativo As String = txtEmailC.Text.Trim
-            Dim emailPersonal As String = txtEmailP.Text.Trim
-            Dim Telefono As String = txtTelefono.Text.Trim
-            Dim sexo As Boolean = CBool(rbMasculino.Checked)
-            Dim fechaIngreso As DateTime = dtpFechaIngreso.Value.Date.ToString
-            Dim fechaAgregado As DateTime = DateTime.Now
-            Dim fechaNac As DateTime = dtpNac.Value.Date.ToString
-            Dim observacion As String = rtxtObservacion.Text.Trim
-            Dim direccion As String = rtxtDireccion.Text.Trim
-            Dim idCar As Integer = CInt(cbCar.SelectedValue)
-            Dim idUser As Integer = CInt(cbUsuario.SelectedValue)
-            Dim id As Integer ' Y esto de donde salió??? XDDD
+        Separador = txtApellidos.Text.Split(" ")
 
-            If tipo = 0 Then
+        Dim primerApellido As String = Separador(0)
+        Dim segundoApellido As String
+
+        If Separador.Length > 1 Then
+            segundoApellido = Separador(1)
+        End If
+
+        Dim car As String = cbCar.Text.Trim
+        Dim emailCorporativo As String = txtEmailC.Text.Trim
+        Dim emailPersonal As String = txtEmailP.Text.Trim
+        Dim Telefono As String = txtTelefono.Text.Trim
+        Dim sexo As Boolean = CBool(rbMasculino.Checked)
+        Dim fechaIngreso As DateTime = dtpFechaIngreso.Value.Date.ToString
+        Dim fechaAgregado As DateTime = DateTime.Now
+        Dim fechaNac As DateTime = dtpNac.Value.Date.ToString
+        Dim observacion As String = rtxtObservacion.Text.Trim
+        Dim direccion As String = rtxtDireccion.Text.Trim
+        Dim idCar As Integer = cbCar.SelectedIndex + 1
+        Dim id As Integer ' Y esto de donde salió??? XDDD
+
+        Dim result As DialogResult = DialogResult.No
+
+        If tipo = 0 And cbUsuario.Text <> String.Empty Then
+
+            result = MessageBox.Show($"¿Deseas reasignar este usuario a {cbUsuario.Text}?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        End If
+
+
+        If tipo = 1 Then
+            emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 0, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser)
+        Else
+            If result = DialogResult.Yes Then
                 emp.RegistroEmpAct(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 0, 2, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser, idEmp, id)
             Else
-                emp.RegistroEmpAgreg(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 0, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idUser)
+                emp.RegistroEmpActSU(cedula, primerNombre, segundoNombre, primerApellido, segundoApellido, direccion, observacion, Telefono, emailPersonal, emailCorporativo, sexo, 0, 1, fechaNac, fechaIngreso, fechaAgregado, idCar, idEmp, idEmp)
             End If
-        Catch ex As Exception
-            MessageBox.Show("Ha ocurrido un error al guardar, intente nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        End If
         MessageBox.Show("Se ha guardado exitosamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        llenarUser()
+        Limpiar()
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnGuardarCamb.Click
         If (MessageBox.Show("¿Deseas guardar los cambios?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
             EnviarDatos(0)
         End If
@@ -176,6 +208,7 @@ Public Class FrmAddEmpleado
     End Sub
 
     Private Function RealizaComprobaciones() As Boolean
+
         If (txtCedula.Text = String.Empty) Then
             MessageBox.Show("La cédula no puede quedar vacía", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return False
@@ -205,12 +238,18 @@ Public Class FrmAddEmpleado
 
     Private Sub DgvEmpleado_DoubleClick(sender As Object, e As EventArgs) Handles DgvEmpleado.DoubleClick
         Try
+
+            If cbUsuario.Items.Count < 1 Then
+                cbUsuario.Enabled = False
+            End If
+
             gbAll.Text = "Editar empleado"
-            btnEditar.Enabled = True
+            btnGuardarCamb.Enabled = True
             btnGuardar.Enabled = False
             btnDarDeBaja.Enabled = True
 
-            Dim fila As Integer = DgvEmpleado.CurrentRow.Index
+            fila = DgvEmpleado.CurrentRow.Index
+
             idEmp = DgvEmpleado.Item(0, fila).Value
             txtCedula.Text = DgvEmpleado.Item(1, fila).Value
             txtNombre.Text = DgvEmpleado.Item(2, fila).Value
@@ -230,13 +269,27 @@ Public Class FrmAddEmpleado
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        Limpiar()
+    End Sub
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If (MessageBox.Show("¿Deseas guardar el nuevo empleado?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
+            EnviarDatos(1)
+        End If
+    End Sub
+
+    Private Sub gbAll_Enter(sender As Object, e As EventArgs) Handles gbAll.Enter
+
+    End Sub
+
+    Private Sub Limpiar()
         gbAll.Text = "Agregar empleado"
         btnGuardar.Enabled = True
         btnDarDeBaja.Enabled = False
-        btnEditar.Enabled = False
+        btnGuardarCamb.Enabled = False
         txtCedula.Text = ""
         txtNombre.Text = ""
         txtApellidos.Text = ""
@@ -247,14 +300,5 @@ Public Class FrmAddEmpleado
         dtpNac.Value = DateTime.Now
         rtxtDireccion.Text = ""
         rtxtObservacion.Text = ""
-    End Sub
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If (MessageBox.Show("¿Deseas guardar el nuevo empleado?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
-            EnviarDatos(0)
-        End If
-    End Sub
-
-    Private Sub gbAll_Enter(sender As Object, e As EventArgs) Handles gbAll.Enter
-
     End Sub
 End Class

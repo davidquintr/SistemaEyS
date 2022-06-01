@@ -22,12 +22,9 @@ Partial Class frmAdminCredenciales
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.gboxPrincipal = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.cbEmpleado = New System.Windows.Forms.ComboBox()
-        Me.cbRol = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -36,17 +33,30 @@ Partial Class frmAdminCredenciales
         Me.txtPassConfirm = New System.Windows.Forms.TextBox()
         Me.btnCon = New System.Windows.Forms.Button()
         Me.btnConCon = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cbRol = New System.Windows.Forms.ComboBox()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.DgvCredenciales = New System.Windows.Forms.DataGridView()
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
+        Me.VwUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Vw_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gboxPrincipal.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.DgvCredenciales, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VwUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gboxPrincipal
@@ -68,10 +78,6 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.538087!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.19878!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.6572!))
-        Me.TableLayoutPanel1.Controls.Add(Me.cbEmpleado, 4, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cbRol, 4, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label6, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 3, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtNombre, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 1)
@@ -80,6 +86,8 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.Controls.Add(Me.txtPassConfirm, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.btnCon, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.btnConCon, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label3, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.cbRol, 4, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(6, 24)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
@@ -90,50 +98,6 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(493, 109)
         Me.TableLayoutPanel1.TabIndex = 6
-        '
-        'cbEmpleado
-        '
-        Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbEmpleado.FormattingEnabled = True
-        Me.cbEmpleado.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbEmpleado.Location = New System.Drawing.Point(333, 2)
-        Me.cbEmpleado.Margin = New System.Windows.Forms.Padding(2)
-        Me.cbEmpleado.Name = "cbEmpleado"
-        Me.cbEmpleado.Size = New System.Drawing.Size(158, 23)
-        Me.cbEmpleado.TabIndex = 8
-        '
-        'cbRol
-        '
-        Me.cbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbRol.FormattingEnabled = True
-        Me.cbRol.Items.AddRange(New Object() {"Sin empleado asignado"})
-        Me.cbRol.Location = New System.Drawing.Point(333, 38)
-        Me.cbRol.Margin = New System.Windows.Forms.Padding(2)
-        Me.cbRol.Name = "cbRol"
-        Me.cbRol.Size = New System.Drawing.Size(158, 23)
-        Me.cbRol.TabIndex = 7
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(265, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 15)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "Empleado:"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(265, 36)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(27, 15)
-        Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Rol:"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtNombre
         '
@@ -214,6 +178,28 @@ Partial Class frmAdminCredenciales
         Me.btnConCon.Text = "*"
         Me.btnConCon.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(265, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(27, 15)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Rol:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cbRol
+        '
+        Me.cbRol.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbRol.FormattingEnabled = True
+        Me.cbRol.Items.AddRange(New Object() {"Sin empleado asignado"})
+        Me.cbRol.Location = New System.Drawing.Point(333, 2)
+        Me.cbRol.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbRol.Name = "cbRol"
+        Me.cbRol.Size = New System.Drawing.Size(158, 23)
+        Me.cbRol.TabIndex = 7
+        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -221,14 +207,14 @@ Partial Class frmAdminCredenciales
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnAgregar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 362)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(10, 361)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(502, 32)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(502, 33)
         Me.FlowLayoutPanel1.TabIndex = 5
         '
         'btnCerrar
@@ -240,53 +226,105 @@ Partial Class frmAdminCredenciales
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
-        'btnGuardar
+        'btnAgregar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(347, 3)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
-        Me.btnGuardar.TabIndex = 12
-        Me.btnGuardar.Text = "Nuevo"
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Location = New System.Drawing.Point(268, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(73, 23)
-        Me.btnEditar.TabIndex = 29
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        Me.btnEditar.Visible = False
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(189, 3)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
-        Me.btnEliminar.TabIndex = 14
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        Me.btnEliminar.Visible = False
+        Me.btnAgregar.Location = New System.Drawing.Point(347, 3)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(73, 23)
+        Me.btnAgregar.TabIndex = 12
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(110, 3)
+        Me.btnLimpiar.Location = New System.Drawing.Point(268, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(73, 23)
-        Me.btnLimpiar.TabIndex = 30
+        Me.btnLimpiar.TabIndex = 29
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
+        'btnGuardar
+        '
+        Me.btnGuardar.Location = New System.Drawing.Point(189, 3)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
+        Me.btnGuardar.TabIndex = 14
+        Me.btnGuardar.Text = "Guardar Cambios"
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(110, 3)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
+        Me.btnEliminar.TabIndex = 30
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
+        '
         'DgvCredenciales
         '
+        Me.DgvCredenciales.AutoGenerateColumns = False
         Me.DgvCredenciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCredenciales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.EmpleadoDataGridViewTextBoxColumn, Me.RolDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
+        Me.DgvCredenciales.DataSource = Me.VwUsuarioBindingSource
         Me.DgvCredenciales.Location = New System.Drawing.Point(10, 157)
         Me.DgvCredenciales.Name = "DgvCredenciales"
         Me.DgvCredenciales.RowHeadersWidth = 51
         Me.DgvCredenciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvCredenciales.Size = New System.Drawing.Size(505, 198)
         Me.DgvCredenciales.TabIndex = 6
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VwUsuarioBindingSource
+        '
+        Me.VwUsuarioBindingSource.DataMember = "Vw_Usuario"
+        Me.VwUsuarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        '
+        'Vw_UsuarioTableAdapter
+        '
+        Me.Vw_UsuarioTableAdapter.ClearBeforeFill = True
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        '
+        'EmpleadoDataGridViewTextBoxColumn
+        '
+        Me.EmpleadoDataGridViewTextBoxColumn.DataPropertyName = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.HeaderText = "Empleado"
+        Me.EmpleadoDataGridViewTextBoxColumn.Name = "EmpleadoDataGridViewTextBoxColumn"
+        Me.EmpleadoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'RolDataGridViewTextBoxColumn
+        '
+        Me.RolDataGridViewTextBoxColumn.DataPropertyName = "Rol"
+        Me.RolDataGridViewTextBoxColumn.HeaderText = "Rol"
+        Me.RolDataGridViewTextBoxColumn.Name = "RolDataGridViewTextBoxColumn"
+        '
+        'EstadoDataGridViewTextBoxColumn
+        '
+        Me.EstadoDataGridViewTextBoxColumn.DataPropertyName = "Estado"
+        Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
+        Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
         '
         'frmAdminCredenciales
         '
@@ -307,6 +345,8 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         CType(Me.DgvCredenciales, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VwUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -317,18 +357,25 @@ Partial Class frmAdminCredenciales
     Friend WithEvents Label2 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnAgregar As Button
     Friend WithEvents cbRol As ComboBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtPassConfirm As TextBox
-    Friend WithEvents btnEliminar As Button
-    Friend WithEvents Label6 As Label
-    Friend WithEvents cbEmpleado As ComboBox
+    Friend WithEvents btnGuardar As Button
     Friend WithEvents DgvCredenciales As DataGridView
-    Friend WithEvents btnEditar As Button
     Friend WithEvents btnLimpiar As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents btnConCon As Button
     Friend WithEvents btnCon As Button
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
+    Friend WithEvents VwUsuarioBindingSource As BindingSource
+    Friend WithEvents Vw_UsuarioTableAdapter As BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents RolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

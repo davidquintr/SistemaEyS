@@ -27,10 +27,11 @@
     End Sub
 
     Private Sub ConfirmarCredenciales()
-        Dim idUsuario As Integer
-        Dim idEmpleado As Integer
-        Dim hasEmp As Boolean = False
         Try
+
+            Dim idUsuario As Integer
+            Dim idEmpleado As Integer
+            Dim hasEmp As Boolean = False
             If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) = 0 Then
                 MessageBox.Show("Credenciales incorrectas, verifique sus datos o consulte a un administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
@@ -60,9 +61,8 @@
                 Me.Hide()
                 Return
             End If
-
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Vista de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         End Try
 
     End Sub

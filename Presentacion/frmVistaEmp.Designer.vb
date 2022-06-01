@@ -26,6 +26,10 @@ Partial Class frmVistaEmp
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.buttonEntrada = New System.Windows.Forms.Button()
+        Me.buttonSalida = New System.Windows.Forms.Button()
+        Me.buttonAlmuerzo = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.lbBienvenida = New System.Windows.Forms.Label()
         Me.lbHoraEntrada = New System.Windows.Forms.Label()
@@ -33,21 +37,20 @@ Partial Class frmVistaEmp
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnIng = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.buttonEntrada = New System.Windows.Forms.Button()
         Me.labelHora = New System.Windows.Forms.Label()
         Me.Vw_EmpDataTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_EmpDataTableAdapter()
-        Me.Vw_EmpDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
+        Me.Tbl_RegistroTableAdapter1 = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_RegistroTableAdapter()
+        Me.Vw_EmpDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
+        Me.FlowLayoutPanel3.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.FlowLayoutPanel3.SuspendLayout()
-        CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -72,6 +75,72 @@ Partial Class frmVistaEmp
         Me.Panel1.Size = New System.Drawing.Size(628, 276)
         Me.Panel1.TabIndex = 0
         '
+        'FlowLayoutPanel3
+        '
+        Me.FlowLayoutPanel3.Controls.Add(Me.buttonEntrada)
+        Me.FlowLayoutPanel3.Controls.Add(Me.buttonSalida)
+        Me.FlowLayoutPanel3.Controls.Add(Me.buttonAlmuerzo)
+        Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
+        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(235, 85)
+        Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(1)
+        Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
+        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(393, 153)
+        Me.FlowLayoutPanel3.TabIndex = 10
+        '
+        'buttonEntrada
+        '
+        Me.buttonEntrada.AutoSize = True
+        Me.buttonEntrada.BackColor = System.Drawing.Color.LightGray
+        Me.buttonEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.buttonEntrada.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
+        Me.buttonEntrada.FlatAppearance.BorderSize = 30
+        Me.buttonEntrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.buttonEntrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.buttonEntrada.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttonEntrada.ForeColor = System.Drawing.Color.DimGray
+        Me.buttonEntrada.Location = New System.Drawing.Point(100, 15)
+        Me.buttonEntrada.Margin = New System.Windows.Forms.Padding(100, 15, 15, 3)
+        Me.buttonEntrada.Name = "buttonEntrada"
+        Me.buttonEntrada.Size = New System.Drawing.Size(216, 32)
+        Me.buttonEntrada.TabIndex = 9
+        Me.buttonEntrada.Text = "Marcar Entrada"
+        Me.buttonEntrada.UseVisualStyleBackColor = False
+        '
+        'buttonSalida
+        '
+        Me.buttonSalida.AutoSize = True
+        Me.buttonSalida.BackColor = System.Drawing.Color.LightGray
+        Me.buttonSalida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.buttonSalida.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
+        Me.buttonSalida.FlatAppearance.BorderSize = 30
+        Me.buttonSalida.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttonSalida.ForeColor = System.Drawing.Color.DimGray
+        Me.buttonSalida.Location = New System.Drawing.Point(100, 53)
+        Me.buttonSalida.Margin = New System.Windows.Forms.Padding(100, 3, 15, 3)
+        Me.buttonSalida.Name = "buttonSalida"
+        Me.buttonSalida.Size = New System.Drawing.Size(216, 32)
+        Me.buttonSalida.TabIndex = 7
+        Me.buttonSalida.Text = "Marcar Salida"
+        Me.buttonSalida.UseVisualStyleBackColor = False
+        '
+        'buttonAlmuerzo
+        '
+        Me.buttonAlmuerzo.AutoSize = True
+        Me.buttonAlmuerzo.BackColor = System.Drawing.Color.LightGray
+        Me.buttonAlmuerzo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.buttonAlmuerzo.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
+        Me.buttonAlmuerzo.FlatAppearance.BorderSize = 30
+        Me.buttonAlmuerzo.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buttonAlmuerzo.ForeColor = System.Drawing.Color.DimGray
+        Me.buttonAlmuerzo.Location = New System.Drawing.Point(100, 91)
+        Me.buttonAlmuerzo.Margin = New System.Windows.Forms.Padding(100, 3, 15, 3)
+        Me.buttonAlmuerzo.Name = "buttonAlmuerzo"
+        Me.buttonAlmuerzo.Size = New System.Drawing.Size(216, 32)
+        Me.buttonAlmuerzo.TabIndex = 8
+        Me.buttonAlmuerzo.Text = "Almuerzo"
+        Me.buttonAlmuerzo.UseVisualStyleBackColor = False
+        '
         'FlowLayoutPanel2
         '
         Me.FlowLayoutPanel2.BackColor = System.Drawing.Color.SteelBlue
@@ -87,34 +156,37 @@ Partial Class frmVistaEmp
         '
         'lbBienvenida
         '
+        Me.lbBienvenida.AutoSize = True
         Me.lbBienvenida.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbBienvenida.ForeColor = System.Drawing.Color.White
         Me.lbBienvenida.Location = New System.Drawing.Point(3, 10)
         Me.lbBienvenida.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
         Me.lbBienvenida.Name = "lbBienvenida"
-        Me.lbBienvenida.Size = New System.Drawing.Size(390, 20)
+        Me.lbBienvenida.Size = New System.Drawing.Size(155, 20)
         Me.lbBienvenida.TabIndex = 0
         Me.lbBienvenida.Text = "Buenos días, Nombre"
         Me.lbBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbHoraEntrada
         '
+        Me.lbHoraEntrada.AutoSize = True
         Me.lbHoraEntrada.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbHoraEntrada.ForeColor = System.Drawing.Color.White
         Me.lbHoraEntrada.Location = New System.Drawing.Point(3, 30)
         Me.lbHoraEntrada.Name = "lbHoraEntrada"
-        Me.lbHoraEntrada.Size = New System.Drawing.Size(387, 20)
+        Me.lbHoraEntrada.Size = New System.Drawing.Size(183, 20)
         Me.lbHoraEntrada.TabIndex = 1
         Me.lbHoraEntrada.Text = "Hora de entrada: HH:MM"
         Me.lbHoraEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lbTiempoTrab
         '
+        Me.lbTiempoTrab.AutoSize = True
         Me.lbTiempoTrab.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbTiempoTrab.ForeColor = System.Drawing.Color.White
         Me.lbTiempoTrab.Location = New System.Drawing.Point(3, 50)
         Me.lbTiempoTrab.Name = "lbTiempoTrab"
-        Me.lbTiempoTrab.Size = New System.Drawing.Size(387, 20)
+        Me.lbTiempoTrab.Size = New System.Drawing.Size(192, 20)
         Me.lbTiempoTrab.TabIndex = 2
         Me.lbTiempoTrab.Text = "Tiempo trabajado: HH:MM"
         Me.lbTiempoTrab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -156,70 +228,6 @@ Partial Class frmVistaEmp
         Me.Panel2.Size = New System.Drawing.Size(235, 276)
         Me.Panel2.TabIndex = 7
         '
-        'FlowLayoutPanel3
-        '
-        Me.FlowLayoutPanel3.Controls.Add(Me.buttonEntrada)
-        Me.FlowLayoutPanel3.Controls.Add(Me.Button1)
-        Me.FlowLayoutPanel3.Controls.Add(Me.Button2)
-        Me.FlowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel3.Location = New System.Drawing.Point(235, 85)
-        Me.FlowLayoutPanel3.Margin = New System.Windows.Forms.Padding(1)
-        Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
-        Me.FlowLayoutPanel3.Size = New System.Drawing.Size(393, 153)
-        Me.FlowLayoutPanel3.TabIndex = 10
-        '
-        'Button1
-        '
-        Me.Button1.AutoSize = True
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.DimGray
-        Me.Button1.Location = New System.Drawing.Point(100, 53)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(100, 3, 15, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(216, 32)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Marcar Salida"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.AutoSize = True
-        Me.Button2.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.DimGray
-        Me.Button2.Location = New System.Drawing.Point(100, 91)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(100, 3, 15, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(216, 32)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Almuerzo"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'buttonEntrada
-        '
-        Me.buttonEntrada.AutoSize = True
-        Me.buttonEntrada.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.buttonEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.buttonEntrada.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
-        Me.buttonEntrada.FlatAppearance.BorderSize = 0
-        Me.buttonEntrada.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buttonEntrada.ForeColor = System.Drawing.Color.DimGray
-        Me.buttonEntrada.Location = New System.Drawing.Point(100, 15)
-        Me.buttonEntrada.Margin = New System.Windows.Forms.Padding(100, 15, 15, 3)
-        Me.buttonEntrada.Name = "buttonEntrada"
-        Me.buttonEntrada.Size = New System.Drawing.Size(216, 32)
-        Me.buttonEntrada.TabIndex = 9
-        Me.buttonEntrada.Text = "Marcar Entrada"
-        Me.buttonEntrada.UseVisualStyleBackColor = False
-        '
         'labelHora
         '
         Me.labelHora.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -236,15 +244,24 @@ Partial Class frmVistaEmp
         '
         Me.Vw_EmpDataTableAdapter.ClearBeforeFill = True
         '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_RegistroTableAdapter1
+        '
+        Me.Tbl_RegistroTableAdapter1.ClearBeforeFill = True
+        '
         'Vw_EmpDataBindingSource
         '
         Me.Vw_EmpDataBindingSource.DataSource = Me.BDSistemaEySDataSet
         Me.Vw_EmpDataBindingSource.Position = 0
         '
-        'BDSistemaEySDataSet
+        'Tbl_RegistroBindingSource
         '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Tbl_RegistroBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.Tbl_RegistroBindingSource.Position = 0
         '
         'frmVistaEmp
         '
@@ -259,13 +276,15 @@ Partial Class frmVistaEmp
         Me.Text = "Entrada y Salida"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.FlowLayoutPanel2.ResumeLayout(False)
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
         Me.FlowLayoutPanel3.ResumeLayout(False)
         Me.FlowLayoutPanel3.PerformLayout()
-        CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel2.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -281,10 +300,12 @@ Partial Class frmVistaEmp
     Friend WithEvents Panel2 As Panel
     Friend WithEvents FlowLayoutPanel3 As FlowLayoutPanel
     Friend WithEvents buttonEntrada As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents buttonSalida As Button
+    Friend WithEvents buttonAlmuerzo As Button
     Friend WithEvents labelHora As Label
     Friend WithEvents Vw_EmpDataTableAdapter As BDSistemaEySDataSetTableAdapters.Vw_EmpDataTableAdapter
     Friend WithEvents Vw_EmpDataBindingSource As BindingSource
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
+    Friend WithEvents Tbl_RegistroTableAdapter1 As BDSistemaEySDataSetTableAdapters.tbl_RegistroTableAdapter
+    Friend WithEvents Tbl_RegistroBindingSource As BindingSource
 End Class

@@ -16,7 +16,12 @@
     Private CentroX As Single
     Private CentroY As Single
 
+    Dim flagTiempo As Boolean = False
+    Dim flag As Boolean = False
+    Dim flagAlm As Boolean = False
+
     Dim idEmp As Integer
+    Dim idReg As Integer
 
     Private Sub frmVistaEmp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -25,6 +30,7 @@
 
         Temporizador.Interval = 1000
         Temporizador.Enabled = True
+        BDSistemaEySDataSet.EnforceConstraints = False
 
         RefrescarGraficos()
 
@@ -32,26 +38,105 @@
 
     Public Sub CargarDatos(idEmp As Integer)
         Me.idEmp = idEmp
-
         Me.Vw_EmpDataTableAdapter.ObtenerEmp(Me.BDSistemaEySDataSet.Vw_EmpData, idEmp)
         lbBienvenida.Text = "Bienvenido, " + BDSistemaEySDataSet.Vw_EmpData.First.Nombre.ToString() + " " + BDSistemaEySDataSet.Vw_EmpData.First.Apellido.ToString()
+        Dim fechaAct As String = DateTime.Today.Date + " 00:00:00.000"
+
+        If Me.Tbl_RegistroTableAdapter1.RegistroDiaAct(Me.BDSistemaEySDataSet.tbl_Registro, fechaAct, idEmp) <> 0 Then
+            flag = True
+            idReg = BDSistemaEySDataSet.tbl_Registro.First.idRegstro
+            buttonEntrada.Enabled = False
+        End If
+
+        Try
+            If Not IsNothing(BDSistemaEySDataSet.tbl_Registro.First.horaSalida) Then
+                lbHoraEntrada.Text = "Jornada laboral terminada"
+                lbTiempoTrab.Text = "Tiempo trabajado: " + BDSistemaEySDataSet.tbl_Registro.First.horaSalida.Subtract(BDSistemaEySDataSet.tbl_Registro.First.horaEntrada).ToString.Substring(0, 8)
+                buttonSalida.Enabled = False
+                buttonEntrada.Enabled = False
+                buttonAlmuerzo.Enabled = False
+                Return
+            End If
+        Catch ex As Exception
+        End Try
+
+        Try
+            If Not IsNothing(BDSistemaEySDataSet.tbl_Registro.First.horaAlmuerzoIn) Then
+                flagAlm = True
+                buttonSalida.Enabled = False
+            End If
+        Catch ex As Exception
+        End Try
+
+        Try
+            If Not IsNothing(BDSistemaEySDataSet.tbl_Registro.First.horaAlmuerzoOut) Then
+                buttonAlmuerzo.Enabled = False
+                buttonSalida.Enabled = True
+            End If
+        Catch ex As Exception
+        End Try
+
+
+        If flag = False Then
+            lbHoraEntrada.Text = "No se ha iniciado la jornada laboral"
+            lbTiempoTrab.Text = ""
+            buttonSalida.Enabled = False
+            buttonAlmuerzo.Enabled = False
+        Else
+            lbHoraEntrada.Text = "Hora de entrada: " + BDSistemaEySDataSet.tbl_Registro.First.horaEntrada.ToString("hh:mm:ss")
+            flagTiempo = True
+        End If
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("Desea marcar su entrada?", "Confirmación", MessageBoxButtons.YesNoCancel)
+    Private Sub confirmarAlmuerzo()
+        If flagAlm = False Then
+
+            Dim result As DialogResult = MessageBox.Show("¿Deseas comenzar tu almuerzo?", "Almuerzo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                Me.Tbl_RegistroTableAdapter1.InsertarAlmIn(DateTime.Now, idReg, idReg)
+                MessageBox.Show("Has marcado tu salida al almuerzo", "Almuerzo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            End If
+
+        Else
+            Dim result As DialogResult = MessageBox.Show("¿Deseas regresar de tu almuerzo?", "Almuerzo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                Me.Tbl_RegistroTableAdapter1.InsertarAlmOut(DateTime.Now, idReg, idReg)
+                MessageBox.Show("Has regresado a tu labor", "Almuerzo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            End If
+
+        End If
+        Me.CargarDatos(idEmp)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("Desea marcar su salida?", "Confirmación", MessageBoxButtons.YesNoCancel)
+    Private Sub MarcarEntrada()
+        Dim result As DialogResult = MessageBox.Show("¿Deseas Marcar tu entrada?", "Entrada", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Me.Tbl_RegistroTableAdapter1.InsertarEntrada(DateTime.Now, idEmp)
+            MessageBox.Show("Se ha marcado la entrada", "Entrada", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        End If
+        Me.CargarDatos(idEmp)
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("Desea iniciar el almuerzo?", "Confirmación", MessageBoxButtons.YesNoCancel)
+    Private Sub MarcarSalida()
+        Dim result As DialogResult = MessageBox.Show("¿Deseas Marcar tu salida?", "Entrada", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If result = DialogResult.Yes Then
+            Me.Tbl_RegistroTableAdapter1.InsertarSalida(DateTime.Now, idReg, idReg)
+            MessageBox.Show("Se ha marcado la Salida", "Salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            flagTiempo = False
+        End If
+        Me.CargarDatos(idEmp)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         labelHora.Text = DateTime.Now.ToLongTimeString
+
+        If flagTiempo = True Then
+            lbTiempoTrab.Text = "Tiempo trabajado: " + DateTime.Now.Subtract(BDSistemaEySDataSet.tbl_Registro.First.horaEntrada).ToString().Substring(0, 8)
+        End If
+
     End Sub
 
 
@@ -175,8 +260,8 @@
     End Sub
 
     Private Sub RefrescarGraficos()
-        Me.SuspendLayout()
 
+        Me.SuspendLayout()
         'primero limpiamos toda la superficie
         GR.Clear(Me.BackColor)
 
@@ -215,17 +300,50 @@
         RefrescarGraficos()
     End Sub
 
-    Private Sub lblHora_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub btnIng_Click(sender As Object, e As EventArgs) Handles btnIng.Click
         Form1.Show()
         Me.Close()
     End Sub
 
+    Private Sub buttonEntrada_MouseEnter(sender As Object, e As EventArgs) Handles buttonEntrada.MouseEnter
+        buttonEntrada.BackColor = Color.SteelBlue
+        buttonEntrada.ForeColor = Color.White
+    End Sub
+
+    Private Sub buttonEntrada_MouseLeave(sender As Object, e As EventArgs) Handles buttonEntrada.MouseLeave
+        buttonEntrada.BackColor = Color.LightGray
+        buttonEntrada.ForeColor = Color.DimGray
+    End Sub
+
+    Private Sub buttonSalida_MouseEnter(sender As Object, e As EventArgs) Handles buttonSalida.MouseEnter
+        buttonSalida.BackColor = Color.SteelBlue
+        buttonSalida.ForeColor = Color.White
+    End Sub
+
+    Private Sub buttonSalida_MouseLeave(sender As Object, e As EventArgs) Handles buttonSalida.MouseLeave
+        buttonSalida.BackColor = Color.LightGray
+        buttonSalida.ForeColor = Color.DimGray
+    End Sub
+
+    Private Sub buttonAlmuerzo_MouseEnter(sender As Object, e As EventArgs) Handles buttonAlmuerzo.MouseEnter
+        buttonAlmuerzo.BackColor = Color.SteelBlue
+        buttonAlmuerzo.ForeColor = Color.White
+    End Sub
+
+    Private Sub buttonAlmuerzo_MouseLeave(sender As Object, e As EventArgs) Handles buttonAlmuerzo.MouseLeave
+        buttonAlmuerzo.BackColor = Color.LightGray
+        buttonAlmuerzo.ForeColor = Color.DimGray
+    End Sub
+
+    Private Sub buttonEntrada_Click(sender As Object, e As EventArgs) Handles buttonEntrada.Click
+        MarcarEntrada()
+    End Sub
+
+    Private Sub buttonSalida_Click(sender As Object, e As EventArgs) Handles buttonSalida.Click
+        MarcarSalida()
+    End Sub
+
+    Private Sub buttonAlmuerzo_Click(sender As Object, e As EventArgs) Handles buttonAlmuerzo.Click
+        confirmarAlmuerzo()
+    End Sub
 End Class

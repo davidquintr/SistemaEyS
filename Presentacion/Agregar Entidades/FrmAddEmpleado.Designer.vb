@@ -22,11 +22,12 @@ Partial Class FrmAddEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnGuardarCamb = New System.Windows.Forms.Button()
         Me.btnDarDeBaja = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -62,12 +63,20 @@ Partial Class FrmAddEmpleado
         Me.cbUsuario = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
+        Me.Tbl_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter()
+        Me.Tbl_UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
+        Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
+        Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.gbAll.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.panelSexo.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -76,7 +85,7 @@ Partial Class FrmAddEmpleado
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardarCamb)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnDarDeBaja)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 476)
@@ -111,14 +120,15 @@ Partial Class FrmAddEmpleado
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'btnEditar
+        'btnGuardarCamb
         '
-        Me.btnEditar.Location = New System.Drawing.Point(238, 3)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(99, 25)
-        Me.btnEditar.TabIndex = 28
-        Me.btnEditar.Text = "Guardar cambios"
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnGuardarCamb.AccessibleName = "btnGuardarCamb"
+        Me.btnGuardarCamb.Location = New System.Drawing.Point(238, 3)
+        Me.btnGuardarCamb.Name = "btnGuardarCamb"
+        Me.btnGuardarCamb.Size = New System.Drawing.Size(99, 25)
+        Me.btnGuardarCamb.TabIndex = 28
+        Me.btnGuardarCamb.Text = "Guardar cambios"
+        Me.btnGuardarCamb.UseVisualStyleBackColor = True
         '
         'btnDarDeBaja
         '
@@ -245,20 +255,22 @@ Partial Class FrmAddEmpleado
         '
         'rbMasculino
         '
+        Me.rbMasculino.AutoSize = True
         Me.rbMasculino.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbMasculino.Location = New System.Drawing.Point(3, 34)
+        Me.rbMasculino.Location = New System.Drawing.Point(87, 3)
         Me.rbMasculino.Name = "rbMasculino"
-        Me.rbMasculino.Size = New System.Drawing.Size(89, 25)
+        Me.rbMasculino.Size = New System.Drawing.Size(80, 19)
         Me.rbMasculino.TabIndex = 7
         Me.rbMasculino.Text = "Masculino"
         Me.rbMasculino.UseVisualStyleBackColor = True
         '
         'rbFemenino
         '
+        Me.rbFemenino.AutoSize = True
         Me.rbFemenino.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbFemenino.Location = New System.Drawing.Point(3, 3)
         Me.rbFemenino.Name = "rbFemenino"
-        Me.rbFemenino.Size = New System.Drawing.Size(89, 25)
+        Me.rbFemenino.Size = New System.Drawing.Size(78, 19)
         Me.rbFemenino.TabIndex = 8
         Me.rbFemenino.Text = "Femenino"
         Me.rbFemenino.UseVisualStyleBackColor = True
@@ -408,7 +420,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.Controls.Add(Me.dtpFechaIngreso, 1, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.cbUsuario, 1, 6)
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(307, 27)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 7
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
@@ -455,11 +467,12 @@ Partial Class FrmAddEmpleado
         '
         Me.panelSexo.Controls.Add(Me.rbFemenino)
         Me.panelSexo.Controls.Add(Me.rbMasculino)
+        Me.panelSexo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panelSexo.Location = New System.Drawing.Point(126, 83)
-        Me.panelSexo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelSexo.Margin = New System.Windows.Forms.Padding(2)
         Me.panelSexo.Name = "panelSexo"
-        Me.panelSexo.Size = New System.Drawing.Size(188, 22)
+        Me.panelSexo.Size = New System.Drawing.Size(189, 23)
         Me.panelSexo.TabIndex = 13
         '
         'cbUsuario
@@ -491,7 +504,7 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel1.Controls.Add(Me.cbDep, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.cbCar, 1, 4)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(5, 27)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 7
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571!))
@@ -514,6 +527,29 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.Size = New System.Drawing.Size(624, 224)
         Me.DgvEmpleado.TabIndex = 5
         '
+        'Tbl_UsuarioTableAdapter
+        '
+        Me.Tbl_UsuarioTableAdapter.ClearBeforeFill = True
+        '
+        'Tbl_UsuarioBindingSource
+        '
+        Me.Tbl_UsuarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.Tbl_UsuarioBindingSource.Position = 0
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_EmpleadoTableAdapter
+        '
+        Me.Tbl_EmpleadoTableAdapter.ClearBeforeFill = True
+        '
+        'Tbl_EmpleadoBindingSource
+        '
+        Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.Tbl_EmpleadoBindingSource.Position = 0
+        '
         'FrmAddEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -532,9 +568,13 @@ Partial Class FrmAddEmpleado
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.panelSexo.ResumeLayout(False)
+        Me.panelSexo.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -573,10 +613,15 @@ Partial Class FrmAddEmpleado
     Friend WithEvents Label13 As Label
     Friend WithEvents panelSexo As FlowLayoutPanel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnGuardarCamb As Button
     Friend WithEvents DgvEmpleado As DataGridView
     Friend WithEvents Label14 As Label
     Friend WithEvents cbUsuario As ComboBox
     Friend WithEvents btnLimpiar As Button
     Private WithEvents btnDarDeBaja As Button
+    Friend WithEvents Tbl_UsuarioTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter
+    Friend WithEvents Tbl_UsuarioBindingSource As BindingSource
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
+    Friend WithEvents Tbl_EmpleadoTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter
+    Friend WithEvents Tbl_EmpleadoBindingSource As BindingSource
 End Class

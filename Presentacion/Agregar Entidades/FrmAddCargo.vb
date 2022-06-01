@@ -16,9 +16,9 @@
 
     Public Sub CambiarModo(idCargo As Integer)
         modo = 1
+        AlternarBotones(1)
         btnEliminar.Visible = True
-        btnEditar.Visible = True
-        GroupBox1.Text = "Administrar Cargo"
+        btnGuardar.Visible = True
         Me.idCargo = idCargo
         viewCar.Fill(tblViewCar)
         ColocarDatos()
@@ -46,6 +46,7 @@
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarDep()
         llenarGrid()
+        AlternarBotones(0)
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
@@ -53,7 +54,16 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+
+        If (txbNombre.Text = String.Empty) Then
+            MessageBox.Show("Se necesita llenar el nombre del usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        If MessageBox.Show("¿Deseas guardar el nuevo cargo?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.No Then
+            Return
+        End If
 
         Dim nombre As String = txbNombre.Text.Trim
         Dim dep As String = cbDep.Text.Trim
@@ -62,27 +72,14 @@
         Dim estado As Integer = 1
 
         carg.RegistroCarAgreg(nombre, desc, estado, idDep)
-
-        MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
-
+        MessageBox.Show("Se ha editado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
         llenarGrid()
-
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
-        Try
-            Dim resp As VariantType
-
-            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
-            If (resp = vbYes) Then
-                carg.RegistroCarElim(idCargo)
-                llenarGrid()
-
-            End If
-        Catch ex As Exception
-
-        End Try
+        carg.RegistroCarElim(idCargo)
+        llenarGrid()
 
     End Sub
 
@@ -94,22 +91,30 @@
             txbNombre.Text = dgvCargos.Item(1, fila).Value
             cbDep.Text = dgvCargos.Item(4, fila).Value
             rtxtDesc.Text = dgvCargos.Item(2, fila).Value
-
-
+            AlternarBotones(1)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+        If (txbNombre.Text = String.Empty) Then
+            MessageBox.Show("Se necesita llenar el nombre del usuario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        If MessageBox.Show("¿Deseas guardar los cambios del cargo?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.No Then
+            Return
+        End If
 
         Dim id As Integer
         Dim nombre As String = txbNombre.Text.Trim
         Dim departamento As Integer = CInt(cbDep.SelectedValue)
         Dim desc As String = rtxtDesc.Text.Trim
         Dim estado As Integer
-
         carg.RegistroCarAct(nombre, desc, estado, departamento, idCargo, id)
+        MessageBox.Show("Se ha editado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         llenarGrid()
     End Sub
@@ -122,6 +127,24 @@
 
         txbNombre.Text = ""
         rtxtDesc.Text = ""
+    End Sub
+
+    Private Sub AlternarBotones(mode As Integer)
+
+        If mode = 0 Then
+            GroupBox1.Text = "Agregar Cargo"
+            btnAgregar.Enabled = True
+            btnGuardar.Enabled = False
+            btnEliminar.Enabled = False
+            btnHorario.Enabled = False
+        Else
+            GroupBox1.Text = "Administrar Cargo"
+            btnAgregar.Enabled = False
+            btnGuardar.Enabled = True
+            btnEliminar.Enabled = True
+            btnHorario.Enabled = True
+        End If
+
     End Sub
 
 End Class
