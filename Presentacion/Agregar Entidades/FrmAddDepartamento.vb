@@ -18,15 +18,23 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
-
         Dim nombre As String = txtNombre.Text.Trim()
         Dim email As String = txtEmail.Text.Trim()
         Dim ext As String = txtExt.Text.Trim()
         Dim Desc As String = rtxtDesc.Text.Trim()
 
+        If txtNombre.Text = String.Empty Then
+            MessageBox.Show("No puedes dejar el nombre en blanco", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        If MessageBox.Show("¿Deseas el nuevo departamento?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then
+            Return
+        End If
+
         Dept.RegistroDepAgreg(nombre, ext, email, Desc, 1)
 
-        MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
+        MessageBox.Show("Se ha guardado con éxito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         llenarGrid()
     End Sub
@@ -34,14 +42,16 @@
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
         Try
-            Dim resp As VariantType
 
-            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
-            If (resp = vbYes) Then
-                Dept.RegistroDepElim(idDept)
-                llenarGrid()
-
+            If MessageBox.Show("¿Deseas eliminar el departamento?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then
+                Return
             End If
+
+            Dept.RegistroDepElim(idDept)
+            llenarGrid()
+
+            MessageBox.Show("Se ha eliminado con éxito", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
         Catch ex As Exception
 
         End Try
@@ -50,12 +60,10 @@
 
     Public Sub CambiarModo(idDept As Integer)
         mode = 1
-        btnEliminar.Visible = True
-        btnEditar.Visible = True
-        GroupBox1.Text = "Administrar Departamento"
         Me.idDept = idDept
         Dept.Fill(tblDept)
         OrdenaDatos()
+        AlternarBotones(0)
     End Sub
 
     Private Sub OrdenaDatos()
@@ -77,13 +85,27 @@
         Dim ext As String = txtExt.Text.Trim
         Dim desc As String = rtxtDesc.Text.Trim
         Dim estado As Integer
+
+        If txtNombre.Text = String.Empty Then
+            MessageBox.Show("No puedes dejar el nombre en blanco", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        If MessageBox.Show("¿Deseas editar el departamento?", "Guardado", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then
+            Return
+        End If
+
+
         Dept.RegistroDepAct(nombre, ext, email, desc, estado, idDept, id)
+
+        MessageBox.Show("Se ha guardado con éxito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         llenarGrid()
     End Sub
 
     Private Sub FrmAddDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarGrid()
+        AlternarBotones(1)
     End Sub
 
     Private Sub DgvDepartamentos_DoubleClick(sender As Object, e As EventArgs) Handles DgvDepartamentos.DoubleClick
@@ -96,10 +118,10 @@
             txtExt.Text = DgvDepartamentos.Item(2, fila).Value
             rtxtDesc.Text = DgvDepartamentos.Item(4, fila).Value
 
-
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+        AlternarBotones(0)
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -108,6 +130,23 @@
         txtEmail.Text = ""
         txtExt.Text = ""
         rtxtDesc.Text = ""
+        AlternarBotones(1)
+    End Sub
+
+    Private Sub AlternarBotones(modo As Integer)
+
+        If modo = 0 Then
+            GroupBox1.Text = "Administrar Departamento"
+            btnGuardar.Enabled = False
+            btnEditar.Enabled = True
+            btnEliminar.Enabled = True
+        Else
+            GroupBox1.Text = "Agregar Departamento"
+            btnGuardar.Enabled = True
+            btnEditar.Enabled = False
+            btnEliminar.Enabled = False
+        End If
+
     End Sub
 
 End Class

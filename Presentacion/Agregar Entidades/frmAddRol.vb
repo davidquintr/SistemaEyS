@@ -20,6 +20,7 @@
         Rol.Fill(tblRol)
         Me.idRol = idRol
         OrdenarDatos()
+        AlternarBotones(0)
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
@@ -32,40 +33,44 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
+        If txbNombre.Text = String.Empty Then
+            MessageBox.Show("No puedes dejar el nombre vacío", "Giardar", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         Dim Nombre As String = txbNombre.Text.Trim
         Dim estado As Integer
+
+        If MessageBox.Show("¿Deseas guardar?", "Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then
+            Return
+        End If
 
         Rol.RegistroRolAgreg(Nombre, estado)
 
         llenarGrid()
 
-        MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
+        MessageBox.Show("Se ha guardado con éxito", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-        Try
-            Dim resp As VariantType
 
-            resp = (MsgBox("Seguro que se desea eliminar?", vbQuestion + vbYesNo, "Confirmación"))
-            If (resp = vbYes) Then
-                Rol.RegistroRolElim(idRol)
-                llenarGrid()
+        If (MessageBox.Show($"¿Deseas eliminar el rol {txbNombre.Text}?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
+            Rol.RegistroRolElim(idRol)
+        End If
+        MessageBox.Show("Se ha eliminado éxito", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            End If
-        Catch ex As Exception
-
-        End Try
-
+        llenarGrid()
     End Sub
 
     Private Sub frmAddRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarGrid()
-        GroupBox1.Text = "Agregar Rol"
+        AlternarBotones(1)
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         txbNombre.Text = ""
+        AlternarBotones(1)
     End Sub
 
     Private Sub DgvRol_DoubleClick(sender As Object, e As EventArgs) Handles DgvRol.DoubleClick
@@ -78,15 +83,42 @@
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
+        AlternarBotones(0)
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
+        If txbNombre.Text = String.Empty Then
+            MessageBox.Show("No puedes dejar el nombre vacío", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         Dim id As Integer
         Dim nombre As String = txbNombre.Text.Trim
 
-        Rol.RegistroRolAct(nombre, 1, idRol, id)
+        If (MessageBox.Show("¿Deseas guardar el rol?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
+            Rol.RegistroRolAct(nombre, 1, idRol, id)
+        End If
+        MessageBox.Show("Se ha guardado con éxito", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         llenarGrid()
     End Sub
+
+    Private Sub AlternarBotones(modo As Integer)
+
+        If modo = 0 Then
+            GroupBox1.Text = "Administrar Rol"
+
+            btnGuardar.Enabled = False
+            btnEliminar.Enabled = True
+            btnEditar.Enabled = True
+        Else
+            GroupBox1.Text = "Agregar Rol"
+            btnGuardar.Enabled = True
+            btnEliminar.Enabled = False
+            btnEditar.Enabled = False
+        End If
+
+    End Sub
+
 End Class

@@ -14,9 +14,10 @@
     Dim mode As Integer = 0
 
     Sub llenarGrid()
-        DgvCredenciales.DataSource = vwUsr.GetData
         DgvCredenciales.Refresh()
         DgvCredenciales.Columns(0).Visible = False
+        DgvCredenciales.Columns(5).Visible = False
+
     End Sub
 
     Sub llenarRol()
@@ -55,6 +56,16 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
+        If txtNombre.Text = String.Empty Then
+            MessageBox.Show("Se necesita llenar el nombre del usuario", "Advertencia", MessageBoxButtons.OK)
+            Return
+        End If
+
+        If txtPass.Text <> txtPassConfirm.Text Then
+            MessageBox.Show("Las contraseñas deben ser iguales", "Advertencia", MessageBoxButtons.OK)
+            Return
+        End If
+
         Dim UserName As String = txtNombre.Text.Trim
         Dim Pass As String = txtPass.Text.Trim
         Dim PassEstado As Integer
@@ -62,9 +73,8 @@
 
         user.RegistroUserAgreg(UserName, Pass, 1, Rol)
 
-
-        MessageBox.Show("Seguro que se desea guardar?", "Confirmación", MessageBoxButtons.YesNoCancel)
-
+        MessageBox.Show("Se ha eliminado correctamente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Close()
         llenarGrid()
     End Sub
 
@@ -84,6 +94,8 @@
             MessageBox.Show("Ha ocurrido un error, es probable que su usuario esté asignado a un empleado, reasigne el empleado antes de eliminar el usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
 
+        MessageBox.Show("Se ha eliminado correctamente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Close()
     End Sub
 
     Private Sub DgvCredenciales_DoubleClick(sender As Object, e As EventArgs) Handles DgvCredenciales.DoubleClick
@@ -94,7 +106,9 @@
             idUser = DgvCredenciales.Item(0, fila).Value
             txtNombre.Text = DgvCredenciales.Item(1, fila).Value
             txtPass.Text = DgvCredenciales.Item(2, fila).Value
-            cbRol.SelectedIndex = DgvCredenciales.Item(5, fila).Value
+            cbRol.SelectedValue = DgvCredenciales.Item(6, fila).Value
+
+            'MessageBox.Show(DgvCredenciales.Item(6, fila).Value, "Advertencia", MessageBoxButtons.OK)
 
             AlternarButton(1)
 
@@ -150,6 +164,9 @@
 
         user.RegistroUserAct(usernName, pass, 1, rol, idUser, id)
         llenarGrid()
+
+        MessageBox.Show("Se ha guardado correctamente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Me.Close()
     End Sub
 
     Private Sub AlternarButton(mode As Integer)

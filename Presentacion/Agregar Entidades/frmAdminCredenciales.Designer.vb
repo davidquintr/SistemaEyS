@@ -42,21 +42,24 @@ Partial Class frmAdminCredenciales
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.DgvCredenciales = New System.Windows.Forms.DataGridView()
-        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.VwUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.Vw_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter()
+        Me.VwUsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpleadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EstadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IdRolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.gboxPrincipal.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.DgvCredenciales, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VwUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gboxPrincipal
@@ -266,28 +269,33 @@ Partial Class frmAdminCredenciales
         '
         Me.DgvCredenciales.AutoGenerateColumns = False
         Me.DgvCredenciales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCredenciales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.EmpleadoDataGridViewTextBoxColumn, Me.RolDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn})
-        Me.DgvCredenciales.DataSource = Me.VwUsuarioBindingSource
+        Me.DgvCredenciales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.EmpleadoDataGridViewTextBoxColumn, Me.RolDataGridViewTextBoxColumn, Me.EstadoDataGridViewTextBoxColumn, Me.IdRolDataGridViewTextBoxColumn})
+        Me.DgvCredenciales.DataSource = Me.VwUsuarioBindingSource1
         Me.DgvCredenciales.Location = New System.Drawing.Point(10, 157)
         Me.DgvCredenciales.Name = "DgvCredenciales"
         Me.DgvCredenciales.RowHeadersWidth = 51
         Me.DgvCredenciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvCredenciales.Size = New System.Drawing.Size(505, 198)
+        Me.DgvCredenciales.Size = New System.Drawing.Size(502, 198)
         Me.DgvCredenciales.TabIndex = 6
-        '
-        'BDSistemaEySDataSet
-        '
-        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
-        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'VwUsuarioBindingSource
         '
         Me.VwUsuarioBindingSource.DataMember = "Vw_Usuario"
         Me.VwUsuarioBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Vw_UsuarioTableAdapter
         '
         Me.Vw_UsuarioTableAdapter.ClearBeforeFill = True
+        '
+        'VwUsuarioBindingSource1
+        '
+        Me.VwUsuarioBindingSource1.DataMember = "Vw_Usuario"
+        Me.VwUsuarioBindingSource1.DataSource = Me.BDSistemaEySDataSet
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -326,6 +334,12 @@ Partial Class frmAdminCredenciales
         Me.EstadoDataGridViewTextBoxColumn.HeaderText = "Estado"
         Me.EstadoDataGridViewTextBoxColumn.Name = "EstadoDataGridViewTextBoxColumn"
         '
+        'IdRolDataGridViewTextBoxColumn
+        '
+        Me.IdRolDataGridViewTextBoxColumn.DataPropertyName = "idRol"
+        Me.IdRolDataGridViewTextBoxColumn.HeaderText = "idRol"
+        Me.IdRolDataGridViewTextBoxColumn.Name = "IdRolDataGridViewTextBoxColumn"
+        '
         'frmAdminCredenciales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -345,8 +359,9 @@ Partial Class frmAdminCredenciales
         Me.TableLayoutPanel1.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         CType(Me.DgvCredenciales, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VwUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -378,4 +393,6 @@ Partial Class frmAdminCredenciales
     Friend WithEvents EmpleadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents RolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EstadoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents IdRolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents VwUsuarioBindingSource1 As BindingSource
 End Class

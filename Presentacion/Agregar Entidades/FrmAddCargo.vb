@@ -17,11 +17,10 @@
     Public Sub CambiarModo(idCargo As Integer)
         modo = 1
         AlternarBotones(1)
-        btnEliminar.Visible = True
-        btnGuardar.Visible = True
         Me.idCargo = idCargo
         viewCar.Fill(tblViewCar)
         ColocarDatos()
+        AlternarBotones(1)
     End Sub
 
     Private Sub ColocarDatos()
@@ -78,9 +77,14 @@
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
 
+        If MessageBox.Show("¿Deseas eliminar el Cargo?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.No Then
+            Return
+        End If
+
         carg.RegistroCarElim(idCargo)
         llenarGrid()
 
+        MessageBox.Show("Se ha  con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub dgvCargos_DoubleClick(sender As Object, e As EventArgs) Handles dgvCargos.DoubleClick
@@ -89,12 +93,16 @@
             Dim fila As Integer = dgvCargos.CurrentRow.Index
             idCargo = dgvCargos.Item(0, fila).Value
             txbNombre.Text = dgvCargos.Item(1, fila).Value
-            cbDep.Text = dgvCargos.Item(4, fila).Value
+            cbDep.SelectedValue = dgvCargos.Item(4, fila).Value
             rtxtDesc.Text = dgvCargos.Item(2, fila).Value
-            AlternarBotones(1)
+
+
         Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+
         End Try
+
+        AlternarBotones(1)
+
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -124,9 +132,9 @@
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-
         txbNombre.Text = ""
         rtxtDesc.Text = ""
+        AlternarBotones(0)
     End Sub
 
     Private Sub AlternarBotones(mode As Integer)

@@ -33,10 +33,10 @@ Partial Class FrmAddCargo
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnHorario = New System.Windows.Forms.Button()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.dgvCargos = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -171,6 +171,15 @@ Partial Class FrmAddCargo
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(245, 3)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
+        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'btnGuardar
         '
         Me.btnGuardar.Location = New System.Drawing.Point(166, 3)
@@ -179,7 +188,6 @@ Partial Class FrmAddCargo
         Me.btnGuardar.TabIndex = 14
         Me.btnGuardar.Text = "Guadar"
         Me.btnGuardar.UseVisualStyleBackColor = True
-        Me.btnGuardar.Visible = False
         '
         'btnEliminar
         '
@@ -189,7 +197,6 @@ Partial Class FrmAddCargo
         Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
-        Me.btnEliminar.Visible = False
         '
         'btnHorario
         '
@@ -199,15 +206,6 @@ Partial Class FrmAddCargo
         Me.btnHorario.TabIndex = 11
         Me.btnHorario.Text = "Horario"
         Me.btnHorario.UseVisualStyleBackColor = True
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Location = New System.Drawing.Point(245, 3)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
-        Me.btnLimpiar.TabIndex = 15
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'dgvCargos
         '

@@ -22,6 +22,7 @@ Partial Class frmEstablecerHorarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -31,41 +32,46 @@ Partial Class frmEstablecerHorarios
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown4 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown5 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown6 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown7 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown8 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown9 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown10 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown11 = New System.Windows.Forms.NumericUpDown()
-        Me.NumericUpDown12 = New System.Windows.Forms.NumericUpDown()
+        Me.checkReg = New System.Windows.Forms.CheckBox()
+        Me.checkSab = New System.Windows.Forms.CheckBox()
+        Me.checkDom = New System.Windows.Forms.CheckBox()
+        Me.npH1R = New System.Windows.Forms.NumericUpDown()
+        Me.npH1S = New System.Windows.Forms.NumericUpDown()
+        Me.npH1D = New System.Windows.Forms.NumericUpDown()
+        Me.npM1R = New System.Windows.Forms.NumericUpDown()
+        Me.npM1S = New System.Windows.Forms.NumericUpDown()
+        Me.npM1D = New System.Windows.Forms.NumericUpDown()
+        Me.npM2R = New System.Windows.Forms.NumericUpDown()
+        Me.npM2S = New System.Windows.Forms.NumericUpDown()
+        Me.npM2D = New System.Windows.Forms.NumericUpDown()
+        Me.npH2R = New System.Windows.Forms.NumericUpDown()
+        Me.npH2S = New System.Windows.Forms.NumericUpDown()
+        Me.npH2D = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Tbl_HorarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_HorarioTableAdapter()
+        Me.Tbl_HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDown12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npH1R, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npH1S, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npH1D, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npM1R, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npM1S, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npM1D, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npM2R, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npM2S, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npM2D, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npH2R, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npH2S, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.npH2D, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_HorarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
@@ -126,21 +132,21 @@ Partial Class frmEstablecerHorarios
         Me.TableLayoutPanel1.Controls.Add(Me.Label8, 4, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 4, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.CheckBox3, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown3, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown4, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown5, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown6, 3, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown7, 7, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown8, 7, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown9, 7, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown10, 5, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown11, 5, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown12, 5, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.checkReg, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.checkSab, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.checkDom, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH1R, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH1S, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH1D, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM1R, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM1S, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM1D, 3, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM2R, 7, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM2S, 7, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.npM2D, 7, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH2R, 5, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH2S, 5, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.npH2D, 5, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 6, 0)
@@ -191,144 +197,144 @@ Partial Class frmEstablecerHorarios
         Me.Label1.Text = ":"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'CheckBox1
+        'checkReg
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(3, 3)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(76, 23)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Regular"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.checkReg.AutoSize = True
+        Me.checkReg.Location = New System.Drawing.Point(3, 3)
+        Me.checkReg.Name = "checkReg"
+        Me.checkReg.Size = New System.Drawing.Size(76, 23)
+        Me.checkReg.TabIndex = 0
+        Me.checkReg.Text = "Regular"
+        Me.checkReg.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'checkSab
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(3, 34)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(74, 23)
-        Me.CheckBox2.TabIndex = 8
-        Me.CheckBox2.Text = "Sábado"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.checkSab.AutoSize = True
+        Me.checkSab.Location = New System.Drawing.Point(3, 34)
+        Me.checkSab.Name = "checkSab"
+        Me.checkSab.Size = New System.Drawing.Size(74, 23)
+        Me.checkSab.TabIndex = 8
+        Me.checkSab.Text = "Sábado"
+        Me.checkSab.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'checkDom
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(3, 65)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CheckBox3.Size = New System.Drawing.Size(86, 23)
-        Me.CheckBox3.TabIndex = 16
-        Me.CheckBox3.Text = "Domingo"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.checkDom.AutoSize = True
+        Me.checkDom.Location = New System.Drawing.Point(3, 65)
+        Me.checkDom.Name = "checkDom"
+        Me.checkDom.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.checkDom.Size = New System.Drawing.Size(86, 23)
+        Me.checkDom.TabIndex = 16
+        Me.checkDom.Text = "Domingo"
+        Me.checkDom.UseVisualStyleBackColor = True
         '
-        'NumericUpDown1
+        'npH1R
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(118, 3)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown1.TabIndex = 1
-        Me.NumericUpDown1.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1R.Location = New System.Drawing.Point(118, 3)
+        Me.npH1R.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1R.Name = "npH1R"
+        Me.npH1R.Size = New System.Drawing.Size(53, 25)
+        Me.npH1R.TabIndex = 1
+        Me.npH1R.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
-        'NumericUpDown2
+        'npH1S
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(118, 34)
-        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown2.TabIndex = 9
-        Me.NumericUpDown2.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1S.Location = New System.Drawing.Point(118, 34)
+        Me.npH1S.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1S.Name = "npH1S"
+        Me.npH1S.Size = New System.Drawing.Size(53, 25)
+        Me.npH1S.TabIndex = 9
+        Me.npH1S.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
-        'NumericUpDown3
+        'npH1D
         '
-        Me.NumericUpDown3.Location = New System.Drawing.Point(118, 65)
-        Me.NumericUpDown3.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown3.TabIndex = 17
-        Me.NumericUpDown3.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1D.Location = New System.Drawing.Point(118, 65)
+        Me.npH1D.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1D.Name = "npH1D"
+        Me.npH1D.Size = New System.Drawing.Size(53, 25)
+        Me.npH1D.TabIndex = 17
+        Me.npH1D.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
-        'NumericUpDown4
+        'npM1R
         '
-        Me.NumericUpDown4.Location = New System.Drawing.Point(198, 3)
-        Me.NumericUpDown4.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.NumericUpDown4.Name = "NumericUpDown4"
-        Me.NumericUpDown4.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown4.TabIndex = 3
-        Me.NumericUpDown4.Value = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM1R.Location = New System.Drawing.Point(198, 3)
+        Me.npM1R.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM1R.Name = "npM1R"
+        Me.npM1R.Size = New System.Drawing.Size(53, 25)
+        Me.npM1R.TabIndex = 3
+        Me.npM1R.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
-        'NumericUpDown5
+        'npM1S
         '
-        Me.NumericUpDown5.Location = New System.Drawing.Point(198, 34)
-        Me.NumericUpDown5.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.NumericUpDown5.Name = "NumericUpDown5"
-        Me.NumericUpDown5.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown5.TabIndex = 11
-        Me.NumericUpDown5.Value = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM1S.Location = New System.Drawing.Point(198, 34)
+        Me.npM1S.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM1S.Name = "npM1S"
+        Me.npM1S.Size = New System.Drawing.Size(53, 25)
+        Me.npM1S.TabIndex = 11
+        Me.npM1S.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
-        'NumericUpDown6
+        'npM1D
         '
-        Me.NumericUpDown6.Location = New System.Drawing.Point(198, 65)
-        Me.NumericUpDown6.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.NumericUpDown6.Name = "NumericUpDown6"
-        Me.NumericUpDown6.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown6.TabIndex = 19
-        Me.NumericUpDown6.Value = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM1D.Location = New System.Drawing.Point(198, 65)
+        Me.npM1D.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM1D.Name = "npM1D"
+        Me.npM1D.Size = New System.Drawing.Size(53, 25)
+        Me.npM1D.TabIndex = 19
+        Me.npM1D.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
-        'NumericUpDown7
+        'npM2R
         '
-        Me.NumericUpDown7.Location = New System.Drawing.Point(368, 3)
-        Me.NumericUpDown7.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.NumericUpDown7.Name = "NumericUpDown7"
-        Me.NumericUpDown7.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown7.TabIndex = 7
-        Me.NumericUpDown7.Value = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM2R.Location = New System.Drawing.Point(368, 3)
+        Me.npM2R.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM2R.Name = "npM2R"
+        Me.npM2R.Size = New System.Drawing.Size(53, 25)
+        Me.npM2R.TabIndex = 7
+        Me.npM2R.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
-        'NumericUpDown8
+        'npM2S
         '
-        Me.NumericUpDown8.Location = New System.Drawing.Point(368, 34)
-        Me.NumericUpDown8.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.NumericUpDown8.Name = "NumericUpDown8"
-        Me.NumericUpDown8.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown8.TabIndex = 15
-        Me.NumericUpDown8.Value = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM2S.Location = New System.Drawing.Point(368, 34)
+        Me.npM2S.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM2S.Name = "npM2S"
+        Me.npM2S.Size = New System.Drawing.Size(53, 25)
+        Me.npM2S.TabIndex = 15
+        Me.npM2S.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
-        'NumericUpDown9
+        'npM2D
         '
-        Me.NumericUpDown9.Location = New System.Drawing.Point(368, 65)
-        Me.NumericUpDown9.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.NumericUpDown9.Name = "NumericUpDown9"
-        Me.NumericUpDown9.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown9.TabIndex = 23
-        Me.NumericUpDown9.Value = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM2D.Location = New System.Drawing.Point(368, 65)
+        Me.npM2D.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.npM2D.Name = "npM2D"
+        Me.npM2D.Size = New System.Drawing.Size(53, 25)
+        Me.npM2D.TabIndex = 23
+        Me.npM2D.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
-        'NumericUpDown10
+        'npH2R
         '
-        Me.NumericUpDown10.Location = New System.Drawing.Point(288, 3)
-        Me.NumericUpDown10.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.NumericUpDown10.Name = "NumericUpDown10"
-        Me.NumericUpDown10.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown10.TabIndex = 5
-        Me.NumericUpDown10.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2R.Location = New System.Drawing.Point(288, 3)
+        Me.npH2R.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2R.Name = "npH2R"
+        Me.npH2R.Size = New System.Drawing.Size(53, 25)
+        Me.npH2R.TabIndex = 5
+        Me.npH2R.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
-        'NumericUpDown11
+        'npH2S
         '
-        Me.NumericUpDown11.Location = New System.Drawing.Point(288, 34)
-        Me.NumericUpDown11.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.NumericUpDown11.Name = "NumericUpDown11"
-        Me.NumericUpDown11.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown11.TabIndex = 13
-        Me.NumericUpDown11.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2S.Location = New System.Drawing.Point(288, 34)
+        Me.npH2S.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2S.Name = "npH2S"
+        Me.npH2S.Size = New System.Drawing.Size(53, 25)
+        Me.npH2S.TabIndex = 13
+        Me.npH2S.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
-        'NumericUpDown12
+        'npH2D
         '
-        Me.NumericUpDown12.Location = New System.Drawing.Point(288, 65)
-        Me.NumericUpDown12.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.NumericUpDown12.Name = "NumericUpDown12"
-        Me.NumericUpDown12.Size = New System.Drawing.Size(53, 25)
-        Me.NumericUpDown12.TabIndex = 21
-        Me.NumericUpDown12.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2D.Location = New System.Drawing.Point(288, 65)
+        Me.npH2D.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2D.Name = "npH2D"
+        Me.npH2D.Size = New System.Drawing.Size(53, 25)
+        Me.npH2D.TabIndex = 21
+        Me.npH2D.Value = New Decimal(New Integer() {23, 0, 0, 0})
         '
         'Label2
         '
@@ -375,6 +381,20 @@ Partial Class frmEstablecerHorarios
         Me.Label6.Text = ":"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Tbl_HorarioTableAdapter
+        '
+        Me.Tbl_HorarioTableAdapter.ClearBeforeFill = True
+        '
+        'Tbl_HorarioBindingSource
+        '
+        Me.Tbl_HorarioBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.Tbl_HorarioBindingSource.Position = 0
+        '
+        'BDSistemaEySDataSet
+        '
+        Me.BDSistemaEySDataSet.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'frmEstablecerHorarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -391,18 +411,20 @@ Partial Class frmEstablecerHorarios
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDown12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npH1R, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npH1S, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npH1D, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npM1R, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npM1S, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npM1D, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npM2R, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npM2S, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npM2D, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npH2R, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npH2S, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.npH2D, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_HorarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -416,24 +438,27 @@ Partial Class frmEstablecerHorarios
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents NumericUpDown2 As NumericUpDown
-    Friend WithEvents NumericUpDown3 As NumericUpDown
-    Friend WithEvents NumericUpDown4 As NumericUpDown
-    Friend WithEvents NumericUpDown5 As NumericUpDown
-    Friend WithEvents NumericUpDown6 As NumericUpDown
-    Friend WithEvents NumericUpDown7 As NumericUpDown
-    Friend WithEvents NumericUpDown8 As NumericUpDown
-    Friend WithEvents NumericUpDown9 As NumericUpDown
-    Friend WithEvents NumericUpDown10 As NumericUpDown
-    Friend WithEvents NumericUpDown11 As NumericUpDown
-    Friend WithEvents NumericUpDown12 As NumericUpDown
+    Friend WithEvents checkReg As CheckBox
+    Friend WithEvents checkSab As CheckBox
+    Friend WithEvents checkDom As CheckBox
+    Friend WithEvents npH1R As NumericUpDown
+    Friend WithEvents npH1S As NumericUpDown
+    Friend WithEvents npH1D As NumericUpDown
+    Friend WithEvents npM1R As NumericUpDown
+    Friend WithEvents npM1S As NumericUpDown
+    Friend WithEvents npM1D As NumericUpDown
+    Friend WithEvents npM2R As NumericUpDown
+    Friend WithEvents npM2S As NumericUpDown
+    Friend WithEvents npM2D As NumericUpDown
+    Friend WithEvents npH2R As NumericUpDown
+    Friend WithEvents npH2S As NumericUpDown
+    Friend WithEvents npH2D As NumericUpDown
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents Tbl_HorarioTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_HorarioTableAdapter
+    Friend WithEvents Tbl_HorarioBindingSource As BindingSource
+    Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
 End Class

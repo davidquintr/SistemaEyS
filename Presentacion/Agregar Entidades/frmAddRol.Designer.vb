@@ -30,8 +30,8 @@ Partial Class frmAddRol
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.txbNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.txbNombre = New System.Windows.Forms.TextBox()
         Me.DgvRol = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -47,9 +47,9 @@ Partial Class frmAddRol
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnLimpiar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEditar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(12, 227)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
@@ -71,18 +71,17 @@ Partial Class frmAddRol
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 12
-        Me.btnGuardar.Text = "Nuevo"
+        Me.btnGuardar.Text = "Agregar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(169, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(11, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 10
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
-        Me.btnEliminar.Visible = False
         '
         'btnEditar
         '
@@ -90,13 +89,12 @@ Partial Class frmAddRol
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(73, 25)
         Me.btnEditar.TabIndex = 32
-        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.Text = "Guardar"
         Me.btnEditar.UseVisualStyleBackColor = True
-        Me.btnEditar.Visible = False
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(11, 3)
+        Me.btnLimpiar.Location = New System.Drawing.Point(169, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
         Me.btnLimpiar.TabIndex = 31
@@ -126,19 +124,11 @@ Partial Class frmAddRol
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(343, 32)
         Me.TableLayoutPanel1.TabIndex = 3
-        '
-        'txbNombre
-        '
-        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(144, 3)
-        Me.txbNombre.Name = "txbNombre"
-        Me.txbNombre.Size = New System.Drawing.Size(196, 23)
-        Me.txbNombre.TabIndex = 3
         '
         'Label2
         '
@@ -150,6 +140,14 @@ Partial Class frmAddRol
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Nombre:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txbNombre
+        '
+        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbNombre.Location = New System.Drawing.Point(144, 3)
+        Me.txbNombre.Name = "txbNombre"
+        Me.txbNombre.Size = New System.Drawing.Size(196, 23)
+        Me.txbNombre.TabIndex = 3
         '
         'DgvRol
         '
