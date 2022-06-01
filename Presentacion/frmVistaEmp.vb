@@ -90,8 +90,12 @@
     End Sub
 
     Private Sub confirmarAlmuerzo()
-        If flagAlm = False Then
 
+        If EsHoraAlmuerzo() = False Then
+            Return
+        End If
+
+        If flagAlm = False Then
             Dim result As DialogResult = MessageBox.Show("¿Deseas comenzar tu almuerzo?", "Almuerzo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
                 Me.Tbl_RegistroTableAdapter1.InsertarAlmIn(DateTime.Now, idReg, idReg)
@@ -346,4 +350,16 @@
     Private Sub buttonAlmuerzo_Click(sender As Object, e As EventArgs) Handles buttonAlmuerzo.Click
         confirmarAlmuerzo()
     End Sub
+    Private Function EsHoraAlmuerzo() As Boolean
+        Me.Tbl_ConfigTableAdapter1.ObtenerAlmuerzo(BDSistemaEySDataSet.tbl_Config)
+
+        If (BDSistemaEySDataSet.tbl_Config.First.horarioAlmuerzoIn.Hour < DateTime.Now.Hour) Then
+            Return True
+        Else
+            MessageBox.Show($"Aún no es hora de almuerzo, comienza a las {BDSistemaEySDataSet.tbl_Config.First.horarioAlmuerzoIn.Hour}hrs", "Almuerzo", MessageBoxButtons.OK, MessageBoxIcon.Question)
+            Return False
+        End If
+
+    End Function
+
 End Class

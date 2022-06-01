@@ -180,7 +180,7 @@ SELECT idConfig, nombreEmpresa, tiempoGracia, emailDep, horarioAlmuerzoIn, horar
               <Mapping SourceColumn="horarioAlmuerzoOut" DataSetColumn="horarioAlmuerzoOut" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActualizarAlmuerzo" Modifier="Public" Name="ActualizarAlmuerzo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ActualizarAlmuerzo">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActualizarAlmuerzo" Modifier="Public" Name="ActualizarAlmuerzo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActualizarAlmuerzo">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [tbl_Config] SET [horarioAlmuerzoIn] = @horarioAlmuerzoIn, [horarioAlmuerzoOut] = @horarioAlmuerzoOut WHERE (([idConfig] = @Original_idConfig));
@@ -194,10 +194,10 @@ SELECT idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tbl_Config WHERE (id
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Config" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ExisteAlmuerzo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="ExisteAlmuerzo" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ExisteAlmuerzo">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Config" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExisteAlmuerzo" Modifier="Public" Name="ExisteAlmuerzo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ExisteAlmuerzo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut
+                    <CommandText>SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut, nombreEmpresa, tiempoGracia, emailDep
 FROM            tbl_Config
 WHERE        (idConfig = @Param1)</CommandText>
                     <Parameters>
@@ -206,7 +206,7 @@ WHERE        (idConfig = @Param1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertarAlmuerzo" Modifier="Public" Name="InsertarAlmuerzo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertarAlmuerzo">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertarAlmuerzo" Modifier="Public" Name="InsertarAlmuerzo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertarAlmuerzo">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [tbl_Config] ([horarioAlmuerzoIn], [horarioAlmuerzoOut]) VALUES (@horarioAlmuerzoIn, @horarioAlmuerzoOut);
@@ -222,12 +222,8 @@ SELECT idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tbl_Config WHERE (id
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut
-FROM            tbl_Config
-WHERE        (horarioAlmuerzoIn = @Param1) AND (horarioAlmuerzoOut = @Param2)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="horarioAlmuerzoIn" DataSourceName="BDSistemaEyS.dbo.tbl_Config" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="horarioAlmuerzoIn" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="horarioAlmuerzoOut" DataSourceName="BDSistemaEyS.dbo.tbl_Config" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Param2" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="horarioAlmuerzoOut" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
+FROM            tbl_Config</CommandText>
+                    <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
@@ -1486,9 +1482,9 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Vw_RegistrosDiaTableAdapter" GeneratorDataComponentClassName="Vw_RegistrosDiaTableAdapter" Name="Vw_RegistrosDia" UserDataComponentName="Vw_RegistrosDiaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.Vw_RegistrosDia" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.Vw_RegistrosDia" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT Nombre, Apellido, Departamento, Cargo, [Hora de Entrada], [Hora de Salida] FROM dbo.Vw_RegistrosDia</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -1555,8 +1551,8 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="horarioAlmuerzoIn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoIn" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoInColumn" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoIn" msprop:Generator_UserColumnName="horarioAlmuerzoIn" type="xs:dateTime" />
-              <xs:element name="horarioAlmuerzoOut" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoOut" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoOutColumn" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoOut" msprop:Generator_UserColumnName="horarioAlmuerzoOut" type="xs:dateTime" />
+              <xs:element name="horarioAlmuerzoIn" msprop:Generator_UserColumnName="horarioAlmuerzoIn" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoInColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoIn" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoIn" type="xs:dateTime" />
+              <xs:element name="horarioAlmuerzoOut" msprop:Generator_UserColumnName="horarioAlmuerzoOut" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoOutColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoOut" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoOut" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1692,24 +1688,24 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fechaInicio" msprop:Generator_ColumnPropNameInRow="fechaInicio" msprop:Generator_ColumnPropNameInTable="fechaInicioColumn" msprop:Generator_ColumnVarNameInTable="columnfechaInicio" msprop:Generator_UserColumnName="fechaInicio" type="xs:dateTime" />
-              <xs:element name="fechaFin" msprop:Generator_ColumnPropNameInRow="fechaFin" msprop:Generator_ColumnPropNameInTable="fechaFinColumn" msprop:Generator_ColumnVarNameInTable="columnfechaFin" msprop:Generator_UserColumnName="fechaFin" type="xs:dateTime" />
-              <xs:element name="razon" msprop:Generator_ColumnPropNameInRow="razon" msprop:Generator_ColumnPropNameInTable="razonColumn" msprop:Generator_ColumnVarNameInTable="columnrazon" msprop:Generator_UserColumnName="razon">
+              <xs:element name="fechaInicio" msprop:Generator_UserColumnName="fechaInicio" msprop:Generator_ColumnPropNameInTable="fechaInicioColumn" msprop:Generator_ColumnPropNameInRow="fechaInicio" msprop:Generator_ColumnVarNameInTable="columnfechaInicio" type="xs:dateTime" />
+              <xs:element name="fechaFin" msprop:Generator_UserColumnName="fechaFin" msprop:Generator_ColumnPropNameInTable="fechaFinColumn" msprop:Generator_ColumnPropNameInRow="fechaFin" msprop:Generator_ColumnVarNameInTable="columnfechaFin" type="xs:dateTime" />
+              <xs:element name="razon" msprop:Generator_UserColumnName="razon" msprop:Generator_ColumnPropNameInTable="razonColumn" msprop:Generator_ColumnPropNameInRow="razon" msprop:Generator_ColumnVarNameInTable="columnrazon">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="descripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_UserColumnName="descripcion" minOccurs="0">
+              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_UserColumnName="estado" type="xs:int" />
-              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2022,39 +2018,39 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vw_RegistrosDia" msprop:Generator_RowClassName="Vw_RegistrosDiaRow" msprop:Generator_RowEvHandlerName="Vw_RegistrosDiaRowChangeEventHandler" msprop:Generator_RowDeletedName="Vw_RegistrosDiaRowDeleted" msprop:Generator_RowDeletingName="Vw_RegistrosDiaRowDeleting" msprop:Generator_RowEvArgName="Vw_RegistrosDiaRowChangeEvent" msprop:Generator_TablePropName="Vw_RegistrosDia" msprop:Generator_RowChangedName="Vw_RegistrosDiaRowChanged" msprop:Generator_UserTableName="Vw_RegistrosDia" msprop:Generator_RowChangingName="Vw_RegistrosDiaRowChanging" msprop:Generator_TableClassName="Vw_RegistrosDiaDataTable" msprop:Generator_TableVarName="tableVw_RegistrosDia">
+        <xs:element name="Vw_RegistrosDia" msprop:Generator_RowEvHandlerName="Vw_RegistrosDiaRowChangeEventHandler" msprop:Generator_RowDeletedName="Vw_RegistrosDiaRowDeleted" msprop:Generator_RowDeletingName="Vw_RegistrosDiaRowDeleting" msprop:Generator_RowEvArgName="Vw_RegistrosDiaRowChangeEvent" msprop:Generator_TablePropName="Vw_RegistrosDia" msprop:Generator_RowChangedName="Vw_RegistrosDiaRowChanged" msprop:Generator_UserTableName="Vw_RegistrosDia" msprop:Generator_RowChangingName="Vw_RegistrosDiaRowChanging" msprop:Generator_RowClassName="Vw_RegistrosDiaRow" msprop:Generator_TableClassName="Vw_RegistrosDiaDataTable" msprop:Generator_TableVarName="tableVw_RegistrosDia">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
+              <xs:element name="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_UserColumnName="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido">
+              <xs:element name="Apellido" msprop:Generator_ColumnPropNameInTable="ApellidoColumn" msprop:Generator_ColumnPropNameInRow="Apellido" msprop:Generator_UserColumnName="Apellido" msprop:Generator_ColumnVarNameInTable="columnApellido">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Departamento" msprop:Generator_UserColumnName="Departamento" msprop:Generator_ColumnPropNameInTable="DepartamentoColumn" msprop:Generator_ColumnPropNameInRow="Departamento" msprop:Generator_ColumnVarNameInTable="columnDepartamento">
+              <xs:element name="Departamento" msprop:Generator_ColumnPropNameInTable="DepartamentoColumn" msprop:Generator_ColumnPropNameInRow="Departamento" msprop:Generator_UserColumnName="Departamento" msprop:Generator_ColumnVarNameInTable="columnDepartamento">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="60" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cargo" msprop:Generator_UserColumnName="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo">
+              <xs:element name="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_UserColumnName="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Hora_x0020_de_x0020_Entrada" msprop:Generator_UserColumnName="Hora de Entrada" msprop:Generator_ColumnPropNameInTable="Hora_de_EntradaColumn" msprop:Generator_ColumnPropNameInRow="Hora_de_Entrada" msprop:Generator_ColumnVarNameInTable="columnHora_de_Entrada" type="xs:dateTime" />
-              <xs:element name="Hora_x0020_de_x0020_Salida" msprop:Generator_UserColumnName="Hora de Salida" msprop:Generator_ColumnPropNameInTable="Hora_de_SalidaColumn" msprop:Generator_ColumnPropNameInRow="Hora_de_Salida" msprop:Generator_ColumnVarNameInTable="columnHora_de_Salida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Hora_x0020_de_x0020_Entrada" msprop:Generator_ColumnPropNameInTable="Hora_de_EntradaColumn" msprop:Generator_ColumnPropNameInRow="Hora_de_Entrada" msprop:Generator_UserColumnName="Hora de Entrada" msprop:Generator_ColumnVarNameInTable="columnHora_de_Entrada" type="xs:dateTime" />
+              <xs:element name="Hora_x0020_de_x0020_Salida" msprop:Generator_ColumnPropNameInTable="Hora_de_SalidaColumn" msprop:Generator_ColumnPropNameInRow="Hora_de_Salida" msprop:Generator_UserColumnName="Hora de Salida" msprop:Generator_ColumnVarNameInTable="columnHora_de_Salida" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2127,15 +2123,15 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Reftbl_Departamento16" msdata:parent="tbl_Departamento" msdata:child="tbl_Cargo" msdata:parentkey="idDepartamento" msdata:childkey="idDepartamento" msprop:Generator_UserParentTable="tbl_Departamento" msprop:Generator_UserChildTable="tbl_Cargo" msprop:Generator_RelationVarName="relationReftbl_Departamento16" msprop:Generator_ChildPropName="Gettbl_CargoRows" msprop:Generator_UserRelationName="Reftbl_Departamento16" msprop:Generator_ParentPropName="tbl_DepartamentoRow" />
-      <msdata:Relationship name="Reftbl_Cargo31" msdata:parent="tbl_Cargo" msdata:child="tbl_Empleado" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Cargo31" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo31" />
-      <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo40" />
-      <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado36" />
-      <msdata:Relationship name="Reftbl_Rol56" msdata:parent="tbl_Rol" msdata:child="tbl_Usuario" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Rol56" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_ParentPropName="tbl_RolRow" msprop:Generator_UserRelationName="Reftbl_Rol56" />
-      <msdata:Relationship name="Reftbl_Usuario57" msdata:parent="tbl_Usuario" msdata:child="tbl_Empleado" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserParentTable="tbl_Usuario" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Usuario57" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_UserRelationName="Reftbl_Usuario57" msprop:Generator_ParentPropName="tbl_UsuarioRow" />
-      <msdata:Relationship name="Reftbl_Rol58" msdata:parent="tbl_Rol" msdata:child="tbl_OpcRol" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Rol58" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_RolRow" msprop:Generator_UserRelationName="Reftbl_Rol58" />
-      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcRol" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_OpcionRow" msprop:Generator_UserRelationName="Reftbl_Opcion53" />
-      <msdata:Relationship name="Reftbl_Empleado51" msdata:parent="tbl_Empleado" msdata:child="tbl_Evento" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Evento" msprop:Generator_RelationVarName="relationReftbl_Empleado51" msprop:Generator_ChildPropName="Gettbl_EventoRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado51" />
+      <msdata:Relationship name="Reftbl_Departamento16" msdata:parent="tbl_Departamento" msdata:child="tbl_Cargo" msdata:parentkey="idDepartamento" msdata:childkey="idDepartamento" msprop:Generator_UserParentTable="tbl_Departamento" msprop:Generator_UserChildTable="tbl_Cargo" msprop:Generator_RelationVarName="relationReftbl_Departamento16" msprop:Generator_ChildPropName="Gettbl_CargoRows" msprop:Generator_ParentPropName="tbl_DepartamentoRow" msprop:Generator_UserRelationName="Reftbl_Departamento16" />
+      <msdata:Relationship name="Reftbl_Cargo31" msdata:parent="tbl_Cargo" msdata:child="tbl_Empleado" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Cargo31" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_UserRelationName="Reftbl_Cargo31" msprop:Generator_ParentPropName="tbl_CargoRow" />
+      <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_UserRelationName="Reftbl_Cargo40" msprop:Generator_ParentPropName="tbl_CargoRow" />
+      <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_UserRelationName="Reftbl_Empleado36" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
+      <msdata:Relationship name="Reftbl_Rol56" msdata:parent="tbl_Rol" msdata:child="tbl_Usuario" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Rol56" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_UserRelationName="Reftbl_Rol56" msprop:Generator_ParentPropName="tbl_RolRow" />
+      <msdata:Relationship name="Reftbl_Usuario57" msdata:parent="tbl_Usuario" msdata:child="tbl_Empleado" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserParentTable="tbl_Usuario" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Usuario57" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_ParentPropName="tbl_UsuarioRow" msprop:Generator_UserRelationName="Reftbl_Usuario57" />
+      <msdata:Relationship name="Reftbl_Rol58" msdata:parent="tbl_Rol" msdata:child="tbl_OpcRol" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Rol58" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_UserRelationName="Reftbl_Rol58" msprop:Generator_ParentPropName="tbl_RolRow" />
+      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcRol" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_UserRelationName="Reftbl_Opcion53" msprop:Generator_ParentPropName="tbl_OpcionRow" />
+      <msdata:Relationship name="Reftbl_Empleado51" msdata:parent="tbl_Empleado" msdata:child="tbl_Evento" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Evento" msprop:Generator_RelationVarName="relationReftbl_Empleado51" msprop:Generator_ChildPropName="Gettbl_EventoRows" msprop:Generator_UserRelationName="Reftbl_Empleado51" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

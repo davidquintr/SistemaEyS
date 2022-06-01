@@ -43,6 +43,8 @@ Partial Class frmVistaEmp
         Me.Tbl_RegistroTableAdapter1 = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_RegistroTableAdapter()
         Me.Vw_EmpDataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_ConfigBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_ConfigTableAdapter1 = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_ConfigTableAdapter()
         Me.Panel1.SuspendLayout()
         Me.FlowLayoutPanel3.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
@@ -51,6 +53,7 @@ Partial Class frmVistaEmp
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_ConfigBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -263,6 +266,15 @@ Partial Class frmVistaEmp
         Me.Tbl_RegistroBindingSource.DataSource = Me.BDSistemaEySDataSet
         Me.Tbl_RegistroBindingSource.Position = 0
         '
+        'Tbl_ConfigBindingSource
+        '
+        Me.Tbl_ConfigBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.Tbl_ConfigBindingSource.Position = 0
+        '
+        'Tbl_ConfigTableAdapter1
+        '
+        Me.Tbl_ConfigTableAdapter1.ClearBeforeFill = True
+        '
         'frmVistaEmp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -285,6 +297,7 @@ Partial Class frmVistaEmp
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Vw_EmpDataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_ConfigBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -308,4 +321,6 @@ Partial Class frmVistaEmp
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents Tbl_RegistroTableAdapter1 As BDSistemaEySDataSetTableAdapters.tbl_RegistroTableAdapter
     Friend WithEvents Tbl_RegistroBindingSource As BindingSource
+    Friend WithEvents Tbl_ConfigBindingSource As BindingSource
+    Friend WithEvents Tbl_ConfigTableAdapter1 As BDSistemaEySDataSetTableAdapters.tbl_ConfigTableAdapter
 End Class

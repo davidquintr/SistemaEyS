@@ -5,13 +5,21 @@
     Dim flagHor As Boolean = False
     Dim idConfig As Integer
 
-    Private Sub frmEstablcerAlmuerzo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmEstablcerAlmu0erzo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        If (Me.Tbl_ConfigTableAdapter1.ExisteAlmuerzo(BDSistemaEySDataSet.tbl_Config, idConfig) > 0) Then
-            flagHor = True
-        Else
+        BDSistemaEySDataSet.EnforceConstraints = False
+
+        Me.Tbl_ConfigTableAdapter1.ObtenerAlmuerzo(BDSistemaEySDataSet.tbl_Config)
+        Try
+            If (BDSistemaEySDataSet.tbl_Config.First.horarioAlmuerzoIn <> Nothing) Then
+                flagHor = True
+                idConfig = 1
+            End If
+
+        Catch ex As Exception
             flagHor = False
-        End If
+            idConfig = 1
+        End Try
 
         MessageBox.Show(flagHor.ToString, "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
 
@@ -54,11 +62,11 @@
         Dim horaEntradaR As DateTime
         Dim horaSalidaR As DateTime
 
-        Me.Tbl_ConfigTableAdapter1.ObtenerAlmuerzo(BDSistemaEySDataSet.tbl_Config, horaEntradaR, horaSalidaR)
+        Me.Tbl_ConfigTableAdapter1.ObtenerAlmuerzo(BDSistemaEySDataSet.tbl_Config)
         Me.idConfig = BDSistemaEySDataSet.tbl_Config.First.idConfig
 
         horaEntradaR = BDSistemaEySDataSet.tbl_Config.First.horarioAlmuerzoIn
-        horaSalidaR = BDSistemaEySDataSet.tbl_Horario.First.horarioOut
+        horaSalidaR = BDSistemaEySDataSet.tbl_Config.First.horarioAlmuerzoOut
 
 
         npH1R.Value = horaEntradaR.Hour
@@ -78,5 +86,9 @@
 
         MessageBox.Show("Se ha guardado el horario", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
         Me.Close()
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel1.Paint
+
     End Sub
 End Class
