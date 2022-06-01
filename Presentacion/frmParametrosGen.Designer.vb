@@ -23,6 +23,7 @@ Partial Class frmParametrosGen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.layoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.labelParametros = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -31,7 +32,6 @@ Partial Class frmParametrosGen
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
         Me.buttonAjustes = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -47,6 +47,15 @@ Partial Class frmParametrosGen
         Me.layoutPanel.Name = "layoutPanel"
         Me.layoutPanel.Size = New System.Drawing.Size(420, 419)
         Me.layoutPanel.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(413, 46)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Ajustes extras"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Panel2
         '
@@ -122,15 +131,6 @@ Partial Class frmParametrosGen
         Me.buttonAjustes.TabIndex = 1
         Me.buttonAjustes.Text = "Ajustes extras"
         Me.buttonAjustes.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(319, 46)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Ajustes extras"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmParametrosGen
         '

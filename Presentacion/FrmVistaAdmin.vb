@@ -31,6 +31,8 @@
     End Sub
 
     Private Sub FrmVistaAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.Vw_RegistrosDia' Puede moverla o quitarla según sea necesario.
+        Me.Vw_RegistrosDiaTableAdapter.Fill(Me.BDSistemaEySDataSet.Vw_RegistrosDia)
         'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.tbl_Usuario' Puede moverla o quitarla según sea necesario.
         'Me.Tbl_UsuarioTableAdapter1.Fill(Me.BDSistemaEySDataSet.tbl_Usuario)
         BDSistemaEySDataSet.EnforceConstraints = False
