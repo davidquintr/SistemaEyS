@@ -200,6 +200,8 @@ Partial Class frmEstablecerHorarios
         'checkReg
         '
         Me.checkReg.AutoSize = True
+        Me.checkReg.Checked = True
+        Me.checkReg.CheckState = System.Windows.Forms.CheckState.Checked
         Me.checkReg.Location = New System.Drawing.Point(3, 3)
         Me.checkReg.Name = "checkReg"
         Me.checkReg.Size = New System.Drawing.Size(76, 23)
@@ -230,7 +232,6 @@ Partial Class frmEstablecerHorarios
         '
         'npH1R
         '
-        Me.npH1R.Enabled = False
         Me.npH1R.Location = New System.Drawing.Point(118, 3)
         Me.npH1R.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH1R.Name = "npH1R"
@@ -260,7 +261,6 @@ Partial Class frmEstablecerHorarios
         '
         'npM1R
         '
-        Me.npM1R.Enabled = False
         Me.npM1R.Location = New System.Drawing.Point(198, 3)
         Me.npM1R.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM1R.Name = "npM1R"
@@ -287,7 +287,6 @@ Partial Class frmEstablecerHorarios
         '
         'npM2R
         '
-        Me.npM2R.Enabled = False
         Me.npM2R.Location = New System.Drawing.Point(368, 3)
         Me.npM2R.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.npM2R.Name = "npM2R"
@@ -314,7 +313,6 @@ Partial Class frmEstablecerHorarios
         '
         'npH2R
         '
-        Me.npH2R.Enabled = False
         Me.npH2R.Location = New System.Drawing.Point(288, 3)
         Me.npH2R.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.npH2R.Name = "npH2R"

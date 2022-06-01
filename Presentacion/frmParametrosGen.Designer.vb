@@ -30,8 +30,9 @@ Partial Class frmParametrosGen
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.buttonEventos = New System.Windows.Forms.Button()
         Me.buttonAjustes = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.layoutPanel.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
@@ -40,6 +41,7 @@ Partial Class frmParametrosGen
         '
         'layoutPanel
         '
+        Me.layoutPanel.Controls.Add(Me.Button1)
         Me.layoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.layoutPanel.Location = New System.Drawing.Point(344, 64)
         Me.layoutPanel.Name = "layoutPanel"
@@ -106,30 +108,29 @@ Partial Class frmParametrosGen
         '
         'FlowLayoutPanel3
         '
-        Me.FlowLayoutPanel3.Controls.Add(Me.buttonEventos)
         Me.FlowLayoutPanel3.Controls.Add(Me.buttonAjustes)
         Me.FlowLayoutPanel3.Location = New System.Drawing.Point(12, 61)
         Me.FlowLayoutPanel3.Name = "FlowLayoutPanel3"
         Me.FlowLayoutPanel3.Size = New System.Drawing.Size(322, 481)
         Me.FlowLayoutPanel3.TabIndex = 1
         '
-        'buttonEventos
-        '
-        Me.buttonEventos.Location = New System.Drawing.Point(3, 3)
-        Me.buttonEventos.Name = "buttonEventos"
-        Me.buttonEventos.Size = New System.Drawing.Size(319, 46)
-        Me.buttonEventos.TabIndex = 0
-        Me.buttonEventos.Text = "Eventos"
-        Me.buttonEventos.UseVisualStyleBackColor = True
-        '
         'buttonAjustes
         '
-        Me.buttonAjustes.Location = New System.Drawing.Point(3, 55)
+        Me.buttonAjustes.Location = New System.Drawing.Point(3, 3)
         Me.buttonAjustes.Name = "buttonAjustes"
         Me.buttonAjustes.Size = New System.Drawing.Size(319, 46)
         Me.buttonAjustes.TabIndex = 1
         Me.buttonAjustes.Text = "Ajustes extras"
         Me.buttonAjustes.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(3, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(319, 46)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Ajustes extras"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmParametrosGen
         '
@@ -146,6 +147,7 @@ Partial Class frmParametrosGen
         Me.Name = "frmParametrosGen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Parametros generales"
+        Me.layoutPanel.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
@@ -164,6 +166,6 @@ Partial Class frmParametrosGen
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents FlowLayoutPanel3 As FlowLayoutPanel
-    Friend WithEvents buttonEventos As Button
     Friend WithEvents buttonAjustes As Button
+    Friend WithEvents Button1 As Button
 End Class

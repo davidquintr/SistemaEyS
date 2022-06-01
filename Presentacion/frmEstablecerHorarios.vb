@@ -5,7 +5,7 @@
     Dim idCargo As Integer
     Dim flagHor As Boolean = False
 
-    Dim idHorario As Integer
+    Dim idHorario(3) As Integer
 
 
     Private Sub frmEstablecerHorarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -14,17 +14,18 @@
 
     Public Sub CargarDatos(idCargo As Integer)
         Me.idCargo = idCargo
-        Try
-            Me.Tbl_HorarioTableAdapter.ObtenerHorario(BDSistemaEySDataSet.tbl_Horario, idCargo, 1)
-            idHorario = BDSistemaEySDataSet.tbl_Horario.First.idHorario
-
+        If (Me.Tbl_HorarioTableAdapter.ExisteHorario(idCargo) > 0) Then
             flagHor = True
-        Catch ex As Exception
+        Else
             flagHor = False
-        End Try
+        End If
+
+        MessageBox.Show(flagHor.ToString, "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
+
 
         If flagHor = False Then
             ConvertirHorarios() 'Esto para crear los datos
+            flagHor = True
         Else
             ColocarHorario()
         End If
@@ -106,6 +107,9 @@
             npH2D.Enabled = True
             npM2D.Enabled = True
         End If
+
+        MessageBox.Show(checkReg.Checked.ToString + " " + checkSab.Checked.ToString + " " + checkDom.Checked.ToString + " ", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Question)
+
     End Sub
 
     Private Sub ConvertirHorarios()
@@ -133,14 +137,15 @@
         horarioBuilder = "11-09-2001 " + npH2D.Value.ToString + ":" + npM2D.Value.ToString + ":00"
         horaSalidaD = DateTime.Parse(horarioBuilder)
 
+
         If flagHor = False Then
             Tbl_HorarioTableAdapter.InsertarHorario(horaEntradaR, horaSalidaR, 1, idCargo, checkReg.Checked)
             Tbl_HorarioTableAdapter.InsertarHorario(horaEntradaS, horaSalidaS, 2, idCargo, checkSab.Checked)
             Tbl_HorarioTableAdapter.InsertarHorario(horaEntradaD, horaSalidaD, 3, idCargo, checkDom.Checked)
         Else
-            Tbl_HorarioTableAdapter.ActualizarHorario(horaEntradaR, horaSalidaR, 1, idCargo, checkReg.Checked, idCargo, idHorario(0))
-            Tbl_HorarioTableAdapter.ActualizarHorario(horaEntradaS, horaSalidaS, 2, idCargo, checkSab.Checked, idCargo, idHorario(1))
-            Tbl_HorarioTableAdapter.ActualizarHorario(horaEntradaD, horaSalidaD, 3, idCargo, checkDom.Checked, idCargo, idHorario(2))
+            Tbl_HorarioTableAdapter.ActualizarHorario(horaEntradaR, horaSalidaR, 1, idCargo, checkReg.Checked, idHorario(0), idHorario(0))
+            Tbl_HorarioTableAdapter.ActualizarHorario(horaEntradaS, horaSalidaS, 2, idCargo, checkSab.Checked, idHorario(1), idHorario(1))
+            Tbl_HorarioTableAdapter.ActualizarHorario(horaEntradaD, horaSalidaD, 3, idCargo, checkDom.Checked, idHorario(2), idHorario(2))
         End If
 
     End Sub
@@ -150,16 +155,22 @@
         Dim horaSalidaR, horaSalidaS, horaSalidaD As DateTime
 
         Me.Tbl_HorarioTableAdapter.ObtenerHorario(BDSistemaEySDataSet.tbl_Horario, idCargo, 1)
+        Me.idHorario(0) = BDSistemaEySDataSet.tbl_Horario.First.idHorario
+
         horaEntradaR = BDSistemaEySDataSet.tbl_Horario.First.horarioIn
         horaSalidaR = BDSistemaEySDataSet.tbl_Horario.First.horarioOut
         checkReg.Checked = BDSistemaEySDataSet.tbl_Horario.First.activo
 
         Me.Tbl_HorarioTableAdapter.ObtenerHorario(BDSistemaEySDataSet.tbl_Horario, idCargo, 2)
+        Me.idHorario(1) = BDSistemaEySDataSet.tbl_Horario.First.idHorario
+
         horaEntradaS = BDSistemaEySDataSet.tbl_Horario.First.horarioIn
         horaSalidaS = BDSistemaEySDataSet.tbl_Horario.First.horarioOut
         checkSab.Checked = BDSistemaEySDataSet.tbl_Horario.First.activo
 
         Me.Tbl_HorarioTableAdapter.ObtenerHorario(BDSistemaEySDataSet.tbl_Horario, idCargo, 3)
+        Me.idHorario(2) = BDSistemaEySDataSet.tbl_Horario.First.idHorario
+
         horaEntradaD = BDSistemaEySDataSet.tbl_Horario.First.horarioIn
         horaSalidaD = BDSistemaEySDataSet.tbl_Horario.First.horarioOut
         checkDom.Checked = BDSistemaEySDataSet.tbl_Horario.First.activo
