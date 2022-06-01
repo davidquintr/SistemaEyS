@@ -100,7 +100,7 @@ Partial Class FrmAddEmpleado
         Me.btnCerrar.Location = New System.Drawing.Point(575, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
-        Me.btnCerrar.TabIndex = 27
+        Me.btnCerrar.TabIndex = 20
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -109,7 +109,7 @@ Partial Class FrmAddEmpleado
         Me.btnGuardar.Location = New System.Drawing.Point(470, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(99, 25)
-        Me.btnGuardar.TabIndex = 26
+        Me.btnGuardar.TabIndex = 19
         Me.btnGuardar.Text = "Agregar empleado"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -118,7 +118,7 @@ Partial Class FrmAddEmpleado
         Me.btnLimpiar.Location = New System.Drawing.Point(365, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(99, 25)
-        Me.btnLimpiar.TabIndex = 29
+        Me.btnLimpiar.TabIndex = 18
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
@@ -128,7 +128,7 @@ Partial Class FrmAddEmpleado
         Me.btnGuardarCamb.Location = New System.Drawing.Point(260, 3)
         Me.btnGuardarCamb.Name = "btnGuardarCamb"
         Me.btnGuardarCamb.Size = New System.Drawing.Size(99, 25)
-        Me.btnGuardarCamb.TabIndex = 28
+        Me.btnGuardarCamb.TabIndex = 17
         Me.btnGuardarCamb.Text = "Guardar cambios"
         Me.btnGuardarCamb.UseVisualStyleBackColor = True
         '
@@ -137,7 +137,7 @@ Partial Class FrmAddEmpleado
         Me.btnDarDeBaja.Location = New System.Drawing.Point(155, 3)
         Me.btnDarDeBaja.Name = "btnDarDeBaja"
         Me.btnDarDeBaja.Size = New System.Drawing.Size(99, 25)
-        Me.btnDarDeBaja.TabIndex = 25
+        Me.btnDarDeBaja.TabIndex = 16
         Me.btnDarDeBaja.Text = "Eliminar"
         Me.btnDarDeBaja.UseVisualStyleBackColor = True
         '
@@ -181,7 +181,7 @@ Partial Class FrmAddEmpleado
         Me.cbCar.Location = New System.Drawing.Point(132, 111)
         Me.cbCar.Name = "cbCar"
         Me.cbCar.Size = New System.Drawing.Size(150, 23)
-        Me.cbCar.TabIndex = 18
+        Me.cbCar.TabIndex = 5
         '
         'txtEmailC
         '
@@ -189,7 +189,7 @@ Partial Class FrmAddEmpleado
         Me.txtEmailC.Location = New System.Drawing.Point(132, 138)
         Me.txtEmailC.Name = "txtEmailC"
         Me.txtEmailC.Size = New System.Drawing.Size(150, 23)
-        Me.txtEmailC.TabIndex = 20
+        Me.txtEmailC.TabIndex = 6
         '
         'cbDep
         '
@@ -199,7 +199,7 @@ Partial Class FrmAddEmpleado
         Me.cbDep.Location = New System.Drawing.Point(132, 84)
         Me.cbDep.Name = "cbDep"
         Me.cbDep.Size = New System.Drawing.Size(150, 23)
-        Me.cbDep.TabIndex = 13
+        Me.cbDep.TabIndex = 4
         '
         'Label9
         '
@@ -218,7 +218,7 @@ Partial Class FrmAddEmpleado
         Me.txtApellidos.Location = New System.Drawing.Point(132, 57)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(150, 23)
-        Me.txtApellidos.TabIndex = 10
+        Me.txtApellidos.TabIndex = 3
         '
         'txtTelefono
         '
@@ -226,7 +226,7 @@ Partial Class FrmAddEmpleado
         Me.txtTelefono.Location = New System.Drawing.Point(132, 3)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(187, 23)
-        Me.txtTelefono.TabIndex = 3
+        Me.txtTelefono.TabIndex = 8
         '
         'txtNombre
         '
@@ -234,7 +234,7 @@ Partial Class FrmAddEmpleado
         Me.txtNombre.Location = New System.Drawing.Point(132, 30)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(150, 23)
-        Me.txtNombre.TabIndex = 5
+        Me.txtNombre.TabIndex = 2
         '
         'Label12
         '
@@ -262,7 +262,7 @@ Partial Class FrmAddEmpleado
         Me.rbMasculino.Location = New System.Drawing.Point(87, 3)
         Me.rbMasculino.Name = "rbMasculino"
         Me.rbMasculino.Size = New System.Drawing.Size(80, 19)
-        Me.rbMasculino.TabIndex = 7
+        Me.rbMasculino.TabIndex = 12
         Me.rbMasculino.Text = "Masculino"
         Me.rbMasculino.UseVisualStyleBackColor = True
         '
@@ -273,7 +273,7 @@ Partial Class FrmAddEmpleado
         Me.rbFemenino.Location = New System.Drawing.Point(3, 3)
         Me.rbFemenino.Name = "rbFemenino"
         Me.rbFemenino.Size = New System.Drawing.Size(78, 19)
-        Me.rbFemenino.TabIndex = 8
+        Me.rbFemenino.TabIndex = 11
         Me.rbFemenino.Text = "Femenino"
         Me.rbFemenino.UseVisualStyleBackColor = True
         '
@@ -283,7 +283,7 @@ Partial Class FrmAddEmpleado
         Me.dtpFechaIngreso.Location = New System.Drawing.Point(132, 57)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
         Me.dtpFechaIngreso.Size = New System.Drawing.Size(187, 23)
-        Me.dtpFechaIngreso.TabIndex = 12
+        Me.dtpFechaIngreso.TabIndex = 10
         '
         'rtxtObservacion
         '
@@ -292,7 +292,7 @@ Partial Class FrmAddEmpleado
         Me.rtxtObservacion.Location = New System.Drawing.Point(132, 111)
         Me.rtxtObservacion.Name = "rtxtObservacion"
         Me.rtxtObservacion.Size = New System.Drawing.Size(193, 21)
-        Me.rtxtObservacion.TabIndex = 16
+        Me.rtxtObservacion.TabIndex = 13
         Me.rtxtObservacion.Text = ""
         '
         'txtEmailP
@@ -301,7 +301,7 @@ Partial Class FrmAddEmpleado
         Me.txtEmailP.Location = New System.Drawing.Point(132, 165)
         Me.txtEmailP.Name = "txtEmailP"
         Me.txtEmailP.Size = New System.Drawing.Size(150, 23)
-        Me.txtEmailP.TabIndex = 24
+        Me.txtEmailP.TabIndex = 7
         '
         'rtxtDireccion
         '
@@ -310,7 +310,7 @@ Partial Class FrmAddEmpleado
         Me.rtxtDireccion.Location = New System.Drawing.Point(132, 138)
         Me.rtxtDireccion.Name = "rtxtDireccion"
         Me.rtxtDireccion.Size = New System.Drawing.Size(193, 21)
-        Me.rtxtDireccion.TabIndex = 22
+        Me.rtxtDireccion.TabIndex = 14
         Me.rtxtDireccion.Text = ""
         '
         'Label1
@@ -451,7 +451,7 @@ Partial Class FrmAddEmpleado
         Me.dtpNac.Location = New System.Drawing.Point(132, 30)
         Me.dtpNac.Name = "dtpNac"
         Me.dtpNac.Size = New System.Drawing.Size(187, 23)
-        Me.dtpNac.TabIndex = 23
+        Me.dtpNac.TabIndex = 9
         '
         'Label13
         '
@@ -483,7 +483,7 @@ Partial Class FrmAddEmpleado
         Me.cbUsuario.Location = New System.Drawing.Point(132, 165)
         Me.cbUsuario.Name = "cbUsuario"
         Me.cbUsuario.Size = New System.Drawing.Size(187, 23)
-        Me.cbUsuario.TabIndex = 29
+        Me.cbUsuario.TabIndex = 15
         '
         'TableLayoutPanel1
         '
@@ -528,7 +528,7 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.RowHeadersWidth = 51
         Me.DgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvEmpleado.Size = New System.Drawing.Size(651, 224)
-        Me.DgvEmpleado.TabIndex = 5
+        Me.DgvEmpleado.TabIndex = 21
         '
         'Tbl_UsuarioTableAdapter
         '

@@ -33,12 +33,12 @@ Partial Class FrmAddCargo
         Me.labelTitulo = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.cbDep = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txbNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.txbNombre = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cbDep = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.rtxtDesc = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.dgvCargos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +52,7 @@ Partial Class FrmAddCargo
         Me.btnCerrar.Location = New System.Drawing.Point(507, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
-        Me.btnCerrar.TabIndex = 13
+        Me.btnCerrar.TabIndex = 15
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -77,7 +77,7 @@ Partial Class FrmAddCargo
         Me.btnAgregar.Location = New System.Drawing.Point(428, 3)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(73, 25)
-        Me.btnAgregar.TabIndex = 12
+        Me.btnAgregar.TabIndex = 14
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
@@ -86,7 +86,7 @@ Partial Class FrmAddCargo
         Me.btnLimpiar.Location = New System.Drawing.Point(349, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
-        Me.btnLimpiar.TabIndex = 15
+        Me.btnLimpiar.TabIndex = 13
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
@@ -95,7 +95,7 @@ Partial Class FrmAddCargo
         Me.btnGuardar.Location = New System.Drawing.Point(270, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
-        Me.btnGuardar.TabIndex = 14
+        Me.btnGuardar.TabIndex = 12
         Me.btnGuardar.Text = "Guadar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -104,7 +104,7 @@ Partial Class FrmAddCargo
         Me.btnEliminar.Location = New System.Drawing.Point(191, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEliminar.TabIndex = 10
+        Me.btnEliminar.TabIndex = 11
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -113,7 +113,7 @@ Partial Class FrmAddCargo
         Me.btnHorario.Location = New System.Drawing.Point(112, 3)
         Me.btnHorario.Name = "btnHorario"
         Me.btnHorario.Size = New System.Drawing.Size(73, 25)
-        Me.btnHorario.TabIndex = 11
+        Me.btnHorario.TabIndex = 10
         Me.btnHorario.Text = "Horario"
         Me.btnHorario.UseVisualStyleBackColor = True
         '
@@ -127,7 +127,7 @@ Partial Class FrmAddCargo
         Me.dgvCargos.RowHeadersWidth = 51
         Me.dgvCargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvCargos.Size = New System.Drawing.Size(583, 150)
-        Me.dgvCargos.TabIndex = 3
+        Me.dgvCargos.TabIndex = 16
         '
         'labelTitulo
         '
@@ -173,33 +173,24 @@ Partial Class FrmAddCargo
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(553, 78)
         Me.TableLayoutPanel1.TabIndex = 3
         '
-        'rtxtDesc
+        'Label2
         '
-        Me.rtxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rtxtDesc.Location = New System.Drawing.Point(391, 3)
-        Me.rtxtDesc.Name = "rtxtDesc"
-        Me.rtxtDesc.Size = New System.Drawing.Size(159, 33)
-        Me.rtxtDesc.TabIndex = 9
-        Me.rtxtDesc.Text = ""
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(54, 15)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Nombre:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label12
+        'txbNombre
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(281, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(72, 15)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "Descripción:"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'cbDep
-        '
-        Me.cbDep.FormattingEnabled = True
-        Me.cbDep.Location = New System.Drawing.Point(113, 42)
-        Me.cbDep.Name = "cbDep"
-        Me.cbDep.Size = New System.Drawing.Size(126, 23)
-        Me.cbDep.TabIndex = 5
+        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txbNombre.Location = New System.Drawing.Point(113, 3)
+        Me.txbNombre.Name = "txbNombre"
+        Me.txbNombre.Size = New System.Drawing.Size(127, 23)
+        Me.txbNombre.TabIndex = 3
         '
         'Label4
         '
@@ -212,24 +203,33 @@ Partial Class FrmAddCargo
         Me.Label4.Text = "Departamento:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txbNombre
+        'cbDep
         '
-        Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(113, 3)
-        Me.txbNombre.Name = "txbNombre"
-        Me.txbNombre.Size = New System.Drawing.Size(127, 23)
-        Me.txbNombre.TabIndex = 3
+        Me.cbDep.FormattingEnabled = True
+        Me.cbDep.Location = New System.Drawing.Point(113, 42)
+        Me.cbDep.Name = "cbDep"
+        Me.cbDep.Size = New System.Drawing.Size(126, 23)
+        Me.cbDep.TabIndex = 4
         '
-        'Label2
+        'Label12
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 15)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Nombre:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(281, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(72, 15)
+        Me.Label12.TabIndex = 8
+        Me.Label12.Text = "Descripción:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'rtxtDesc
+        '
+        Me.rtxtDesc.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rtxtDesc.Location = New System.Drawing.Point(391, 3)
+        Me.rtxtDesc.Name = "rtxtDesc"
+        Me.rtxtDesc.Size = New System.Drawing.Size(159, 33)
+        Me.rtxtDesc.TabIndex = 5
+        Me.rtxtDesc.Text = ""
         '
         'GroupBox1
         '

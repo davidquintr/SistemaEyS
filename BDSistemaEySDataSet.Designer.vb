@@ -10426,7 +10426,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataBy2() As BDSistemaEySDataSet.tbl_ConfigDataTable
+        Public Overloads Overridable Function GetDataBy21() As BDSistemaEySDataSet.tbl_ConfigDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(4)
             Dim dataTable As BDSistemaEySDataSet.tbl_ConfigDataTable = New BDSistemaEySDataSet.tbl_ConfigDataTable()
             Me.Adapter.Fill(dataTable)
@@ -14711,7 +14711,7 @@ Namespace BDSistemaEySDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(6) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(7) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT idUsuario, username, password, estado, idRol FROM tbl_Usuario"
@@ -14725,44 +14725,50 @@ Namespace BDSistemaEySDataSetTableAdapters
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT        idUsuario, username, password, estado, idRol"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_U"& _ 
-                "suario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idUsuario = @Param1)"
+            Me._commandCollection(2).CommandText = "SELECT        idUsuario, username, estado, idRol, password"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_U"& _ 
+                "suario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (username = @Param1)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "SELECT        idUsuario, username, password, estado, idRol"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_U"& _ 
-                "suario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (username = @Param1)"
+                "suario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idUsuario = @Param1)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "UPDATE [tbl_Usuario] SET [username] = @username, [password] = @password, [estado]"& _ 
+            Me._commandCollection(4).CommandText = "SELECT        idUsuario, username, password, estado, idRol"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            tbl_U"& _ 
+                "suario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (username = @Param1)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "UPDATE [tbl_Usuario] SET [username] = @username, [password] = @password, [estado]"& _ 
                 " = @estado, [idRol] = @idRol WHERE (([idUsuario] = @Original_idUsuario));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
                 "T idUsuario, username, password, estado, idRol FROM tbl_Usuario WHERE (idUsuario"& _ 
                 " = @idUsuario)"
-            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(5).Connection = Me.Connection
-            Me._commandCollection(5).CommandText = "INSERT INTO [tbl_Usuario] ([username], [password], [estado], [idRol]) VALUES (@us"& _ 
-                "ername, @password, @estado, @idRol);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idUsuario, username, password, esta"& _ 
-                "do, idRol FROM tbl_Usuario WHERE (idUsuario = SCOPE_IDENTITY())"
             Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(6) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(6).Connection = Me.Connection
-            Me._commandCollection(6).CommandText = "DELETE FROM [tbl_Usuario] WHERE (([idUsuario] = @Original_idUsuario))"
+            Me._commandCollection(6).CommandText = "INSERT INTO [tbl_Usuario] ([username], [password], [estado], [idRol]) VALUES (@us"& _ 
+                "ername, @password, @estado, @idRol);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idUsuario, username, password, esta"& _ 
+                "do, idRol FROM tbl_Usuario WHERE (idUsuario = SCOPE_IDENTITY())"
             Me._commandCollection(6).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(6).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRol", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idRol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(7) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(7).Connection = Me.Connection
+            Me._commandCollection(7).CommandText = "DELETE FROM [tbl_Usuario] WHERE (([idUsuario] = @Original_idUsuario))"
+            Me._commandCollection(7).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(7).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idUsuario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idUsuario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14837,8 +14843,42 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function ExtraerUsuario(ByVal dataTable As BDSistemaEySDataSet.tbl_UsuarioDataTable, ByVal Param1 As Integer) As Integer
+        Public Overloads Overridable Function ComprobarUsuario(ByVal dataTable As BDSistemaEySDataSet.tbl_UsuarioDataTable, ByVal Param1 As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy6(ByVal Param1 As String) As BDSistemaEySDataSet.tbl_UsuarioDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Param1 Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Param1")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,String)
+            End If
+            Dim dataTable As BDSistemaEySDataSet.tbl_UsuarioDataTable = New BDSistemaEySDataSet.tbl_UsuarioDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function ExtraerUsuario(ByVal dataTable As BDSistemaEySDataSet.tbl_UsuarioDataTable, ByVal Param1 As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -14852,7 +14892,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataBy4(ByVal Param1 As Integer) As BDSistemaEySDataSet.tbl_UsuarioDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
             Dim dataTable As BDSistemaEySDataSet.tbl_UsuarioDataTable = New BDSistemaEySDataSet.tbl_UsuarioDataTable()
             Me.Adapter.Fill(dataTable)
@@ -14864,7 +14904,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function GetUsuarioID(ByVal dataTable As BDSistemaEySDataSet.tbl_UsuarioDataTable, ByVal Param1 As String) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -14882,7 +14922,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataBy5(ByVal Param1 As String) As BDSistemaEySDataSet.tbl_UsuarioDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand = Me.CommandCollection(4)
             If (Param1 Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Param1")
             Else
@@ -15045,7 +15085,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
         Public Overloads Overridable Function RegistroUserAct(ByVal username As String, ByVal password As String, ByVal estado As Integer, ByVal idRol As Integer, ByVal Original_idUsuario As Integer, ByVal idUsuario As Integer) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
             If (username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("username")
             Else
@@ -15081,7 +15121,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
         Public Overloads Overridable Function RegistroUserAgreg(ByVal username As String, ByVal password As String, ByVal estado As Integer, ByVal idRol As Integer) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(5)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(6)
             If (username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("username")
             Else
@@ -15115,7 +15155,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
         Public Overloads Overridable Function RegistroUserElim(ByVal Original_idUsuario As Integer) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(6)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(7)
             command.Parameters(0).Value = CType(Original_idUsuario,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _

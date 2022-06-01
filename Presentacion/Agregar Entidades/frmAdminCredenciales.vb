@@ -15,9 +15,11 @@
 
     Sub llenarGrid()
         DgvCredenciales.Refresh()
-        DgvCredenciales.Columns(0).Visible = False
-        DgvCredenciales.Columns(5).Visible = False
-
+        Try
+            DgvCredenciales.Columns(0).Visible = False
+            DgvCredenciales.Columns(5).Visible = False
+        Catch exe As Exception
+        End Try
     End Sub
 
     Sub llenarRol()
@@ -66,6 +68,11 @@
             Return
         End If
 
+        If ComprobarUsuario() Then
+            MessageBox.Show($"El nombre de usuario digitado ya esta en uso", "Usuario repetido", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         Dim UserName As String = txtNombre.Text.Trim
         Dim Pass As String = txtPass.Text.Trim
         Dim PassEstado As Integer
@@ -73,7 +80,7 @@
 
         user.RegistroUserAgreg(UserName, Pass, 1, Rol)
 
-        MessageBox.Show("Se ha eliminado correctamente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("Se ha guardado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Me.Close()
         llenarGrid()
     End Sub
@@ -84,7 +91,7 @@
 
     Private Sub btnDarDeBaja_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Try
-            If MessageBox.Show($"¿Deseas eliminar al usuario{txtNombre.Text}?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then
+            If MessageBox.Show($"¿Deseas eliminar al usuario {txtNombre.Text}?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.No Then
                 Return
             End If
 
@@ -183,5 +190,16 @@
             btnEliminar.Enabled = True
         End If
     End Sub
+
+    Private Function ComprobarUsuario() As Boolean
+        Me.Tbl_UsuarioTableAdapter.ComprobarUsuario(BDSistemaEySDataSet.tbl_Usuario, txtNombre.Text.Trim)
+
+        Try
+            Dim userRep As String = BDSistemaEySDataSet.tbl_Usuario.First.username
+            Return True
+        Catch
+            Return False
+        End Try
+    End Function
 
 End Class

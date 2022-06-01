@@ -54,6 +54,9 @@ Partial Class frmAdminCredenciales
         Me.VwUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Vw_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.Vw_UsuarioTableAdapter()
         Me.labelTitulo = New System.Windows.Forms.Label()
+        Me.tblUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDSistemaEySDataSet1 = New SistemaEyS.BDSistemaEySDataSet()
+        Me.Tbl_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter()
         Me.gboxPrincipal.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -61,6 +64,8 @@ Partial Class frmAdminCredenciales
         CType(Me.VwUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VwUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDSistemaEySDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gboxPrincipal
@@ -159,7 +164,7 @@ Partial Class frmAdminCredenciales
         Me.txtPassConfirm.Name = "txtPassConfirm"
         Me.txtPassConfirm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassConfirm.Size = New System.Drawing.Size(142, 23)
-        Me.txtPassConfirm.TabIndex = 11
+        Me.txtPassConfirm.TabIndex = 6
         '
         'btnCon
         '
@@ -223,7 +228,7 @@ Partial Class frmAdminCredenciales
         Me.btnCerrar.Location = New System.Drawing.Point(504, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
-        Me.btnCerrar.TabIndex = 13
+        Me.btnCerrar.TabIndex = 12
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -232,7 +237,7 @@ Partial Class frmAdminCredenciales
         Me.btnAgregar.Location = New System.Drawing.Point(425, 3)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(73, 23)
-        Me.btnAgregar.TabIndex = 12
+        Me.btnAgregar.TabIndex = 11
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
@@ -241,7 +246,7 @@ Partial Class frmAdminCredenciales
         Me.btnLimpiar.Location = New System.Drawing.Point(346, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(73, 23)
-        Me.btnLimpiar.TabIndex = 29
+        Me.btnLimpiar.TabIndex = 10
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
@@ -250,7 +255,7 @@ Partial Class frmAdminCredenciales
         Me.btnGuardar.Location = New System.Drawing.Point(267, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
-        Me.btnGuardar.TabIndex = 14
+        Me.btnGuardar.TabIndex = 9
         Me.btnGuardar.Text = "Guardar Cambios"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -259,7 +264,7 @@ Partial Class frmAdminCredenciales
         Me.btnEliminar.Location = New System.Drawing.Point(188, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
-        Me.btnEliminar.TabIndex = 30
+        Me.btnEliminar.TabIndex = 8
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -276,7 +281,7 @@ Partial Class frmAdminCredenciales
         Me.DgvCredenciales.RowHeadersWidth = 51
         Me.DgvCredenciales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvCredenciales.Size = New System.Drawing.Size(580, 198)
-        Me.DgvCredenciales.TabIndex = 6
+        Me.DgvCredenciales.TabIndex = 13
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -353,6 +358,20 @@ Partial Class frmAdminCredenciales
         Me.labelTitulo.Text = "Titulo"
         Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'tblUsuarioBindingSource
+        '
+        Me.tblUsuarioBindingSource.DataSource = Me.BDSistemaEySDataSet1
+        Me.tblUsuarioBindingSource.Position = 0
+        '
+        'BDSistemaEySDataSet1
+        '
+        Me.BDSistemaEySDataSet1.DataSetName = "BDSistemaEySDataSet"
+        Me.BDSistemaEySDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_UsuarioTableAdapter
+        '
+        Me.Tbl_UsuarioTableAdapter.ClearBeforeFill = True
+        '
         'frmAdminCredenciales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -376,6 +395,8 @@ Partial Class frmAdminCredenciales
         CType(Me.VwUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VwUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDSistemaEySDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -410,4 +431,7 @@ Partial Class frmAdminCredenciales
     Friend WithEvents IdRolDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents VwUsuarioBindingSource1 As BindingSource
     Friend WithEvents labelTitulo As Label
+    Friend WithEvents tblUsuarioBindingSource As BindingSource
+    Friend WithEvents Tbl_UsuarioTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter
+    Friend WithEvents BDSistemaEySDataSet1 As BDSistemaEySDataSet
 End Class

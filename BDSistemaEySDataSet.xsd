@@ -194,7 +194,7 @@ SELECT idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tbl_Config WHERE (id
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Config" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExisteAlmuerzo" Modifier="Public" Name="ExisteAlmuerzo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ExisteAlmuerzo">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Config" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="ExisteAlmuerzo" Modifier="Public" Name="ExisteAlmuerzo" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ExisteAlmuerzo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut, nombreEmpresa, tiempoGracia, emailDep
@@ -206,7 +206,7 @@ WHERE        (idConfig = @Param1)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertarAlmuerzo" Modifier="Public" Name="InsertarAlmuerzo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertarAlmuerzo">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertarAlmuerzo" Modifier="Public" Name="InsertarAlmuerzo" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertarAlmuerzo">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [tbl_Config] ([horarioAlmuerzoIn], [horarioAlmuerzoOut]) VALUES (@horarioAlmuerzoIn, @horarioAlmuerzoOut);
@@ -218,7 +218,7 @@ SELECT idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut FROM tbl_Config WHERE (id
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Config" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ObtenerAlmuerzo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="ObtenerAlmuerzo" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ObtenerAlmuerzo">
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Config" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ObtenerAlmuerzo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy21" GeneratorSourceName="ObtenerAlmuerzo" GetMethodModifier="Public" GetMethodName="GetDataBy21" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy21" UserSourceName="ObtenerAlmuerzo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        idConfig, horarioAlmuerzoIn, horarioAlmuerzoOut
@@ -1126,6 +1126,18 @@ WHERE        (username = @Param1) AND (password = @Param2)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ComprobarUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy6" GeneratorSourceName="ComprobarUsuario" GetMethodModifier="Public" GetMethodName="GetDataBy6" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="ComprobarUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        idUsuario, username, estado, idRol, password
+FROM            tbl_Usuario
+WHERE        (username = @Param1)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="username" DataSourceName="BDSistemaEyS.dbo.tbl_Usuario" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@Param1" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="BDSistemaEySConnectionString (MySettings)" DbObjectName="BDSistemaEyS.dbo.tbl_Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="ExtraerUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy4" GeneratorSourceName="ExtraerUsuario" GetMethodModifier="Public" GetMethodName="GetDataBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ExtraerUsuario">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -1551,8 +1563,8 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="horarioAlmuerzoIn" msprop:Generator_UserColumnName="horarioAlmuerzoIn" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoInColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoIn" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoIn" type="xs:dateTime" />
-              <xs:element name="horarioAlmuerzoOut" msprop:Generator_UserColumnName="horarioAlmuerzoOut" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoOutColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoOut" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoOut" type="xs:dateTime" />
+              <xs:element name="horarioAlmuerzoIn" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoInColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoIn" msprop:Generator_UserColumnName="horarioAlmuerzoIn" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoIn" type="xs:dateTime" />
+              <xs:element name="horarioAlmuerzoOut" msprop:Generator_ColumnPropNameInTable="horarioAlmuerzoOutColumn" msprop:Generator_ColumnPropNameInRow="horarioAlmuerzoOut" msprop:Generator_UserColumnName="horarioAlmuerzoOut" msprop:Generator_ColumnVarNameInTable="columnhorarioAlmuerzoOut" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1688,24 +1700,24 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fechaInicio" msprop:Generator_UserColumnName="fechaInicio" msprop:Generator_ColumnPropNameInTable="fechaInicioColumn" msprop:Generator_ColumnPropNameInRow="fechaInicio" msprop:Generator_ColumnVarNameInTable="columnfechaInicio" type="xs:dateTime" />
-              <xs:element name="fechaFin" msprop:Generator_UserColumnName="fechaFin" msprop:Generator_ColumnPropNameInTable="fechaFinColumn" msprop:Generator_ColumnPropNameInRow="fechaFin" msprop:Generator_ColumnVarNameInTable="columnfechaFin" type="xs:dateTime" />
-              <xs:element name="razon" msprop:Generator_UserColumnName="razon" msprop:Generator_ColumnPropNameInTable="razonColumn" msprop:Generator_ColumnPropNameInRow="razon" msprop:Generator_ColumnVarNameInTable="columnrazon">
+              <xs:element name="fechaInicio" msprop:Generator_ColumnPropNameInTable="fechaInicioColumn" msprop:Generator_ColumnPropNameInRow="fechaInicio" msprop:Generator_UserColumnName="fechaInicio" msprop:Generator_ColumnVarNameInTable="columnfechaInicio" type="xs:dateTime" />
+              <xs:element name="fechaFin" msprop:Generator_ColumnPropNameInTable="fechaFinColumn" msprop:Generator_ColumnPropNameInRow="fechaFin" msprop:Generator_UserColumnName="fechaFin" msprop:Generator_ColumnVarNameInTable="columnfechaFin" type="xs:dateTime" />
+              <xs:element name="razon" msprop:Generator_ColumnPropNameInTable="razonColumn" msprop:Generator_ColumnPropNameInRow="razon" msprop:Generator_UserColumnName="razon" msprop:Generator_ColumnVarNameInTable="columnrazon">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
+              <xs:element name="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_UserColumnName="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
-              <xs:element name="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado" type="xs:int" />
+              <xs:element name="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_UserColumnName="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -2123,15 +2135,15 @@ SELECT idOpcRol, activo, idOpcion, idRol FROM tbl_OpcRol WHERE (idOpcRol = @idOp
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="Reftbl_Departamento16" msdata:parent="tbl_Departamento" msdata:child="tbl_Cargo" msdata:parentkey="idDepartamento" msdata:childkey="idDepartamento" msprop:Generator_UserParentTable="tbl_Departamento" msprop:Generator_UserChildTable="tbl_Cargo" msprop:Generator_RelationVarName="relationReftbl_Departamento16" msprop:Generator_ChildPropName="Gettbl_CargoRows" msprop:Generator_ParentPropName="tbl_DepartamentoRow" msprop:Generator_UserRelationName="Reftbl_Departamento16" />
-      <msdata:Relationship name="Reftbl_Cargo31" msdata:parent="tbl_Cargo" msdata:child="tbl_Empleado" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Cargo31" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_UserRelationName="Reftbl_Cargo31" msprop:Generator_ParentPropName="tbl_CargoRow" />
-      <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_UserRelationName="Reftbl_Cargo40" msprop:Generator_ParentPropName="tbl_CargoRow" />
-      <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_UserRelationName="Reftbl_Empleado36" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
-      <msdata:Relationship name="Reftbl_Rol56" msdata:parent="tbl_Rol" msdata:child="tbl_Usuario" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Rol56" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_UserRelationName="Reftbl_Rol56" msprop:Generator_ParentPropName="tbl_RolRow" />
-      <msdata:Relationship name="Reftbl_Usuario57" msdata:parent="tbl_Usuario" msdata:child="tbl_Empleado" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserParentTable="tbl_Usuario" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Usuario57" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_ParentPropName="tbl_UsuarioRow" msprop:Generator_UserRelationName="Reftbl_Usuario57" />
-      <msdata:Relationship name="Reftbl_Rol58" msdata:parent="tbl_Rol" msdata:child="tbl_OpcRol" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Rol58" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_UserRelationName="Reftbl_Rol58" msprop:Generator_ParentPropName="tbl_RolRow" />
-      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcRol" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_UserRelationName="Reftbl_Opcion53" msprop:Generator_ParentPropName="tbl_OpcionRow" />
-      <msdata:Relationship name="Reftbl_Empleado51" msdata:parent="tbl_Empleado" msdata:child="tbl_Evento" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Evento" msprop:Generator_RelationVarName="relationReftbl_Empleado51" msprop:Generator_ChildPropName="Gettbl_EventoRows" msprop:Generator_UserRelationName="Reftbl_Empleado51" msprop:Generator_ParentPropName="tbl_EmpleadoRow" />
+      <msdata:Relationship name="Reftbl_Departamento16" msdata:parent="tbl_Departamento" msdata:child="tbl_Cargo" msdata:parentkey="idDepartamento" msdata:childkey="idDepartamento" msprop:Generator_UserParentTable="tbl_Departamento" msprop:Generator_UserChildTable="tbl_Cargo" msprop:Generator_RelationVarName="relationReftbl_Departamento16" msprop:Generator_ChildPropName="Gettbl_CargoRows" msprop:Generator_UserRelationName="Reftbl_Departamento16" msprop:Generator_ParentPropName="tbl_DepartamentoRow" />
+      <msdata:Relationship name="Reftbl_Cargo31" msdata:parent="tbl_Cargo" msdata:child="tbl_Empleado" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Cargo31" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo31" />
+      <msdata:Relationship name="Reftbl_Cargo40" msdata:parent="tbl_Cargo" msdata:child="tbl_Horario" msdata:parentkey="idCargo" msdata:childkey="idCargo" msprop:Generator_UserParentTable="tbl_Cargo" msprop:Generator_UserChildTable="tbl_Horario" msprop:Generator_RelationVarName="relationReftbl_Cargo40" msprop:Generator_ChildPropName="Gettbl_HorarioRows" msprop:Generator_ParentPropName="tbl_CargoRow" msprop:Generator_UserRelationName="Reftbl_Cargo40" />
+      <msdata:Relationship name="Reftbl_Empleado36" msdata:parent="tbl_Empleado" msdata:child="tbl_Registro" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Registro" msprop:Generator_RelationVarName="relationReftbl_Empleado36" msprop:Generator_ChildPropName="Gettbl_RegistroRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado36" />
+      <msdata:Relationship name="Reftbl_Rol56" msdata:parent="tbl_Rol" msdata:child="tbl_Usuario" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_Usuario" msprop:Generator_RelationVarName="relationReftbl_Rol56" msprop:Generator_ChildPropName="Gettbl_UsuarioRows" msprop:Generator_ParentPropName="tbl_RolRow" msprop:Generator_UserRelationName="Reftbl_Rol56" />
+      <msdata:Relationship name="Reftbl_Usuario57" msdata:parent="tbl_Usuario" msdata:child="tbl_Empleado" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserParentTable="tbl_Usuario" msprop:Generator_UserChildTable="tbl_Empleado" msprop:Generator_RelationVarName="relationReftbl_Usuario57" msprop:Generator_ChildPropName="Gettbl_EmpleadoRows" msprop:Generator_UserRelationName="Reftbl_Usuario57" msprop:Generator_ParentPropName="tbl_UsuarioRow" />
+      <msdata:Relationship name="Reftbl_Rol58" msdata:parent="tbl_Rol" msdata:child="tbl_OpcRol" msdata:parentkey="idRol" msdata:childkey="idRol" msprop:Generator_UserParentTable="tbl_Rol" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Rol58" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_RolRow" msprop:Generator_UserRelationName="Reftbl_Rol58" />
+      <msdata:Relationship name="Reftbl_Opcion53" msdata:parent="tbl_Opcion" msdata:child="tbl_OpcRol" msdata:parentkey="idOpcion" msdata:childkey="idOpcion" msprop:Generator_UserParentTable="tbl_Opcion" msprop:Generator_UserChildTable="tbl_OpcRol" msprop:Generator_RelationVarName="relationReftbl_Opcion53" msprop:Generator_ChildPropName="Gettbl_OpcRolRows" msprop:Generator_ParentPropName="tbl_OpcionRow" msprop:Generator_UserRelationName="Reftbl_Opcion53" />
+      <msdata:Relationship name="Reftbl_Empleado51" msdata:parent="tbl_Empleado" msdata:child="tbl_Evento" msdata:parentkey="idEmpleado" msdata:childkey="idEmpleado" msprop:Generator_UserParentTable="tbl_Empleado" msprop:Generator_UserChildTable="tbl_Evento" msprop:Generator_RelationVarName="relationReftbl_Empleado51" msprop:Generator_ChildPropName="Gettbl_EventoRows" msprop:Generator_ParentPropName="tbl_EmpleadoRow" msprop:Generator_UserRelationName="Reftbl_Empleado51" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

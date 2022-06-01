@@ -60,7 +60,7 @@ Partial Class frmAddRol
         Me.btnCerrar.Location = New System.Drawing.Point(351, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
-        Me.btnCerrar.TabIndex = 13
+        Me.btnCerrar.TabIndex = 8
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -69,7 +69,7 @@ Partial Class frmAddRol
         Me.btnGuardar.Location = New System.Drawing.Point(272, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
-        Me.btnGuardar.TabIndex = 12
+        Me.btnGuardar.TabIndex = 7
         Me.btnGuardar.Text = "Agregar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -78,7 +78,7 @@ Partial Class frmAddRol
         Me.btnLimpiar.Location = New System.Drawing.Point(193, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
-        Me.btnLimpiar.TabIndex = 31
+        Me.btnLimpiar.TabIndex = 6
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
@@ -87,7 +87,7 @@ Partial Class frmAddRol
         Me.btnEditar.Location = New System.Drawing.Point(114, 3)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEditar.TabIndex = 32
+        Me.btnEditar.TabIndex = 5
         Me.btnEditar.Text = "Guardar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
@@ -96,7 +96,7 @@ Partial Class frmAddRol
         Me.btnEliminar.Location = New System.Drawing.Point(35, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
-        Me.btnEliminar.TabIndex = 10
+        Me.btnEliminar.TabIndex = 4
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -122,9 +122,9 @@ Partial Class frmAddRol
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(385, 35)
         Me.TableLayoutPanel1.TabIndex = 3
         '
@@ -157,7 +157,7 @@ Partial Class frmAddRol
         Me.DgvRol.RowHeadersWidth = 51
         Me.DgvRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvRol.Size = New System.Drawing.Size(427, 147)
-        Me.DgvRol.TabIndex = 5
+        Me.DgvRol.TabIndex = 9
         '
         'labelTitulo
         '
