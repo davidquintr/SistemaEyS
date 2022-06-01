@@ -2758,6 +2758,8 @@ Partial Public Class BDSistemaEySDataSet
         
         Private columnidCargo As Global.System.Data.DataColumn
         
+        Private columnactivo As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -2834,6 +2836,14 @@ Partial Public Class BDSistemaEySDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property activoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnactivo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2870,9 +2880,9 @@ Partial Public Class BDSistemaEySDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function Addtbl_HorarioRow(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal parenttbl_CargoRowByReftbl_Cargo40 As tbl_CargoRow) As tbl_HorarioRow
+        Public Overloads Function Addtbl_HorarioRow(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal parenttbl_CargoRowByReftbl_Cargo40 As tbl_CargoRow, ByVal activo As Boolean) As tbl_HorarioRow
             Dim rowtbl_HorarioRow As tbl_HorarioRow = CType(Me.NewRow,tbl_HorarioRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, horarioIn, horarioOut, tipoHorario, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, horarioIn, horarioOut, tipoHorario, Nothing, activo}
             If (Not (parenttbl_CargoRowByReftbl_Cargo40) Is Nothing) Then
                 columnValuesArray(4) = parenttbl_CargoRowByReftbl_Cargo40(0)
             End If
@@ -2909,6 +2919,7 @@ Partial Public Class BDSistemaEySDataSet
             Me.columnhorarioOut = MyBase.Columns("horarioOut")
             Me.columntipoHorario = MyBase.Columns("tipoHorario")
             Me.columnidCargo = MyBase.Columns("idCargo")
+            Me.columnactivo = MyBase.Columns("activo")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2924,6 +2935,8 @@ Partial Public Class BDSistemaEySDataSet
             MyBase.Columns.Add(Me.columntipoHorario)
             Me.columnidCargo = New Global.System.Data.DataColumn("idCargo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidCargo)
+            Me.columnactivo = New Global.System.Data.DataColumn("activo", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnactivo)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidHorario}, true))
             Me.columnidHorario.AutoIncrement = true
             Me.columnidHorario.AutoIncrementSeed = -1
@@ -2935,6 +2948,7 @@ Partial Public Class BDSistemaEySDataSet
             Me.columnhorarioOut.AllowDBNull = false
             Me.columntipoHorario.AllowDBNull = false
             Me.columnidCargo.AllowDBNull = false
+            Me.columnactivo.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7307,6 +7321,17 @@ Partial Public Class BDSistemaEySDataSet
             End Get
             Set
                 Me(Me.tabletbl_Horario.idCargoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property activo() As Boolean
+            Get
+                Return CType(Me(Me.tabletbl_Horario.activoColumn),Boolean)
+            End Get
+            Set
+                Me(Me.tabletbl_Horario.activoColumn) = value
             End Set
         End Property
         
@@ -12604,47 +12629,54 @@ Namespace BDSistemaEySDataSetTableAdapters
             tableMapping.ColumnMappings.Add("horarioOut", "horarioOut")
             tableMapping.ColumnMappings.Add("tipoHorario", "tipoHorario")
             tableMapping.ColumnMappings.Add("idCargo", "idCargo")
+            tableMapping.ColumnMappings.Add("activo", "activo")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tbl_Horario] WHERE (([idHorario] = @Original_idHorario) AND (["& _ 
-                "horarioIn] = @Original_horarioIn) AND ([horarioOut] = @Original_horarioOut) AND "& _ 
-                "([tipoHorario] = @Original_tipoHorario) AND ([idCargo] = @Original_idCargo))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [tbl_Horario] WHERE (([idHorario] = @Original_idHorario) AND ([horari"& _ 
+                "oIn] = @Original_horarioIn) AND ([horarioOut] = @Original_horarioOut) AND ([tipo"& _ 
+                "Horario] = @Original_tipoHorario) AND ([idCargo] = @Original_idCargo) AND ([acti"& _ 
+                "vo] = @Original_activo))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioIn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioOut", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tipoHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_activo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "activo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_Horario] ([horarioIn], [horarioOut], [tipoHorario], [idCar"& _ 
-                "go]) VALUES (@horarioIn, @horarioOut, @tipoHorario, @idCargo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario"& _ 
-                ", horarioIn, horarioOut, tipoHorario, idCargo FROM tbl_Horario WHERE (idHorario "& _ 
-                "= SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_Horario] ([horarioIn], [horarioOut], [tipoHorario], [idCargo], ["& _ 
+                "activo]) VALUES (@horarioIn, @horarioOut, @tipoHorario, @idCargo, @activo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SEL"& _ 
+                "ECT idHorario, horarioIn, horarioOut, tipoHorario, idCargo, activo FROM tbl_Hora"& _ 
+                "rio WHERE (idHorario = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@activo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "activo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_Horario] SET [horarioIn] = @horarioIn, [horarioOut] = @horarioO"& _ 
-                "ut, [tipoHorario] = @tipoHorario, [idCargo] = @idCargo WHERE (([idHorario] = @Or"& _ 
-                "iginal_idHorario) AND ([horarioIn] = @Original_horarioIn) AND ([horarioOut] = @O"& _ 
-                "riginal_horarioOut) AND ([tipoHorario] = @Original_tipoHorario) AND ([idCargo] ="& _ 
-                " @Original_idCargo));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, horarioIn, horarioOut, tipoHorario, idC"& _ 
-                "argo FROM tbl_Horario WHERE (idHorario = @idHorario)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [tbl_Horario] SET [horarioIn] = @horarioIn, [horarioOut] = @horarioOut, [t"& _ 
+                "ipoHorario] = @tipoHorario, [idCargo] = @idCargo, [activo] = @activo WHERE (([id"& _ 
+                "Horario] = @Original_idHorario) AND ([horarioIn] = @Original_horarioIn) AND ([ho"& _ 
+                "rarioOut] = @Original_horarioOut) AND ([tipoHorario] = @Original_tipoHorario) AN"& _ 
+                "D ([idCargo] = @Original_idCargo) AND ([activo] = @Original_activo));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id"& _ 
+                "Horario, horarioIn, horarioOut, tipoHorario, idCargo, activo FROM tbl_Horario WH"& _ 
+                "ERE (idHorario = @idHorario)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@activo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "activo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioIn", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioIn", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horarioOut", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioOut", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tipoHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_activo", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "activo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -12658,19 +12690,45 @@ Namespace BDSistemaEySDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT idHorario, horarioIn, horarioOut, tipoHorario, idCargo FROM dbo.tbl_Horari"& _ 
-                "o"
+            Me._commandCollection(0).CommandText = "SELECT idHorario, horarioIn, horarioOut, tipoHorario, idCargo, activo FROM tbl_Ho"& _ 
+                "rario"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        idHorario, horarioIn, horarioOut, tipoHorario, idCargo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
-                "     tbl_Horario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (idCargo = @Param2) AND (tipoHorario = @Param1)"
+            Me._commandCollection(1).CommandText = "UPDATE       tbl_Horario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                horarioIn = @horarioIn, horarioOut ="& _ 
+                " @horarioOut, tipoHorario = @tipoHorario, idCargo = @idCargo, activo = @activo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "WHERE        (idCargo = @Param1);  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, horarioIn, horarioOut, "& _ 
+                "tipoHorario, idCargo, activo FROM tbl_Horario WHERE (idHorario = @idHorario)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioIn", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioOut", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@activo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "activo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "INSERT INTO [tbl_Horario] ([horarioIn], [horarioOut], [tipoHorario], [idCargo], ["& _ 
+                "activo]) VALUES (@horarioIn, @horarioOut, @tipoHorario, @idCargo, @activo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
+                "ELECT idHorario, horarioIn, horarioOut, tipoHorario, idCargo, activo FROM tbl_Ho"& _ 
+                "rario WHERE (idHorario = SCOPE_IDENTITY())"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioIn", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioIn", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horarioOut", Global.System.Data.SqlDbType.DateTime, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "horarioOut", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tipoHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@activo", Global.System.Data.SqlDbType.Bit, 1, Global.System.Data.ParameterDirection.Input, 0, 0, "activo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT activo, horarioIn, horarioOut, idCargo, idHorario, tipoHorario, activo FRO"& _ 
+                "M tbl_Horario WHERE (idCargo = @Param2) AND (tipoHorario = @Param1)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param2", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "tipoHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12702,7 +12760,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
         Public Overloads Overridable Function ObtenerHorario(ByVal dataTable As BDSistemaEySDataSet.tbl_HorarioDataTable, ByVal Param2 As Integer, ByVal Param1 As Integer) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param2,Integer)
             Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param1,Integer)
             If (Me.ClearBeforeFill = true) Then
@@ -12717,7 +12775,7 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
         Public Overloads Overridable Function GetDataBy(ByVal Param2 As Integer, ByVal Param1 As Integer) As BDSistemaEySDataSet.tbl_HorarioDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param2,Integer)
             Me.Adapter.SelectCommand.Parameters(1).Value = CType(Param1,Integer)
             Dim dataTable As BDSistemaEySDataSet.tbl_HorarioDataTable = New BDSistemaEySDataSet.tbl_HorarioDataTable()
@@ -12757,12 +12815,13 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_idHorario As Integer, ByVal Original_horarioIn As Date, ByVal Original_horarioOut As Date, ByVal Original_tipoHorario As Integer, ByVal Original_idCargo As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_idHorario As Integer, ByVal Original_horarioIn As Date, ByVal Original_horarioOut As Date, ByVal Original_tipoHorario As Integer, ByVal Original_idCargo As Integer, ByVal Original_activo As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_idHorario,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_horarioIn,Date)
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_horarioOut,Date)
             Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_tipoHorario,Integer)
             Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_idCargo,Integer)
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_activo,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12782,11 +12841,12 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal activo As Boolean) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(horarioIn,Date)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(horarioOut,Date)
             Me.Adapter.InsertCommand.Parameters(2).Value = CType(tipoHorario,Integer)
             Me.Adapter.InsertCommand.Parameters(3).Value = CType(idCargo,Integer)
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(activo,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12806,17 +12866,19 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal Original_idHorario As Integer, ByVal Original_horarioIn As Date, ByVal Original_horarioOut As Date, ByVal Original_tipoHorario As Integer, ByVal Original_idCargo As Integer, ByVal idHorario As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal activo As Boolean, ByVal Original_idHorario As Integer, ByVal Original_horarioIn As Date, ByVal Original_horarioOut As Date, ByVal Original_tipoHorario As Integer, ByVal Original_idCargo As Integer, ByVal Original_activo As Boolean, ByVal idHorario As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(horarioIn,Date)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(horarioOut,Date)
             Me.Adapter.UpdateCommand.Parameters(2).Value = CType(tipoHorario,Integer)
             Me.Adapter.UpdateCommand.Parameters(3).Value = CType(idCargo,Integer)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_idHorario,Integer)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_horarioIn,Date)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_horarioOut,Date)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_tipoHorario,Integer)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_idCargo,Integer)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(idHorario,Integer)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(activo,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_idHorario,Integer)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_horarioIn,Date)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_horarioOut,Date)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_tipoHorario,Integer)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_idCargo,Integer)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_activo,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(idHorario,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12836,8 +12898,64 @@ Namespace BDSistemaEySDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal Original_idHorario As Integer, ByVal Original_horarioIn As Date, ByVal Original_horarioOut As Date, ByVal Original_tipoHorario As Integer, ByVal Original_idCargo As Integer) As Integer
-            Return Me.Update(horarioIn, horarioOut, tipoHorario, idCargo, Original_idHorario, Original_horarioIn, Original_horarioOut, Original_tipoHorario, Original_idCargo, Original_idHorario)
+        Public Overloads Overridable Function Update(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal activo As Boolean, ByVal Original_idHorario As Integer, ByVal Original_horarioIn As Date, ByVal Original_horarioOut As Date, ByVal Original_tipoHorario As Integer, ByVal Original_idCargo As Integer, ByVal Original_activo As Boolean) As Integer
+            Return Me.Update(horarioIn, horarioOut, tipoHorario, idCargo, activo, Original_idHorario, Original_horarioIn, Original_horarioOut, Original_tipoHorario, Original_idCargo, Original_activo, Original_idHorario)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function ActualizarHorario(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal activo As Boolean, ByVal Param1 As Integer, ByVal idHorario As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(horarioIn,Date)
+            command.Parameters(1).Value = CType(horarioOut,Date)
+            command.Parameters(2).Value = CType(tipoHorario,Integer)
+            command.Parameters(3).Value = CType(idCargo,Integer)
+            command.Parameters(4).Value = CType(activo,Boolean)
+            command.Parameters(5).Value = CType(Param1,Integer)
+            command.Parameters(6).Value = CType(idHorario,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertarHorario(ByVal horarioIn As Date, ByVal horarioOut As Date, ByVal tipoHorario As Integer, ByVal idCargo As Integer, ByVal activo As Boolean) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            command.Parameters(0).Value = CType(horarioIn,Date)
+            command.Parameters(1).Value = CType(horarioOut,Date)
+            command.Parameters(2).Value = CType(tipoHorario,Integer)
+            command.Parameters(3).Value = CType(idCargo,Integer)
+            command.Parameters(4).Value = CType(activo,Boolean)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

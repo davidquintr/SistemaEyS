@@ -129,6 +129,7 @@
 
     Private Sub btnHorario_Click(sender As Object, e As EventArgs) Handles btnHorario.Click
         frmEstablecerHorarios.Show()
+        frmEstablecerHorarios.CargarDatos(idCargo)
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click

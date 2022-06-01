@@ -236,7 +236,7 @@ Partial Class frmEstablecerHorarios
         Me.npH1R.Name = "npH1R"
         Me.npH1R.Size = New System.Drawing.Size(53, 25)
         Me.npH1R.TabIndex = 1
-        Me.npH1R.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1R.Value = New Decimal(New Integer() {6, 0, 0, 0})
         '
         'npH1S
         '
@@ -246,7 +246,7 @@ Partial Class frmEstablecerHorarios
         Me.npH1S.Name = "npH1S"
         Me.npH1S.Size = New System.Drawing.Size(53, 25)
         Me.npH1S.TabIndex = 9
-        Me.npH1S.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1S.Value = New Decimal(New Integer() {8, 0, 0, 0})
         '
         'npH1D
         '
@@ -256,7 +256,7 @@ Partial Class frmEstablecerHorarios
         Me.npH1D.Name = "npH1D"
         Me.npH1D.Size = New System.Drawing.Size(53, 25)
         Me.npH1D.TabIndex = 17
-        Me.npH1D.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH1D.Value = New Decimal(New Integer() {8, 0, 0, 0})
         '
         'npM1R
         '
@@ -266,7 +266,6 @@ Partial Class frmEstablecerHorarios
         Me.npM1R.Name = "npM1R"
         Me.npM1R.Size = New System.Drawing.Size(53, 25)
         Me.npM1R.TabIndex = 3
-        Me.npM1R.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
         'npM1S
         '
@@ -276,7 +275,6 @@ Partial Class frmEstablecerHorarios
         Me.npM1S.Name = "npM1S"
         Me.npM1S.Size = New System.Drawing.Size(53, 25)
         Me.npM1S.TabIndex = 11
-        Me.npM1S.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
         'npM1D
         '
@@ -286,7 +284,6 @@ Partial Class frmEstablecerHorarios
         Me.npM1D.Name = "npM1D"
         Me.npM1D.Size = New System.Drawing.Size(53, 25)
         Me.npM1D.TabIndex = 19
-        Me.npM1D.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
         'npM2R
         '
@@ -296,7 +293,6 @@ Partial Class frmEstablecerHorarios
         Me.npM2R.Name = "npM2R"
         Me.npM2R.Size = New System.Drawing.Size(53, 25)
         Me.npM2R.TabIndex = 7
-        Me.npM2R.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
         'npM2S
         '
@@ -306,7 +302,6 @@ Partial Class frmEstablecerHorarios
         Me.npM2S.Name = "npM2S"
         Me.npM2S.Size = New System.Drawing.Size(53, 25)
         Me.npM2S.TabIndex = 15
-        Me.npM2S.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
         'npM2D
         '
@@ -316,7 +311,6 @@ Partial Class frmEstablecerHorarios
         Me.npM2D.Name = "npM2D"
         Me.npM2D.Size = New System.Drawing.Size(53, 25)
         Me.npM2D.TabIndex = 23
-        Me.npM2D.Value = New Decimal(New Integer() {59, 0, 0, 0})
         '
         'npH2R
         '
@@ -326,7 +320,7 @@ Partial Class frmEstablecerHorarios
         Me.npH2R.Name = "npH2R"
         Me.npH2R.Size = New System.Drawing.Size(53, 25)
         Me.npH2R.TabIndex = 5
-        Me.npH2R.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2R.Value = New Decimal(New Integer() {17, 0, 0, 0})
         '
         'npH2S
         '
@@ -336,7 +330,7 @@ Partial Class frmEstablecerHorarios
         Me.npH2S.Name = "npH2S"
         Me.npH2S.Size = New System.Drawing.Size(53, 25)
         Me.npH2S.TabIndex = 13
-        Me.npH2S.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2S.Value = New Decimal(New Integer() {13, 0, 0, 0})
         '
         'npH2D
         '
@@ -346,7 +340,7 @@ Partial Class frmEstablecerHorarios
         Me.npH2D.Name = "npH2D"
         Me.npH2D.Size = New System.Drawing.Size(53, 25)
         Me.npH2D.TabIndex = 21
-        Me.npH2D.Value = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.npH2D.Value = New Decimal(New Integer() {13, 0, 0, 0})
         '
         'Label2
         '
