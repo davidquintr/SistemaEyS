@@ -10,7 +10,7 @@
     Dim tblCarg As New BDSistemaEySDataSet.tbl_CargoDataTable
 
 
-    Private GR As Graphics = Me.CreateGraphics
+    Private GR As Graphics
 
     'declaramos la constante de PI
     Const PI As Double = 3.14159265
@@ -21,8 +21,8 @@
     'declaramos un temporizador que actualiza la informacion de las horas
     Private WithEvents Temporizador As New Timer
 
-    Private CentroX As Single
-    Private CentroY As Single
+    Private CentroX As Single = 300 / 2
+    Private CentroY As Single = 280 / 2
 
     Private idEmp As Integer
     Private idUsuario As Integer
@@ -36,12 +36,11 @@
         'TODO: esta línea de código carga datos en la tabla 'BDSistemaEySDataSet.tbl_Usuario' Puede moverla o quitarla según sea necesario.
         'Me.Tbl_UsuarioTableAdapter1.Fill(Me.BDSistemaEySDataSet.tbl_Usuario)
         BDSistemaEySDataSet.EnforceConstraints = False
-        CentroX = 280 / 2
-        CentroY = 280 / 2
 
         Temporizador.Interval = 1000
         Temporizador.Enabled = True
-
+        GR = Me.Panel4.CreateGraphics
+        GR.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
         RefrescarGraficos()
 
         If VwVistaAdminBindingSource IsNot Nothing Then

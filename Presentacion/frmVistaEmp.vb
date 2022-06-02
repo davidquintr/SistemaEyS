@@ -2,7 +2,7 @@
 
 
 
-    Private GR As Graphics = Me.CreateGraphics
+    Private GR As Graphics
 
     'declaramos la constante de PI
     Const PI As Double = 3.14159265
@@ -13,8 +13,8 @@
     'declaramos un temporizador que actualiza la informacion de las horas
     Private WithEvents Temporizador As New Timer
 
-    Private CentroX As Single
-    Private CentroY As Single
+    Private CentroX As Single = 250 / 2
+    Private CentroY As Single = 250 / 2
 
     Dim flagTiempo As Boolean = False
     Dim flag As Boolean = False
@@ -25,13 +25,13 @@
 
     Private Sub frmVistaEmp_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        CentroX = 230 / 2
-        CentroY = 220 / 2
 
         Temporizador.Interval = 1000
         Temporizador.Enabled = True
         BDSistemaEySDataSet.EnforceConstraints = False
 
+        GR = Me.Panel2.CreateGraphics
+        GR.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
         RefrescarGraficos()
 
     End Sub
@@ -266,8 +266,6 @@
     Private Sub RefrescarGraficos()
 
         Me.SuspendLayout()
-        'primero limpiamos toda la superficie
-        GR.Clear(Me.BackColor)
 
         'entonces los límites están trazados
         DibujarLimites()

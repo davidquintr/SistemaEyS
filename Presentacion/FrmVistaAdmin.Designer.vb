@@ -77,7 +77,6 @@ Partial Class FrmVistaAdmin
         Me.labelHora = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VwVistaAdminBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
@@ -247,26 +246,26 @@ Partial Class FrmVistaAdmin
         '
         Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
         Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.AñadirToolStripMenuItem.Text = "Añadir"
         '
         'RolToolStripMenuItem
         '
         Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
-        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
         Me.RolToolStripMenuItem.Text = "Rol"
         '
         'UsuarioToolStripMenuItem1
         '
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
         Me.UsuarioToolStripMenuItem1.Text = "Usuario"
         '
         'AdministrarToolStripMenuItem
         '
         Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
         Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
-        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.AdministrarToolStripMenuItem.Text = "Listar"
         '
         'RolToolStripMenuItem1
@@ -284,7 +283,7 @@ Partial Class FrmVistaAdmin
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(106, 6)
         '
         'AyudaToolStripMenuItem
         '
@@ -462,7 +461,6 @@ Partial Class FrmVistaAdmin
         Me.Panel4.Controls.Add(Me.labelHora)
         Me.Panel4.Controls.Add(Me.RichTextBox1)
         Me.Panel4.Controls.Add(Me.MonthCalendar1)
-        Me.Panel4.Controls.Add(Me.Panel5)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
         Me.Panel4.Name = "Panel4"
@@ -497,15 +495,6 @@ Partial Class FrmVistaAdmin
         Me.MonthCalendar1.Location = New System.Drawing.Point(9, 314)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 1
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Location = New System.Drawing.Point(9, 9)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(1)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(283, 252)
-        Me.Panel5.TabIndex = 0
         '
         'Tbl_EmpleadoBindingSource
         '
@@ -648,7 +637,6 @@ Partial Class FrmVistaAdmin
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents Panel5 As Panel
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents labelHora As Label
     Friend WithEvents DataGridView1 As DataGridView
