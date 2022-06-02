@@ -40,6 +40,8 @@ Partial Class Form1
         Me.TableAdapterManager = New SistemaEyS.BDSistemaEySDataSetTableAdapters.TableAdapterManager()
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
         Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tbl_OpcRolTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_OpcRolTableAdapter()
+        Me.Tbl_OpcRolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         UsernameLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -49,6 +51,7 @@ Partial Class Form1
         CType(Me.Tbl_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Tbl_OpcRolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameLabel
@@ -228,6 +231,15 @@ Partial Class Form1
         Me.Tbl_EmpleadoBindingSource.DataMember = "tbl_Empleado"
         Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
         '
+        'Tbl_OpcRolTableAdapter
+        '
+        Me.Tbl_OpcRolTableAdapter.ClearBeforeFill = True
+        '
+        'Tbl_OpcRolBindingSource
+        '
+        Me.Tbl_OpcRolBindingSource.DataSource = Me.BDSistemaEySDataSet
+        Me.Tbl_OpcRolBindingSource.Position = 0
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -248,6 +260,7 @@ Partial Class Form1
         CType(Me.Tbl_UsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDSistemaEySDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tbl_EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Tbl_OpcRolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -266,4 +279,6 @@ Partial Class Form1
     Friend WithEvents Tbl_EmpleadoBindingSource As BindingSource
     Friend WithEvents BDSistemaEySDataSet As BDSistemaEySDataSet
     Friend WithEvents Label1 As Label
+    Friend WithEvents Tbl_OpcRolTableAdapter As BDSistemaEySDataSetTableAdapters.tbl_OpcRolTableAdapter
+    Friend WithEvents Tbl_OpcRolBindingSource As BindingSource
 End Class

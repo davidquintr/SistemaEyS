@@ -63,12 +63,12 @@ Partial Class FrmAddEmpleado
         Me.cbUsuario = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.DgvEmpleado = New System.Windows.Forms.DataGridView()
+        Me.labelTitulo = New System.Windows.Forms.Label()
         Me.Tbl_UsuarioTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_UsuarioTableAdapter()
         Me.Tbl_UsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BDSistemaEySDataSet = New SistemaEyS.BDSistemaEySDataSet()
         Me.Tbl_EmpleadoTableAdapter = New SistemaEyS.BDSistemaEySDataSetTableAdapters.tbl_EmpleadoTableAdapter()
         Me.Tbl_EmpleadoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.labelTitulo = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.gbAll.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -530,6 +530,19 @@ Partial Class FrmAddEmpleado
         Me.DgvEmpleado.Size = New System.Drawing.Size(651, 224)
         Me.DgvEmpleado.TabIndex = 21
         '
+        'labelTitulo
+        '
+        Me.labelTitulo.BackColor = System.Drawing.Color.SteelBlue
+        Me.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.labelTitulo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labelTitulo.ForeColor = System.Drawing.Color.White
+        Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.labelTitulo.Name = "labelTitulo"
+        Me.labelTitulo.Size = New System.Drawing.Size(651, 43)
+        Me.labelTitulo.TabIndex = 6
+        Me.labelTitulo.Text = "Titulo"
+        Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Tbl_UsuarioTableAdapter
         '
         Me.Tbl_UsuarioTableAdapter.ClearBeforeFill = True
@@ -552,19 +565,6 @@ Partial Class FrmAddEmpleado
         '
         Me.Tbl_EmpleadoBindingSource.DataSource = Me.BDSistemaEySDataSet
         Me.Tbl_EmpleadoBindingSource.Position = 0
-        '
-        'labelTitulo
-        '
-        Me.labelTitulo.BackColor = System.Drawing.Color.SteelBlue
-        Me.labelTitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.labelTitulo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.labelTitulo.ForeColor = System.Drawing.Color.White
-        Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.labelTitulo.Name = "labelTitulo"
-        Me.labelTitulo.Size = New System.Drawing.Size(651, 43)
-        Me.labelTitulo.TabIndex = 6
-        Me.labelTitulo.Text = "Titulo"
-        Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmAddEmpleado
         '

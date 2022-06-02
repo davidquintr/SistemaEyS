@@ -39,6 +39,9 @@
 End Class
 
 Namespace BDSistemaEySDataSetTableAdapters
+    Partial Public Class tbl_UsuarioTableAdapter
+    End Class
+
     Partial Public Class tbl_RegistroTableAdapter
     End Class
 

@@ -32,11 +32,13 @@
             Dim idUsuario As Integer
             Dim idEmpleado As Integer
             Dim hasEmp As Boolean = False
+            Dim hasAdmin
             If Me.Tbl_UsuarioTableAdapter.BuscarUC(Me.BDSistemaEySDataSet.tbl_Usuario, UsernameTextBox.Text, PasswordTextBox.Text) = 0 Then
                 MessageBox.Show("Credenciales incorrectas, verifique sus datos o consulte a un administrador", "Credenciales incorrectas", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
             idUsuario = BDSistemaEySDataSet.tbl_Usuario.First.idUsuario
+            Dim idRol As Integer = BDSistemaEySDataSet.tbl_Usuario.First.idRol
 
             If Me.Tbl_EmpleadoTableAdapter.GetEmpleado(Me.BDSistemaEySDataSet.tbl_Empleado, idUsuario) <> 0 Then
                 hasEmp = True
@@ -44,6 +46,15 @@
 
             If hasEmp = True Then
                 idEmpleado = BDSistemaEySDataSet.tbl_Empleado.First.idEmpleado
+            End If
+
+            Me.Tbl_OpcRolTableAdapter.ObtenerOpcUser(BDSistemaEySDataSet.tbl_OpcRol, idRol)
+
+            If Me.BDSistemaEySDataSet.tbl_OpcRol.First.activo = False And idEmpleado <> 0 Then
+                frmVistaEmp.Show()
+                frmVistaEmp.CargarDatos(idEmpleado)
+                Me.Hide()
+                Return
             End If
 
             Dim result As DialogResult = MessageBox.Show("¿Desea iniciar como administrador?", "Inicio de sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
