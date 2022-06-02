@@ -50,6 +50,7 @@
 
             Me.Tbl_OpcRolTableAdapter.ObtenerOpcUser(BDSistemaEySDataSet.tbl_OpcRol, idRol)
 
+
             If Me.BDSistemaEySDataSet.tbl_OpcRol.First.activo = False And idEmpleado <> 0 Then
                 frmVistaEmp.Show()
                 frmVistaEmp.CargarDatos(idEmpleado)
