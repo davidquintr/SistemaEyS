@@ -36,6 +36,7 @@ Partial Class frmListarRoles
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.labelTitulo = New System.Windows.Forms.Label()
+        Me.btnPermisos = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -46,6 +47,7 @@ Partial Class frmListarRoles
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.FlowLayoutPanel1.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnAdministrar)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnPermisos)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 181)
@@ -198,6 +200,15 @@ Partial Class frmListarRoles
         Me.labelTitulo.Text = "Listar Roles"
         Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnPermisos
+        '
+        Me.btnPermisos.Location = New System.Drawing.Point(172, 3)
+        Me.btnPermisos.Name = "btnPermisos"
+        Me.btnPermisos.Size = New System.Drawing.Size(75, 23)
+        Me.btnPermisos.TabIndex = 17
+        Me.btnPermisos.Text = "Permisos"
+        Me.btnPermisos.UseVisualStyleBackColor = True
+        '
         'frmListarRoles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -237,4 +248,5 @@ Partial Class frmListarRoles
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents labelTitulo As Label
+    Friend WithEvents btnPermisos As Button
 End Class

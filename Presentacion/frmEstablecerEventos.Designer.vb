@@ -31,15 +31,15 @@ Partial Class frmEstablecerEventos
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rtbDescripcion = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
-        Me.txtEvento = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtRazon = New System.Windows.Forms.TextBox()
-        Me.cbEmpleado = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
+        Me.cbEmpleado = New System.Windows.Forms.ComboBox()
+        Me.txtEvento = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvEventos = New System.Windows.Forms.DataGridView()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -67,7 +67,7 @@ Partial Class frmEstablecerEventos
         Me.btnCerrar.Location = New System.Drawing.Point(622, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 23)
-        Me.btnCerrar.TabIndex = 8
+        Me.btnCerrar.TabIndex = 13
         Me.btnCerrar.Text = "Cerrar"
         Me.btnCerrar.UseVisualStyleBackColor = True
         '
@@ -76,7 +76,7 @@ Partial Class frmEstablecerEventos
         Me.btnGuardar.Location = New System.Drawing.Point(543, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 23)
-        Me.btnGuardar.TabIndex = 7
+        Me.btnGuardar.TabIndex = 12
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
@@ -85,7 +85,7 @@ Partial Class frmEstablecerEventos
         Me.btnEliminar.Location = New System.Drawing.Point(464, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
-        Me.btnEliminar.TabIndex = 9
+        Me.btnEliminar.TabIndex = 11
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
         '
@@ -129,7 +129,7 @@ Partial Class frmEstablecerEventos
         Me.rtbDescripcion.Location = New System.Drawing.Point(3, 21)
         Me.rtbDescripcion.Name = "rtbDescripcion"
         Me.rtbDescripcion.Size = New System.Drawing.Size(686, 91)
-        Me.rtbDescripcion.TabIndex = 6
+        Me.rtbDescripcion.TabIndex = 8
         Me.rtbDescripcion.Text = ""
         '
         'TableLayoutPanel1
@@ -138,7 +138,7 @@ Partial Class frmEstablecerEventos
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.13622!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.86378!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 236.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.dtpFechaInicio, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
@@ -158,16 +158,6 @@ Partial Class frmEstablecerEventos
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(692, 91)
         Me.TableLayoutPanel1.TabIndex = 0
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 15)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tipo de evento:"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -184,15 +174,7 @@ Partial Class frmEstablecerEventos
         Me.dtpFechaInicio.Location = New System.Drawing.Point(135, 33)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
         Me.dtpFechaInicio.Size = New System.Drawing.Size(227, 23)
-        Me.dtpFechaInicio.TabIndex = 3
-        '
-        'txtEvento
-        '
-        Me.txtEvento.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEvento.Location = New System.Drawing.Point(135, 3)
-        Me.txtEvento.Name = "txtEvento"
-        Me.txtEvento.Size = New System.Drawing.Size(227, 23)
-        Me.txtEvento.TabIndex = 6
+        Me.dtpFechaInicio.TabIndex = 4
         '
         'Label3
         '
@@ -210,16 +192,7 @@ Partial Class frmEstablecerEventos
         Me.txtRazon.Location = New System.Drawing.Point(135, 63)
         Me.txtRazon.Name = "txtRazon"
         Me.txtRazon.Size = New System.Drawing.Size(227, 23)
-        Me.txtRazon.TabIndex = 8
-        '
-        'cbEmpleado
-        '
-        Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbEmpleado.FormattingEnabled = True
-        Me.cbEmpleado.Location = New System.Drawing.Point(458, 3)
-        Me.cbEmpleado.Name = "cbEmpleado"
-        Me.cbEmpleado.Size = New System.Drawing.Size(231, 23)
-        Me.cbEmpleado.TabIndex = 5
+        Me.txtRazon.TabIndex = 5
         '
         'Label4
         '
@@ -237,7 +210,34 @@ Partial Class frmEstablecerEventos
         Me.dtpFechaFinal.Location = New System.Drawing.Point(458, 33)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(231, 23)
-        Me.dtpFechaFinal.TabIndex = 4
+        Me.dtpFechaFinal.TabIndex = 7
+        '
+        'cbEmpleado
+        '
+        Me.cbEmpleado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbEmpleado.FormattingEnabled = True
+        Me.cbEmpleado.Location = New System.Drawing.Point(458, 3)
+        Me.cbEmpleado.Name = "cbEmpleado"
+        Me.cbEmpleado.Size = New System.Drawing.Size(231, 23)
+        Me.cbEmpleado.TabIndex = 6
+        '
+        'txtEvento
+        '
+        Me.txtEvento.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEvento.Location = New System.Drawing.Point(135, 3)
+        Me.txtEvento.Name = "txtEvento"
+        Me.txtEvento.Size = New System.Drawing.Size(227, 23)
+        Me.txtEvento.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(88, 15)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Tipo de evento:"
         '
         'dgvEventos
         '
@@ -248,7 +248,7 @@ Partial Class frmEstablecerEventos
         Me.dgvEventos.RowHeadersWidth = 51
         Me.dgvEventos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvEventos.Size = New System.Drawing.Size(698, 164)
-        Me.dgvEventos.TabIndex = 6
+        Me.dgvEventos.TabIndex = 14
         '
         'frmEstablecerEventos
         '

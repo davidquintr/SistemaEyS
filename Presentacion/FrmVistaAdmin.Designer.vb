@@ -50,7 +50,6 @@ Partial Class FrmVistaAdmin
         Me.RolToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.PermisosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InstructivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportarUnProblemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -239,7 +238,7 @@ Partial Class FrmVistaAdmin
         '
         'SeguridadToolStripMenuItem
         '
-        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.ToolStripSeparator2, Me.PermisosToolStripMenuItem})
+        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirToolStripMenuItem, Me.AdministrarToolStripMenuItem, Me.ToolStripSeparator2})
         Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
         Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.SeguridadToolStripMenuItem.Text = "Seguridad"
@@ -248,26 +247,26 @@ Partial Class FrmVistaAdmin
         '
         Me.AñadirToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem, Me.UsuarioToolStripMenuItem1})
         Me.AñadirToolStripMenuItem.Name = "AñadirToolStripMenuItem"
-        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.AñadirToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AñadirToolStripMenuItem.Text = "Añadir"
         '
         'RolToolStripMenuItem
         '
         Me.RolToolStripMenuItem.Name = "RolToolStripMenuItem"
-        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(114, 22)
+        Me.RolToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RolToolStripMenuItem.Text = "Rol"
         '
         'UsuarioToolStripMenuItem1
         '
         Me.UsuarioToolStripMenuItem1.Name = "UsuarioToolStripMenuItem1"
-        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(114, 22)
+        Me.UsuarioToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.UsuarioToolStripMenuItem1.Text = "Usuario"
         '
         'AdministrarToolStripMenuItem
         '
         Me.AdministrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RolToolStripMenuItem1, Me.UsuarioToolStripMenuItem2})
         Me.AdministrarToolStripMenuItem.Name = "AdministrarToolStripMenuItem"
-        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.AdministrarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AdministrarToolStripMenuItem.Text = "Listar"
         '
         'RolToolStripMenuItem1
@@ -285,13 +284,7 @@ Partial Class FrmVistaAdmin
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(119, 6)
-        '
-        'PermisosToolStripMenuItem
-        '
-        Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.PermisosToolStripMenuItem.Text = "Permisos"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(177, 6)
         '
         'AyudaToolStripMenuItem
         '
@@ -638,7 +631,6 @@ Partial Class FrmVistaAdmin
     Friend WithEvents AdministrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RolToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents UsuarioToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents PermisosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BDSistemaEySDataSetBindingSource As BindingSource
     Friend WithEvents VwVistaAdminBindingSource As BindingSource
     Friend WithEvents Vw_VistaAdminTableAdapter As BDSistemaEySDataSetTableAdapters.Vw_VistaAdminTableAdapter

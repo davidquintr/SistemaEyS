@@ -51,12 +51,6 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel6 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnHorario = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.lblCantCarg = New System.Windows.Forms.Label()
-        Me.btnSig = New System.Windows.Forms.Button()
-        Me.btnAnterior = New System.Windows.Forms.Button()
-        Me.cbCargos = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -372,11 +366,9 @@ Partial Class frmSeguridadPermisos
         Me.FlowLayoutPanel6.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.FlowLayoutPanel6.Controls.Add(Me.btnCerrar)
         Me.FlowLayoutPanel6.Controls.Add(Me.btnGuardar)
-        Me.FlowLayoutPanel6.Controls.Add(Me.btnHorario)
-        Me.FlowLayoutPanel6.Controls.Add(Me.btnEliminar)
         Me.FlowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
-        Me.FlowLayoutPanel6.Location = New System.Drawing.Point(0, 372)
+        Me.FlowLayoutPanel6.Location = New System.Drawing.Point(0, 340)
         Me.FlowLayoutPanel6.Name = "FlowLayoutPanel6"
         Me.FlowLayoutPanel6.Size = New System.Drawing.Size(390, 30)
         Me.FlowLayoutPanel6.TabIndex = 7
@@ -399,72 +391,11 @@ Partial Class frmSeguridadPermisos
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-        'btnHorario
-        '
-        Me.btnHorario.Location = New System.Drawing.Point(156, 3)
-        Me.btnHorario.Name = "btnHorario"
-        Me.btnHorario.Size = New System.Drawing.Size(73, 23)
-        Me.btnHorario.TabIndex = 11
-        Me.btnHorario.Text = "Horario"
-        Me.btnHorario.UseVisualStyleBackColor = True
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Location = New System.Drawing.Point(77, 3)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(73, 23)
-        Me.btnEliminar.TabIndex = 10
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
-        '
-        'lblCantCarg
-        '
-        Me.lblCantCarg.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantCarg.Location = New System.Drawing.Point(231, 340)
-        Me.lblCantCarg.Name = "lblCantCarg"
-        Me.lblCantCarg.Size = New System.Drawing.Size(116, 24)
-        Me.lblCantCarg.TabIndex = 14
-        Me.lblCantCarg.Text = "999/999"
-        Me.lblCantCarg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnSig
-        '
-        Me.btnSig.Location = New System.Drawing.Point(353, 341)
-        Me.btnSig.Name = "btnSig"
-        Me.btnSig.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnSig.Size = New System.Drawing.Size(23, 25)
-        Me.btnSig.TabIndex = 15
-        Me.btnSig.Text = ">"
-        Me.btnSig.UseVisualStyleBackColor = True
-        '
-        'btnAnterior
-        '
-        Me.btnAnterior.Location = New System.Drawing.Point(203, 340)
-        Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnAnterior.Size = New System.Drawing.Size(23, 25)
-        Me.btnAnterior.TabIndex = 13
-        Me.btnAnterior.Text = "<"
-        Me.btnAnterior.UseVisualStyleBackColor = True
-        '
-        'cbCargos
-        '
-        Me.cbCargos.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbCargos.FormattingEnabled = True
-        Me.cbCargos.Location = New System.Drawing.Point(13, 340)
-        Me.cbCargos.Name = "cbCargos"
-        Me.cbCargos.Size = New System.Drawing.Size(184, 23)
-        Me.cbCargos.TabIndex = 12
-        '
         'frmSeguridadPermisos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(390, 402)
-        Me.Controls.Add(Me.lblCantCarg)
-        Me.Controls.Add(Me.btnSig)
-        Me.Controls.Add(Me.btnAnterior)
-        Me.Controls.Add(Me.cbCargos)
+        Me.ClientSize = New System.Drawing.Size(390, 370)
         Me.Controls.Add(Me.FlowLayoutPanel6)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
@@ -522,11 +453,5 @@ Partial Class frmSeguridadPermisos
     Friend WithEvents FlowLayoutPanel6 As FlowLayoutPanel
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents btnHorario As Button
-    Friend WithEvents btnEliminar As Button
     Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents lblCantCarg As Label
-    Friend WithEvents btnSig As Button
-    Friend WithEvents btnAnterior As Button
-    Friend WithEvents cbCargos As ComboBox
 End Class

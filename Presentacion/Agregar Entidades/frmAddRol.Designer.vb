@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAddRol
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmAddRol
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCerrar = New System.Windows.Forms.Button()
@@ -52,12 +52,12 @@ Partial Class frmAddRol
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 272)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(427, 31)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(404, 31)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'btnCerrar
         '
-        Me.btnCerrar.Location = New System.Drawing.Point(351, 3)
+        Me.btnCerrar.Location = New System.Drawing.Point(328, 3)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(73, 25)
         Me.btnCerrar.TabIndex = 8
@@ -66,7 +66,7 @@ Partial Class frmAddRol
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(272, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(249, 3)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(73, 25)
         Me.btnGuardar.TabIndex = 7
@@ -75,7 +75,7 @@ Partial Class frmAddRol
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(193, 3)
+        Me.btnLimpiar.Location = New System.Drawing.Point(170, 3)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(73, 25)
         Me.btnLimpiar.TabIndex = 6
@@ -84,7 +84,7 @@ Partial Class frmAddRol
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(114, 3)
+        Me.btnEditar.Location = New System.Drawing.Point(91, 3)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(73, 25)
         Me.btnEditar.TabIndex = 5
@@ -93,7 +93,7 @@ Partial Class frmAddRol
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(35, 3)
+        Me.btnEliminar.Location = New System.Drawing.Point(12, 3)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(73, 25)
         Me.btnEliminar.TabIndex = 4
@@ -106,7 +106,7 @@ Partial Class frmAddRol
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.818182!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 46)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(403, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(386, 67)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         '
@@ -125,7 +125,7 @@ Partial Class frmAddRol
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(385, 35)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(371, 35)
         Me.TableLayoutPanel1.TabIndex = 3
         '
         'Label2
@@ -142,10 +142,10 @@ Partial Class frmAddRol
         'txbNombre
         '
         Me.txbNombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txbNombre.Location = New System.Drawing.Point(161, 3)
+        Me.txbNombre.Location = New System.Drawing.Point(156, 3)
         Me.txbNombre.Name = "txbNombre"
-        Me.txbNombre.Size = New System.Drawing.Size(196, 23)
-        Me.txbNombre.TabIndex = 3
+        Me.txbNombre.Size = New System.Drawing.Size(212, 23)
+        Me.txbNombre.TabIndex = 2
         '
         'DgvRol
         '
@@ -156,7 +156,7 @@ Partial Class frmAddRol
         Me.DgvRol.Name = "DgvRol"
         Me.DgvRol.RowHeadersWidth = 51
         Me.DgvRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvRol.Size = New System.Drawing.Size(427, 147)
+        Me.DgvRol.Size = New System.Drawing.Size(404, 147)
         Me.DgvRol.TabIndex = 9
         '
         'labelTitulo
@@ -167,7 +167,7 @@ Partial Class frmAddRol
         Me.labelTitulo.ForeColor = System.Drawing.Color.White
         Me.labelTitulo.Location = New System.Drawing.Point(0, 0)
         Me.labelTitulo.Name = "labelTitulo"
-        Me.labelTitulo.Size = New System.Drawing.Size(427, 43)
+        Me.labelTitulo.Size = New System.Drawing.Size(404, 43)
         Me.labelTitulo.TabIndex = 8
         Me.labelTitulo.Text = "Titulo"
         Me.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -176,7 +176,7 @@ Partial Class frmAddRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(427, 303)
+        Me.ClientSize = New System.Drawing.Size(404, 303)
         Me.Controls.Add(Me.labelTitulo)
         Me.Controls.Add(Me.DgvRol)
         Me.Controls.Add(Me.FlowLayoutPanel1)

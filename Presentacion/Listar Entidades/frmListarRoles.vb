@@ -89,4 +89,9 @@
         frmAddRol.Show()
         frmAddRol.CambiarModo(fila)
     End Sub
+
+    Private Sub btnPermisos_Click(sender As Object, e As EventArgs) Handles btnPermisos.Click
+        frmSeguridadPermisos.Show()
+        frmSeguridadPermisos.CargarDatos(CInt(lbID.Text))
+    End Sub
 End Class

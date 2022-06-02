@@ -25,6 +25,7 @@ Partial Class frmParametrosGen
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.labelParametros = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.btnIng = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
         Me.buttonAjustes = New System.Windows.Forms.Button()
         Me.btnEmpresa = New System.Windows.Forms.Button()
@@ -34,7 +35,6 @@ Partial Class frmParametrosGen
         Me.btnHorarioAlmuerzo = New System.Windows.Forms.Button()
         Me.btnTGracia = New System.Windows.Forms.Button()
         Me.btnDominio = New System.Windows.Forms.Button()
-        Me.btnIng = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel3.SuspendLayout()
@@ -75,6 +75,21 @@ Partial Class frmParametrosGen
         Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         Me.FlowLayoutPanel2.Size = New System.Drawing.Size(641, 39)
         Me.FlowLayoutPanel2.TabIndex = 7
+        '
+        'btnIng
+        '
+        Me.btnIng.BackColor = System.Drawing.Color.SteelBlue
+        Me.btnIng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnIng.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnIng.FlatAppearance.BorderSize = 0
+        Me.btnIng.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIng.ForeColor = System.Drawing.Color.White
+        Me.btnIng.Location = New System.Drawing.Point(488, 3)
+        Me.btnIng.Name = "btnIng"
+        Me.btnIng.Size = New System.Drawing.Size(150, 32)
+        Me.btnIng.TabIndex = 7
+        Me.btnIng.Text = "Finalizar"
+        Me.btnIng.UseVisualStyleBackColor = False
         '
         'FlowLayoutPanel3
         '
@@ -126,7 +141,7 @@ Partial Class frmParametrosGen
         Me.btnExtras.Location = New System.Drawing.Point(10, 3)
         Me.btnExtras.Name = "btnExtras"
         Me.btnExtras.Size = New System.Drawing.Size(321, 46)
-        Me.btnExtras.TabIndex = 2
+        Me.btnExtras.TabIndex = 3
         Me.btnExtras.Text = "Ajustes extras"
         Me.btnExtras.UseVisualStyleBackColor = True
         '
@@ -135,7 +150,7 @@ Partial Class frmParametrosGen
         Me.btnNombreEmpresa.Location = New System.Drawing.Point(10, 55)
         Me.btnNombreEmpresa.Name = "btnNombreEmpresa"
         Me.btnNombreEmpresa.Size = New System.Drawing.Size(321, 46)
-        Me.btnNombreEmpresa.TabIndex = 3
+        Me.btnNombreEmpresa.TabIndex = 4
         Me.btnNombreEmpresa.Text = "Nombre de la Empresa"
         Me.btnNombreEmpresa.UseVisualStyleBackColor = True
         Me.btnNombreEmpresa.Visible = False
@@ -145,7 +160,7 @@ Partial Class frmParametrosGen
         Me.btnHorarioAlmuerzo.Location = New System.Drawing.Point(10, 107)
         Me.btnHorarioAlmuerzo.Name = "btnHorarioAlmuerzo"
         Me.btnHorarioAlmuerzo.Size = New System.Drawing.Size(321, 46)
-        Me.btnHorarioAlmuerzo.TabIndex = 4
+        Me.btnHorarioAlmuerzo.TabIndex = 5
         Me.btnHorarioAlmuerzo.Text = "Horario de almuerzo"
         Me.btnHorarioAlmuerzo.UseVisualStyleBackColor = True
         Me.btnHorarioAlmuerzo.Visible = False
@@ -155,7 +170,7 @@ Partial Class frmParametrosGen
         Me.btnTGracia.Location = New System.Drawing.Point(10, 159)
         Me.btnTGracia.Name = "btnTGracia"
         Me.btnTGracia.Size = New System.Drawing.Size(321, 46)
-        Me.btnTGracia.TabIndex = 5
+        Me.btnTGracia.TabIndex = 6
         Me.btnTGracia.Text = "Tiempo de gracia"
         Me.btnTGracia.UseVisualStyleBackColor = True
         Me.btnTGracia.Visible = False
@@ -165,25 +180,10 @@ Partial Class frmParametrosGen
         Me.btnDominio.Location = New System.Drawing.Point(10, 211)
         Me.btnDominio.Name = "btnDominio"
         Me.btnDominio.Size = New System.Drawing.Size(321, 46)
-        Me.btnDominio.TabIndex = 6
+        Me.btnDominio.TabIndex = 7
         Me.btnDominio.Text = "Dominio de la empresa(@)"
         Me.btnDominio.UseVisualStyleBackColor = True
         Me.btnDominio.Visible = False
-        '
-        'btnIng
-        '
-        Me.btnIng.BackColor = System.Drawing.Color.SteelBlue
-        Me.btnIng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnIng.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue
-        Me.btnIng.FlatAppearance.BorderSize = 0
-        Me.btnIng.Font = New System.Drawing.Font("Segoe UI Semibold", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnIng.ForeColor = System.Drawing.Color.White
-        Me.btnIng.Location = New System.Drawing.Point(488, 3)
-        Me.btnIng.Name = "btnIng"
-        Me.btnIng.Size = New System.Drawing.Size(150, 32)
-        Me.btnIng.TabIndex = 7
-        Me.btnIng.Text = "Finalizar"
-        Me.btnIng.UseVisualStyleBackColor = False
         '
         'frmParametrosGen
         '
